@@ -1,14 +1,19 @@
-# World Banknote Archive — Official Overview
+# World Banknote Archive — Public Reading Room
 
-This public repository hosts the official, read-only project overview for World Banknote Archive.
+World Banknote Archiveの独立した公開資料室です。国旗を入口に、各国・通貨圏の通貨、発行機関、紙幣意匠を読み、中央銀行などの公式資料へ移動できます。
 
-It intentionally excludes all collection records, prices, storage locations, source documents, NAS addresses, and original media. The operational application and its data remain private.
+## Pages
+
+- `index.html` — 国別アトラス、検索、地域フィルター、資料室ガイド
+- `country.html?code=JP` — 国旗・通貨・発行機関・観察点・一次資料リンク
+- `countries.js` — 公開情報だけで構成した国別データ
 
 ## Public boundary
 
-- Static project overview only
-- Anonymous sample content only
-- No application API or writable database
-- `noindex` and `robots.txt` directives enabled
+このリポジトリには、収蔵記録、価格、取得経路、保管位置、NASアドレス、原本画像を含めません。運用アプリと実データは非公開環境で管理します。
 
-The site is deployed through GitHub Pages from the `main` branch using GitHub Actions.
+検索エンジンへの掲載を意図しないため、`noindex`メタ指定と`robots.txt`を設定しています。
+
+## Deployment
+
+GitHub Pagesの`main`ブランチ直下から静的サイトとして配信します。

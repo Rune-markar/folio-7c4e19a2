@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="World Banknote Archive 国別紙幣資料。">
+  <meta name="theme-color" content="#16241d">
+  <title>国別紙幣資料 — World Banknote Archive</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="detail-page">
+  <a class="skip-link" href="#main">本文へ移動</a>
+
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="World Banknote Archive トップ">
+      <span class="brand-seal" aria-hidden="true"><b>W</b><small>26</small></span>
+      <span class="brand-copy"><strong>World Banknote Archive</strong><small>紙幣資料室 / PUBLIC READING ROOM</small></span>
+    </a>
+    <nav class="global-nav" aria-label="メインナビゲーション">
+      <a href="index.html#atlas">国別アトラス</a>
+      <a href="index.html#guide">見かた</a>
+      <a href="index.html#boundary">公開範囲</a>
+    </nav>
+  </header>
+
+  <main id="main" class="detail-main">
+    <a class="back-link" href="index.html#atlas"><span aria-hidden="true">←</span> 国別アトラスへ戻る</a>
+    <article id="country-detail" aria-live="polite">
+      <div class="detail-loading">資料を読み込んでいます…</div>
+    </article>
+    <section class="related section-shell" id="related" aria-labelledby="related-title" hidden>
+      <header class="section-heading compact-heading">
+        <div><p class="eyebrow">RELATED READING</p><h2 id="related-title">同じ地域の資料</h2></div>
+        <p>国旗を選ぶと、別の国・通貨圏の資料へ移動します。</p>
+      </header>
+      <div class="related-grid" id="related-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div><strong>World Banknote Archive</strong><span>Official public reading room</span></div>
+    <p>Collection data is intentionally excluded.</p>
+    <a href="index.html">資料室トップへ →</a>
+  </footer>
+
+  <script src="countries.js"></script>
+  <script src="country.js"></script>
+</body>
+</html>

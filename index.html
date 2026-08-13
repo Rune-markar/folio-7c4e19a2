@@ -4,92 +4,129 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-  <meta name="referrer" content="no-referrer">
-  <meta name="description" content="World Banknote Archiveの公式公開概要。実際の収蔵データを含まない公開用ページです。">
-  <meta name="theme-color" content="#17231d">
-  <title>World Banknote Archive — Official Overview</title>
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="国旗から世界の紙幣と通貨をたどる、World Banknote Archiveの公式公開資料室。">
+  <meta name="theme-color" content="#16241d">
+  <title>World Banknote Archive — 紙幣資料室</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+
   <header class="site-header">
-    <a class="brand" href="#top" aria-label="World Banknote Archive トップ">
-      <span class="brand-mark" aria-hidden="true">W</span>
-      <span><strong>World Banknote Archive</strong><small>Official public overview</small></span>
+    <a class="brand" href="index.html" aria-label="World Banknote Archive トップ">
+      <span class="brand-seal" aria-hidden="true"><b>W</b><small>26</small></span>
+      <span class="brand-copy"><strong>World Banknote Archive</strong><small>紙幣資料室 / PUBLIC READING ROOM</small></span>
     </a>
-    <span class="status"><i aria-hidden="true"></i> PUBLIC OVERVIEW</span>
+    <nav class="global-nav" aria-label="メインナビゲーション">
+      <a href="#atlas">国別アトラス</a>
+      <a href="#guide">見かた</a>
+      <a href="#boundary">公開範囲</a>
+    </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow">PRIVATE COLLECTION SYSTEM / 2026</p>
-        <h1>紙幣の来歴と収蔵を、<br><em>静かな一冊の台帳へ。</em></h1>
-        <p class="lead">World Banknote Archiveは、世界各地の紙幣を、来歴・状態・所在・取得記録とともに整理する個人NAS向け収蔵管理システムです。</p>
-        <div class="hero-notice">
-          <span aria-hidden="true">◇</span>
-          <p><strong>公開範囲</strong> このページはシステム概要のみを掲載しています。実際の収蔵品、価格、保管位置、原本画像は公開していません。</p>
+        <p class="eyebrow">THE PUBLIC READING ROOM · EST. 2026</p>
+        <h1 id="hero-title">一枚の紙幣から、<br><em>その国を読む。</em></h1>
+        <p class="lead">国旗を入口に、通貨、発行機関、意匠、安全技術へ。世界の紙幣を「見る」だけでなく、背景までたどるための小さな資料室です。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#atlas">国旗から探す <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#guide">この資料室について <span aria-hidden="true">→</span></a>
         </div>
+        <dl class="hero-stats" aria-label="掲載概要">
+          <div><dt>ISSUING AREAS</dt><dd id="country-total">09</dd></div>
+          <div><dt>REGIONS</dt><dd>04</dd></div>
+          <div><dt>SOURCE POLICY</dt><dd>01<small>次資料優先</small></dd></div>
+        </dl>
       </div>
 
-      <div class="specimen" aria-label="匿名化された画面イメージ">
-        <div class="specimen-head">
-          <span>ARCHIVE / SAMPLE VIEW</span>
-          <b>•••</b>
-        </div>
-        <div class="specimen-note">
-          <div class="note-art" aria-hidden="true">
-            <span>SPECIMEN</span>
+      <div class="hero-art" aria-label="紙幣資料室の装飾イメージ">
+        <div class="registry-label"><span>WBA / OPEN CATALOGUE</span><b>PUBLIC</b></div>
+        <div class="note-stack" aria-hidden="true">
+          <div class="note note-back"><span>ARCHIVE</span><strong>10</strong></div>
+          <div class="note note-mid"><span>WORLD NOTE</span><strong>50</strong></div>
+          <div class="note note-front">
+            <span class="note-serial">WBA · 2026 · PUBLIC</span>
+            <span class="note-rosette">W</span>
             <strong>100</strong>
-            <small>ARCHIVE NOTE</small>
-          </div>
-          <div class="note-copy">
-            <small>SAMPLE RECORD</small>
-            <h2>匿名サンプル紙幣</h2>
-            <dl>
-              <div><dt>地域</dt><dd>Sample Region</dd></div>
-              <div><dt>発行年</dt><dd>19XX</dd></div>
-              <div><dt>状態</dt><dd>Reference only</dd></div>
-            </dl>
+            <small>SPECIMEN / REFERENCE ONLY</small>
           </div>
         </div>
-        <div class="specimen-stats">
-          <div><small>CATALOG</small><strong>来歴</strong></div>
-          <div><small>STORAGE</small><strong>所在</strong></div>
-          <div><small>BACKUP</small><strong>保全</strong></div>
-        </div>
+        <p class="art-caption"><span>01</span> 紙幣画像は掲載せず、意匠・発行情報・公式資料への導線を公開しています。</p>
       </div>
     </section>
 
-    <section class="features" aria-labelledby="features-title">
+    <section class="atlas section-shell" id="atlas" aria-labelledby="atlas-title">
       <header class="section-heading">
-        <p class="eyebrow">ARCHIVE PRINCIPLES</p>
-        <h2 id="features-title">収集から保存までを、<br>一つの流れとして記録する。</h2>
+        <div>
+          <p class="eyebrow">COUNTRY &amp; CURRENCY ATLAS</p>
+          <h2 id="atlas-title">国旗から資料をひらく</h2>
+        </div>
+        <p>各カードから専用の国別ページへ移動できます。通貨の基本情報を確認した後、中央銀行などの公式資料へ進めます。</p>
       </header>
-      <div class="feature-grid">
-        <article><span>01</span><h3>CATALOG</h3><p>国、通貨、額面、発行年、シリーズ、状態、参考資料を統一形式で整理します。</p></article>
-        <article><span>02</span><h3>PROVENANCE</h3><p>入手経路と来歴を収蔵品に結び付け、情報の根拠と更新履歴を保持します。</p></article>
-        <article><span>03</span><h3>LOCATION</h3><p>バインダー、ページ、ポケット単位で物理的な所在を管理します。</p></article>
-        <article><span>04</span><h3>PRESERVATION</h3><p>台帳と画像を分離し、NAS上で世代バックアップできる構成を採用します。</p></article>
+
+      <div class="atlas-tools" aria-label="国別資料の絞り込み">
+        <label class="search-box">
+          <span aria-hidden="true">⌕</span>
+          <span class="sr-only">国名・通貨名で検索</span>
+          <input id="country-search" type="search" placeholder="国名・通貨名で検索" autocomplete="off">
+        </label>
+        <div class="filter-list" id="region-filters" aria-label="地域で絞り込む">
+          <button class="filter-button is-active" type="button" data-region="all" aria-pressed="true">すべて</button>
+          <button class="filter-button" type="button" data-region="asia" aria-pressed="false">アジア</button>
+          <button class="filter-button" type="button" data-region="europe" aria-pressed="false">ヨーロッパ</button>
+          <button class="filter-button" type="button" data-region="americas" aria-pressed="false">南北アメリカ</button>
+          <button class="filter-button" type="button" data-region="oceania" aria-pressed="false">オセアニア</button>
+        </div>
+        <p class="result-count" aria-live="polite"><strong id="result-count">9</strong> AREAS</p>
+      </div>
+
+      <div class="country-grid" id="country-grid">
+        <noscript>国別資料の表示にはJavaScriptを有効にしてください。</noscript>
+      </div>
+      <div class="empty-state" id="empty-state" hidden>
+        <span aria-hidden="true">◇</span>
+        <h3>該当する資料はありません</h3>
+        <p>検索語や地域を変えてお試しください。</p>
       </div>
     </section>
 
-    <section class="architecture" aria-labelledby="architecture-title">
-      <div>
-        <p class="eyebrow">SYSTEM BOUNDARY</p>
-        <h2 id="architecture-title">外部公開と個人台帳を分離。</h2>
+    <section class="reading-guide section-shell" id="guide" aria-labelledby="guide-title">
+      <div class="guide-intro">
+        <p class="eyebrow">HOW TO READ A BANKNOTE</p>
+        <h2 id="guide-title">紙幣を読む、<br>三つの視点。</h2>
+        <p>紙幣は価値を示す道具であると同時に、国の技術、文化、記憶を凝縮した印刷物です。</p>
       </div>
-      <ol>
-        <li><span>PUBLIC</span><strong>公式概要</strong><p>GitHub Pagesには説明と匿名サンプルのみを配置。</p></li>
-        <li><span>PRIVATE</span><strong>アプリ本体</strong><p>運用コードと設定は非公開リポジトリで管理。</p></li>
-        <li><span>LOCAL</span><strong>収蔵データ</strong><p>台帳、画像、価格、保管位置は私設NAS内だけに保存。</p></li>
+      <ol class="guide-list">
+        <li><span>01 / IDENTITY</span><h3>国と通貨</h3><p>国旗、通貨コード、発行機関から、その紙幣が属する制度を確認します。</p></li>
+        <li><span>02 / DESIGN</span><h3>意匠と物語</h3><p>肖像、自然、建築、抽象模様から、何が国の象徴として選ばれたかを読みます。</p></li>
+        <li><span>03 / SECURITY</span><h3>素材と技術</h3><p>透かし、ホログラム、窓、凹版印刷など、真正性を守る工夫に注目します。</p></li>
       </ol>
+    </section>
+
+    <section class="boundary section-shell" id="boundary" aria-labelledby="boundary-title">
+      <div class="boundary-mark" aria-hidden="true">PRIVATE<br>≠<br>PUBLIC</div>
+      <div class="boundary-copy">
+        <p class="eyebrow">COLLECTION BOUNDARY</p>
+        <h2 id="boundary-title">公開資料室と、個人台帳は別の場所です。</h2>
+        <p>このサイトに掲載するのは、国・通貨・発行機関に関する一般公開情報だけです。収蔵品の有無、価格、取得経路、保管位置、原本画像は公開していません。</p>
+        <div class="boundary-tags" aria-label="非公開項目">
+          <span>COLLECTION RECORDS</span><span>PRICES</span><span>STORAGE</span><span>ORIGINAL MEDIA</span>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p><strong>World Banknote Archive</strong><span>Official public overview</span></p>
-    <p>Collection data is intentionally excluded.</p>
+  <footer class="site-footer">
+    <div><strong>World Banknote Archive</strong><span>Official public reading room</span></div>
+    <p>External references open on their respective official websites.</p>
+    <a href="#main">ページ上部へ ↑</a>
   </footer>
+
+  <script src="countries.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
