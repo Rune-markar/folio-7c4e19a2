@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 3" role="img" aria-labelledby="title">
+  <title id="title">ドイツ民主共和国旗</title>
+  <path fill="#000" d="M0 0h5v1H0z"/>
+  <path fill="#d00" d="M0 1h5v1H0z"/>
+  <path fill="#ffce00" d="M0 2h5v1H0z"/>
+  <g transform="translate(2.5 1.5)" fill="none" stroke="#ffce00" stroke-width=".085">
+    <circle r=".58"/>
+    <path d="M-.48-.29c-.18.24-.18.58 0 .82M.48-.29c.18.24.18.58 0 .82" stroke-dasharray=".08 .045"/>
+    <path d="M-.22.35L.25-.32M-.32-.18L.25.31M-.36-.2l.16-.16M.2-.36l.16.16"/>
+  </g>
+</svg>

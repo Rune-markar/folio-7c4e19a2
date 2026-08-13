@@ -1,0 +1,2209 @@
+{
+  "schemaVersion": 5,
+  "updatedAt": "2026-08-13T18:31:39.377Z",
+  "settings": {
+    "archiveName": "World Banknote Archive"
+  },
+  "sourceSnapshot": {
+    "importedAt": "2026-08-14",
+    "countryCount": 92,
+    "detailedNotionCount": 34,
+    "sheetCount": 12,
+    "note": "NAS正本から生成した閲覧専用スナップショット"
+  },
+  "collectionIndex": [
+    {
+      "region": "北アメリカ",
+      "country": "アメリカ"
+    },
+    {
+      "region": "北アメリカ",
+      "country": "カナダ"
+    },
+    {
+      "region": "中央アメリカ",
+      "country": "メキシコ"
+    },
+    {
+      "region": "中央アメリカ",
+      "country": "ホンジュラス"
+    },
+    {
+      "region": "中央アメリカ",
+      "country": "ニカラグア"
+    },
+    {
+      "region": "中央アメリカ",
+      "country": "ハイチ"
+    },
+    {
+      "region": "オセアニア",
+      "country": "オーストラリア"
+    },
+    {
+      "region": "オセアニア",
+      "country": "ハット・リバー公国"
+    },
+    {
+      "region": "南アメリカ",
+      "country": "ブラジル"
+    },
+    {
+      "region": "南アメリカ",
+      "country": "チリ"
+    },
+    {
+      "region": "南アメリカ",
+      "country": "ペルー"
+    },
+    {
+      "region": "南アメリカ",
+      "country": "アルゼンチン"
+    },
+    {
+      "region": "南アメリカ",
+      "country": "ベネズエラ"
+    },
+    {
+      "region": "東アジア",
+      "country": "大日本帝国"
+    },
+    {
+      "region": "東アジア",
+      "country": "日本"
+    },
+    {
+      "region": "東アジア",
+      "country": "中華人民共和国"
+    },
+    {
+      "region": "東アジア",
+      "country": "中華民国"
+    },
+    {
+      "region": "東アジア",
+      "country": "北朝鮮"
+    },
+    {
+      "region": "東アジア",
+      "country": "モンゴル"
+    },
+    {
+      "region": "東アジア",
+      "country": "香港"
+    },
+    {
+      "region": "東南アジア",
+      "country": "インドネシア"
+    },
+    {
+      "region": "東南アジア",
+      "country": "フィリピン"
+    },
+    {
+      "region": "東南アジア",
+      "country": "インド"
+    },
+    {
+      "region": "東南アジア",
+      "country": "タイ"
+    },
+    {
+      "region": "東南アジア",
+      "country": "マレーシア"
+    },
+    {
+      "region": "東南アジア",
+      "country": "ベトナム"
+    },
+    {
+      "region": "東南アジア",
+      "country": "ラオス"
+    },
+    {
+      "region": "東南アジア",
+      "country": "シンガポール"
+    },
+    {
+      "region": "東南アジア",
+      "country": "ネパール"
+    },
+    {
+      "region": "東南アジア",
+      "country": "カンボジア"
+    },
+    {
+      "region": "東南アジア",
+      "country": "ブータン"
+    },
+    {
+      "region": "東南アジア",
+      "country": "バングラデシュ"
+    },
+    {
+      "region": "東南アジア",
+      "country": "パキスタン"
+    },
+    {
+      "region": "東南アジア",
+      "country": "ミャンマー"
+    },
+    {
+      "region": "東南アジア",
+      "country": "スリランカ"
+    },
+    {
+      "region": "北ヨーロッパ",
+      "country": "スウェーデン"
+    },
+    {
+      "region": "北ヨーロッパ",
+      "country": "デンマーク"
+    },
+    {
+      "region": "北ヨーロッパ",
+      "country": "フィンランド"
+    },
+    {
+      "region": "東ヨーロッパ",
+      "country": "エストニア"
+    },
+    {
+      "region": "東ヨーロッパ",
+      "country": "ウクライナ"
+    },
+    {
+      "region": "東ヨーロッパ",
+      "country": "モルドバ"
+    },
+    {
+      "region": "東ヨーロッパ",
+      "country": "ポーランド"
+    },
+    {
+      "region": "東ヨーロッパ",
+      "country": "ルーマニア"
+    },
+    {
+      "region": "東ヨーロッパ",
+      "country": "ベラルーシ"
+    },
+    {
+      "region": "中央ヨーロッパ",
+      "country": "オーストリア"
+    },
+    {
+      "region": "中央ヨーロッパ",
+      "country": "ハンガリー"
+    },
+    {
+      "region": "中央ヨーロッパ",
+      "country": "ドイツ"
+    },
+    {
+      "region": "西ヨーロッパ",
+      "country": "イタリア"
+    },
+    {
+      "region": "西ヨーロッパ",
+      "country": "フランス"
+    },
+    {
+      "region": "西ヨーロッパ",
+      "country": "ザール保護領"
+    },
+    {
+      "region": "西ヨーロッパ",
+      "country": "イギリス"
+    },
+    {
+      "region": "西ヨーロッパ",
+      "country": "オランダ"
+    },
+    {
+      "region": "ロシア構成国",
+      "country": "沿ドニエストル共和国"
+    },
+    {
+      "region": "ロシア構成国",
+      "country": "タタールスタン共和国"
+    },
+    {
+      "region": "ロシア構成国",
+      "country": "ソビエト連邦"
+    },
+    {
+      "region": "ロシア構成国",
+      "country": "ロシア連邦"
+    },
+    {
+      "region": "バルカン半島",
+      "country": "ユーゴスラビア連邦共和国"
+    },
+    {
+      "region": "バルカン半島",
+      "country": "北マケドニア"
+    },
+    {
+      "region": "バルカン半島",
+      "country": "セルビア"
+    },
+    {
+      "region": "バルカン半島",
+      "country": "スロベニア"
+    },
+    {
+      "region": "バルカン半島",
+      "country": "クロアチア"
+    },
+    {
+      "region": "バルカン半島",
+      "country": "ブルガリア"
+    },
+    {
+      "region": "イベリア半島",
+      "country": "スペイン"
+    },
+    {
+      "region": "イベリア半島",
+      "country": "ポルトガル"
+    },
+    {
+      "region": "中央アジア",
+      "country": "キルギス"
+    },
+    {
+      "region": "中央アジア",
+      "country": "ウズベキスタン"
+    },
+    {
+      "region": "中央アジア",
+      "country": "トルクメニスタン"
+    },
+    {
+      "region": "中央アジア",
+      "country": "タジキスタン"
+    },
+    {
+      "region": "中央アジア",
+      "country": "カザフスタン"
+    },
+    {
+      "region": "中央アジア",
+      "country": "アフガニスタン"
+    },
+    {
+      "region": "中東アジア",
+      "country": "イラク"
+    },
+    {
+      "region": "中東アジア",
+      "country": "アラブ首長国連邦"
+    },
+    {
+      "region": "中東アジア",
+      "country": "サウジアラビア"
+    },
+    {
+      "region": "中東アジア",
+      "country": "オマーン"
+    },
+    {
+      "region": "中東アジア",
+      "country": "バーレーン"
+    },
+    {
+      "region": "中東アジア",
+      "country": "トルコ"
+    },
+    {
+      "region": "中東アジア",
+      "country": "レバノン"
+    },
+    {
+      "region": "中東アジア",
+      "country": "シリア"
+    },
+    {
+      "region": "アフリカ",
+      "country": "エリトリア"
+    },
+    {
+      "region": "アフリカ",
+      "country": "南アメリカ共和国"
+    },
+    {
+      "region": "アフリカ",
+      "country": "エチオピア"
+    },
+    {
+      "region": "アフリカ",
+      "country": "マダガスカル"
+    },
+    {
+      "region": "アフリカ",
+      "country": "エジプト"
+    },
+    {
+      "region": "アフリカ",
+      "country": "ギニアビセウ"
+    },
+    {
+      "region": "アフリカ",
+      "country": "マウライ"
+    },
+    {
+      "region": "アフリカ",
+      "country": "アンゴラ"
+    },
+    {
+      "region": "アフリカ",
+      "country": "ザンビア"
+    },
+    {
+      "region": "アフリカ",
+      "country": "ブルンジ"
+    },
+    {
+      "region": "アフリカ",
+      "country": "モロッコ"
+    },
+    {
+      "region": "アフリカ",
+      "country": "ソマリア"
+    },
+    {
+      "region": "アフリカ",
+      "country": "ギアナ"
+    },
+    {
+      "region": "アフリカ",
+      "country": "南スーダン"
+    }
+  ],
+  "items": [
+    {
+      "id": "ve-2-2018",
+      "type": "banknote",
+      "country": "ベネズエラ",
+      "region": "南アメリカ",
+      "currency": "ボリバル・ソベラノ",
+      "denomination": "2",
+      "year": "2018",
+      "series": "ボリバル・ソベラノ導入シリーズ",
+      "issueEndDate": "",
+      "title": "2 ボリバル・ソベラノ",
+      "story": "肖像・人物：独立運動家ホセファ・カメホを肖像とする。発行背景：旧ボリバル・フエルテから5桁を切り下げ、2018年8月に導入されたボリバル・ソベラノの最小額面券。当時の社会情勢：石油依存経済の不振、財政悪化と通貨増発が重なり、生活必需品の不足と急激な物価上昇が進んだ時期の紙幣である。特殊な点：縦長の人物面と横長の自然面を組み合わせ、通貨改革直後から急速に購買力を失った小額券という点が特徴。採用モチーフは、表面がホセファ・カメホ、額面数字、国章、裏面がキガタヒメコンゴウインコ、ベネズエラの自然景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ホセファ・カメホ、額面数字、国章／裏：キガタヒメコンゴウインコ、ベネズエラの自然景観",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ve-2-2018-front.jpg",
+        "back": "media/ve-2-2018-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ve-5-2018",
+      "type": "banknote",
+      "country": "ベネズエラ",
+      "region": "南アメリカ",
+      "currency": "ボリバル・ソベラノ",
+      "denomination": "5",
+      "year": "2018",
+      "series": "デノミネーション後シリーズ",
+      "issueEndDate": "",
+      "title": "5 ボリバル・ソベラノ",
+      "story": "肖像・人物：独立戦争の軍人ホセ・フェリクス・リバスを描く。発行背景：2018年のデノミネーションで登場したボリバル・ソベラノ初期シリーズ。当時の社会情勢：石油依存経済の不振、財政悪化と通貨増発が重なり、生活必需品の不足と急激な物価上昇が進んだ時期の紙幣である。特殊な点：肖像面を縦、動物面を横に読む構成で、生物多様性と国家史を一枚に結び付けている。採用モチーフは、表面がホセ・フェリクス・リバス、国章、額面数字、裏面がオサガメ、海岸景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ホセ・フェリクス・リバス、国章、額面数字／裏：オサガメ、海岸景観",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ve-5-2018-front.jpg",
+        "back": "media/ve-5-2018-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ve-20-2014",
+      "type": "banknote",
+      "country": "ベネズエラ",
+      "region": "南アメリカ",
+      "currency": "旧ボリバル",
+      "denomination": "20",
+      "year": "2014",
+      "series": "ボリバル・フエルテ",
+      "issueEndDate": "",
+      "title": "20 旧ボリバル",
+      "story": "肖像・人物：独立運動を支え投獄にも耐えたルイサ・カセレス・デ・アリスメンディを描く。発行背景：ボリバル・フエルテ期に発行された女性英雄シリーズの20ボリバル券。当時の社会情勢：チャベス後の政権下で為替統制と物資不足が深まり、インフレが加速し始めた時期に流通した。特殊な点：女性の歴史的人物と絶滅危惧種を表裏に配し、人物面が縦長である。採用モチーフは、表面がルイサ・カセレス・デ・アリスメンディ、国章、裏面がタイマイ、海洋景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ルイサ・カセレス・デ・アリスメンディ、国章／裏：タイマイ、海洋景観",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ve-20-2014-front.jpg",
+        "back": "media/ve-20-2014-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ve-50-2018",
+      "type": "banknote",
+      "country": "ベネズエラ",
+      "region": "南アメリカ",
+      "currency": "旧ボリバル",
+      "denomination": "50",
+      "year": "2018",
+      "series": "ボリバル・フエルテ最終期",
+      "issueEndDate": "",
+      "title": "50 旧ボリバル",
+      "story": "肖像・人物：シモン・ボリバルの師で教育思想家のシモン・ロドリゲスを描く。発行背景：旧ボリバル・フエルテの最終期に残った50ボリバル券。当時の社会情勢：石油依存経済の不振、財政悪化と通貨増発が重なり、生活必需品の不足と急激な物価上昇が進んだ時期の紙幣である。特殊な点：同じ2018年に5桁切下げの新通貨へ交代したため、名目額と実際の購買力の乖離を示す。採用モチーフは、表面がシモン・ロドリゲス、国章、裏面がメガネグマ、山岳森林である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：シモン・ロドリゲス、国章／裏：メガネグマ、山岳森林",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ve-50-2018-front.jpg",
+        "back": "media/ve-50-2018-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ve-2000-2016",
+      "type": "banknote",
+      "country": "ベネズエラ",
+      "region": "南アメリカ",
+      "currency": "旧ボリバル",
+      "denomination": "2,000",
+      "year": "2016",
+      "series": "ボリバル・フエルテ高額面シリーズ",
+      "issueEndDate": "",
+      "title": "2,000 旧ボリバル",
+      "story": "肖像・人物：スペイン征服に抵抗した先住民指導者グアイカイプロを描く。発行背景：急速なインフレへの対応として2016年末に追加された高額面券。当時の社会情勢：石油依存経済の不振、財政悪化と通貨増発が重なり、生活必需品の不足と急激な物価上昇が進んだ時期の紙幣である。特殊な点：発行時には高額面だったが短期間で日常決済力を失い、先住民史と固有動物を結ぶ縦横構成を持つ。採用モチーフは、表面がグアイカイプロ、先住民装飾、国章、裏面がオウギワシ、森林景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：グアイカイプロ、先住民装飾、国章／裏：オウギワシ、森林景観",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ve-2000-2016-front.jpg",
+        "back": "media/ve-2000-2016-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ar-1-1985",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "アウストラル",
+      "denomination": "1",
+      "year": "1985",
+      "series": "アウストラル導入シリーズ",
+      "issueEndDate": "",
+      "title": "1 アウストラル",
+      "story": "肖像・人物：初代大統領ベルナルディーノ・リバダビアを肖像とする。発行背景：ペソ・アルヘンティーノから3桁を切り下げて導入されたアウストラルの最小紙幣。当時の社会情勢：軍政後の民主化を進めたアルフォンシン政権は、財政赤字と物価上昇を抑えるため1985年にアウストラル計画を導入したが、数年後には再び高インフレに直面した。特殊な点：潜像BCRA、太陽形透かし、共通裏面の『進歩』寓意像を備える。採用モチーフは、表面がベルナルディーノ・リバダビア、潜像BCRA、額面、裏面が松明と盾を持つ『進歩』の寓意像である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ベルナルディーノ・リバダビア、潜像BCRA、額面／裏：松明と盾を持つ『進歩』の寓意像",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-1-1985-front.jpg",
+        "back": "media/ar-1-1985-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ar-5-1985",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "アウストラル",
+      "denomination": "5",
+      "year": "1985",
+      "series": "アウストラル導入シリーズ",
+      "issueEndDate": "",
+      "title": "5 アウストラル",
+      "story": "肖像・人物：連邦派の政治家・軍人フスト・ホセ・デ・ウルキサを描く。発行背景：1985年の通貨改革で発行された5アウストラル券。当時の社会情勢：軍政後の民主化を進めたアルフォンシン政権は、財政赤字と物価上昇を抑えるため1985年にアウストラル計画を導入したが、数年後には再び高インフレに直面した。特殊な点：歴代政治家の肖像と、自由・国家建設を示す共通寓意像を組み合わせた統一シリーズ。採用モチーフは、表面がフスト・ホセ・デ・ウルキサ、潜像BCRA、額面、裏面が松明と盾を持つ『進歩』の寓意像である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：フスト・ホセ・デ・ウルキサ、潜像BCRA、額面／裏：松明と盾を持つ『進歩』の寓意像",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-5-1985-front.jpg",
+        "back": "media/ar-5-1985-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ar-10-1985",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "アウストラル",
+      "denomination": "10",
+      "year": "1985",
+      "series": "アウストラル・シリーズ",
+      "issueEndDate": "",
+      "title": "10 アウストラル",
+      "story": "肖像・人物：大統領サンティアゴ・デルキを肖像とする。発行背景：アウストラル計画の新通貨を定着させるため発行された中額面券。当時の社会情勢：軍政後の民主化を進めたアルフォンシン政権は、財政赤字と物価上昇を抑えるため1985年にアウストラル計画を導入したが、数年後には再び高インフレに直面した。特殊な点：肖像の線刻違い、潜像BCRA、複数の太陽形透かしが版判別の要点。採用モチーフは、表面がサンティアゴ・デルキ、潜像BCRA、額面、裏面が松明と盾を持つ『進歩』の寓意像である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：サンティアゴ・デルキ、潜像BCRA、額面／裏：松明と盾を持つ『進歩』の寓意像",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-10-1985-front.jpg",
+        "back": "media/ar-10-1985-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ar-5-1970",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "ペソ",
+      "denomination": "5",
+      "year": "1970年代",
+      "series": "ペソ・レイ18.188法シリーズ",
+      "issueEndDate": "",
+      "title": "5 ペソ",
+      "story": "肖像・人物：独立運動の指導者マヌエル・ベルグラノを描く。発行背景：1969年法律18,188号による100分の1のデノミネーション後に使われたペソ・レイ券。当時の社会情勢：軍政と政情不安の下でインフレが続き、1970年代後半にはさらに高額面化が進んだ。特殊な点：統一寸法の新系列で、裏面に国内景観を置き国家像を示した。採用モチーフは、表面がマヌエル・ベルグラノ、国章、額面、裏面がバリローチェとリャオ・リャオの湖畔景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：マヌエル・ベルグラノ、国章、額面／裏：バリローチェとリャオ・リャオの湖畔景観",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-5-1970-front.jpg",
+        "back": "media/ar-5-1970-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ar-10-1992",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "兌換ペソ",
+      "denomination": "10",
+      "year": "1992",
+      "series": "兌換ペソ・シリーズ",
+      "issueEndDate": "",
+      "title": "10 兌換ペソ",
+      "story": "肖像・人物：独立運動家マヌエル・ベルグラノを肖像とする。発行背景：兌換法により1ペソを1米ドルへ結び付けた1992年開始のペソ・コンベルティブレ券。当時の社会情勢：ハイパーインフレ収束と通貨信用回復を狙い、民営化と市場改革が進められた。特殊な点：『兌換可能な法定通貨』の文言と自由の女神頭部の透かしを持つ。採用モチーフは、表面がマヌエル・ベルグラノ、国章、兌換表示、裏面がロサリオの国旗記念碑と市街である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：マヌエル・ベルグラノ、国章、兌換表示／裏：ロサリオの国旗記念碑と市街",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-10-1992-front.jpg",
+        "back": "media/ar-10-1992-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "cl-1000-1994",
+      "type": "banknote",
+      "country": "チリ",
+      "region": "南アメリカ",
+      "currency": "ペソ",
+      "denomination": "1,000",
+      "year": "1994",
+      "series": "1990年代シリーズ",
+      "issueEndDate": "",
+      "title": "1,000 ペソ",
+      "story": "肖像・人物：太平洋戦争の英雄イグナシオ・カレラ・ピントを描く。発行背景：民主政復帰後も継続使用されたチリ中央銀行の1,000ペソ券。当時の社会情勢：市場経済の成長と政治的移行が並行し、比較的安定した通貨運営が進んだ1990年代の券。特殊な点：肖像とコンセプシオンの英雄記念碑を結び、国家的記憶を表裏で構成する。採用モチーフは、表面がイグナシオ・カレラ・ピント、国章、月桂樹、裏面がコンセプシオンの英雄記念碑、アラウカリアである。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：イグナシオ・カレラ・ピント、国章、月桂樹／裏：コンセプシオンの英雄記念碑、アラウカリア",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/cl-1000-1994-front.jpg",
+        "back": "media/cl-1000-1994-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "pe-500-1987",
+      "type": "banknote",
+      "country": "ペルー",
+      "region": "南アメリカ",
+      "currency": "インティ",
+      "denomination": "500",
+      "year": "1987",
+      "series": "インティ紙幣シリーズ",
+      "issueEndDate": "",
+      "title": "500 インティ",
+      "story": "肖像・人物：トゥパク・アマルー2世ことホセ・ガブリエル・コンドルカンキを描く。発行背景：1985年にソルから千分の一で導入されたインティ系列の500券。当時の社会情勢：債務危機、財政赤字と価格統制の失敗からインフレが急伸し、後に百万単位券へ進んだ。特殊な点：先住民反乱の指導者を国家的象徴とし、裏面にアンデスの高地を置く。採用モチーフは、表面がトゥパク・アマルー2世、国章、幾何学文様、裏面がアンデス山脈、登山隊のキャンプである。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：トゥパク・アマルー2世、国章、幾何学文様／裏：アンデス山脈、登山隊のキャンプ",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/pe-500-1987-front.jpg",
+        "back": "media/pe-500-1987-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "br-5-1920",
+      "type": "banknote",
+      "country": "ブラジル",
+      "region": "南アメリカ",
+      "currency": "ミルレイス",
+      "denomination": "5",
+      "year": "1910年代後半–1920年代",
+      "series": "ブラジル共和国初期",
+      "issueEndDate": "",
+      "title": "5 ミルレイス",
+      "story": "肖像・人物：中央にブラジル共和国の政治家肖像を置く。発行背景：旧綴りBRAZILを用いた第一共和政期の国庫5ミルレイス券。当時の社会情勢：コーヒー輸出を基盤に都市化が進む一方、第一次世界大戦後の物価変動と地域寡頭制が続いた。特殊な点：イタリアのカルティエリ・ミラーニ社製で、署名欄と精緻な彩紋を重視した大型券。採用モチーフは、表面が政治家肖像、共和国名、額面、彩紋、裏面が額面数字、国名、装飾枠である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：政治家肖像、共和国名、額面、彩紋／裏：額面数字、国名、装飾枠",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 44,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/br-5-1920-front.jpg",
+        "back": "media/br-5-1920-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-50-1906",
+      "type": "banknote",
+      "country": "ドイツ帝国",
+      "region": "ヨーロッパ",
+      "currency": "マルク",
+      "denomination": "50",
+      "year": "1906–1914",
+      "series": "ゲルマニア肖像シリーズ",
+      "issueEndDate": "",
+      "title": "50 マルク",
+      "story": "肖像・人物：特定人物の肖像を置かず国家銀行券としての文字意匠を中心とする。発行背景：ドイツ帝国の金本位制下で発行された50マルク・ライヒスバンク券。当時の社会情勢：工業化と対外進出が進み、第一次世界大戦前の通貨信用が金との兌換を基礎としていた。特殊な点：大型の精密彩紋、帝国鷲、署名と法的文言で偽造防止と国家権威を示す。採用モチーフは、表面が帝国鷲、額面文字、署名、彩紋、裏面が大形額面数字、星形彩紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：帝国鷲、額面文字、署名、彩紋／裏：大形額面数字、星形彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 5,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 57,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-50-1906-front.jpg",
+        "back": "media/de-50-1906-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-10000-1922",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "10,000",
+      "year": "1922",
+      "series": "ライヒスバンク券",
+      "issueEndDate": "",
+      "title": "10,000 パピエルマルク",
+      "story": "肖像・人物：古典絵画に基づく男性肖像を配する。発行背景：マルク下落が急速化した1922年に発行された1万マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：従来の精緻な肖像入り券を保ちながら額面が万単位へ上がった、崩壊前夜の過渡的紙幣。採用モチーフは、表面が男性肖像、帝国鷲、額面、透かし欄、裏面が帝国鷲、大形額面数字、組紐文様である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：男性肖像、帝国鷲、額面、透かし欄／裏：帝国鷲、大形額面数字、組紐文様",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-10000-1922-front.jpg",
+        "back": "media/de-10000-1922-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-100000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "100,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "100,000 パピエルマルク",
+      "story": "肖像・人物：帽子をかぶった男性の古典肖像を配する。発行背景：1923年2月に発行された10万マルク・ライヒスバンク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：精緻な肖像と彩紋を残す一方、半年ほどで百万・億単位へ追い越された時間的短命さが特殊。採用モチーフは、表面が男性肖像、額面、帝国銀行印、裏面が大形額面数字、楕円彩紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：男性肖像、額面、帝国銀行印／裏：大形額面数字、楕円彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-100000-1923-front.jpg",
+        "back": "media/de-100000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-2000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "2,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "2,000,000 パピエルマルク",
+      "story": "肖像・人物：左右に古典絵画風の人物肖像を置く。発行背景：1923年8月に発行された200万マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：左右対称の肖像を残しながら印刷を簡略化し、急増する現金需要へ対応した。採用モチーフは、表面が二人の人物肖像、200万の額面、帝国銀行印、裏面が大形額面数字、組紐文様である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：二人の人物肖像、200万の額面、帝国銀行印／裏：大形額面数字、組紐文様",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-2000000-1923-front.jpg",
+        "back": "media/de-2000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-10000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "10,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "10,000,000 パピエルマルク",
+      "story": "肖像・人物：人物肖像を省き文字と額面を主役とする。発行背景：1923年8月下旬に投入された1,000万マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：裏面がほぼ無地に近く、短期間で大量供給するため装飾と印刷工程を削った緊急券。採用モチーフは、表面が巨大な額面文字、帝国銀行印、署名、裏面が淡い地紋、反転額面である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：巨大な額面文字、帝国銀行印、署名／裏：淡い地紋、反転額面",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-10000000-1923-front.jpg",
+        "back": "media/de-10000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-100000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "100,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "100,000,000 パピエルマルク",
+      "story": "肖像・人物：人物肖像を用いない緊急的な高額面券。発行背景：物価上昇が億単位へ達した1923年の1億マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：片面中心の簡略印刷と大きな数字で額面識別を優先し、紙幣の寿命が極端に短かった。採用モチーフは、表面が1億の額面文字、帝国銀行印、署名、裏面がほぼ無地の裏面、透ける地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：1億の額面文字、帝国銀行印、署名／裏：ほぼ無地の裏面、透ける地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-100000000-1923-front.jpg",
+        "back": "media/de-100000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-500000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "500,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "500,000,000 パピエルマルク",
+      "story": "肖像・人物：人物肖像を省略した簡素な構成。発行背景：1923年9月に発行された5億マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：片面印刷に近い低コスト仕様で、十億・兆単位券へ至る直前の額面拡大を示す。採用モチーフは、表面が5億の巨大額面、帝国銀行印、署名、裏面がほぼ無地の紙面、淡い地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：5億の巨大額面、帝国銀行印、署名／裏：ほぼ無地の紙面、淡い地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-500000000-1923-front.jpg",
+        "back": "media/de-500000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-1000000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "1,000,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "1,000,000,000 パピエルマルク",
+      "story": "肖像・人物：古典絵画に基づく男性肖像を再び採用する。発行背景：1923年10月に発行された10億マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：十億という額面を肖像入りの旧来様式で示し、レンテンマルク導入直前の通貨崩壊を記録する。採用モチーフは、表面が男性肖像、10億の額面、帝国銀行印、裏面が赤字の額面表示、旧額面様式の地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：男性肖像、10億の額面、帝国銀行印／裏：赤字の額面表示、旧額面様式の地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-1000000000-1923-front.jpg",
+        "back": "media/de-1000000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-1-1940",
+      "type": "banknote",
+      "country": "ナチス・ドイツ",
+      "region": "ヨーロッパ",
+      "currency": "ライヒスマルク",
+      "denomination": "1",
+      "year": "1940年代",
+      "series": "第二次世界大戦期",
+      "issueEndDate": "",
+      "title": "1 ライヒスマルク",
+      "story": "肖像・人物：人物肖像を置かず、官製の文字と紋章を中心とする。発行背景：第二次世界大戦期に流通した1ライヒスマルクの小額券。当時の社会情勢：価格・賃金統制、配給制、軍需優先の戦時経済下で補助的な日常決済を担った。特殊な点：Reichskreditkassenではなく国家通貨の小額紙幣として、褐色単色と簡素な両面印刷を用いる。採用モチーフは、表面が額面、帝国鷲と鉤十字、発行文言、裏面が額面数字、法的文言、装飾枠である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：額面、帝国鷲と鉤十字、発行文言／裏：額面数字、法的文言、装飾枠",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-1-1940-front.jpg",
+        "back": "media/de-1-1940-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "at-1000-1922",
+      "type": "banknote",
+      "country": "オーストリア＝ハンガリー帝国",
+      "region": "ヨーロッパ",
+      "currency": "クローネ",
+      "denomination": "1,000",
+      "year": "1920年代",
+      "series": "第一共和国移行期",
+      "issueEndDate": "",
+      "title": "1,000 クローネ",
+      "story": "肖像・人物：古典的な女性頭部を中央に配する。発行背景：帝国崩壊後にも旧オーストリア＝ハンガリー銀行券を基礎として流通した1,000クローネ券。当時の社会情勢：第一次世界大戦後の領土縮小、財政赤字とインフレの中で、各継承国が加刷や新通貨移行を進めた。特殊な点：多言語帝国の旧様式と精密な輪形彩紋を残し、国家分裂後の通貨継承を示す。採用モチーフは、表面が女性頭部、額面、旧銀行名、署名、裏面が同心円状の彩紋、額面数字である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：女性頭部、額面、旧銀行名、署名／裏：同心円状の彩紋、額面数字",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/at-1000-1922-front.jpg",
+        "back": "media/at-1000-1922-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "at-50-1986",
+      "type": "banknote",
+      "country": "オーストリア共和国",
+      "region": "ヨーロッパ",
+      "currency": "シリング",
+      "denomination": "50",
+      "year": "1986",
+      "series": "フロイト肖像シリーズ",
+      "issueEndDate": "",
+      "title": "50 シリング",
+      "story": "肖像・人物：精神分析を創始したジークムント・フロイトを描く。発行背景：ユーロ導入前のオーストリア・シリング最終世代に属する50シリング券。当時の社会情勢：冷戦末期の安定した社会市場経済と、文化・科学者を国家的遺産として顕彰する姿勢を反映する。特殊な点：肖像の細線、潜像的な曲線、建築物を組み合わせた精密な偽造防止意匠。採用モチーフは、表面がジークムント・フロイト、署名、幾何学曲線、裏面がウィーンのヨーゼフィヌム、医史学建築である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ジークムント・フロイト、署名、幾何学曲線／裏：ウィーンのヨーゼフィヌム、医史学建築",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/at-50-1986-front.jpg",
+        "back": "media/at-50-1986-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "sheet-tr-100-1983",
+      "type": "banknote",
+      "country": "トルコ共和国",
+      "region": "アジア",
+      "currency": "トルコリラ",
+      "denomination": "100",
+      "year": "1983",
+      "series": "旧管理表から移行",
+      "issueEndDate": "1989/08/21",
+      "title": "100 トルコリラ",
+      "story": "肖像・人物：共和国建国者ムスタファ・ケマル・アタテュルクを描く。発行背景：高インフレ下の第7次発行系列に属する100旧トルコリラ券。当時の社会情勢：1980年軍事クーデター後、輸出志向改革と政治統制が併存し、物価上昇が額面の高額化を促した。特殊な点：アタテュルク肖像を共通化し、透かし欄と精密彩紋で国家統一を強調する。採用モチーフは、表面がアタテュルク、国章的星月、額面、裏面が山岳・水辺の景観、額面数字である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：アタテュルク、国章的星月、額面／裏：山岳・水辺の景観、額面数字",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-tr-100-1983-front.jpg",
+        "back": "media/sheet-tr-100-1983-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-tr-500",
+      "type": "banknote",
+      "country": "トルコ共和国",
+      "region": "アジア",
+      "currency": "トルコリラ",
+      "denomination": "500",
+      "year": "不明",
+      "series": "旧管理表から移行",
+      "issueEndDate": "",
+      "title": "500 トルコリラ",
+      "story": "肖像・人物：共和国建国者ムスタファ・ケマル・アタテュルクを描く。発行背景：1980年代の高インフレに対応して発行された500旧トルコリラ券。当時の社会情勢：市場自由化が進む一方で通貨価値の低下が続き、日常券の額面は急速に大きくなった。特殊な点：表面の共通肖像に対し、裏面は近代教育と共和国建設を象徴する建築を置く。採用モチーフは、表面がアタテュルク、チューリップ文様、額面、裏面がイスタンブール大学正門、モスクの尖塔である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：アタテュルク、チューリップ文様、額面／裏：イスタンブール大学正門、モスクの尖塔",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-tr-500-front.jpg",
+        "back": "media/sheet-tr-500-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-hu-1946",
+      "type": "banknote",
+      "country": "ハンガリー",
+      "region": "ヨーロッパ",
+      "currency": "ペンゴ",
+      "denomination": "100兆",
+      "year": "1946",
+      "series": "旧管理表から移行",
+      "issueEndDate": "",
+      "title": "100兆 ペンゴ",
+      "story": "肖像・人物：若い女性の寓意的肖像を配する。発行背景：1946年に発行された100兆ペンゲー、すなわち1億Bペンゲー相当の超高額面券。当時の社会情勢：第二次世界大戦後の生産設備喪失、賠償負担と財政赤字により、ペンゲーは世界史上最悪級のハイパーインフレーションへ陥った。特殊な点：数字の巨大さだけでなくBペンゲーという十億倍単位を用い、まもなくフォリントへ交代した。採用モチーフは、表面が女性寓意像、超高額面、ハンガリー銀行名、裏面が国会議事堂、ドナウ河岸、超高額面文字である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：女性寓意像、超高額面、ハンガリー銀行名／裏：国会議事堂、ドナウ河岸、超高額面文字",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 44,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-hu-1946-front.jpg",
+        "back": "media/sheet-hu-1946-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-fi-10-1986",
+      "type": "banknote",
+      "country": "フィンランド共和国",
+      "region": "ヨーロッパ",
+      "currency": "マルッカ",
+      "denomination": "10",
+      "year": "1986",
+      "series": "旧管理表から移行",
+      "issueEndDate": "2001/12/31",
+      "title": "10 マルッカ",
+      "story": "肖像・人物：『空飛ぶフィンランド人』と呼ばれた長距離走者パーヴォ・ヌルミを描く。発行背景：1986年改刷の10マルッカ券で、福祉国家と文化・スポーツの功績者を扱うシリーズ。当時の社会情勢：冷戦末期の安定した北欧社会で流通し、1990年代の不況とユーロ移行前まで使われた。特殊な点：縦に反復するヌルミ透かしと機械読取用の点状透かしを備える。採用モチーフは、表面がパーヴォ・ヌルミ、額面、青色幾何学線、裏面がヘルシンキ・オリンピックスタジアム、走路である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：パーヴォ・ヌルミ、額面、青色幾何学線／裏：ヘルシンキ・オリンピックスタジアム、走路",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-fi-10-1986-front.jpg",
+        "back": "media/sheet-fi-10-1986-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-fr-10-1966",
+      "type": "banknote",
+      "country": "フランス共和国",
+      "region": "ヨーロッパ",
+      "currency": "フラン",
+      "denomination": "10",
+      "year": "1966",
+      "series": "旧管理表から移行",
+      "issueEndDate": "1974/11/04",
+      "title": "10 フラン",
+      "story": "肖像・人物：啓蒙思想家ヴォルテールを羽根ペンとともに描く。発行背景：第五共和政下で旧10新フラン券を置き換えた10フラン券。当時の社会情勢：戦後成長『栄光の30年』の中で新フランが定着し、文学・思想家を国家文化として顕彰した。特殊な点：表裏で同一人物を異なる居所と組み合わせ、肖像透かしもヴォルテールとする。採用モチーフは、表面がヴォルテール、羽根ペン、チュイルリー宮殿フロール館、裏面がヴォルテール、シレー城、庭園である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ヴォルテール、羽根ペン、チュイルリー宮殿フロール館／裏：ヴォルテール、シレー城、庭園",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-fr-10-1966-front.jpg",
+        "back": "media/sheet-fr-10-1966-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-fr-5-1965",
+      "type": "banknote",
+      "country": "フランス共和国",
+      "region": "ヨーロッパ",
+      "currency": "新フラン",
+      "denomination": "5",
+      "year": "1965",
+      "series": "旧管理表から移行",
+      "issueEndDate": "2002/02/17",
+      "title": "5 新フラン",
+      "story": "肖像・人物：作家ヴィクトル・ユゴーを描く。発行背景：1958年の100分の1デノミネーションに対応し、旧500フラン意匠へ5新フラン表示を加えた券。当時の社会情勢：第五共和政成立と通貨安定化の時期に、文学者とパリの都市景観を国民的象徴として用いた。特殊な点：旧券の図版をほぼ継承したため、新旧通貨移行を券面上で直接確認できる。採用モチーフは、表面がヴィクトル・ユゴー、パンテオン、月桂樹、裏面がヴィクトル・ユゴー、ヴォージュ広場、樹木である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ヴィクトル・ユゴー、パンテオン、月桂樹／裏：ヴィクトル・ユゴー、ヴォージュ広場、樹木",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-fr-5-1965-front.jpg",
+        "back": "media/sheet-fr-5-1965-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-yu-1993",
+      "type": "banknote",
+      "country": "ユーゴスラビア連邦共和国",
+      "region": "ヨーロッパ",
+      "currency": "ディナール",
+      "denomination": "500億",
+      "year": "1993",
+      "series": "旧管理表から移行",
+      "issueEndDate": "",
+      "title": "500億 ディナール",
+      "story": "肖像・人物：セルビア公ミラン・オブレノヴィッチを描く。発行背景：ユーゴスラビア連邦共和国が1993年に発行した500億ディナール券。当時の社会情勢：国際制裁、内戦の波及、生産低下と財政赤字の貨幣化により、日々の物価が激変するハイパーインフレーションとなった。特殊な点：十一桁の額面を持ちながら短期間で購買力を失い、翌年の通貨改革前に消えた。採用モチーフは、表面がミラン・オブレノヴィッチ、500億の数字、彩紋、裏面がオブレノヴィッチ家の邸宅、巨大額面である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ミラン・オブレノヴィッチ、500億の数字、彩紋／裏：オブレノヴィッチ家の邸宅、巨大額面",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 5,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 46,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-yu-1993-front.jpg",
+        "back": "media/sheet-yu-1993-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-fr-5-1966",
+      "type": "banknote",
+      "country": "フランス共和国",
+      "region": "ヨーロッパ",
+      "currency": "新フラン",
+      "denomination": "5",
+      "year": "1966",
+      "series": "旧管理表から移行",
+      "issueEndDate": "1970/01/08",
+      "title": "5 新フラン",
+      "story": "肖像・人物：細菌学者ルイ・パスツールを描く。発行背景：1967年から流通したフランス最後の5フラン紙幣。当時の社会情勢：高度成長期に科学研究と公衆衛生の成果を国家的記憶として顕彰し、のちに小額面は硬貨へ移った。特殊な点：肖像透かしに加え、狂犬病ワクチンの逸話を建築・彫像・桑・葡萄で語る。採用モチーフは、表面がルイ・パスツール、パスツール研究所、葡萄房、裏面がルイ・パスツール、羊飼いジュピーユ像、実験・養蚕意匠である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ルイ・パスツール、パスツール研究所、葡萄房／裏：ルイ・パスツール、羊飼いジュピーユ像、実験・養蚕意匠",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-fr-5-1966-front.jpg",
+        "back": "media/sheet-fr-5-1966-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-fr-5-1943",
+      "type": "banknote",
+      "country": "フランス共和国",
+      "region": "ヨーロッパ",
+      "currency": "フラン",
+      "denomination": "5",
+      "year": "1943",
+      "series": "旧管理表から移行",
+      "issueEndDate": "1947/10/30",
+      "title": "5 フラン",
+      "story": "肖像・人物：特定の著名人ではなく、ピレネーの羊飼いとアジャン地方の少女を描く。発行背景：占領期の1943年に作られた5フラン『羊飼い』券。当時の社会情勢：第二次世界大戦下の物資不足と統制経済の中、神話的寓意から地方の労働と生活を示す現実的主題へ移った。特殊な点：小型券の表裏で異なる地方衣装を用い、農村フランスの多様性を強調する。採用モチーフは、表面がピレネーの羊飼い、山岳衣装、杖、裏面がアジャン地方の少女、白い頭巾、花、金色の十字架である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ピレネーの羊飼い、山岳衣装、杖／裏：アジャン地方の少女、白い頭巾、花、金色の十字架",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 44,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-fr-5-1943-front.jpg",
+        "back": "media/sheet-fr-5-1943-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-saar-5-1947",
+      "type": "banknote",
+      "country": "ザール保護領",
+      "region": "ヨーロッパ",
+      "currency": "ザールマルク",
+      "denomination": "5",
+      "year": "1947",
+      "series": "旧管理表から移行",
+      "issueEndDate": "1959/06/29",
+      "title": "5 ザールマルク",
+      "story": "肖像・人物：古典的女性頭部と労働を表す女性寓意像を描く。発行背景：戦後フランス管理下のザールで1947年に発行された5マルク券。当時の社会情勢：石炭・鉄鋼地帯ザールの帰属が未確定で、ドイツ通貨圏からフラン圏へ移る過渡期に使われた。特殊な点：国名をSAAR／SARREと併記し、短命なザールマルクからザールフランへの移行を示す。採用モチーフは、表面が古典的女性頭部、葡萄・植物装飾、独仏表記、裏面が女性労働寓意像、産業と農業の象徴である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：古典的女性頭部、葡萄・植物装飾、独仏表記／裏：女性労働寓意像、産業と農業の象徴",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-saar-5-1947-front.jpg",
+        "back": "media/sheet-saar-5-1947-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "pe-10-1985",
+      "type": "banknote",
+      "country": "ペルー",
+      "region": "南アメリカ",
+      "currency": "インティ",
+      "denomination": "10",
+      "year": "1985",
+      "series": "インティ紙幣シリーズ",
+      "issueEndDate": "",
+      "title": "10 インティ",
+      "story": "肖像・人物：作家・学者リカルド・パルマを描く。発行背景：1985年の通貨改革で導入されたインティ初期の10券。当時の社会情勢：債務危機と財政難の中、ガルシア政権の政策後にインフレが加速し、低額面券は急速に役割を失った。特殊な点：文化人の肖像と綿花生産の労働景観を結び、都市文化と農業を表裏に置く。採用モチーフは、表面がリカルド・パルマ、署名、幾何学文様、裏面が先住民農民、綿花の収穫、農地である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：リカルド・パルマ、署名、幾何学文様／裏：先住民農民、綿花の収穫、農地",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/pe-10-1985-front.jpg",
+        "back": "media/pe-10-1985-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "pe-50-1986",
+      "type": "banknote",
+      "country": "ペルー",
+      "region": "南アメリカ",
+      "currency": "インティ",
+      "denomination": "50",
+      "year": "1986",
+      "series": "インティ紙幣シリーズ",
+      "issueEndDate": "",
+      "title": "50 インティ",
+      "story": "肖像・人物：政治家ニコラス・デ・ピエロラを肖像とする。発行背景：インティ制度初期の50券として1980年代半ばに流通した。当時の社会情勢：対外債務、財政赤字と物資不足が進み、通貨への信認低下が後のハイパーインフレーションにつながった。特殊な点：政治家肖像に対し、裏面では山間部への物資供給を描き国土の地理的条件を示す。採用モチーフは、表面がニコラス・デ・ピエロラ、国章、額面、裏面が物資輸送用ヘリコプター、山地の設備である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ニコラス・デ・ピエロラ、国章、額面／裏：物資輸送用ヘリコプター、山地の設備",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/pe-50-1986-front.jpg",
+        "back": "media/pe-50-1986-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "ar-5-late-peso",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "ペソ",
+      "denomination": "5",
+      "year": "1970年代後半–1980年代前半",
+      "series": "旧ペソ末期シリーズ",
+      "issueEndDate": "",
+      "title": "5 ペソ",
+      "story": "肖像・人物：独立の英雄ホセ・デ・サン＝マルティンを描く。発行背景：ペソ・レイ末期からペソ・アルヘンティーノ移行期に連なる5ペソ券。当時の社会情勢：軍政末期の債務危機と高インフレにより通貨単位の切替えが相次ぎ、1985年にはさらにアウストラルへ交代した。特殊な点：同一英雄肖像を長期に反復し、裏面にイグアスの滝を置く国家景観型意匠。採用モチーフは、表面がホセ・デ・サン＝マルティン、国章、月桂樹、裏面がイグアスの滝、亜熱帯林である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ホセ・デ・サン＝マルティン、国章、月桂樹／裏：イグアスの滝、亜熱帯林",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-5-late-peso-front.jpg",
+        "back": "media/ar-5-late-peso-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "hu-10000b-1946",
+      "type": "banknote",
+      "country": "ハンガリー",
+      "region": "ヨーロッパ",
+      "currency": "B-ペンゲー",
+      "denomination": "10,000",
+      "year": "1946",
+      "series": "戦後ハイパーインフレーション最終期",
+      "issueEndDate": "",
+      "title": "10,000 B-ペンゲー",
+      "story": "肖像・人物：若い女性の横顔を寓意像として描く。発行背景：1946年6月に発行された1万Bペンゲー、すなわち10兆ペンゲー相当券。当時の社会情勢：第二次世界大戦後の生産設備喪失、賠償負担と財政赤字により、ペンゲーは世界史上最悪級のハイパーインフレーションへ陥った。特殊な点：Bはbillionを示す十億倍単位で、裏面も装飾中心に簡略化され、フォリント導入直前の異常な桁数を示す。採用モチーフは、表面が女性横顔、1万Bの額面、ハンガリー銀行名、裏面が巨大額面、楕円彩紋、B記号である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：女性横顔、1万Bの額面、ハンガリー銀行名／裏：巨大額面、楕円彩紋、B記号",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 44,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/hu-10000b-1946-front.jpg",
+        "back": "media/hu-10000b-1946-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-2-1914",
+      "type": "banknote",
+      "country": "ドイツ帝国",
+      "region": "ヨーロッパ",
+      "currency": "マルク",
+      "denomination": "2",
+      "year": "1914–1918",
+      "series": "第一次世界大戦期・戦時貸付金庫券",
+      "issueEndDate": "",
+      "title": "2 マルク",
+      "story": "肖像・人物：人物肖像を置かず帝国鷲を中心とする。発行背景：第一次世界大戦の開戦後、金貨不足を補うため貸付金庫が発行した2マルク券。当時の社会情勢：金兌換停止と戦費調達の下で硬貨が退蔵され、少額決済用の紙券需要が急増した。特殊な点：通常のライヒスバンク券ではなくDarlehnskassenscheinであり、赤緑二色と大きな帝国鷲を用いる。採用モチーフは、表面が額面文字、貸付金庫の発行文、帝国印章、裏面が帝国鷲、二つの円形彩紋、額面数字である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：額面文字、貸付金庫の発行文、帝国印章／裏：帝国鷲、二つの円形彩紋、額面数字",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-2-1914-front.jpg",
+        "back": "media/de-2-1914-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-50-1920",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "マルク",
+      "denomination": "50",
+      "year": "1920",
+      "series": "ライヒスバンク券",
+      "issueEndDate": "",
+      "title": "50 マルク",
+      "story": "肖像・人物：古典絵画風の女性像を表面に配する。発行背景：ヴァイマル共和国初期の1920年に発行された50マルク券。当時の社会情勢：敗戦、革命、賠償問題と財政赤字でマルク下落が始まったが、1923年ほどの簡略券にはまだ至っていない。特殊な点：表面の精緻な女性像と、裏面の労働者・商人像を組み合わせ、芸術性の高い大型券とする。採用モチーフは、表面が女性寓意像、帝国銀行名、額面、彩紋、裏面が労働者と商人、中央額面、建築的装飾である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：女性寓意像、帝国銀行名、額面、彩紋／裏：労働者と商人、中央額面、建築的装飾",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-50-1920-front.jpg",
+        "back": "media/de-50-1920-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-1000-1922",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "1,000",
+      "year": "1922",
+      "series": "インフレ進行期ライヒスバンク券",
+      "issueEndDate": "",
+      "title": "1,000 パピエルマルク",
+      "story": "肖像・人物：古典絵画に基づく長髪の男性肖像を置く。発行背景：1922年9月に発行された1,000マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：旧来の肖像入り1,000マルク様式を使い続けた直後、同額面が日常小額へ転落したことを示す。採用モチーフは、表面が男性肖像、帝国銀行印、額面、透かし欄、裏面が大形額面、赤色の加刷的文言、地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：男性肖像、帝国銀行印、額面、透かし欄／裏：大形額面、赤色の加刷的文言、地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-1000-1922-front.jpg",
+        "back": "media/de-1000-1922-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-20000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "20,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション期",
+      "issueEndDate": "",
+      "title": "20,000 パピエルマルク",
+      "story": "肖像・人物：人物肖像を省き数字と文字を前面に出す。発行背景：1923年2月に発行された2万マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：複雑な肖像を使わず短納期の文字中心デザインとし、額面の急変へ印刷工程を合わせた。採用モチーフは、表面が2万の額面文字、帝国銀行印、署名、黒色枠、裏面が大形額面、花形彩紋、緑と橙の地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：2万の額面文字、帝国銀行印、署名、黒色枠／裏：大形額面、花形彩紋、緑と橙の地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-20000-1923-front.jpg",
+        "back": "media/de-20000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-20000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "20,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション中期",
+      "issueEndDate": "",
+      "title": "20,000,000 パピエルマルク",
+      "story": "肖像・人物：人物肖像を用いない緊急高額面券。発行背景：1923年7月25日付の2,000万マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：表裏の版記号が異なる組を避ける必要がある券種で、裏面は淡く印刷工程も簡略化されている。採用モチーフは、表面が2,000万の装飾文字、帝国銀行印、署名、裏面が淡い反転額面、簡略地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：2,000万の装飾文字、帝国銀行印、署名／裏：淡い反転額面、簡略地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-20000000-1923-front.jpg",
+        "back": "media/de-20000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "de-50000000-1923",
+      "type": "banknote",
+      "country": "ドイツ（ヴァイマル共和国）",
+      "region": "ヨーロッパ",
+      "currency": "パピエルマルク",
+      "denomination": "50,000,000",
+      "year": "1923",
+      "series": "ハイパーインフレーション中期",
+      "issueEndDate": "",
+      "title": "50,000,000 パピエルマルク",
+      "story": "肖像・人物：人物肖像を省いた片面中心の構成。発行背景：1923年7月25日付の5,000万マルク券。当時の社会情勢：第一次世界大戦後の賠償、財政赤字、ルール占領への消極的抵抗を支える紙幣増発が重なり、1923年には賃金と物価が日ごとに書き換わるハイパーインフレーションとなった。特殊な点：巨大な額面文字を最優先し、裏面をほぼ無地にすることで大量・迅速な供給へ対応した。採用モチーフは、表面が5,000万の巨大額面、帝国銀行印、署名、裏面がほぼ無地の裏面、淡い透け地紋である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：5,000万の巨大額面、帝国銀行印、署名／裏：ほぼ無地の裏面、淡い透け地紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-50000000-1923-front.jpg",
+        "back": "media/de-50000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": []
+    },
+    {
+      "id": "sheet-dk-20-1972",
+      "type": "banknote",
+      "country": "デンマーク",
+      "region": "ヨーロッパ",
+      "currency": "クローネ",
+      "denomination": "20",
+      "year": "1972",
+      "series": "旧管理表から移行",
+      "issueEndDate": "",
+      "title": "20 クローネ",
+      "story": "肖像・人物：商人ペーター・トゥテインの妻パウリーネ・トゥテインを、画家イェンス・ユールの肖像画から描く。発行背景：1972年系列として設計され、1980年から流通した20クローネ券。当時の社会情勢：北欧福祉国家の安定期に、王侯ではない歴史的肖像と身近な動物を組み合わせた。特殊な点：パレットと筆の透かしを持ち、表面肖像と裏面動物を統一したシリーズ設計。採用モチーフは、表面がパウリーネ・トゥテイン、額面、ロココ風彩紋、裏面が雄雌二羽のイエスズメである。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：パウリーネ・トゥテイン、額面、ロココ風彩紋／裏：雄雌二羽のイエスズメ",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-dk-20-1972-front.jpg",
+        "back": "media/sheet-dk-20-1972-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    },
+    {
+      "id": "sheet-dk-10-1936",
+      "type": "banknote",
+      "country": "デンマーク",
+      "region": "ヨーロッパ",
+      "currency": "クローネ",
+      "denomination": "10",
+      "year": "1936",
+      "series": "旧管理表から移行",
+      "issueEndDate": "",
+      "title": "10 クローネ",
+      "story": "肖像・人物：人物肖像を表面に置かず、裏面に神話上のメルクリウス頭部を配する。発行背景：1936年法に基づく金兌換文言を残した10クローネ国立銀行券。当時の社会情勢：世界恐慌後の管理通貨化と第二次世界大戦前夜にあたり、法文上の金兌換表現と現実の通貨管理が交差する。特殊な点：5クローネ券と同じ高さで視覚障害者が触覚判別しにくかった点も資料上の特徴。採用モチーフは、表面が額面文字、海藻状装飾、金兌換文言、裏面がメルクリウス頭部、三頭の獅子、葉飾りである。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：額面文字、海藻状装飾、金兌換文言／裏：メルクリウス頭部、三頭の獅子、葉飾り",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "202211130",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 44,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/sheet-dk-10-1936-front.jpg",
+        "back": "media/sheet-dk-10-1936-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "旧管理表"
+      ]
+    }
+  ],
+  "lots": [],
+  "trades": [],
+  "runtime": {
+    "mediaDirectory": "GitHub Pages（閲覧専用）"
+  }
+}
