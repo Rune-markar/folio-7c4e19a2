@@ -126,6 +126,7 @@ img, video { height: auto; }
 .country-symbol.is-active { box-shadow: 0 0 0 2px rgba(215,183,115,.09); }
 .country-flag { width: 55px; height: 37px; flex: 0 0 auto; overflow: hidden; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.34); border-radius: 4px; background: #fff; box-shadow: 0 3px 9px rgba(0,0,0,.22); }
 .country-flag img { width: 100%; height: 100%; display: block; object-fit: contain; }
+.country-flag-label { color: #24303c; font-family: "Times New Roman", serif; font-size: 11px; font-weight: 800; letter-spacing: .08em; }
 .country-symbol strong, .country-symbol small { display: block; }
 .country-symbol strong { max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; }
 .country-symbol small { color: rgba(255,255,255,.46); font-size: 8px; line-height: 1.45; }

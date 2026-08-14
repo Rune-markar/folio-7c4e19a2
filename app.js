@@ -22,7 +22,7 @@ const palette = ["#d9c798", "#b9c7b1", "#d6aaa2", "#bfc4cf", "#ccb88f", "#a9c3bd
 const historicalAtlas = [
   { era: "2018", label: "2018", period: "現代", mapYear: 2018, featureNames: ["Venezuela"], country: "ベネズエラ", officialName: "ベネズエラ・ボリバル共和国", currency: "ボリバル・ソベラノ（2018年8月導入）", flag: "/flags/venezuela-2006.svg", flagAlt: "2006年以降のベネズエラ国旗", flagPeriod: "2006–現在", short: "ベネズエラ", detail: "通貨改革が行われ、ボリバル・ソベラノが登場した時代。" },
   { era: "1994", label: "1994", period: "南米の安定化", mapYear: 1994, featureNames: ["Chile"], country: "チリ", officialName: "チリ共和国", currency: "チリ・ペソ", flag: "/flags/chile.svg", flagAlt: "1994年当時のチリ国旗", flagPeriod: "1817–現在", short: "チリ", detail: "民主化後のチリで、ペソが日常の取引を支えていた時代。" },
-  { era: "1993", label: "1993", period: "再編の時代", mapYear: 1993, featureNames: ["Yugoslavia"], country: "ユーゴスラビア連邦共和国", currency: "ユーゴスラビア・ディナール", flag: "/flags/yugoslavia-1992.svg", flagAlt: "1992年から2003年のユーゴスラビア連邦共和国旗", flagPeriod: "1992–2003", short: "ユーゴスラビア", detail: "国家の再編と急激なインフレーションが紙幣に刻まれた時代。" },
+  { era: "1993", label: "1992–2003", period: "連邦共和国ディナール", mapYear: 1993, featureNames: ["Yugoslavia"], country: "ユーゴスラビア連邦共和国", currency: "ユーゴスラビア・ディナール", currencyFamily: "yugoslavia", currencyKey: "yugoslavia-federal-dinar", currencyOrder: 2, regimeLabel: "ユーゴスラビア連邦共和国", flag: "/flags/yugoslavia-1992.svg", flagAlt: "1992年から2003年のユーゴスラビア連邦共和国旗", flagPeriod: "1992–2003", short: "ユーゴスラビア", detail: "社会主義連邦の解体後、セルビアとモンテネグロで構成された連邦共和国のディナール。国家再編と急激なインフレーションが紙幣に刻まれた時代。" },
   { era: "1987", label: "1987", period: "インティ時代", mapYear: 1987, featureNames: ["Peru"], country: "ペルー", officialName: "ペルー共和国", currency: "ペルー・インティ", flag: "/flags/peru.svg", flagAlt: "1987年当時のペルー国旗", flagPeriod: "1950–現在", short: "ペルー", detail: "インフレーションが進行するなか、インティ紙幣が流通していた時代。" },
   { era: "1986", label: "1986", period: "冷戦後期", mapYear: 1986, featureNames: ["Austria"], country: "オーストリア共和国", currency: "オーストリア・シリング", flag: "/flags/austria.svg", flagAlt: "オーストリア国旗", flagPeriod: "1945–現在", short: "オーストリア", detail: "シリングが流通していた、欧州統合前のオーストリア。" },
   { era: "1986", label: "1986", period: "冷戦後期", mapYear: 1986, featureNames: ["Finland"], country: "フィンランド共和国", currency: "フィンランド・マルッカ", flag: "/flags/finland.svg", flagAlt: "フィンランド国旗", flagPeriod: "1918–現在", short: "フィンランド", detail: "マルッカ紙幣が北欧の日常を支えていた時代。" },
@@ -45,7 +45,32 @@ const historicalAtlas = [
   { era: "1948", label: "1948–2001", period: "ドイツ・マルク", eraPeriod: "戦後の通貨改革", mapYear: 1946, mapLegend: "1946年境界資料（1948年通貨改革）", featureNames: ["German Federal Republic"], country: "ドイツ連邦共和国", nativeName: "Bundesrepublik Deutschland", currency: "ドイツ・マルク（Deutsche Mark）", currencyFamily: "germany", currencyKey: "germany-deutsche-mark", currencyOrder: 5, regimeLabel: "西ドイツ → 統一ドイツ", flag: "/flags/weimar-1919.svg", flagAlt: "ドイツ連邦共和国旗", flagPeriod: "1949–現在", short: "西ドイツ", detail: "1948年の西側占領地域の通貨改革で導入され、1949年以後は西ドイツ、1990年以後は統一ドイツの通貨となりました。" },
   { era: "1948", label: "1948–1990", period: "東ドイツ・マルク", eraPeriod: "戦後の通貨改革", mapYear: 1946, mapLegend: "1946年境界資料（東側占領地域）", featureNames: ["German Democratic Republic"], country: "ドイツ民主共和国", nativeName: "Deutsche Demokratische Republik", currency: "東ドイツ・マルク（Mark der DDR）", currencyFamily: "germany", currencyKey: "germany-ddr-mark", currencyOrder: 6, regimeLabel: "東ドイツ", flag: "/flags/east-germany.svg", flagAlt: "ドイツ民主共和国旗", flagPeriod: "1959–1990", short: "東ドイツ", detail: "東側占領地域の通貨改革に始まり、ドイツ民主共和国で1990年の通貨統合まで使われたマルクです。" },
   { era: "2002", label: "2002–", period: "ユーロ", mapYear: 2018, mapLegend: "2018年境界資料（2002年現金流通開始）", featureNames: ["German Federal Republic"], country: "ドイツ連邦共和国（ユーロ）", nativeName: "Bundesrepublik Deutschland", currency: "ユーロ（Euro）", currencyFamily: "germany", currencyKey: "germany-euro", currencyOrder: 7, regimeLabel: "統一ドイツ", flag: "/flags/weimar-1919.svg", flagAlt: "ドイツ連邦共和国旗", flagPeriod: "1949–現在", short: "ドイツ", detail: "1999年に会計通貨として導入され、2002年からユーロ紙幣・硬貨の流通が始まりました。" },
-  { era: "1914", label: "1914", period: "大戦の始まり", mapYear: 1914, featureNames: ["Denmark"], country: "デンマーク", officialName: "デンマーク王国", currency: "デンマーク・クローネ", flag: "/flags/denmark.svg", flagAlt: "1914年当時のデンマーク国旗", flagPeriod: "1914年仕様", short: "デンマーク", detail: "北欧の王国でクローネ紙幣が使われていた時代。" }
+  { era: "1914", label: "1914", period: "大戦の始まり", mapYear: 1914, featureNames: ["Denmark"], country: "デンマーク", officialName: "デンマーク王国", currency: "デンマーク・クローネ", flag: "/flags/denmark.svg", flagAlt: "1914年当時のデンマーク国旗", flagPeriod: "1914年仕様", short: "デンマーク", detail: "北欧の王国でクローネ紙幣が使われていた時代。" },
+  { era: "1943", label: "1942–1945", period: "日本軍占領地ペソ", eraPeriod: "アジア太平洋戦争", mapYear: 1943, mapLegend: "1943年境界資料（占領・実効支配域ではありません）", mapBoundaryLabel: "フィリピンの外郭", mapControl: "日本軍占領下。1943年10月に第二共和国が成立", territoryMode: "outline-only", featureNames: ["Philippines"], country: "フィリピン", officialName: "日本軍占領下フィリピン", currency: "日本軍占領地ペソ", currencyFamily: "philippines", currencyKey: "philippines-japanese-occupation-peso", currencyOrder: 1, regimeLabel: "日本軍政 → 第二共和国", flagPeriod: "1942–1945", short: "フィリピン", detail: "日本軍が発行した軍票の時期。フィリピンの地理的・紙幣史的な系統として戦後の共和国へ接続しますが、金色線は占領軍の実効支配域ではなくフィリピンの外郭です。" },
+  { era: "2018", label: "1946–現在", period: "共和国のフィリピン・ペソ", mapYear: 2018, mapLegend: "2018年境界資料（1946年独立後の系統）", featureNames: ["Philippines"], country: "フィリピン", officialName: "フィリピン共和国", currency: "フィリピン・ペソ", currencyFamily: "philippines", currencyKey: "philippines-republic-peso", currencyOrder: 2, regimeLabel: "フィリピン共和国", flagPeriod: "1946–現在", short: "フィリピン", detail: "日本占領期の軍票とは発行主体も通貨制度も異なりますが、同じ地域の紙幣史を比較する後続期として表示します。" },
+  { era: "1885", label: "1885", period: "明治初期の日本銀行兌換銀券", mapYear: 1914, mapLegend: "1914年境界資料（収蔵紙幣は1885年）", featureNames: ["Japan"], country: "大日本帝国", currency: "円", currencyFamily: "japan", currencyKey: "japan-meiji-yen", currencyOrder: 1, regimeLabel: "大日本帝国・明治期", flagPeriod: "1870–1999", short: "明治日本", detail: "日本銀行が開業後初めて発行した兌換銀券の時期。利用できる最古の境界資料との差を注記して表示します。" },
+  { era: "1943", label: "1938–1945", period: "戦時期の円", eraPeriod: "アジア太平洋戦争", mapYear: 1943, featureNames: ["Japan"], country: "大日本帝国", currency: "円", currencyFamily: "japan", currencyKey: "japan-wartime-yen", currencyOrder: 2, regimeLabel: "大日本帝国・戦時期", flagPeriod: "1870–1999", short: "戦時日本", detail: "日中戦争から敗戦前後に発行・流通した日本銀行券と政府紙幣の時期。占領地軍票はこの国内通貨系譜へ混ぜず、使用地域側の系譜で扱います。" },
+  { era: "2018", label: "1946–現在", period: "戦後・現代の円", mapYear: 2018, featureNames: ["Japan"], country: "日本", officialName: "日本国", currency: "円", currencyFamily: "japan", currencyKey: "japan-modern-yen", currencyOrder: 3, regimeLabel: "戦後日本", flagPeriod: "1999–現在", short: "日本", detail: "戦後の日本で継続する円の通貨期。帝国期との制度的連続と国家体制の断絶を分けて比較します。" },
+  { era: "1938", label: "1937–1939", period: "日本軍用円", mapYear: 1940, mapLegend: "1940年境界資料（収蔵紙幣は1937・1939年）", mapBoundaryLabel: "中華民国の外郭（占領域ではありません）", mapControl: "日本軍占領地域向け軍票。中国全域を日本の支配域としては表示しない", territoryMode: "outline-only", featureNames: ["China"], country: "中華民国", currency: "日本軍用円", currencyFamily: "republic-of-china", currencyKey: "roc-japanese-military-yen", currencyOrder: 1, regimeLabel: "日中戦争期の中華民国", flagPeriod: "1928–現在", short: "中華民国", detail: "日本軍占領地域向けの軍票。地図は当時の中華民国外郭であり、日本軍の占領・実効支配域を示すものではありません。" },
+  { era: "2018", label: "1949–現在", period: "台湾の新台湾ドル", mapYear: 2018, featureNames: ["Taiwan"], country: "中華民国", officialName: "中華民国（台湾）", currency: "新台湾ドル", currencyFamily: "republic-of-china", currencyKey: "roc-new-taiwan-dollar", currencyOrder: 2, regimeLabel: "台湾の中華民国政府", flagPeriod: "1928–現在", short: "台湾", detail: "日中戦争期の大陸で使われた軍票とは別制度です。中華民国をめぐる紙幣史の後続期として表示するもので、主権・法的地位への見解を示す分類ではありません。" },
+  { era: "1943", label: "1942–1945", period: "日本軍占領地ルピー", eraPeriod: "アジア太平洋戦争", mapYear: 1943, mapLegend: "1943年境界資料（占領・実効支配域ではありません）", mapBoundaryLabel: "ビルマの外郭", territoryMode: "outline-only", featureNames: ["Myanmar (Burma)"], country: "ミャンマー", officialName: "日本軍占領下ビルマ", currency: "日本軍占領地ルピー", currencyFamily: "myanmar", currencyKey: "myanmar-japanese-occupation-rupee", currencyOrder: 1, regimeLabel: "日本軍政 → ビルマ国", flagPeriod: "1942–1945", short: "ミャンマー", detail: "日本軍占領地ルピーが流通したビルマの戦時期。現在のミャンマーへ続く地域の紙幣史として扱い、外郭を占領軍の実効支配域とはみなしません。" },
+  { era: "2018", label: "1948–現在", period: "独立後のチャット", mapYear: 2018, featureNames: ["Myanmar (Burma)"], country: "ミャンマー", officialName: "ミャンマー連邦共和国", currency: "チャット", currencyFamily: "myanmar", currencyKey: "myanmar-kyat", currencyOrder: 2, regimeLabel: "独立後のビルマ／ミャンマー", flagPeriod: "1948–現在", short: "ミャンマー", detail: "占領地軍票とは別制度の独立後通貨。地域の紙幣史を比較する後続期として系譜に含めます。" },
+  { era: "1943", label: "1942–1945", period: "日本軍占領地ドル", eraPeriod: "アジア太平洋戦争", mapYear: 1943, mapLegend: "1943年境界資料（マラヤ諸地域の外郭）", mapBoundaryLabel: "マラヤ諸地域の外郭", territoryMode: "outline-only", featureNames: ["Federated Malay States", "Unfederated Malay States"], country: "マレーシア", officialName: "日本軍占領下マラヤ", currency: "日本軍占領地ドル", currencyFamily: "malaysia", currencyKey: "malaya-japanese-occupation-dollar", currencyOrder: 1, regimeLabel: "日本軍政下マラヤ", flagPeriod: "1942–1945", short: "マラヤ", detail: "軍票の通用圏は現在のマレーシアだけでなくシンガポールや北ボルネオ等を含みました。地図は資料にあるマラヤ諸地域の外郭であり、通用圏全体や実効支配域の厳密な復元ではありません。" },
+  { era: "2018", label: "1967–現在", period: "マレーシア・リンギット", mapYear: 2018, featureNames: ["Malaysia"], country: "マレーシア", officialName: "マレーシア", currency: "リンギット", currencyFamily: "malaysia", currencyKey: "malaysia-ringgit", currencyOrder: 2, regimeLabel: "マレーシア", flagPeriod: "1963–現在", short: "マレーシア", detail: "占領地ドルの通用圏と現在の国境は一致しません。重なる地域の紙幣史をたどる後続期として表示します。" },
+  { era: "1951", label: "1951", period: "人民共和国初期の第2レフ", mapYear: 1947, mapLegend: "1947年境界資料（収蔵紙幣は1951年）", featureNames: ["Bulgaria"], country: "ブルガリア", officialName: "ブルガリア人民共和国", currency: "第2レフ", flagPeriod: "1946–1967", short: "ブルガリア", detail: "社会主義体制初期の通貨改革後に発行された第2レフ紙幣の時期。" },
+  { era: "1981", label: "1981", period: "社会主義ユーゴスラビア・ディナール", mapYear: 1983, mapLegend: "1983年境界資料（収蔵紙幣は1981年）", featureNames: ["Yugoslavia"], country: "ユーゴスラビア社会主義連邦共和国", currency: "ユーゴスラビア・ディナール", currencyFamily: "yugoslavia", currencyKey: "yugoslavia-sfr-dinar", currencyOrder: 1, regimeLabel: "社会主義連邦共和国", flagPeriod: "1946–1992", short: "ユーゴスラビア", detail: "六共和国からなる社会主義連邦のディナール。1990年代の国家再編と通貨混乱へ続く前段として表示します。" },
+  { era: "1988", label: "1988", period: "人民共和国末期の第3ズウォティ", mapYear: 1987, mapLegend: "1987年境界資料（収蔵紙幣は1988年）", featureNames: ["Poland"], country: "ポーランド", officialName: "ポーランド人民共和国", currency: "第3ズウォティ", flagPeriod: "1980–1990", short: "ポーランド", detail: "社会主義体制末期に流通した旧ズウォティ紙幣の時期。" },
+  { era: "1991", label: "1991", period: "旧レウ末期", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1991年）", featureNames: ["Rumania"], country: "ルーマニア", officialName: "ルーマニア", currency: "旧レウ", currencyFamily: "romania", currencyKey: "romania-old-leu", currencyOrder: 1, regimeLabel: "体制転換後のルーマニア", flagPeriod: "1989–現在", short: "ルーマニア", detail: "社会主義政権崩壊後、デノミネーション前の旧レウが流通した時期。" },
+  { era: "2005", label: "2005–現在", period: "新レウ", mapYear: 2018, mapLegend: "2018年境界資料（2005年デノミネーション）", featureNames: ["Rumania"], country: "ルーマニア", officialName: "ルーマニア", currency: "新レウ", currencyFamily: "romania", currencyKey: "romania-new-leu", currencyOrder: 2, regimeLabel: "現代ルーマニア", flagPeriod: "1989–現在", short: "ルーマニア", detail: "2005年に1万旧レウを1新レウとしたデノミネーション後の通貨期。" },
+  { era: "1992", label: "1992", period: "独立後のクーポン／フリヴニャ", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1992年）", featureNames: ["Ukraine"], country: "ウクライナ", officialName: "ウクライナ", currency: "フリヴニャ（1992年銘）", flagPeriod: "1992–現在", short: "ウクライナ", detail: "ソ連解体後、独自通貨制度を整えていった独立初期の紙幣。" },
+  { era: "1992", label: "1992–1999", period: "旧ベラルーシ・ルーブル", mapYear: 1993, mapLegend: "1993年境界資料（1992年発行）", featureNames: ["Belarus (Byelorussia)"], country: "ベラルーシ", officialName: "ベラルーシ共和国", currency: "旧ベラルーシ・ルーブル", currencyFamily: "belarus", currencyKey: "belarus-first-ruble", currencyOrder: 1, regimeLabel: "独立初期のベラルーシ", flagPeriod: "1991–1995", short: "ベラルーシ", detail: "ソ連解体後に導入された最初のベラルーシ・ルーブル紙幣の時期。" },
+  { era: "2000", label: "2000–2016", period: "第2ベラルーシ・ルーブル", mapYear: 2018, mapLegend: "2018年境界資料（2000年デノミネーション）", featureNames: ["Belarus (Byelorussia)"], country: "ベラルーシ", officialName: "ベラルーシ共和国", currency: "第2ベラルーシ・ルーブル", currencyFamily: "belarus", currencyKey: "belarus-second-ruble", currencyOrder: 2, regimeLabel: "ベラルーシ共和国", flagPeriod: "1995–2012", short: "ベラルーシ", detail: "2000年のデノミネーションで導入され、2016年の再デノミネーションまで使われた通貨期。" },
+  { era: "1981", label: "1981–1992", period: "社会主義期トゥグルグ", mapYear: 1983, mapLegend: "1983年境界資料（収蔵紙幣は1981年）", featureNames: ["Mongolia"], country: "モンゴル", officialName: "モンゴル人民共和国", currency: "トゥグルグ", currencyFamily: "mongolia", currencyKey: "mongolia-socialist-tugrik", currencyOrder: 1, regimeLabel: "モンゴル人民共和国", flagPeriod: "1945–1992", short: "モンゴル", detail: "社会主義体制下でスフバートルと国家図像を用いたトゥグルグ紙幣の時期。" },
+  { era: "1993", label: "1993–現在", period: "民主化後トゥグルグ", mapYear: 1993, featureNames: ["Mongolia"], country: "モンゴル", officialName: "モンゴル国", currency: "トゥグルグ", currencyFamily: "mongolia", currencyKey: "mongolia-democratic-tugrik", currencyOrder: 2, regimeLabel: "モンゴル国", flagPeriod: "1992–現在", short: "モンゴル", detail: "1992年憲法後、新国章と伝統文化を反映した紙幣系列。通貨名は継続しつつ国家体制の転換を示します。" },
+  { era: "1975", label: "1975–1992", period: "英領香港ドル", mapYear: 1983, mapLegend: "1983年境界資料・香港位置表示", mapBoundaryLabel: "香港の位置（境界未収録）", featureNames: [], focusCoordinates: [114.17, 22.32], country: "香港", officialName: "英領香港", currency: "香港ドル", currencyFamily: "hong-kong", currencyKey: "hong-kong-colonial-dollar", currencyOrder: 1, regimeLabel: "イギリス統治下香港", flagPeriod: "1959–1997", short: "香港", detail: "複数の発券銀行が香港ドルを発行したイギリス統治期。基礎地図に香港の個別境界がないため位置のみを示します。" },
+  { era: "2018", label: "1997–現在", period: "香港特別行政区の香港ドル", mapYear: 2018, mapLegend: "2018年境界資料・香港位置表示", mapBoundaryLabel: "香港の位置（境界未収録）", featureNames: [], focusCoordinates: [114.17, 22.32], country: "香港", officialName: "香港特別行政区", currency: "香港ドル", currencyFamily: "hong-kong", currencyKey: "hong-kong-sar-dollar", currencyOrder: 2, regimeLabel: "香港特別行政区", flagPeriod: "1997–現在", short: "香港", detail: "主権移管後も香港ドルと複数発券銀行の制度が続く時期。英領期との制度的連続を紙幣史の系譜として表示します。" },
+  { era: "2018", label: "2009–現在", period: "第3ウォン", mapYear: 2018, featureNames: ["Korea, People's Republic of"], country: "朝鮮民主主義人民共和国", currency: "第3ウォン", flagPeriod: "1948–現在", short: "北朝鮮", detail: "2009年のデノミネーション後の通貨期。収蔵品には2017～2019年の記念加刷券を含みます。" },
+  { era: "2010", label: "1993–現在", period: "モルドバ・レウ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2010年）", featureNames: ["Moldova"], country: "モルドバ", officialName: "モルドバ共和国", currency: "モルドバ・レウ", flagPeriod: "1990–現在", short: "モルドバ", detail: "独立後に導入されたモルドバ・レウの通貨期。" }
 ];
 const atlasRegionOverrides = new Map([
   ["オーストリア共和国", "中央ヨーロッパ"],
@@ -58,7 +83,18 @@ const atlasRegionOverrides = new Map([
   ["ドイツ連邦共和国（ユーロ）", "中央ヨーロッパ"],
   ["フィンランド共和国", "北ヨーロッパ"],
   ["フランス共和国", "西ヨーロッパ"],
-  ["トルコ共和国", "中東アジア"]
+  ["トルコ共和国", "中東アジア"],
+  ["ブルガリア", "バルカン半島"],
+  ["ユーゴスラビア社会主義連邦共和国", "バルカン半島"],
+  ["ユーゴスラビア連邦共和国", "バルカン半島"],
+  ["ポーランド", "東ヨーロッパ"],
+  ["ルーマニア", "東ヨーロッパ"],
+  ["ベラルーシ", "東ヨーロッパ"],
+  ["モルドバ", "東ヨーロッパ"],
+  ["ウクライナ", "東ヨーロッパ"],
+  ["モンゴル", "東アジア"],
+  ["香港", "東アジア"],
+  ["朝鮮民主主義人民共和国", "東アジア"]
 ]);
 const atlasRegionViews = new Map([
   ["北アメリカ", [-168, 12, -52, 74]],
@@ -78,7 +114,7 @@ const atlasRegionViews = new Map([
   ["ロシア構成国", [19, 40, 180, 82]],
   ["アフリカ", [-20, -36, 55, 38]]
 ]);
-const atlasTimelineEras = new Set(["1914", "1920", "1923", "1940", "1943", "1946", "1947", "1965", "1966", "1970", "1983", "1985", "1986", "1987", "1992", "1993", "1994", "2018"]);
+const atlasTimelineEras = new Set(["1885", "1914", "1920", "1923", "1938", "1940", "1943", "1946", "1947", "1951", "1965", "1966", "1970", "1975", "1981", "1983", "1985", "1986", "1987", "1988", "1991", "1992", "1993", "1994", "2000", "2005", "2010", "2018"]);
 const historicalMapCache = new Map();
 let historicalMapRequest = 0;
 const staticArchive = true;
@@ -185,6 +221,11 @@ function atlasCountryName(entry) {
   return entry?.officialName || entry?.country || "";
 }
 
+function atlasFlagMarkup(entry) {
+  if (entry.flag) return `<img src="${entry.flag.replace(/^\//, "")}" alt="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}">`;
+  return `<span class="country-flag-label" aria-hidden="true">${escapeHtml(entry.short || entry.country).slice(0, 3)}</span>`;
+}
+
 function atlasRegion(entry) {
   if (!entry) return "";
   const indexedRegion = appState.database.collectionIndex?.find((item) => item.country === entry.country)?.region;
@@ -251,7 +292,7 @@ function renderDashboard() {
   $("#countrySymbols").innerHTML = appState.atlasRegion ? countries.map((entry) => {
     const count = appState.database.items.filter((item) => item.country === entry.country).length;
     const wideName = atlasCountryName(entry).length > 12;
-    return `<button type="button" role="option" aria-selected="${entry.country === appState.atlasCountry}" class="country-symbol${wideName ? " has-wide-name" : ""}${entry.country === appState.atlasCountry ? " is-active" : ""}" data-atlas-country="${escapeHtml(entry.country)}"><span class="country-flag"><img src="${entry.flag.replace(/^\//, "")}" alt="${escapeHtml(entry.flagAlt)}"></span><span><strong>${escapeHtml(atlasCountryName(entry))}</strong><small>${escapeHtml(entry.pickerCurrency || entry.currency)}</small><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
+    return `<button type="button" role="option" aria-selected="${entry.country === appState.atlasCountry}" class="country-symbol${wideName ? " has-wide-name" : ""}${entry.country === appState.atlasCountry ? " is-active" : ""}" data-atlas-country="${escapeHtml(entry.country)}"><span class="country-flag">${atlasFlagMarkup(entry)}</span><span><strong>${escapeHtml(atlasCountryName(entry))}</strong><small>${escapeHtml(entry.pickerCurrency || entry.currency)}</small><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
   }).join("") : `<span class="picker-guidance">先に地域を選択してください</span>`;
   renderAtlasMap();
 }
@@ -405,6 +446,7 @@ async function renderAtlasMap() {
     $("#mapCountryNative").hidden = !entry.nativeName;
     $("#mapCountryDetail").textContent = entry.detail;
     $("#mapCurrency").textContent = entry.currency;
+    $("#mapControlLabel").textContent = entry.mapControlLabel || `${entry.label}の状態`;
     $("#mapControl").textContent = entry.mapControl || "";
     $("#mapControlFact").hidden = !entry.mapControl;
     $("#mapFacts").hidden = false;
@@ -484,10 +526,27 @@ async function renderAtlasMap() {
       $("#mapLabel").style.dominantBaseline = "middle";
       $("#mapLabel").textContent = entry.mapLabel || atlasCountryName(entry);
       $("#historicalLabel").classList.add("is-visible");
+    } else if (entry?.focusCoordinates) {
+      const [x, y] = equalEarthPoint(entry.focusCoordinates);
+      const scale = 7;
+      const markerRadius = 3.5 / scale;
+      cameraTransform = `translate(${(500 - x * scale).toFixed(2)}px, ${(240 - y * scale).toFixed(2)}px) scale(${scale})`;
+      $("#mapGlow feGaussianBlur").setAttribute("stdDeviation", (7 / scale).toFixed(3));
+      $("#mapMarker").setAttribute("cx", x);
+      $("#mapMarker").setAttribute("cy", y);
+      $("#mapMarker").setAttribute("r", markerRadius.toFixed(3));
+      $("#mapMarker").style.strokeWidth = `${(1.5 / scale).toFixed(3)}px`;
+      $("#mapLabel").setAttribute("x", x + 12 / scale);
+      $("#mapLabel").setAttribute("y", y);
+      $("#mapLabel").style.fontSize = `${(18 / scale).toFixed(3)}px`;
+      $("#mapLabel").style.strokeWidth = `${(4.5 / scale).toFixed(3)}px`;
+      $("#mapLabel").style.dominantBaseline = "middle";
+      $("#mapLabel").textContent = entry.mapLabel || atlasCountryName(entry);
+      $("#historicalLabel").classList.add("is-visible");
     }
     $("#mapCamera").style.transform = cameraTransform;
-    $("#mapDataStatus").textContent = entry && !selected.length ? "対象境界を特定できません" : `${mapYear}年 · ${data.features.length}地域`;
-    $("#mapDescription").textContent = entry ? (entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。フランスの外郭のみを表示し、ヴィシー政府の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`) : regionFeature ? `${mapYear}年資料の世界地図。${appState.atlasRegion}の概略範囲を網掛けで強調表示しています。` : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
+    $("#mapDataStatus").textContent = entry && !selected.length ? (entry.focusCoordinates ? `${mapYear}年 · 位置表示` : "対象境界を特定できません") : `${mapYear}年 · ${data.features.length}地域`;
+    $("#mapDescription").textContent = entry ? (entry.focusCoordinates && !selected.length ? `${mapYear}年の世界境界。基礎資料に個別境界がないため、${atlasCountryName(entry)}の位置を示しています。` : entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。${atlasCountryName(entry)}の外郭を表示し、占領軍の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`) : regionFeature ? `${mapYear}年資料の世界地図。${appState.atlasRegion}の概略範囲を網掛けで強調表示しています。` : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
   } catch (error) {
     if (requestId !== historicalMapRequest) return;
     $("#mapDataStatus").textContent = "地図の読込に失敗";
@@ -908,6 +967,9 @@ function attachEvents() {
     if (currencyTarget) {
       const entry = historicalAtlas.find((item) => item.currencyKey === currencyTarget.dataset.atlasCurrency);
       if (!entry) return;
+      appState.atlasEra = entry.era;
+      appState.atlasRegion = atlasRegion(entry);
+      appState.atlasCountry = entry.country;
       appState.atlasCurrency = entry.currencyKey;
       renderDashboard();
     }

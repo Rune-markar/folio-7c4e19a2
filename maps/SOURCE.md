@@ -30,3 +30,14 @@ checked against the French Ministry of Armed Forces' Chemins de memoire:
 
 https://www.cheminsdememoire.gouv.fr/fr/revue/1943-reprendre-loffensive
 https://www.cheminsdememoire.gouv.fr/fr/septembre-1943-la-liberation-de-la-corse
+
+The Japanese occupation-note entries for the Philippines, Burma, Malaya, and
+China follow the same conservative rule. CShapes represents the political-unit
+outer boundaries for the selected date, not wartime front lines or complete
+areas of effective control, so the atlas renders those features as outlines and
+labels the limitation. The Hong Kong entries use a location marker because the
+served CShapes extracts do not contain a separate Hong Kong boundary. Philippine
+currency-period interpretation was checked against the Bangko Sentral ng
+Pilipinas history of Philippine money:
+
+https://www.bsp.gov.ph/Pages/CoinsAndNotes/HistoryOfPhilippineMoney/HistoryOfPhilippineMoney.aspx
