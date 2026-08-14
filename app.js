@@ -227,6 +227,28 @@ function atlasCountryName(entry) {
   return entry?.officialName || entry?.country || "";
 }
 
+function atlasCountryCurrencyName(entry) {
+  if (!entry) return "";
+  const currencyName = entry.country === "ヴァイマル共和国" ? entry.period : (entry.pickerCurrency || entry.currency);
+  const countryName = entry.country === "ドイツ連邦共和国（ユーロ）" ? "ドイツ連邦共和国" : entry.country;
+  return `${countryName}（${currencyName}）`;
+}
+
+function atlasPickerKey(entry) {
+  return entry.currencyKey || `${entry.country}\u0000${entry.currency}`;
+}
+
+function atlasCollectionCount(entry) {
+  if (entry.country !== "ヴァイマル共和国") {
+    return appState.database.items.filter((item) => item.country === entry.country).length;
+  }
+  return appState.database.items.filter((item) => {
+    if (item.country !== "ドイツ（ヴァイマル共和国）") return false;
+    if (entry.currencyKey === "germany-rentenmark") return item.currency === "レンテンマルク";
+    return item.currency === "パピエルマルク" || item.currency === "マルク";
+  }).length;
+}
+
 function atlasFlagMarkup(entry) {
   if (entry.flag) return `<img src="${entry.flag.replace(/^\//, "")}" alt="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}">`;
   return `<span class="country-flag-label" aria-hidden="true">${escapeHtml(entry.short || entry.country).slice(0, 3)}</span>`;
@@ -288,17 +310,20 @@ function renderDashboard() {
     appState.atlasCurrency = "";
   }
   $("#regionSymbols").innerHTML = regions.map((region) => {
-    const countryCount = new Set(eraEntries.filter((entry) => atlasRegion(entry) === region).map((entry) => entry.country)).size;
+    const countryCount = new Set(eraEntries.filter((entry) => atlasRegion(entry) === region).map(atlasPickerKey)).size;
     const active = region === appState.atlasRegion;
-    return `<button type="button" role="option" aria-selected="${active}" class="region-symbol${active ? " is-active" : ""}" data-atlas-region="${escapeHtml(region)}"><strong>${escapeHtml(region)}</strong><small>${countryCount}か国・体制</small></button>`;
+    return `<button type="button" role="option" aria-selected="${active}" class="region-symbol${active ? " is-active" : ""}" data-atlas-region="${escapeHtml(region)}"><strong>${escapeHtml(region)}</strong><small>${countryCount}件の国名・通貨</small></button>`;
   }).join("");
   const countries = Array.from(new Map(eraEntries
     .filter((entry) => atlasRegion(entry) === appState.atlasRegion)
-    .map((entry) => [entry.country, entry])).values());
+    .map((entry) => [atlasPickerKey(entry), entry])).values());
   $("#countrySymbols").innerHTML = appState.atlasRegion ? countries.map((entry) => {
-    const count = appState.database.items.filter((item) => item.country === entry.country).length;
-    const wideName = atlasCountryName(entry).length > 12;
-    return `<button type="button" role="option" aria-selected="${entry.country === appState.atlasCountry}" class="country-symbol${wideName ? " has-wide-name" : ""}${entry.country === appState.atlasCountry ? " is-active" : ""}" data-atlas-country="${escapeHtml(entry.country)}"><span class="country-flag">${atlasFlagMarkup(entry)}</span><span><strong>${escapeHtml(atlasCountryName(entry))}</strong><small>${escapeHtml(entry.pickerCurrency || entry.currency)}</small><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
+    const count = atlasCollectionCount(entry);
+    const active = entry.currencyKey ? entry.currencyKey === appState.atlasCurrency : entry.country === appState.atlasCountry;
+    const displayName = atlasCountryCurrencyName(entry);
+    const wideName = displayName.length > 12;
+    const entryIndex = historicalAtlas.indexOf(entry);
+    return `<button type="button" role="option" aria-selected="${active}" class="country-symbol${wideName ? " has-wide-name" : ""}${active ? " is-active" : ""}" data-atlas-entry-index="${entryIndex}"><span class="country-flag">${atlasFlagMarkup(entry)}</span><span><strong>${escapeHtml(displayName)}</strong><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
   }).join("") : `<span class="picker-guidance">先に地域を選択してください</span>`;
   renderAtlasMap();
 }
@@ -450,7 +475,7 @@ async function renderAtlasMap() {
     $("#mapCountryName").textContent = appState.atlasRegion;
     $("#mapCountryNative").hidden = true;
     $("#mapCountryNative").textContent = "";
-    $("#mapCountryDetail").textContent = "選択した地域を拡大し、概略範囲を網掛けで表示しています。国家・体制を選ぶと、その当時の国境へ移動します。";
+    $("#mapCountryDetail").textContent = "選択した地域を拡大し、概略範囲を網掛けで表示しています。国名・通貨を選ぶと、その当時の国境へ移動します。";
     $("#viewCountryCollection").hidden = true;
     $("#mapFacts").hidden = true;
     $("#mapControlFact").hidden = true;
@@ -460,10 +485,10 @@ async function renderAtlasMap() {
     renderCurrencyChronology(null);
   } else if (!entry) {
     $("#mapOverline").textContent = "BORDERLESS WORLD";
-    $("#mapCountryName").textContent = "国家・体制を選択してください";
+    $("#mapCountryName").textContent = "国名・通貨を選択してください";
     $("#mapCountryNative").hidden = true;
     $("#mapCountryNative").textContent = "";
-    $("#mapCountryDetail").textContent = "地図にはまだ国境がありません。上の年代、地域、国家・体制を選ぶと、当時の姿が現れます。";
+    $("#mapCountryDetail").textContent = "地図にはまだ国境がありません。上の年代、地域、国名・通貨を選ぶと、当時の姿が現れます。";
     $("#viewCountryCollection").hidden = true;
     $("#mapFacts").hidden = true;
     $("#mapControlFact").hidden = true;
@@ -473,7 +498,7 @@ async function renderAtlasMap() {
     renderCurrencyChronology(null);
   } else {
     $("#mapOverline").textContent = entry.mapOverline || `${entry.label} · HISTORICAL BORDER`;
-    $("#mapCountryName").textContent = atlasCountryName(entry);
+    $("#mapCountryName").textContent = atlasCountryCurrencyName(entry);
     $("#mapCountryNative").textContent = entry.nativeName || "";
     $("#mapCountryNative").hidden = !entry.nativeName;
     $("#mapCountryDetail").textContent = entry.detail;
@@ -981,10 +1006,12 @@ function attachEvents() {
       appState.atlasCurrency = "";
       renderDashboard();
     }
-    const countryTarget = event.target.closest("[data-atlas-country]");
+    const countryTarget = event.target.closest("[data-atlas-entry-index]");
     if (countryTarget) {
-      appState.atlasCountry = countryTarget.dataset.atlasCountry;
-      appState.atlasCurrency = historicalAtlas.slice().reverse().find((entry) => entry.era === appState.atlasEra && entry.country === appState.atlasCountry)?.currencyKey || "";
+      const entry = historicalAtlas[Number(countryTarget.dataset.atlasEntryIndex)];
+      if (!entry) return;
+      appState.atlasCountry = entry.country;
+      appState.atlasCurrency = entry.currencyKey || "";
       renderDashboard();
     }
     const currencyTarget = event.target.closest("[data-atlas-currency]");
