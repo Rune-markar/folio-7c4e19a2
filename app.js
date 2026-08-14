@@ -549,10 +549,56 @@ function openPublicNote(item) {
     ["国家・体制", item.stateStatus || "未記録"]
   ];
   $("#publicNoteFacts").innerHTML = facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
-  $("#publicNoteStory").textContent = item.story || "歴史解説はまだ登録されていません。";
+  renderPublicNoteStory(item.story);
   const motifs = item.motifs || "";
   $("#publicNoteMotifs").textContent = motifs || "モチーフはまだ登録されていません。";
   $("#publicNoteDialog").showModal();
+}
+
+function renderPublicNoteStory(story) {
+  const container = $("#publicNoteStory");
+  container.replaceChildren();
+  if (!story) {
+    const empty = document.createElement("p");
+    empty.className = "public-note-empty";
+    empty.textContent = "歴史解説はまだ登録されていません。";
+    container.append(empty);
+    return;
+  }
+  const sections = [
+    ["肖像・人物：", "肖像・人物"], ["発行背景：", "発行背景"],
+    ["当時の社会情勢：", "当時の社会情勢"], ["特殊な点：", "この紙幣の特徴"],
+    ["採用モチーフは、", null],
+    ["通貨制度と、", "収蔵資料として"]
+  ];
+  const points = [];
+  let remaining = story;
+  for (const [marker, heading] of sections) {
+    const markerIndex = remaining.indexOf(marker);
+    if (markerIndex === -1) continue;
+    const before = remaining.slice(0, markerIndex).trim();
+    if (before) points.push(["", before]);
+    remaining = remaining.slice(markerIndex + marker.length);
+    const nextIndexes = sections.map(([nextMarker]) => remaining.indexOf(nextMarker)).filter((index) => index >= 0);
+    const end = nextIndexes.length ? Math.min(...nextIndexes) : remaining.length;
+    const text = remaining.slice(0, end).trim();
+    if (heading) points.push([heading, text]);
+    remaining = remaining.slice(end);
+  }
+  if (!points.length) points.push(["", story]);
+  for (const [heading, text] of points) {
+    const block = document.createElement("div");
+    block.className = "public-note-story-block";
+    if (heading) {
+      const title = document.createElement("h4");
+      title.textContent = heading;
+      block.append(title);
+    }
+    const body = document.createElement("p");
+    body.textContent = text;
+    block.append(body);
+    container.append(block);
+  }
 }
 
 function openCardNote(item) {

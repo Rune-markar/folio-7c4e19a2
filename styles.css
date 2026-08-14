@@ -379,6 +379,11 @@ code { padding: 2px 5px; border-radius: 4px; background: var(--paper-deep); }
 .public-note-copy section { margin-top: 20px; }
 .public-note-copy section h3 { margin: 4px 0 8px; font: 700 17px var(--serif); }
 .public-note-copy section > p:last-child { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.9; white-space: pre-line; }
+.public-note-story { display: grid; gap: 11px; }
+.public-note-story-block { padding: 11px 13px 12px; border-left: 2px solid var(--gold); background: var(--paper); }
+.public-note-story-block h4 { margin: 0 0 4px; color: var(--ink); font: 700 12px var(--serif); }
+.public-note-story-block p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.75; }
+.public-note-story-block:first-child { padding-top: 0; border-left: 0; background: transparent; }
 .footer-spacer { flex: 1; }
 .toast { position: fixed; z-index: 100; right: 24px; bottom: 24px; max-width: min(380px, calc(100vw - 30px)); padding: 13px 17px; border-radius: 11px; background: var(--ink); color: #fff; box-shadow: var(--shadow); font-size: 11px; opacity: 0; transform: translateY(12px); pointer-events: none; transition: .22s; }
 .toast.is-visible { opacity: 1; transform: translateY(0); }
