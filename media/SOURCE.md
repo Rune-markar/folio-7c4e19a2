@@ -67,5 +67,8 @@
 | kp-2000-2018-commemorative | kp-2000-2018-commemorative-front.jpg, kp-2000-2018-commemorative-back.jpg | [Numista 204589](https://en.numista.com/204589) | 建国70周年（1948–2018）の記念加刷を持つ流通記念紙幣P#CS24、基券P#65と照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
 | kp-5000-2017-kim-jong-suk | kp-5000-2017-kim-jong-suk-front.jpg, kp-5000-2017-kim-jong-suk-back.jpg | [Numista 203645](https://en.numista.com/203645) | 金正淑生誕100周年（1917–2017）の記念加刷を持つ流通記念紙幣P#CS20、基券P#67と照合。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
 | kp-5000-2019-china-relations | kp-5000-2019-china-relations-front.jpg, kp-5000-2019-china-relations-back.jpg | [Numista 225251](https://en.numista.com/225251) | 中朝国交樹立70周年（1949–2019）の記念加刷を持つ流通記念紙幣P#CS27a、基券P#67と照合。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
+| cn-10-1936 | cn-10-1936-front.jpg, cn-10-1936-back.jpg | [Numista 211540](https://en.numista.com/211540), [スミソニアン国立アメリカ歴史博物館](https://americanhistory.si.edu/collections/object/nmah_1894043) | 民国25年（1936年）、P#214、トーマス・デ・ラ・ルー印刷、孫文と孔林の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| cn-5-military-1938 | cn-5-military-1938-front.jpg, cn-5-military-1938-back.jpg | [Numista 206104](https://en.numista.com/206104), [Banknote.ws P#M24（比較資料）](https://www.banknote.ws/COLLECTION/countries/ASI/CIN/CIN-MIL-JAPSOV/CINM0024.htm) | 占領下中国向け日本円加刷軍票P#M25。菅原道真・北野天満宮、赤色の大日本帝國政府・軍用手票加刷を照合。透かし未確認のためM25a／M25bは切り分けず、1938～1944年型として登録した。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
+| cn-10-military-1938 | cn-10-military-1938-front.jpg, cn-10-military-1938-back.jpg | [Numista 203957](https://en.numista.com/203957) | 1938年、P#M27a、日本P#40への加刷、和気清麻呂と護王神社の表裏を照合。追加手押印のない発行券。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
 
 画像はいずれも紙幣全体が写り、主要文字を確認でき、販売者名・ロゴ・透かし文字・`SPECIMEN` 表示のないものを採用しました。保有資料写真およびその共有フォルダURLは公開物へ収録していません。
