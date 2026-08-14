@@ -60,5 +60,8 @@
 | mn-10-1993 | mn-10-1993-front.jpg, mn-10-1993-back.jpg | [Numista 203103](https://en.numista.com/203103), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#54、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
 | mn-20-1993 | mn-20-1993-front.jpg, mn-20-1993-back.jpg | [Numista 203105](https://en.numista.com/203105), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#55、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
 | by-100-1992 | by-100-1992-front.jpg, by-100-1992-back.jpg | [Numista 203049](https://en.numista.com/203049) | 1992年、P#8、ヨーロッパバイソンとパホニアの表裏を照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| cn-10-1936 | cn-10-1936-front.jpg, cn-10-1936-back.jpg | [Numista 211540](https://en.numista.com/211540), [スミソニアン国立アメリカ歴史博物館](https://americanhistory.si.edu/collections/object/nmah_1894043) | 民国25年（1936年）、P#214、トーマス・デ・ラ・ルー印刷、孫文と孔林の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| cn-5-military-1938 | cn-5-military-1938-front.jpg, cn-5-military-1938-back.jpg | [Numista 206104](https://en.numista.com/206104), [Banknote.ws P#M24（比較資料）](https://www.banknote.ws/COLLECTION/countries/ASI/CIN/CIN-MIL-JAPSOV/CINM0024.htm) | 占領下中国向け日本円加刷軍票P#M25。菅原道真・北野天満宮、赤色の大日本帝國政府・軍用手票加刷を照合。透かし未確認のためM25a／M25bは切り分けず、1938～1944年型として登録した。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
+| cn-10-military-1938 | cn-10-military-1938-front.jpg, cn-10-military-1938-back.jpg | [Numista 203957](https://en.numista.com/203957) | 1938年、P#M27a、日本P#40への加刷、和気清麻呂と護王神社の表裏を照合。追加手押印のない発行券。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
 
 画像はいずれも紙幣全体が写り、主要文字を確認でき、販売者名・ロゴ・透かし文字・`SPECIMEN` 表示のないものを採用しました。保有資料写真およびその共有フォルダURLは公開物へ収録していません。
