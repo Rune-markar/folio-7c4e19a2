@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">ケニア共和国国旗</title>
+  <desc id="desc">黒、白、赤、白、緑の横帯に、中央へマサイの盾と交差する白い槍を配した旗</desc>
+  <path fill="#000" d="M0 0h900v180H0z"/>
+  <path fill="#fff" d="M0 180h900v40H0z"/>
+  <path fill="#b00" d="M0 220h900v160H0z"/>
+  <path fill="#fff" d="M0 380h900v40H0z"/>
+  <path fill="#060" d="M0 420h900v180H0z"/>
+  <g stroke="#fff" stroke-width="18" stroke-linecap="round">
+    <path d="M350 500 550 100"/>
+    <path d="M350 100 550 500"/>
+  </g>
+  <g stroke="#000" stroke-width="7">
+    <path fill="#b00" d="M450 96c-76 50-112 119-112 204s36 154 112 204c76-50 112-119 112-204S526 146 450 96z"/>
+    <path fill="#000" d="M450 96c-37 55-55 123-55 204s18 149 55 204c37-55 55-123 55-204S487 151 450 96z"/>
+    <path fill="#fff" d="M450 132c-18 55-27 111-27 168s9 113 27 168c18-55 27-111 27-168s-9-113-27-168z"/>
+    <path fill="#b00" d="M450 166c-9 45-14 90-14 134s5 89 14 134c9-45 14-90 14-134s-5-89-14-134z"/>
+  </g>
+</svg>

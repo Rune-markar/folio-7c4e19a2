@@ -14,6 +14,8 @@ Flag designs are displayed for the year represented by each atlas entry.
 - German Empire, 1867-1918: black-white-red national flag.
 - Denmark: Dannebrog.
 - Brazil, 1889-1960: 21-star historical national flag from Wikimedia Commons.
+- Brazil, 1960-1968: 22-star historical national flag. The additional star represented Guanabara; `brazil-1960.svg` is a compact geometric reconstruction of the documented design. Reference: https://commons.wikimedia.org/wiki/File:Flag_of_Brazil_(1960%E2%80%931968).svg
+- Brazil, 1968-1992: 23-star historical national flag. The additional star represented Acre; `brazil-1968.svg` is a compact geometric reconstruction. Reference: https://www.planalto.gov.br/ccivil_03/leis/l5700.htm
 - Germany, 1935-1945: historical national flag from Wikimedia Commons. It is shown only as historical documentation for the collected banknote.
 - Turkey: national flag used in the represented 1983 period.
 - Argentina: national flag used in the represented 1985 period.
@@ -23,3 +25,6 @@ Flag designs are displayed for the year represented by each atlas entry.
 - Japan, 1999-present specification: Act on National Flag and Anthem (Act No. 127 of 1999), Appendix 1: 2:3, centred disc with a diameter of 3/5 of the height: https://laws.e-gov.go.jp/law/411AC0000000127
 
 Downloaded files retain their original SVG content. Simple geometric flags were recreated as compact SVG files from their documented designs.
+# ケニア
+
+- `kenya.svg` — ケニア憲法第9条第2項・第二附則、および National Flag, Emblems and Names Act (Cap. 99) 第二附則の制式記述を基準に再構成。黒・赤・緑の等幅三帯、細い白帯、中央の対称な盾と白い槍を反映した。出典: [Kenya Law（憲法）](https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03)、[Kenya Law（Cap. 99）](https://new.kenyalaw.org/akn/ke/act/1963/44/eng@2022-12-31)

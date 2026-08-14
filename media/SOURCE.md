@@ -39,6 +39,8 @@
 | `cn-50sen-1937` | `cn-50sen-1937-front.jpg`, `cn-50sen-1937-back.jpg` | [Numista 456973](https://en.numista.com/456973) | ページ上の画像表示は CC BY-NC-SA 4.0。P#M2、中華民国臨時政府地域向け50銭券の鶏・龍意匠を照合。非営利・継承条件を維持する。 |
 | `cn-50sen-1939` | `cn-50sen-1939-front.jpg`, `cn-50sen-1939-back.jpg` | [Numista 214740](https://en.numista.com/214740) | P#M14、1939年の無記号50銭券を照合。表面画像は CC BY-NC 4.0、裏面画像は個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
 
+| item id | local files | primary reference | note |
+|---|---|---|---|
 | de-5000000-1923 | de-5000000-1923-front.jpg, de-5000000-1923-back.jpg | [Banknote.ws P#95](https://www.banknote.ws/COLLECTION/countries/EUR/GER/GER0095.htm) | 1923-07-25付・P#95と照合。取得時に画像個別の利用許諾表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
 | de-buer-1000000000-1923 | de-buer-1000000000-1923-front.jpg, de-buer-1000000000-1923-back.jpg | [Numista 228988](https://en.numista.com/228988) | DeNG 7/8#659e・N#228988、1923-10-16付と照合。ページ上の画像表示は CC BY-SA。表示条件と継承条件を維持する。 |
 | at-50-1919 | at-50-1919-front.jpg, at-50-1919-back.jpg | [Banknote.ws P#54](https://www.banknote.ws/COLLECTION/countries/EUR/AUT/AUT0054.htm) | 1914年原券、1919年「DEUTSCHÖSTERREICH」再検印のP#54aと照合。画像個別の利用許諾表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
@@ -82,3 +84,58 @@
 | mm-1-1942 | mm-1-1942-front.jpg, mm-1-1942-back.jpg | [Numista 207646](https://en.numista.com/207646), [Wikimedia Commons BUR-14](https://commons.wikimedia.org/wiki/File:BUR-14-Burma-Japanese_Occupation-One_Rupee_ND_(1942).jpg) | 1942年、日本軍政下ビルマ1ルピー、P#14。パンノキ、アーナンダ寺院、BDブロックを照合したが、紙色・透かし・ブロック間隔を写真から測れないためa2／bの細分類は保留。Smithsonian National Numismatic Collection所蔵画像を表裏に分割・縮小。原券はPD-Japan、デジタル画像はCC BY-SA 4.0（同館クレジット）。 |
 
 画像はいずれも紙幣全体が写り、主要文字を確認でき、販売者名・ロゴ・透かし文字・`SPECIMEN` 表示のないものを採用しました。保有資料写真およびその共有フォルダURLは公開物へ収録していません。
+
+## 2026-08-14 全件権利監査
+
+画像個別のライセンスまたは公的な複製条件を確認できないものは、ファイルが残っていても `app.js` の `withheldImageIds` に登録し、カード・詳細・編集プレビューのすべてで公開停止する。カタログページに型式情報があることと、そのページの投稿画像を再配布できることは別に判定する。
+
+既存記録を再点検した結果、次の27件は採用画像そのものの許諾を確定できなかったため公開停止した: `br-5-1964`, `br-10-1974`, `br-100-1989`, `my-5-occupation`, `jp-1-1885`, `jp-5sen-1944`, `jp-10sen-1944`, `jp-50sen-1938`, `cn-50sen-1939`, `de-5000000-1923`, `at-50-1919`, `by-50-2000`, `by-100-2000`, `by-500-2000`, `yu-10-1981`, `yu-20-1981`, `yu-50-1981`, `mn-10-1981`, `mn-20-1981`, `mn-50-1981`, `hk-5-1975`, `kp-50-2018-commemorative`, `kp-5000-2017-kim-jong-suk`, `kp-5000-2019-china-relations`, `cn-5-military-1938`, `jp-50sen-1944`, `cn-frbc-5fen-1938`。
+
+従来出典行がなかった次の44件は、公開スナップショット内のファイル名まで確認したが、採用元ページと画像個別許諾を復元できなかった。出典記録を「来歴未確定・公開停止」として補完する。
+
+| item id | 監査対象ファイル | 出典・権利状態 |
+| --- | --- | --- |
+| `ve-2-2018` | `ve-2-2018-front.jpg`, `ve-2-2018-back.jpg` | 来歴未確定・公開停止 |
+| `ve-5-2018` | `ve-5-2018-front.jpg`, `ve-5-2018-back.jpg` | 来歴未確定・公開停止 |
+| `ve-20-2014` | `ve-20-2014-front.jpg`, `ve-20-2014-back.jpg` | 来歴未確定・公開停止 |
+| `ve-50-2018` | `ve-50-2018-front.jpg`, `ve-50-2018-back.jpg` | 来歴未確定・公開停止 |
+| `ve-2000-2016` | `ve-2000-2016-front.jpg`, `ve-2000-2016-back.jpg` | 来歴未確定・公開停止 |
+| `ar-1-1985` | `ar-1-1985-front.jpg`, `ar-1-1985-back.jpg` | 来歴未確定・公開停止 |
+| `ar-5-1985` | `ar-5-1985-front.jpg`, `ar-5-1985-back.jpg` | 来歴未確定・公開停止 |
+| `ar-10-1985` | `ar-10-1985-front.jpg`, `ar-10-1985-back.jpg` | 来歴未確定・公開停止 |
+| `ar-10-1992` | `ar-10-1992-front.jpg`, `ar-10-1992-back.jpg` | 来歴未確定・公開停止 |
+| `cl-1000-1994` | `cl-1000-1994-front.jpg`, `cl-1000-1994-back.jpg` | 来歴未確定・公開停止 |
+| `pe-500-1987` | `pe-500-1987-front.jpg`, `pe-500-1987-back.jpg` | 来歴未確定・公開停止 |
+| `de-50-1906` | `de-50-1906-front.jpg`, `de-50-1906-back.jpg` | 来歴未確定・公開停止 |
+| `de-10000-1922` | `de-10000-1922-front.jpg`, `de-10000-1922-back.jpg` | 来歴未確定・公開停止 |
+| `de-100000-1923` | `de-100000-1923-front.jpg`, `de-100000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-2000000-1923` | `de-2000000-1923-front.jpg`, `de-2000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-10000000-1923` | `de-10000000-1923-front.jpg`, `de-10000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-100000000-1923` | `de-100000000-1923-front.jpg`, `de-100000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-500000000-1923` | `de-500000000-1923-front.jpg`, `de-500000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-1000000000-1923` | `de-1000000000-1923-front.jpg`, `de-1000000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-1-1940` | `de-1-1940-front.jpg`, `de-1-1940-back.jpg` | 来歴未確定・公開停止 |
+| `at-1000-1922` | `at-1000-1922-front.jpg`, `at-1000-1922-back.jpg` | 来歴未確定・公開停止 |
+| `at-50-1986` | `at-50-1986-front.jpg`, `at-50-1986-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-tr-100-1983` | `sheet-tr-100-1983-front.jpg`, `sheet-tr-100-1983-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-tr-500` | `sheet-tr-500-front.jpg`, `sheet-tr-500-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-hu-1946` | `sheet-hu-1946-front.jpg`, `sheet-hu-1946-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-fi-10-1986` | `sheet-fi-10-1986-front.jpg`, `sheet-fi-10-1986-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-fr-10-1966` | `sheet-fr-10-1966-front.jpg`, `sheet-fr-10-1966-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-fr-5-1965` | `sheet-fr-5-1965-front.jpg`, `sheet-fr-5-1965-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-yu-1993` | `sheet-yu-1993-front.jpg`, `sheet-yu-1993-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-fr-5-1966` | `sheet-fr-5-1966-front.jpg`, `sheet-fr-5-1966-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-fr-5-1943` | `sheet-fr-5-1943-front.jpg`, `sheet-fr-5-1943-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-saar-5-1947` | `sheet-saar-5-1947-front.jpg`, `sheet-saar-5-1947-back.jpg` | 来歴未確定・公開停止 |
+| `pe-10-1985` | `pe-10-1985-front.jpg`, `pe-10-1985-back.jpg` | 来歴未確定・公開停止 |
+| `pe-50-1986` | `pe-50-1986-front.jpg`, `pe-50-1986-back.jpg` | 来歴未確定・公開停止 |
+| `ar-10-1983-peso-argentino` | `ar-10-1983-peso-argentino-front.jpg`, `ar-10-1983-peso-argentino-back.jpg` | 来歴未確定・公開停止。券面照合により10ペソ・アルヘンティーノ（P#313）へ台帳訂正済み |
+| `hu-10000b-1946` | `hu-10000b-1946-front.jpg`, `hu-10000b-1946-back.jpg` | 来歴未確定・公開停止 |
+| `de-2-1914` | `de-2-1914-front.jpg`, `de-2-1914-back.jpg` | 来歴未確定・公開停止 |
+| `de-50-1920` | `de-50-1920-front.jpg`, `de-50-1920-back.jpg` | 来歴未確定・公開停止 |
+| `de-1000-1922` | `de-1000-1922-front.jpg`, `de-1000-1922-back.jpg` | 来歴未確定・公開停止 |
+| `de-20000-1923` | `de-20000-1923-front.jpg`, `de-20000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-20000000-1923` | `de-20000000-1923-front.jpg`, `de-20000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `de-50000000-1923` | `de-50000000-1923-front.jpg`, `de-50000000-1923-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-dk-20-1972` | `sheet-dk-20-1972-front.jpg`, `sheet-dk-20-1972-back.jpg` | 来歴未確定・公開停止 |
+| `sheet-dk-10-1936` | `sheet-dk-10-1936-front.jpg`, `sheet-dk-10-1936-back.jpg` | 来歴未確定・公開停止 |
