@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "updatedAt": "2026-08-14T17:10:00+09:00",
+  "updatedAt": "2026-08-14T18:30:00+09:00",
   "settings": {
     "archiveName": "World Banknote Archive"
   },
@@ -9,7 +9,7 @@
     "countryCount": 94,
     "detailedNotionCount": 34,
     "sheetCount": 12,
-    "photoRegistrationCount": 61,
+    "photoRegistrationCount": 64,
     "note": "NAS正本から生成した閲覧専用スナップショット（保有資料写真との照合登録を含む）"
   },
   "collectionIndex": [
@@ -3860,6 +3860,130 @@
       },
       "tags": [
         "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-50sen-1943",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.50",
+      "year": "1943",
+      "series": "政府紙幣50銭・靖国神社（昭和18年銘）",
+      "issueEndDate": "1948/08/31",
+      "title": "50銭政府紙幣（靖国神社・昭和18年）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：戦時下の通貨需要増加に対応し、臨時通貨法にもとづく靖国神社50銭券の昭和18年銘として発行された。当時の社会情勢：太平洋戦争期の金属節約と大量の小額通貨需要により、製造は民間印刷会社にも委託された。特殊な点：写真の組番号757は、昭和18年銘に対応する91～849の範囲と一致する。採用モチーフは、表面が靖国神社の大鳥居・神門と金鵄、裏面が高千穂峰と額面彩紋である。",
+      "motifs": "表：靖国神社大鳥居、神門、金鵄、桜／裏：高千穂峰、額面彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#59b・JNDA#11-61・N#208853",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-50sen-1943-front.jpg",
+        "back": "media/jp-50sen-1943-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-50sen-1944",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.50",
+      "year": "1944",
+      "series": "政府紙幣50銭・靖国神社（昭和19年銘）",
+      "issueEndDate": "1948/08/31",
+      "title": "50銭政府紙幣（靖国神社・昭和19年）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：戦時下の小額通貨需要を支えた靖国神社50銭券の昭和19年銘として発行された。当時の社会情勢：戦局悪化と物資不足が深まり、補助貨幣の紙幣化と大量生産が続いた。特殊な点：写真の組番号10は、昭和19年銘に対応する1～211の範囲と一致する。採用モチーフは、表面が靖国神社の大鳥居・神門と金鵄、裏面が高千穂峰と額面彩紋である。",
+      "motifs": "表：靖国神社大鳥居、神門、金鵄、桜／裏：高千穂峰、額面彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#59c・JNDA#11-61・N#208853",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-50sen-1944-front.jpg",
+        "back": "media/jp-50sen-1944-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-50sen-1948",
+      "type": "banknote",
+      "country": "日本",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.50",
+      "year": "1948",
+      "series": "B号小額政府紙幣",
+      "issueEndDate": "1953/12/31",
+      "title": "B号50銭政府紙幣（板垣退助）",
+      "story": "肖像・人物：自由民権運動の指導者で、自由党の結成に関わった板垣退助を描く。発行背景：戦後の小額通貨不足を補うため、1948年3月にB号政府紙幣として発行された。当時の社会情勢：新円切替後も物価上昇と硬貨不足が続き、占領下の民主化を象徴する人物と国会議事堂が採用された。特殊な点：日本銀行券ではなく日本政府が発行した最後の50銭紙幣で、1953年末に通用を停止した。採用モチーフは、表面が板垣退助と大蔵大臣印、裏面が国会議事堂と額面である。",
+      "motifs": "表：板垣退助、大蔵大臣印、額面／裏：国会議事堂、額面",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#61a・N#207290",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 42,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-50sen-1948-front.jpg",
+        "back": "media/jp-50sen-1948-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "戦後政府紙幣"
       ]
     },
     {
