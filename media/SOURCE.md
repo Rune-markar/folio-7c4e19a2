@@ -51,5 +51,14 @@
 | mn-10-1981 | mn-10-1981-front.jpg, mn-10-1981-back.jpg | [Banknote.ws P#45](https://www.banknote.ws/COLLECTION/countries/ASI/MON/MON0045.htm) | 1981年、スフバートル肖像のP#45と照合。画像個別の利用許諾表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
 | mn-20-1981 | mn-20-1981-front.jpg, mn-20-1981-back.jpg | [Banknote.ws P#46](https://www.banknote.ws/COLLECTION/countries/ASI/MON/MON0046.htm) | 1981年、スフバートルとウランバートル発電所のP#46と照合。画像個別の利用許諾表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
 | mn-50-1981 | mn-50-1981-front.jpg, mn-50-1981-back.jpg | [Banknote.ws P#47](https://www.banknote.ws/COLLECTION/countries/ASI/MON/MON0047.htm) | 1981年、スフバートルと政府庁舎のP#47と照合。画像個別の利用許諾表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
+| hk-5-1975 | hk-5-1975-front.jpg, hk-5-1975-back.jpg | [Numista 211309](https://en.numista.com/211309) | 1975-06-01付、P#73b、チャータード銀行ビルと香港大会堂の表裏を照合。選択画像には投稿者名のみが表示され、個別ライセンスを確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
+| hk-10-1992 | hk-10-1992-front.jpg, hk-10-1992-back.jpg | [Numista 203841](https://en.numista.com/203841) | 1992-01-01付、P#191c、香港紋章とHSBC本店・獅子像の表裏を照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| mn-010-1993 | mn-010-1993-front.jpg, mn-010-1993-back.jpg | [Numista 202906](https://en.numista.com/202906) | 1993年、P#49、弓術を描く10ムング券の表裏を照合。ページ上の画像表示はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| mn-020-1993 | mn-020-1993-front.jpg, mn-020-1993-back.jpg | [Numista 203098](https://en.numista.com/203098) | 1993年、P#50、モンゴル相撲を描く20ムング券の表裏を照合。ページ上の画像表示はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| mn-1-1993 | mn-1-1993-front.jpg, mn-1-1993-back.jpg | [Numista 203101](https://en.numista.com/203101), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#52、獅子とソヨンボの表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| mn-5-1993 | mn-5-1993-front.jpg, mn-5-1993-back.jpg | [Numista 203102](https://en.numista.com/203102), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#53、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| mn-10-1993 | mn-10-1993-front.jpg, mn-10-1993-back.jpg | [Numista 203103](https://en.numista.com/203103), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#54、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| mn-20-1993 | mn-20-1993-front.jpg, mn-20-1993-back.jpg | [Numista 203105](https://en.numista.com/203105), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#55、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
+| by-100-1992 | by-100-1992-front.jpg, by-100-1992-back.jpg | [Numista 203049](https://en.numista.com/203049) | 1992年、P#8、ヨーロッパバイソンとパホニアの表裏を照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
 
 画像はいずれも紙幣全体が写り、主要文字を確認でき、販売者名・ロゴ・透かし文字・`SPECIMEN` 表示のないものを採用しました。保有資料写真およびその共有フォルダURLは公開物へ収録していません。
