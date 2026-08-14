@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "updatedAt": "2026-08-14T16:30:00+09:00",
+  "updatedAt": "2026-08-14T17:10:00+09:00",
   "settings": {
     "archiveName": "World Banknote Archive"
   },
@@ -9,7 +9,7 @@
     "countryCount": 92,
     "detailedNotionCount": 34,
     "sheetCount": 12,
-    "photoRegistrationCount": 16,
+    "photoRegistrationCount": 42,
     "note": "NAS正本から生成した閲覧専用スナップショット（保有資料写真との照合登録を含む）"
   },
   "collectionIndex": [
@@ -2384,11 +2384,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#95",
       "stateStatus": "消滅国家・体制",
-      "rarityFactors": {"state": 4, "age": 4, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 52,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/de-5000000-1923-front.jpg", "back": "media/de-5000000-1923-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-5000000-1923-front.jpg",
+        "back": "media/de-5000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "de-buer-1000000000-1923",
@@ -2409,11 +2425,28 @@
       "estimatedValue": 0,
       "catalogNumber": "DeNG 7/8#659e・N#228988",
       "stateStatus": "消滅国家・体制",
-      "rarityFactors": {"state": 4, "age": 4, "condition": 2, "marketEvidence": 2, "issueVolume": 2},
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 2,
+        "issueVolume": 2
+      },
       "rarityScore": 60,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/de-buer-1000000000-1923-front.jpg", "back": "media/de-buer-1000000000-1923-back.jpg", "document": ""},
-      "tags": ["写真照合登録", "ノートゲルト"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/de-buer-1000000000-1923-front.jpg",
+        "back": "media/de-buer-1000000000-1923-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "ノートゲルト"
+      ]
     },
     {
       "id": "at-50-1919",
@@ -2434,11 +2467,28 @@
       "estimatedValue": 0,
       "catalogNumber": "P#54a",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 5, "condition": 2, "marketEvidence": 2, "issueVolume": 2},
+      "rarityFactors": {
+        "state": 2,
+        "age": 5,
+        "condition": 2,
+        "marketEvidence": 2,
+        "issueVolume": 2
+      },
       "rarityScore": 53,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/at-50-1919-front.jpg", "back": "media/at-50-1919-back.jpg", "document": ""},
-      "tags": ["写真照合登録", "再検印券"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/at-50-1919-front.jpg",
+        "back": "media/at-50-1919-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "再検印券"
+      ]
     },
     {
       "id": "by-50-2000",
@@ -2459,11 +2509,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#25",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 2, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 34,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/by-50-2000-front.jpg", "back": "media/by-50-2000-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/by-50-2000-front.jpg",
+        "back": "media/by-50-2000-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "by-100-2000",
@@ -2484,11 +2550,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#26",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 2, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 34,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/by-100-2000-front.jpg", "back": "media/by-100-2000-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/by-100-2000-front.jpg",
+        "back": "media/by-100-2000-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "by-500-2000",
@@ -2509,11 +2591,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#27",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 2, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 34,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/by-500-2000-front.jpg", "back": "media/by-500-2000-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/by-500-2000-front.jpg",
+        "back": "media/by-500-2000-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "yu-10-1981",
@@ -2534,11 +2632,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#87b",
       "stateStatus": "消滅国家・体制",
-      "rarityFactors": {"state": 4, "age": 3, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 47,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/yu-10-1981-front.jpg", "back": "media/yu-10-1981-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/yu-10-1981-front.jpg",
+        "back": "media/yu-10-1981-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "yu-20-1981",
@@ -2559,11 +2673,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#88b",
       "stateStatus": "消滅国家・体制",
-      "rarityFactors": {"state": 4, "age": 3, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 47,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/yu-20-1981-front.jpg", "back": "media/yu-20-1981-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/yu-20-1981-front.jpg",
+        "back": "media/yu-20-1981-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "yu-50-1981",
@@ -2584,11 +2714,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#89b",
       "stateStatus": "消滅国家・体制",
-      "rarityFactors": {"state": 4, "age": 3, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 47,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/yu-50-1981-front.jpg", "back": "media/yu-50-1981-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/yu-50-1981-front.jpg",
+        "back": "media/yu-50-1981-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "mn-10-1981",
@@ -2609,11 +2755,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#45",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 3, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 39,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/mn-10-1981-front.jpg", "back": "media/mn-10-1981-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/mn-10-1981-front.jpg",
+        "back": "media/mn-10-1981-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "mn-20-1981",
@@ -2634,11 +2796,27 @@
       "estimatedValue": 0,
       "catalogNumber": "P#46",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 3, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 39,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/mn-20-1981-front.jpg", "back": "media/mn-20-1981-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/mn-20-1981-front.jpg",
+        "back": "media/mn-20-1981-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
     },
     {
       "id": "mn-50-1981",
@@ -2659,11 +2837,1110 @@
       "estimatedValue": 0,
       "catalogNumber": "P#47",
       "stateStatus": "現存",
-      "rarityFactors": {"state": 2, "age": 3, "condition": 2, "marketEvidence": 1, "issueVolume": 1},
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
       "rarityScore": 39,
-      "location": {"binder": "非公開", "page": "", "pocket": ""},
-      "images": {"front": "media/mn-50-1981-front.jpg", "back": "media/mn-50-1981-back.jpg", "document": ""},
-      "tags": ["写真照合登録"]
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/mn-50-1981-front.jpg",
+        "back": "media/mn-50-1981-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "bg-25-1951",
+      "type": "banknote",
+      "country": "ブルガリア",
+      "region": "バルカン半島",
+      "currency": "第2レフ",
+      "denomination": "25",
+      "year": "1951",
+      "series": "ブルガリア人民共和国1951年シリーズ",
+      "issueEndDate": "",
+      "title": "25 レヴァ",
+      "story": "肖像・人物：共産主義指導者ゲオルギ・ディミトロフを描く。発行背景：社会主義体制の確立期に発行され、1952年の通貨改革後に第2レフ建てで流通した。当時の社会情勢：農業集団化と重工業化が推進され、労働と国家建設が券面表現の中心となった。特殊な点：国家指導者の肖像と労働の図像を結び付ける。採用モチーフは、表面がディミトロフ、国章、額面、裏面が鉄道労働者である。",
+      "motifs": "表：ゲオルギ・ディミトロフ、国章、額面／裏：鉄道労働者",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#84",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 47,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/bg-25-1951-front.jpg",
+        "back": "media/bg-25-1951-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "bg-200-1951",
+      "type": "banknote",
+      "country": "ブルガリア",
+      "region": "バルカン半島",
+      "currency": "第2レフ",
+      "denomination": "200",
+      "year": "1951",
+      "series": "ブルガリア人民共和国1951年シリーズ",
+      "issueEndDate": "",
+      "title": "200 レヴァ",
+      "story": "肖像・人物：共産主義指導者ゲオルギ・ディミトロフを描く。発行背景：1951年に印刷され、1952年の通貨改革後に流通した高額面券。当時の社会情勢：農業集団化と計画経済のもと、葉たばこは重要な輸出作物だった。特殊な点：政治指導者と農業労働を表裏に置き、体制と生産を一体で示す。採用モチーフは、表面がディミトロフ、国章、額面、裏面が葉たばこの収穫である。",
+      "motifs": "表：ゲオルギ・ディミトロフ、国章、額面／裏：葉たばこの収穫",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#87",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 47,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/bg-200-1951-front.jpg",
+        "back": "media/bg-200-1951-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ro-500-1991",
+      "type": "banknote",
+      "country": "ルーマニア",
+      "region": "東ヨーロッパ",
+      "currency": "旧レウ",
+      "denomination": "500",
+      "year": "1991-04",
+      "series": "体制転換期1991年シリーズ",
+      "issueEndDate": "",
+      "title": "500 レイ",
+      "story": "肖像・人物：彫刻家コンスタンティン・ブランクーシを描く。発行背景：1989年革命後の共和国が1991年に発行した500レイ券。当時の社会情勢：計画経済から市場経済への移行で物価上昇と制度再編が進んだ。特殊な点：政治家ではなく国際的な芸術家を前面に出し、文化的連続性を示す。採用モチーフは、表面がブランクーシ、裏面が彫刻作品『無限柱』である。",
+      "motifs": "表：コンスタンティン・ブランクーシ／裏：『無限柱』とブランクーシ",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#98b",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ro-500-1991-front.jpg",
+        "back": "media/ro-500-1991-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ro-1-2005",
+      "type": "banknote",
+      "country": "ルーマニア",
+      "region": "東ヨーロッパ",
+      "currency": "新レウ",
+      "denomination": "1",
+      "year": "2005-07-01",
+      "series": "デノミネーション後ポリマー・シリーズ",
+      "issueEndDate": "",
+      "title": "1 レウ",
+      "story": "肖像・人物：歴史家ニコラエ・ヨルガを描く。発行背景：旧レウ1万を新レウ1へ切り替えた2005年のデノミネーションで発行された。当時の社会情勢：EU加盟準備と通貨安定化が進められ、耐久性と偽造防止を備えたポリマー券が採用された。特殊な点：透明窓を持つ小額ポリマー券である。採用モチーフは、表面がヨルガとリンドウ、裏面がクルテア・デ・アルジェシュ修道院である。",
+      "motifs": "表：ニコラエ・ヨルガ、リンドウ、国章／裏：クルテア・デ・アルジェシュ修道院",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#117a",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ro-1-2005-front.jpg",
+        "back": "media/ro-1-2005-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "pl-50-1988",
+      "type": "banknote",
+      "country": "ポーランド",
+      "region": "東ヨーロッパ",
+      "currency": "第3ズウォティ",
+      "denomination": "50",
+      "year": "1988-12-01",
+      "series": "ポーランド人民共和国1974年人物シリーズ",
+      "issueEndDate": "",
+      "title": "50 ズウォティ",
+      "story": "肖像・人物：軍人カロル・シフィエルチェフスキを描く。発行背景：社会主義期末の1988年日付で発行された小額券。当時の社会情勢：高インフレと政治改革要求が強まり、翌年の体制転換を目前にしていた。特殊な点：人民ポーランドの軍事的英雄像を国家勲章とともに提示する。採用モチーフは、表面がシフィエルチェフスキ、裏面がグルンヴァルト十字勲章である。",
+      "motifs": "表：カロル・シフィエルチェフスキ／裏：グルンヴァルト十字勲章",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#142",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 47,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/pl-50-1988-front.jpg",
+        "back": "media/pl-50-1988-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "pl-100-1988",
+      "type": "banknote",
+      "country": "ポーランド",
+      "region": "東ヨーロッパ",
+      "currency": "第3ズウォティ",
+      "denomination": "100",
+      "year": "1988-12-01",
+      "series": "ポーランド人民共和国1974年人物シリーズ",
+      "issueEndDate": "",
+      "title": "100 ズウォティ",
+      "story": "肖像・人物：革命家ルドヴィク・ヴァリンスキを描く。発行背景：19世紀の社会主義組織『プロレタリアート』の記憶を用いた人民共和国末期の紙幣。当時の社会情勢：経済危機と円卓会議へ向かう政治変動のなか、体制の歴史的正統性が券面で強調された。特殊な点：同組織の新聞題字を大きく配する。採用モチーフは、表面がヴァリンスキ、裏面が『プロレタリアート』紙の題字である。",
+      "motifs": "表：ルドヴィク・ヴァリンスキ／裏：『プロレタリアート』紙の題字",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#143",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 47,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/pl-100-1988-front.jpg",
+        "back": "media/pl-100-1988-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "md-1-2010",
+      "type": "banknote",
+      "country": "モルドバ",
+      "region": "東ヨーロッパ",
+      "currency": "モルドバ・レウ",
+      "denomination": "1",
+      "year": "2010",
+      "series": "シュテファン大公シリーズ",
+      "issueEndDate": "",
+      "title": "1 レウ",
+      "story": "肖像・人物：中世モルダヴィア公シュテファン大公を描く。発行背景：独立後の国家通貨レウを支える継続シリーズの2010年券。当時の社会情勢：欧州統合志向と旧ソ連圏との関係の間で、歴史的国家像の形成が続いた。特殊な点：最小額面にも統治者像と宗教建築を組み合わせる。採用モチーフは、表面がシュテファン大公、裏面がカプリヤナ修道院である。",
+      "motifs": "表：シュテファン大公、国章／裏：カプリヤナ修道院",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#8h1",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/md-1-2010-front.jpg",
+        "back": "media/md-1-2010-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "by-1000-2000",
+      "type": "banknote",
+      "country": "ベラルーシ",
+      "region": "東ヨーロッパ",
+      "currency": "第2ベラルーシ・ルーブル",
+      "denomination": "1,000",
+      "year": "2000",
+      "series": "2000年建築・文化シリーズ",
+      "issueEndDate": "",
+      "title": "1,000 ルーブル",
+      "story": "肖像・人物：人物肖像を置かず、国立美術館を主題とする。発行背景：2000年の通貨単位切替で導入された第2ルーブル券。当時の社会情勢：独立国家としての制度を整える一方、強い大統領制のもとで国家文化施設が象徴化された。特殊な点：美術館建築と静物画的な花果を表裏に配する。採用モチーフは、表面がベラルーシ国立美術館、裏面が花瓶の花と果物である。",
+      "motifs": "表：ベラルーシ国立美術館／裏：花瓶の花、果物",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#28",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/by-1000-2000-front.jpg",
+        "back": "media/by-1000-2000-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ua-1-1992",
+      "type": "banknote",
+      "country": "ウクライナ",
+      "region": "東ヨーロッパ",
+      "currency": "フリヴニャ",
+      "denomination": "1",
+      "year": "1992",
+      "series": "独立後第1次フリヴニャ・シリーズ",
+      "issueEndDate": "",
+      "title": "1 フリヴニャ",
+      "story": "肖像・人物：キエフ大公ヴォロディーミル大公を描く。発行背景：独立後に設計され、1996年の通貨改革で流通を開始した最初期フリヴニャ券。当時の社会情勢：ソ連ルーブル圏から離脱し、独自の金融制度と歴史叙述を構築していた。特殊な点：キエフ・ルーシの統治者を新通貨の起点に据える。採用モチーフは、表面がヴォロディーミル大公、裏面が古代都市ケルソネソス遺跡である。",
+      "motifs": "表：ヴォロディーミル大公／裏：ケルソネソス遺跡",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#103",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ua-1-1992-front.jpg",
+        "back": "media/ua-1-1992-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ua-2-1992",
+      "type": "banknote",
+      "country": "ウクライナ",
+      "region": "東ヨーロッパ",
+      "currency": "フリヴニャ",
+      "denomination": "2",
+      "year": "1992",
+      "series": "独立後第1次フリヴニャ・シリーズ",
+      "issueEndDate": "",
+      "title": "2 フリヴニャ",
+      "story": "肖像・人物：キエフ大公ヤロスラフ賢公を描く。発行背景：独立後に設計され、1996年の通貨改革で流通を開始した初期券。当時の社会情勢：新国家が通貨制度を整え、キエフ・ルーシの歴史を国家の系譜として提示した。特殊な点：法典編纂と文化振興で知られる統治者を低額面券へ配する。採用モチーフは、表面がヤロスラフ賢公、裏面がキーウの聖ソフィア大聖堂である。",
+      "motifs": "表：ヤロスラフ賢公／裏：聖ソフィア大聖堂",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#104",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ua-2-1992-front.jpg",
+        "back": "media/ua-2-1992-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ph-1-1943",
+      "type": "banknote",
+      "country": "フィリピン",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ペソ",
+      "denomination": "1",
+      "year": "1943",
+      "series": "日本政府占領地券・1943年シリーズ",
+      "issueEndDate": "",
+      "title": "1 ペソ（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本軍占領下のフィリピンで日本政府が発行した軍票。当時の社会情勢：既存通貨の置換と物資調達に使われ、乱発によるインフレから『ミッキーマウス・マネー』とも呼ばれた。特殊な点：英語の発行体名と日本語の『大日本帝國政府』を併記する。採用モチーフは、表面がリサール記念碑、裏面が額面と装飾枠である。",
+      "motifs": "表：リサール記念碑、額面／裏：額面、装飾枠",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#109",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ph-1-1943-front.jpg",
+        "back": "media/ph-1-1943-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨"
+      ]
+    },
+    {
+      "id": "ph-5-1943",
+      "type": "banknote",
+      "country": "フィリピン",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ペソ",
+      "denomination": "5",
+      "year": "1943",
+      "series": "日本政府占領地券・1943年シリーズ",
+      "issueEndDate": "",
+      "title": "5 ペソ（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本軍占領下のフィリピンで発行された5ペソ軍票。当時の社会情勢：占領経済を支える強制通貨として流通し、供給増加により急速に価値を失った。特殊な点：現地の記念碑と英語・日本語の発行体表記を組み合わせる。採用モチーフは、表面がリサール記念碑、裏面が赤色の装飾枠と額面である。",
+      "motifs": "表：リサール記念碑、額面／裏：赤色装飾枠、額面",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#110",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ph-5-1943-front.jpg",
+        "back": "media/ph-5-1943-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨"
+      ]
+    },
+    {
+      "id": "ph-10-1943",
+      "type": "banknote",
+      "country": "フィリピン",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ペソ",
+      "denomination": "10",
+      "year": "1943",
+      "series": "日本政府占領地券・1943年シリーズ",
+      "issueEndDate": "",
+      "title": "10 ペソ（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本軍占領下のフィリピンで発行された10ペソ軍票。当時の社会情勢：軍政下の決済を支えたが、戦局悪化と増刷により深刻なインフレを招いた。特殊な点：同型券を2点確認し、うち1点には流通時の押印が残る。採用モチーフは、表面がリサール記念碑、裏面が額面と装飾枠である。",
+      "motifs": "表：リサール記念碑、額面／裏：額面、装飾枠",
+      "collectionQty": 2,
+      "duplicateQty": 1,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#111",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ph-10-1943-front.jpg",
+        "back": "media/ph-10-1943-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨"
+      ]
+    },
+    {
+      "id": "mm-10-occupation",
+      "type": "banknote",
+      "country": "ミャンマー",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ルピー",
+      "denomination": "10",
+      "year": "1942-1944",
+      "series": "日本政府ビルマ占領地券",
+      "issueEndDate": "",
+      "title": "10 ルピー（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本軍占領下のビルマ向けに発行されたルピー建て軍票。当時の社会情勢：英国統治の通貨制度を置き換え、日本の軍事占領と物資調達を支えた。特殊な点：地域を示すBA系ブロック文字と英語・日本語の発行体表記を持つ。採用モチーフは、表面がアーナンダ寺院とヤシ、裏面が額面彩紋である。",
+      "motifs": "表：アーナンダ寺院、ヤシ／裏：額面、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#16",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/mm-10-occupation-front.jpg",
+        "back": "media/mm-10-occupation-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨"
+      ]
+    },
+    {
+      "id": "mm-100-1944",
+      "type": "banknote",
+      "country": "ミャンマー",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ルピー",
+      "denomination": "100",
+      "year": "1944",
+      "series": "日本政府ビルマ占領地券",
+      "issueEndDate": "",
+      "title": "100 ルピー（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：占領末期の1944年にビルマ向けに発行された高額面軍票。当時の社会情勢：戦争遂行と占領地経済の混乱で通貨供給が増え、軍票の購買力は低下した。特殊な点：地域を示すBAブロックと大形の100表示を持つ。採用モチーフは、表面がヤシと寺院景観、裏面が額面と寺院である。",
+      "motifs": "表：ヤシ、寺院景観、大形額面／裏：額面、寺院",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#17",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/mm-100-1944-front.jpg",
+        "back": "media/mm-100-1944-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨"
+      ]
+    },
+    {
+      "id": "my-1-occupation",
+      "type": "banknote",
+      "country": "マレーシア",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ドル",
+      "denomination": "1",
+      "year": "1942-1945",
+      "series": "日本政府マラヤ占領地券",
+      "issueEndDate": "",
+      "title": "1 ドル（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：占領下のマラヤ、シンガポール、北ボルネオ等で日本政府が発行したドル建て軍票。当時の社会情勢：占領経済の強制通貨として流通し、増刷と物資不足から価値が急落した。特殊な点：ブロック文字MOと『支払要求に応じる』旨の英文を持つ。採用モチーフは、表面がパンノキとヤシ、裏面が額面彩紋である。",
+      "motifs": "表：パンノキ、ヤシ、額面／裏：額面、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#M5",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/my-1-occupation-front.jpg",
+        "back": "media/my-1-occupation-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨",
+        "バナナマネー"
+      ]
+    },
+    {
+      "id": "my-5-occupation",
+      "type": "banknote",
+      "country": "マレーシア",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ドル",
+      "denomination": "5",
+      "year": "1942-1945",
+      "series": "日本政府マラヤ占領地券",
+      "issueEndDate": "",
+      "title": "5 ドル（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本占領下のマラヤ地域で発行された5ドル軍票。当時の社会情勢：戦時統制と物資不足のなかで流通し、終戦時には通貨価値を失った。特殊な点：地域別ブロック文字と熱帯植物の意匠で発行地を示す。採用モチーフは、表面がヤシなどの熱帯植物、裏面が額面彩紋である。",
+      "motifs": "表：熱帯植物、額面／裏：額面、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#M6",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/my-5-occupation-front.jpg",
+        "back": "media/my-5-occupation-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨",
+        "バナナマネー"
+      ]
+    },
+    {
+      "id": "my-10-occupation",
+      "type": "banknote",
+      "country": "マレーシア",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ドル",
+      "denomination": "10",
+      "year": "1942-1944",
+      "series": "日本政府マラヤ占領地券",
+      "issueEndDate": "",
+      "title": "10 ドル（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本占領下のマラヤ地域で発行された10ドル軍票。当時の社会情勢：増刷による激しいインフレを象徴し、券面の植物から『バナナマネー』と呼ばれた。特殊な点：MPブロックと大きなバナナの木を持つ代表的占領地券である。採用モチーフは、表面がバナナとヤシ、裏面が額面彩紋である。",
+      "motifs": "表：バナナ、ヤシ、額面／裏：額面、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#M7",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/my-10-occupation-front.jpg",
+        "back": "media/my-10-occupation-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨",
+        "バナナマネー"
+      ]
+    },
+    {
+      "id": "jp-1-1885",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "1",
+      "year": "1885",
+      "series": "旧兌換銀行券・大黒札",
+      "issueEndDate": "",
+      "title": "旧1円券（大黒札）",
+      "story": "肖像・人物：福神の大黒天を描く。発行背景：日本銀行開業後、最初に発行された兌換銀券の1円券。当時の社会情勢：近代的な中央銀行制度を整え、紙幣への信用を統一しようとした明治期の通貨制度改革を示す。特殊な点：エドアルド・キヨッソーネの精緻な彫刻と英文の銀兌換文言を持つ。採用モチーフは、表面が大黒天、鼠、銀貨、裏面が彩紋と偽造罰則文である。",
+      "motifs": "表：大黒天、鼠、1円銀貨／裏：彩紋、偽造罰則文",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#22・JNDA#11-25",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 5,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 57,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-1-1885-front.jpg",
+        "back": "media/jp-1-1885-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-1-1943",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "1",
+      "year": "1943",
+      "series": "い号券・有番号券",
+      "issueEndDate": "",
+      "title": "い号1円券（有番号）",
+      "story": "肖像・人物：古代の忠臣として伝承される武内宿禰を描く。発行背景：太平洋戦争下の1943年に発行された日本銀行券。当時の社会情勢：金属・資材不足と戦時統制の進展により、券面は従来券より簡略化された。特殊な点：有番号の初期型で、のちに番号を省いた型も発行された。採用モチーフは、表面が武内宿禰、裏面が宇倍神社拝殿である。",
+      "motifs": "表：武内宿禰、額面／裏：宇倍神社拝殿",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#49・JNDA#11-54",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-1-1943-front.jpg",
+        "back": "media/jp-1-1943-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-5sen-1944",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.05",
+      "year": "1944",
+      "series": "い号小額日本銀行券",
+      "issueEndDate": "",
+      "title": "5銭券（楠木正成像）",
+      "story": "肖像・人物：皇居外苑の楠木正成騎馬像を描く。発行背景：戦時の硬貨材料不足を補うため、1944年に発行された小額日本銀行券。当時の社会情勢：総力戦体制で金属資源が軍需へ転用され、紙製の補助通貨が日常決済を担った。特殊な点：木材パルプを用いた小形券である。採用モチーフは、表面が楠木正成騎馬像、裏面が額面と彩紋である。",
+      "motifs": "表：楠木正成騎馬像／裏：額面、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#52・JNDA#11-63",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-5sen-1944-front.jpg",
+        "back": "media/jp-5sen-1944-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-10sen-1944",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.10",
+      "year": "1944",
+      "series": "い号小額日本銀行券",
+      "issueEndDate": "",
+      "title": "10銭券（八紘一宇塔）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：戦時の補助貨幣不足を補うため1944年に発行された小額日本銀行券。当時の社会情勢：国家総動員と対外戦争の理念が公共建築と標語によって可視化された。特殊な点：当時の国家理念を象徴する八紘一宇塔を券面へ採用する。採用モチーフは、表面が八紘一宇塔、裏面が額面と鳩である。",
+      "motifs": "表：八紘一宇塔／裏：額面、鳩",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#53・JNDA#11-62",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-10sen-1944-front.jpg",
+        "back": "media/jp-10sen-1944-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-50sen-1938",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.50",
+      "year": "1938",
+      "series": "政府紙幣50銭・富士桜",
+      "issueEndDate": "",
+      "title": "50銭政府紙幣（富士桜）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日中戦争下の臨時通貨法により、銀を節約する50銭硬貨の代用として発行された。当時の社会情勢：戦時動員に伴う金属統制が進み、補助貨幣も紙へ置き換えられた。特殊な点：法貨として一度に使える枚数へ制限があった。採用モチーフは、表面が越前岳から見た富士山と山桜、裏面が額面彩紋である。",
+      "motifs": "表：富士山、山桜／裏：額面、波形彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#58・JNDA#11-60",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-50sen-1938-front.jpg",
+        "back": "media/jp-50sen-1938-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "jp-50sen-1945",
+      "type": "banknote",
+      "country": "大日本帝国",
+      "region": "東アジア",
+      "currency": "円",
+      "denomination": "0.50",
+      "year": "1945",
+      "series": "政府紙幣50銭・靖国神社",
+      "issueEndDate": "",
+      "title": "50銭政府紙幣（靖国神社）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：昭和20年銘で印刷され、終戦直後の1946年から小額貨幣不足を補うため流通した。当時の社会情勢：敗戦後の混乱、電力不足、金属不足により、戦時意匠を残す政府紙幣が継続使用された。特殊な点：帝国期の発行体名と意匠を持ちながら、主に占領期初頭に流通した。採用モチーフは、表面が靖国神社大鳥居と金鵄、裏面が額面彩紋である。",
+      "motifs": "表：靖国神社大鳥居、金鵄／裏：額面、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#60",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/jp-50sen-1945-front.jpg",
+        "back": "media/jp-50sen-1945-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "cn-50sen-1937",
+      "type": "banknote",
+      "country": "中華民国",
+      "region": "東アジア",
+      "currency": "日本軍用円",
+      "denomination": "0.50",
+      "year": "1937",
+      "series": "中華民国臨時政府地域・日本軍占領地軍票",
+      "issueEndDate": "",
+      "title": "50銭軍票（鶏・龍）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日中戦争初期、日本軍占領地域向けに用意された50銭軍票。当時の社会情勢：占領地の通貨支配と軍需調達を目的に、日本軍用手票が流通させられた。特殊な点：鶏と龍という具象的な図柄を用い、赤い印章と日本語の発行体表記を持つ。採用モチーフは、表面が尾長鶏と龍、裏面が印章と額面である。",
+      "motifs": "表：尾長鶏、龍、額面／裏：印章、額面",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#M2・N#456973",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/cn-50sen-1937-front.jpg",
+        "back": "media/cn-50sen-1937-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "中華民国臨時政府地域",
+        "占領地通貨",
+        "軍票"
+      ]
+    },
+    {
+      "id": "cn-50sen-1939",
+      "type": "banknote",
+      "country": "中華民国",
+      "region": "東アジア",
+      "currency": "日本軍用円",
+      "denomination": "0.50",
+      "year": "1939",
+      "series": "中華民国臨時政府地域・日本軍占領地軍票",
+      "issueEndDate": "",
+      "title": "50銭軍票（無組番号）",
+      "story": "肖像・人物：古代人物像を円形肖像として配する。発行背景：中国の日本軍占領地域向けに発行された50銭軍票。当時の社会情勢：傀儡政権の成立と並行して複数の軍票・銀行券が流通し、通貨体系は分断された。特殊な点：『日本軍用手票』の表記を持ち、組番号を省いた型である。採用モチーフは、表面が人物像、軍用手票表記、額面、裏面が英文額面である。",
+      "motifs": "表：人物像、日本軍用手票表記、額面／裏：50 SEN、彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#M14・JNDA#13-34",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/cn-50sen-1939-front.jpg",
+        "back": "media/cn-50sen-1939-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "中華民国臨時政府地域",
+        "占領地通貨",
+        "軍票"
+      ]
     }
   ],
   "lots": [],

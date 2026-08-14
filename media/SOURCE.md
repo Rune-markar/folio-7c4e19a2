@@ -12,6 +12,32 @@
 | `ke-50-2010` | `ke-50-2010-front.jpg`, `ke-50-2010-back.jpg` | [Numista 201705](https://en.numista.com/201705) | ページ上に CC BY-NC / CC BY-NC-SA 表示。P#47e、券面日付2010-07-16、肖像・裏面意匠を照合。非営利公開と表示条件を維持する。 |
 | `ar-5000-1977` | `ar-5000-1977-front.jpg`, `ar-5000-1977-back.jpg` | [Numista 203700](https://en.numista.com/203700) | ページ上の画像表示は CC BY-NC-SA 4.0。P#305、1977–1983年、LEY表記なし型、表裏意匠を照合。非営利・継承条件を維持する。 |
 | `ar-5-1974` | `ar-5-1974-front.jpg`, `ar-5-1974-back.jpg` | [Numista 207836](https://en.numista.com/207836) | ページ上の画像表示は CC BY-NC 4.0。P#294、DECRETO-LEY表記型、表裏意匠を照合し、誤っていた旧画像を交換。非営利公開に限定する。 |
+| `bg-25-1951` | `bg-25-1951-front.jpg`, `bg-25-1951-back.jpg` | [Numista 203383](https://en.numista.com/203383) | ページ上の画像表示は CC BY-NC 4.0。P#84、1951年25レヴァ券の額面・年・意匠を照合。非営利公開に限定する。 |
+| `bg-200-1951` | `bg-200-1951-front.jpg`, `bg-200-1951-back.jpg` | [Numista 203410](https://en.numista.com/203410) | ページ上の画像表示は CC BY-NC 4.0。P#87、1951年200レヴァ券の額面・年・意匠を照合。非営利公開に限定する。 |
+| `ro-500-1991` | `ro-500-1991-front.jpg`, `ro-500-1991-back.jpg` | [Numista 205411](https://en.numista.com/205411) | ページ上の画像表示は CC BY-NC 4.0。P#98b、1991年4月版とコンスタンティン・ブランクーシ肖像を照合。非営利公開に限定する。 |
+| `ro-1-2005` | `ro-1-2005-front.jpg`, `ro-1-2005-back.jpg` | [Numista 201653](https://en.numista.com/201653) | ページ上の画像表示は CC BY-NC-SA 4.0。P#117、2005年ポリマー券の額面・意匠を照合。非営利・継承条件を維持する。 |
+| `pl-50-1988` | `pl-50-1988-front.jpg`, `pl-50-1988-back.jpg` | [Numista 203924](https://en.numista.com/203924), [Wikimedia Commons 表](https://commons.wikimedia.org/wiki/File:Polish_50_Zlotych,_1988(obverse).webp), [裏](https://commons.wikimedia.org/wiki/File:Polish_50_Zlotych,_1988(reverse).webp) | NumistaでP#142cと1988年型を照合し、Commonsの1988年券画像を使用。画像は表裏ともCC0 1.0。 |
+| `pl-100-1988` | `pl-100-1988-front.jpg`, `pl-100-1988-back.jpg` | [Numista 203926](https://en.numista.com/203926) | ページ上の画像表示は CC BY-NC 4.0。P#143、1988年100ズウォティ券とルドヴィク・ヴァリンスキ肖像を照合。非営利公開に限定する。 |
+| `md-1-2010` | `md-1-2010-front.jpg`, `md-1-2010-back.jpg` | [Numista 202816](https://en.numista.com/202816) | ページ上の画像表示は CC BY-NC 4.0。P#8h1、2010年1レウ券の年・額面・意匠を照合。非営利公開に限定する。 |
+| `by-1000-2000` | `by-1000-2000-front.jpg`, `by-1000-2000-back.jpg` | [Numista 205190](https://en.numista.com/205190) | ページ上の画像表示は CC BY-NC-SA 4.0。P#28、2000年1000ルーブル券の額面・意匠を照合。非営利・継承条件を維持する。 |
+| `ua-1-1992` | `ua-1-1992-front.jpg`, `ua-1-1992-back.jpg` | [Numista 202869](https://en.numista.com/202869) | ページ上の画像表示は CC BY-NC 4.0。P#103、1992年初期シリーズの1フリヴニャ券を照合。非営利公開に限定する。 |
+| `ua-2-1992` | `ua-2-1992-front.jpg`, `ua-2-1992-back.jpg` | [Numista 202867](https://en.numista.com/202867) | ページ上の画像表示は CC BY-NC-SA 4.0。P#104、1992年初期シリーズの2フリヴニ券を照合。非営利・継承条件を維持する。 |
+| `ph-1-1943` | `ph-1-1943-front.jpg`, `ph-1-1943-back.jpg` | [Numista 201639](https://en.numista.com/201639) | ページ上の画像表示は CC BY-NC-SA 4.0。P#109、日本軍政下フィリピン1ペソ券の発行体・額面・意匠を照合。非営利・継承条件を維持する。 |
+| `ph-5-1943` | `ph-5-1943-front.jpg`, `ph-5-1943-back.jpg` | [Numista 203952](https://en.numista.com/203952) | ページ上の画像表示は CC BY 4.0。P#110、日本軍政下フィリピン5ペソ券の発行体・額面・意匠を照合。表示条件を維持する。 |
+| `ph-10-1943` | `ph-10-1943-front.jpg`, `ph-10-1943-back.jpg` | [Numista 206401](https://en.numista.com/206401) | ページ上の画像表示は CC BY-NC 4.0。P#111、日本軍政下フィリピン10ペソ券を照合。写真上の同型2点を所蔵数2として登録。非営利公開に限定する。 |
+| `mm-10-occupation` | `mm-10-occupation-front.jpg`, `mm-10-occupation-back.jpg` | [Numista 203976](https://en.numista.com/203976), [Australian War Memorial C1175293](https://www.awm.gov.au/collection/C1175293) | Numista画像は CC BY-NC 4.0。P#16、日本軍政下ビルマ10ルピー券の額面・発行背景を一次資料と併せて照合。非営利公開に限定する。 |
+| `mm-100-1944` | `mm-100-1944-front.jpg`, `mm-100-1944-back.jpg` | [Numista 207647](https://en.numista.com/207647) | ページ上の画像表示は CC BY-NC-SA 4.0。P#17、日本軍政下ビルマ100ルピー券の額面・意匠を照合。非営利・継承条件を維持する。 |
+| `my-1-occupation` | `my-1-occupation-front.jpg`, `my-1-occupation-back.jpg` | [Numista 204451](https://en.numista.com/204451), [National Heritage Board Singapore 1044527](https://www.roots.gov.sg/Collection-Landing/listing/1044527?taigerlist=collections) | Numista画像は CC BY-NC 4.0。P#M5、日本軍政下マラヤ1ドル券の額面・発行背景を公的収蔵資料と併せて照合。非営利公開に限定する。 |
+| `my-5-occupation` | `my-5-occupation-front.jpg`, `my-5-occupation-back.jpg` | [Numista 204452](https://en.numista.com/204452) | P#M6、日本軍政下マラヤ5ドル券の額面・意匠を照合。取得時に選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
+| `my-10-occupation` | `my-10-occupation-front.jpg`, `my-10-occupation-back.jpg` | [Numista 203104](https://en.numista.com/203104) | ページ上の画像表示は CC BY-NC 4.0。P#M7、日本軍政下マラヤ10ドル券の額面・意匠を照合。非営利公開に限定する。 |
+| `jp-1-1885` | `jp-1-1885-front.jpg`, `jp-1-1885-back.jpg` | [Numista 437172](https://en.numista.com/437172) | P#22、1885年旧壹圓券（大黒札）の年・額面・意匠を照合。取得時に選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
+| `jp-1-1943` | `jp-1-1943-front.jpg`, `jp-1-1943-back.jpg` | [Numista 210318](https://en.numista.com/210318) | ページ上の画像表示は CC BY-NC-SA 4.0。P#49、1943年い号券1円の年・意匠を照合。非営利・継承条件を維持する。 |
+| `jp-5sen-1944` | `jp-5sen-1944-front.jpg`, `jp-5sen-1944-back.jpg` | [Numista 205534](https://en.numista.com/205534) | P#52、1944年い号券5銭の年・額面・意匠を照合。取得時に選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
+| `jp-10sen-1944` | `jp-10sen-1944-front.jpg`, `jp-10sen-1944-back.jpg` | [Numista 208598](https://en.numista.com/208598) | P#53、1944年い号券10銭の年・額面・意匠を照合。取得時に選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
+| `jp-50sen-1938` | `jp-50sen-1938-front.jpg`, `jp-50sen-1938-back.jpg` | [Numista 210259](https://en.numista.com/210259) | P#58、1938年小額政府紙幣50銭の年・額面・意匠を照合。取得時に選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
+| `jp-50sen-1945` | `jp-50sen-1945-front.jpg`, `jp-50sen-1945-back.jpg` | [Numista 210311](https://en.numista.com/210311) | ページ上の画像表示は CC BY-NC 4.0。P#60、昭和20年銘50銭券（1946年発行）の年・意匠を照合。非営利公開に限定する。 |
+| `cn-50sen-1937` | `cn-50sen-1937-front.jpg`, `cn-50sen-1937-back.jpg` | [Numista 456973](https://en.numista.com/456973) | ページ上の画像表示は CC BY-NC-SA 4.0。P#M2、中華民国臨時政府地域向け50銭券の鶏・龍意匠を照合。非営利・継承条件を維持する。 |
+| `cn-50sen-1939` | `cn-50sen-1939-front.jpg`, `cn-50sen-1939-back.jpg` | [Numista 214740](https://en.numista.com/214740) | P#M14、1939年の無記号50銭券を照合。表面画像は CC BY-NC 4.0、裏面画像は個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に再確認する。 |
 
 | de-5000000-1923 | de-5000000-1923-front.jpg, de-5000000-1923-back.jpg | [Banknote.ws P#95](https://www.banknote.ws/COLLECTION/countries/EUR/GER/GER0095.htm) | 1923-07-25付・P#95と照合。取得時に画像個別の利用許諾表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
 | de-buer-1000000000-1923 | de-buer-1000000000-1923-front.jpg, de-buer-1000000000-1923-back.jpg | [Numista 228988](https://en.numista.com/228988) | DeNG 7/8#659e・N#228988、1923-10-16付と照合。ページ上の画像表示は CC BY-SA。表示条件と継承条件を維持する。 |
