@@ -60,5 +60,12 @@
 | mn-10-1993 | mn-10-1993-front.jpg, mn-10-1993-back.jpg | [Numista 203103](https://en.numista.com/203103), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#54、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
 | mn-20-1993 | mn-20-1993-front.jpg, mn-20-1993-back.jpg | [Numista 203105](https://en.numista.com/203105), [モンゴル銀行](https://www.mongolbank.mn/en/banknote) | 1993年、P#55、スフバートルと馬群の表裏を照合。Numista画像はCC BY-NC-SA 4.0。非営利・継承条件を維持する。 |
 | by-100-1992 | by-100-1992-front.jpg, by-100-1992-back.jpg | [Numista 203049](https://en.numista.com/203049) | 1992年、P#8、ヨーロッパバイソンとパホニアの表裏を照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| kp-50-2018-commemorative | kp-50-2018-commemorative-front.jpg, kp-50-2018-commemorative-back.jpg | [Numista 225250](https://en.numista.com/225250) | 建国70周年（1948–2018）の記念加刷を持つ流通記念紙幣P#CS26a、基券P#60と照合。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
+| kp-200-2018-commemorative | kp-200-2018-commemorative-front.jpg, kp-200-2018-commemorative-back.jpg | [Numista 220519](https://en.numista.com/220519) | 建国70周年（1948–2018）の記念加刷を持つ流通記念紙幣、基券P#62と照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| kp-500-2018-commemorative | kp-500-2018-commemorative-front.jpg, kp-500-2018-commemorative-back.jpg | [Numista 204566](https://en.numista.com/204566) | 建国70周年（1948–2018）の記念加刷を持つ流通記念紙幣P#CS22、基券P#63と照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| kp-1000-2018-commemorative | kp-1000-2018-commemorative-front.jpg, kp-1000-2018-commemorative-back.jpg | [Numista 204571](https://en.numista.com/204571) | 建国70周年（1948–2018）の記念加刷を持つ流通記念紙幣P#CS21、基券P#64と照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| kp-2000-2018-commemorative | kp-2000-2018-commemorative-front.jpg, kp-2000-2018-commemorative-back.jpg | [Numista 204589](https://en.numista.com/204589) | 建国70周年（1948–2018）の記念加刷を持つ流通記念紙幣P#CS24、基券P#65と照合。ページ上の画像表示はCC BY-NC 4.0。非営利公開に限定する。 |
+| kp-5000-2017-kim-jong-suk | kp-5000-2017-kim-jong-suk-front.jpg, kp-5000-2017-kim-jong-suk-back.jpg | [Numista 203645](https://en.numista.com/203645) | 金正淑生誕100周年（1917–2017）の記念加刷を持つ流通記念紙幣P#CS20、基券P#67と照合。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
+| kp-5000-2019-china-relations | kp-5000-2019-china-relations-front.jpg, kp-5000-2019-china-relations-back.jpg | [Numista 225251](https://en.numista.com/225251) | 中朝国交樹立70周年（1949–2019）の記念加刷を持つ流通記念紙幣P#CS27a、基券P#67と照合。選択画像の個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
 
 画像はいずれも紙幣全体が写り、主要文字を確認でき、販売者名・ロゴ・透かし文字・`SPECIMEN` 表示のないものを採用しました。保有資料写真およびその共有フォルダURLは公開物へ収録していません。

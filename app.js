@@ -498,7 +498,7 @@ async function renderAtlasMap() {
 function filteredItems() {
   const query = appState.search.trim().normalize("NFKC").toLocaleLowerCase("ja");
   return appState.database.items.filter((item) => {
-    const haystack = [item.country, item.region, item.currency, item.denomination, item.year, item.series, item.title, item.story, item.catalogNumber].join(" ").normalize("NFKC").toLocaleLowerCase("ja");
+    const haystack = [item.country, item.region, item.currency, item.denomination, item.year, item.series, item.issueType, item.title, item.story, item.catalogNumber, ...(item.tags || [])].join(" ").normalize("NFKC").toLocaleLowerCase("ja");
     if (query && !haystack.includes(query)) return false;
     if (appState.filters.region && item.region !== appState.filters.region) return false;
     if (appState.filters.country && item.country !== appState.filters.country) return false;
@@ -528,13 +528,14 @@ function filteredItems() {
 
 function noteCard(item) {
   const image = item.images?.front ? `<img src="${escapeHtml(item.images.front)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の表面">` : "";
+  const issueBadge = item.issueType ? `<span class="commemorative-label">${escapeHtml(item.issueType)}</span>` : "";
   const location = item.location?.binder && item.location.binder !== "未配置" ? `${item.location.binder}${item.location.page ? ` / ${item.location.page}` : ""}` : "未配置";
   const interactionLabel = staticArchive ? "の詳細を見る" : "を編集";
   const footerStatus = staticArchive ? "詳細を見る →" : location;
   const interaction = ` role="button" tabindex="0" aria-label="${escapeHtml(item.country)} ${escapeHtml(item.title)}${interactionLabel}"`;
   return `<article class="note-card"${interaction} data-note-id="${escapeHtml(item.id)}">
     <div class="note-visual" style="--note-bg:${hashColor(item.country)}">${image}<span class="note-country-code">${escapeHtml(item.country.slice(0, 12))}</span><span class="note-denom">${escapeHtml(item.denomination)}</span></div>
-    <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span><span class="rarity-label">希少度 ${item.rarityScore}/100</span></div>
+    <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span>${issueBadge}<span class="rarity-label">希少度 ${item.rarityScore}/100</span></div>
       <h4>${escapeHtml(item.title || `${item.denomination} ${item.currency}`)}</h4><p>${escapeHtml(item.year || "年代不明")} · ${escapeHtml(item.series || item.currency)}</p>
       <div class="note-footer"><span class="qty-pill">本蔵 ${item.collectionQty}枚${item.duplicateQty ? ` <b class="duplicate-pill">＋ダブり ${item.duplicateQty}</b>` : ""}</span><span>${escapeHtml(footerStatus)}</span></div>
     </div></article>`;
@@ -668,6 +669,7 @@ function openPublicNote(item) {
   $("#publicNoteImages").innerHTML = images.length ? images.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}"><figcaption>${label}</figcaption></figure>`).join("") : `<p class="public-note-empty">公開画像はありません。</p>`;
   const facts = [
     ["発行国・体制", item.country],
+    ...(item.issueType ? [["発行区分", item.issueType]] : []),
     ["通貨", item.currency],
     ["額面", item.denomination],
     ["発行年・年代", item.year || "不明"],
