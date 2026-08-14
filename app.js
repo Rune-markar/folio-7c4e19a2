@@ -106,7 +106,14 @@ function collectionStats() {
 
 function switchView(view) {
   appState.view = view;
-  $$(".view").forEach((element) => element.classList.toggle("is-active", element.dataset.view === view));
+  $$(".view").forEach((element) => {
+    const active = element.dataset.view === view;
+    element.classList.toggle("is-active", active);
+    if (active) {
+      const footer = $(".app-footer");
+      if (footer) element.append(footer);
+    }
+  });
   $$(".nav-item").forEach((element) => {
     const active = element.dataset.viewTarget === view;
     element.classList.toggle("is-active", active);
