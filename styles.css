@@ -166,6 +166,8 @@ img, video { height: auto; }
 .map-camera { transform-box: view-box; transform-origin: 0 0; transition: transform .72s cubic-bezier(.22,.75,.18,1); }
 .historical-map-data { transition: opacity .25s ease; }
 .map-territory { fill: rgba(225,220,198,.13); stroke: transparent; }
+.map-region-hatch { fill: url(#mapRegionHatch); stroke: rgba(255,230,166,.9); stroke-width: 1.5; vector-effect: non-scaling-stroke; filter: drop-shadow(0 0 5px rgba(215,183,115,.32)); }
+#mapRegionHatch line { stroke: rgba(255,226,158,.58); stroke-width: 2; }
 .map-selected-border { fill: rgba(215,183,115,.83); stroke: #ffe6a6; stroke-width: 2.1; vector-effect: non-scaling-stroke; filter: url(#mapGlow); transition: fill .3s, stroke .3s, opacity .3s; }
 .map-selected-border.outline-only { fill: rgba(215,183,115,.035); stroke: #ffe6a6; stroke-width: 2.6; filter: none; }
 .map-selected-border.precision-1 { stroke-dasharray: 2.5 2.5; }

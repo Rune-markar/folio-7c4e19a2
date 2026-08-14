@@ -122,12 +122,14 @@
                     <desc id="mapDescription">国家・体制を選ぶと、その年代の対象地域と国境が表示されます。</desc>
                     <defs>
                       <pattern id="mapGrid" width="50" height="48" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 48" fill="none" stroke="currentColor" stroke-width="1"/></pattern>
+                      <pattern id="mapRegionHatch" width="8" height="8" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><line x1="0" y1="0" x2="0" y2="8"/></pattern>
                       <filter id="mapGlow"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
                     </defs>
                     <rect class="map-grid" width="1000" height="480" fill="url(#mapGrid)"/>
                     <g class="graticule" aria-hidden="true"><path d="M0 240H1000M500 0V480"/><ellipse cx="500" cy="240" rx="430" ry="150"/><ellipse cx="500" cy="240" rx="430" ry="65"/></g>
                     <g class="map-camera" id="mapCamera" aria-hidden="true">
                       <g class="historical-map-data" id="historicalMapData"></g>
+                      <g class="historical-region-data" id="historicalRegionData"></g>
                       <g class="historical-border-data" id="historicalBorderData"></g>
                       <g class="historical-label" id="historicalLabel">
                         <circle class="map-marker" id="mapMarker" r="6"/>

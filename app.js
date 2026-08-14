@@ -60,6 +60,24 @@ const atlasRegionOverrides = new Map([
   ["フランス共和国", "西ヨーロッパ"],
   ["トルコ共和国", "中東アジア"]
 ]);
+const atlasRegionViews = new Map([
+  ["北アメリカ", [-168, 12, -52, 74]],
+  ["中央アメリカ", [-118, 6, -59, 33]],
+  ["南アメリカ", [-82, -56, -34, 14]],
+  ["オセアニア", [108, -49, 180, 3]],
+  ["東アジア", [94, 14, 151, 55]],
+  ["東南アジア", [89, -12, 145, 30]],
+  ["中央アジア", [45, 29, 91, 56]],
+  ["中東アジア", [24, 12, 61, 43]],
+  ["北ヨーロッパ", [-13, 53, 33, 72]],
+  ["西ヨーロッパ", [-12, 41, 13, 60]],
+  ["中央ヨーロッパ", [3, 43, 25, 57]],
+  ["東ヨーロッパ", [19, 39, 61, 72]],
+  ["イベリア半島", [-11, 35, 5, 45]],
+  ["バルカン半島", [12, 34, 31, 48]],
+  ["ロシア構成国", [19, 40, 180, 82]],
+  ["アフリカ", [-20, -36, 55, 38]]
+]);
 const atlasTimelineEras = new Set(["1914", "1920", "1923", "1940", "1943", "1946", "1947", "1965", "1966", "1970", "1983", "1985", "1986", "1987", "1992", "1993", "1994", "2018"]);
 const historicalMapCache = new Map();
 let historicalMapRequest = 0;
@@ -281,6 +299,18 @@ function projectedBounds(features) {
   return bounds;
 }
 
+function regionGeometry(bounds) {
+  const [west, south, east, north] = bounds;
+  const segments = 12;
+  const interpolate = (start, end, index) => start + (end - start) * index / segments;
+  const ring = [];
+  for (let index = 0; index <= segments; index += 1) ring.push([interpolate(west, east, index), north]);
+  for (let index = 1; index <= segments; index += 1) ring.push([east, interpolate(north, south, index)]);
+  for (let index = 1; index <= segments; index += 1) ring.push([interpolate(east, west, index), south]);
+  for (let index = 1; index <= segments; index += 1) ring.push([west, interpolate(south, north, index)]);
+  return { type: "Polygon", coordinates: [ring] };
+}
+
 function projectedPolygonView(features) {
   let largest = null;
   const polygons = [];
@@ -338,10 +368,24 @@ async function renderAtlasMap() {
   const entry = selectedAtlasEntry();
   const eraEntry = historicalAtlas.find((item) => item.era === appState.atlasEra);
   const mapYear = entry?.mapYear ?? eraEntry.mapYear;
+  const regionBounds = !entry && appState.atlasRegion ? atlasRegionViews.get(appState.atlasRegion) : null;
   const requestId = ++historicalMapRequest;
   $("#historicalLabel").classList.remove("is-visible");
   $("#mapLabel").textContent = "";
-  if (!entry) {
+  if (!entry && appState.atlasRegion) {
+    $("#mapOverline").textContent = `${appState.atlasRegion} · REGION`;
+    $("#mapCountryName").textContent = appState.atlasRegion;
+    $("#mapCountryNative").hidden = true;
+    $("#mapCountryNative").textContent = "";
+    $("#mapCountryDetail").textContent = "選択した地域を拡大し、概略範囲を網掛けで表示しています。国家・体制を選ぶと、その当時の国境へ移動します。";
+    $("#viewCountryCollection").hidden = true;
+    $("#mapFacts").hidden = true;
+    $("#mapControlFact").hidden = true;
+    $("#mapBoundaryLabel").textContent = "選択地域（概略）";
+    $("#mapLegend").classList.remove("is-outline-only");
+    $("#mapEraLegend").textContent = `${mapYear}年境界資料`;
+    renderCurrencyChronology(null);
+  } else if (!entry) {
     $("#mapOverline").textContent = "BORDERLESS WORLD";
     $("#mapCountryName").textContent = "国家・体制を選択してください";
     $("#mapCountryNative").hidden = true;
@@ -375,12 +419,27 @@ async function renderAtlasMap() {
     const [data, coastlineData] = await Promise.all([loadHistoricalMap(mapYear), loadHistoricalMap(2018)]);
     if (requestId !== historicalMapRequest) return;
     const selected = entry ? data.features.filter((feature) => entry.featureNames.includes(feature.properties?.NAME)) : [];
+    const regionFeature = regionBounds ? { type: "Feature", properties: {}, geometry: regionGeometry(regionBounds) } : null;
+    const regionProjectedBounds = regionFeature ? projectedBounds([regionFeature]) : null;
+    const regionalFeatures = regionProjectedBounds ? data.features.filter((feature) => {
+      const focus = projectedPolygonView([feature]);
+      return Number.isFinite(focus.x) && Number.isFinite(focus.y)
+        && focus.x >= regionProjectedBounds.minX && focus.x <= regionProjectedBounds.maxX
+        && focus.y >= regionProjectedBounds.minY && focus.y <= regionProjectedBounds.maxY;
+    }) : [];
     const group = $("#historicalMapData");
     group.replaceChildren(...coastlineData.features.map((feature) => {
       const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
       path.setAttribute("d", geometryPath(feature.geometry));
       path.setAttribute("fill-rule", "evenodd");
       path.setAttribute("class", "map-territory");
+      return path;
+    }));
+    $("#historicalRegionData").replaceChildren(...regionalFeatures.map((feature) => {
+      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+      path.setAttribute("d", geometryPath(feature.geometry));
+      path.setAttribute("fill-rule", "evenodd");
+      path.setAttribute("class", "map-region-hatch");
       return path;
     }));
     $("#historicalBorderData").replaceChildren(...selected.map((feature) => {
@@ -392,7 +451,15 @@ async function renderAtlasMap() {
       return path;
     }));
     let cameraTransform = "translate(0px, 0px) scale(1)";
-    if (entry && selected.length) {
+    if (regionFeature) {
+      const bounds = regionProjectedBounds;
+      const width = bounds.maxX - bounds.minX;
+      const height = bounds.maxY - bounds.minY;
+      const scale = Math.max(1.35, Math.min(4.8, 260 / Math.max(width, height, 1)));
+      const x = (bounds.minX + bounds.maxX) / 2;
+      const y = (bounds.minY + bounds.maxY) / 2;
+      cameraTransform = `translate(${(500 - x * scale).toFixed(2)}px, ${(240 - y * scale).toFixed(2)}px) scale(${scale.toFixed(3)})`;
+    } else if (entry && selected.length) {
       const focus = projectedPolygonView(selected);
       const { bounds, x, y } = focus;
       const width = bounds.maxX - bounds.minX;
@@ -420,7 +487,7 @@ async function renderAtlasMap() {
     }
     $("#mapCamera").style.transform = cameraTransform;
     $("#mapDataStatus").textContent = entry && !selected.length ? "対象境界を特定できません" : `${mapYear}年 · ${data.features.length}地域`;
-    $("#mapDescription").textContent = entry ? (entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。フランスの外郭のみを表示し、ヴィシー政府の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`) : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
+    $("#mapDescription").textContent = entry ? (entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。フランスの外郭のみを表示し、ヴィシー政府の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`) : regionFeature ? `${mapYear}年資料の世界地図。${appState.atlasRegion}の概略範囲を網掛けで強調表示しています。` : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
   } catch (error) {
     if (requestId !== historicalMapRequest) return;
     $("#mapDataStatus").textContent = "地図の読込に失敗";
