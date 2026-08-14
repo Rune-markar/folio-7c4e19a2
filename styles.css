@@ -331,6 +331,10 @@ code { padding: 2px 5px; border-radius: 4px; background: var(--paper-deep); }
 .source-link { display: block; padding: 8px 0; border-top: 1px solid var(--line); color: var(--burgundy); font-size: 11px; font-weight: 700; text-decoration: none; }
 .security-note { margin-top: 18px; padding: 17px 20px; border-left: 3px solid var(--burgundy); background: var(--burgundy-soft); display: flex; align-items: baseline; gap: 12px; font-size: 10px; }
 .security-note strong { color: var(--burgundy); white-space: nowrap; }
+.app-footer { margin-top: 30px; padding: 15px 2px 0; border-top: 1px solid var(--line); display: flex; justify-content: space-between; gap: 16px; color: var(--muted); font-size: 10px; }
+.app-footer strong { color: var(--ink); font-weight: 700; }
+.app-footer a { color: var(--burgundy); font-weight: 700; text-decoration: none; }
+.app-footer a:hover, .app-footer a:focus-visible { text-decoration: underline; }
 
 .modal { width: min(920px, calc(100vw - 30px)); max-height: min(90vh, 920px); padding: 0; border: 0; border-radius: 20px; background: var(--card-solid); color: var(--ink); box-shadow: 0 30px 90px rgba(0,0,0,.28); }
 .note-modal { width: min(1180px, calc(100vw - 30px)); }
