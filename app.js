@@ -445,7 +445,8 @@ function renderCollection() {
   const ribbon = $("#sourceRibbon");
   if (source.countryCount) {
     ribbon.hidden = false;
-    ribbon.innerHTML = `<span><b>Notion同期スナップショット</b> ${escapeHtml(source.importedAt || "")}</span><span>${source.countryCount}か国・地域の索引 · 詳細${source.detailedNotionCount || 0}件 · 一覧表${source.sheetCount || 0}件</span>`;
+    const photoRegistration = Number(source.photoRegistrationCount) > 0 ? ` · 写真照合${source.photoRegistrationCount}件` : "";
+    ribbon.innerHTML = `<span><b>Notion同期スナップショット</b> ${escapeHtml(source.importedAt || "")}</span><span>${source.countryCount}か国・地域の索引 · 詳細${source.detailedNotionCount || 0}件 · 一覧表${source.sheetCount || 0}件${photoRegistration}</span>`;
   } else {
     ribbon.hidden = true;
   }

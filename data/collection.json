@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "updatedAt": "2026-08-13T18:31:39.377Z",
+  "updatedAt": "2026-08-14T14:27:08.1174192+09:00",
   "settings": {
     "archiveName": "World Banknote Archive"
   },
@@ -9,7 +9,8 @@
     "countryCount": 92,
     "detailedNotionCount": 34,
     "sheetCount": 12,
-    "note": "NAS正本から生成した閲覧専用スナップショット"
+    "photoRegistrationCount": 4,
+    "note": "NAS正本から生成した閲覧専用スナップショット（保有資料写真との照合登録を含む）"
   },
   "collectionIndex": [
     {
@@ -695,23 +696,23 @@
       "tags": []
     },
     {
-      "id": "ar-5-1970",
+      "id": "ar-5-1974",
       "type": "banknote",
       "country": "アルゼンチン",
       "region": "南アメリカ",
       "currency": "ペソ",
       "denomination": "5",
-      "year": "1970年代",
-      "series": "ペソ・レイ18.188法シリーズ",
+      "year": "1974–1976",
+      "series": "ペソ・レイ18.188法シリーズ（DECRETO-LEY表記）",
       "issueEndDate": "",
       "title": "5 ペソ",
-      "story": "肖像・人物：独立運動の指導者マヌエル・ベルグラノを描く。発行背景：1969年法律18,188号による100分の1のデノミネーション後に使われたペソ・レイ券。当時の社会情勢：軍政と政情不安の下でインフレが続き、1970年代後半にはさらに高額面化が進んだ。特殊な点：統一寸法の新系列で、裏面に国内景観を置き国家像を示した。採用モチーフは、表面がマヌエル・ベルグラノ、国章、額面、裏面がバリローチェとリャオ・リャオの湖畔景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
-      "motifs": "表：マヌエル・ベルグラノ、国章、額面／裏：バリローチェとリャオ・リャオの湖畔景観",
+      "story": "肖像・人物：独立運動の指導者で国旗を制定したマヌエル・ベルグラノを描く。発行背景：1969年法令18,188号による100分の1のデノミネーション後に使われたペソ・レイ券で、保有資料はDECRETO-LEY表記と署名から1974–1976年型に一致する。当時の社会情勢：軍政と政情不安の下でインフレが続き、1970年代後半にはさらに高額面化が進んだ。特殊な点：表面の国旗制定者と、裏面のロサリオ国旗記念碑を結び付ける。採用モチーフは、表面がマヌエル・ベルグラノ、国章、DECRETO-LEY表記、裏面がロサリオの国旗記念碑である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：マヌエル・ベルグラノ、国章、DECRETO-LEY表記／裏：ロサリオの国旗記念碑",
       "collectionQty": 1,
       "duplicateQty": 0,
       "condition": "未評価",
       "estimatedValue": 0,
-      "catalogNumber": "",
+      "catalogNumber": "P#294",
       "stateStatus": "現存",
       "rarityFactors": {
         "state": 2,
@@ -727,8 +728,8 @@
         "pocket": ""
       },
       "images": {
-        "front": "media/ar-5-1970-front.jpg",
-        "back": "media/ar-5-1970-back.jpg",
+        "front": "media/ar-5-1974-front.jpg",
+        "back": "media/ar-5-1974-back.jpg",
         "document": ""
       },
       "tags": []
@@ -851,40 +852,40 @@
       "tags": []
     },
     {
-      "id": "br-5-1920",
+      "id": "br-5-1964",
       "type": "banknote",
       "country": "ブラジル",
       "region": "南アメリカ",
-      "currency": "ミルレイス",
+      "currency": "クルゼイロ",
       "denomination": "5",
-      "year": "1910年代後半–1920年代",
-      "series": "ブラジル共和国初期",
+      "year": "1964",
+      "series": "テゾウロ・ナシオナル 第2版（Valor Legal）",
       "issueEndDate": "",
-      "title": "5 ミルレイス",
-      "story": "肖像・人物：中央にブラジル共和国の政治家肖像を置く。発行背景：旧綴りBRAZILを用いた第一共和政期の国庫5ミルレイス券。当時の社会情勢：コーヒー輸出を基盤に都市化が進む一方、第一次世界大戦後の物価変動と地域寡頭制が続いた。特殊な点：イタリアのカルティエリ・ミラーニ社製で、署名欄と精緻な彩紋を重視した大型券。採用モチーフは、表面が政治家肖像、共和国名、額面、彩紋、裏面が額面数字、国名、装飾枠である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
-      "motifs": "表：政治家肖像、共和国名、額面、彩紋／裏：額面数字、国名、装飾枠",
+      "title": "5 クルゼイロ",
+      "story": "肖像・人物：外交官・歴史家として国境交渉を担ったリオ・ブランコ男爵を描く。発行背景：テゾウロ・ナシオナル名義の5クルゼイロ券で、保有資料のシリーズ番号3707Aは1964年発行範囲に一致する。当時の社会情勢：1964年の政変を境に軍政へ移行した時期であり、旧来の国庫券が引き続き流通を支えた。特殊な点：表面の「VALOR LEGAL」表示と第2版の彩紋、署名・シリーズ番号が細分類の手掛かりとなる。採用モチーフは、表面がリオ・ブランコ男爵、国庫名、額面、裏面がアントニオ・パレイラス作『アマゾン征服』である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：リオ・ブランコ男爵、国庫名、額面／裏：アントニオ・パレイラス作『アマゾン征服』",
       "collectionQty": 1,
       "duplicateQty": 0,
       "condition": "未評価",
       "estimatedValue": 0,
-      "catalogNumber": "",
+      "catalogNumber": "P#176c",
       "stateStatus": "現存",
       "rarityFactors": {
         "state": 2,
-        "age": 4,
+        "age": 3,
         "condition": 2,
         "marketEvidence": 1,
         "issueVolume": 1
       },
-      "rarityScore": 44,
+      "rarityScore": 39,
       "location": {
         "binder": "非公開",
         "page": "",
         "pocket": ""
       },
       "images": {
-        "front": "media/br-5-1920-front.jpg",
-        "back": "media/br-5-1920-back.jpg",
+        "front": "media/br-5-1964-front.jpg",
+        "back": "media/br-5-1964-back.jpg",
         "document": ""
       },
       "tags": []
@@ -2198,6 +2199,170 @@
       },
       "tags": [
         "旧管理表"
+      ]
+    },
+    {
+      "id": "br-10-1974",
+      "type": "banknote",
+      "country": "ブラジル",
+      "region": "南アメリカ",
+      "currency": "クルゼイロ",
+      "denomination": "10",
+      "year": "1974",
+      "series": "ブラジル中央銀行 第2版・第1型",
+      "issueEndDate": "",
+      "title": "10 クルゼイロ",
+      "story": "肖像・人物：ブラジル帝国第2代皇帝ペドロ2世を描く。発行背景：ブラジル中央銀行が1970年代に発行した第2版第1型の10クルゼイロ券で、保有資料の署名組合せと番号様式を1974年型として照合した。当時の社会情勢：軍政下の高度成長と石油危機後の物価上昇が交差し、クルゼイロが日常流通を担った。特殊な点：表面の横向き肖像と裏面の皇帝像を組み合わせ、同一人物を異なる時代表現で示す。採用モチーフは、表面がペドロ2世、中央銀行名、額面、裏面がペドロ2世の全身像と書物である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ペドロ2世、中央銀行名、額面／裏：ペドロ2世の全身像、書物",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#193",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/br-10-1974-front.jpg",
+        "back": "media/br-10-1974-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "br-100-1989",
+      "type": "banknote",
+      "country": "ブラジル",
+      "region": "南アメリカ",
+      "currency": "クルザード・ノヴォ",
+      "denomination": "100",
+      "year": "1989",
+      "series": "クルザード・ノヴォ・シリーズ",
+      "issueEndDate": "",
+      "title": "100 クルザード・ノヴォ",
+      "story": "肖像・人物：詩人・教育者セシリア・メイレレスを描く。発行背景：1989年の通貨改革で1,000クルザードを1クルザード・ノヴォへ切り替えた際に発行された100券。当時の社会情勢：民主化後も高インフレが続き、短期間に通貨単位と額面体系が更新された。特殊な点：肖像、手稿、子どもの図像を重ね、文学と教育を一枚の券面で構成する。採用モチーフは、表面がセシリア・メイレレス、手稿、額面、裏面が読書する子どもと教育場面である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：セシリア・メイレレス、手稿、額面／裏：読書する子ども、教育場面",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#220",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 2,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 34,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/br-100-1989-front.jpg",
+        "back": "media/br-100-1989-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ke-50-2010",
+      "type": "banknote",
+      "country": "ケニア",
+      "region": "アフリカ",
+      "currency": "ケニア・シリング",
+      "denomination": "50",
+      "year": "2010-07-16",
+      "series": "ジョモ・ケニヤッタ・シリーズ",
+      "issueEndDate": "",
+      "title": "50 ケニア・シリング",
+      "story": "肖像・人物：独立運動を率い初代大統領となったジョモ・ケニヤッタを描く。発行背景：保有資料の券面日付16 JULY 2010に一致する50シリング券。当時の社会情勢：2007年選挙後の混乱を経て新憲法が制定された2010年、国家統合と経済回復が課題となっていた。特殊な点：独立の象徴である肖像と、沿岸交易を示すモンバサの牙型門・キャラバンを表裏に配する。採用モチーフは、表面がジョモ・ケニヤッタ、国章、額面、裏面がモンバサの牙型門、キャラバンである。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ジョモ・ケニヤッタ、国章、額面／裏：モンバサの牙型門、キャラバン",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#47e",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 1,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 29,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ke-50-2010-front.jpg",
+        "back": "media/ke-50-2010-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
+      ]
+    },
+    {
+      "id": "ar-5000-1977",
+      "type": "banknote",
+      "country": "アルゼンチン",
+      "region": "南アメリカ",
+      "currency": "ペソ・レイ18.188",
+      "denomination": "5,000",
+      "year": "1977–1983",
+      "series": "ペソ・レイ18.188法シリーズ（LEY表記なし）",
+      "issueEndDate": "",
+      "title": "5,000 ペソ",
+      "story": "肖像・人物：南米独立の英雄ホセ・デ・サン＝マルティンを描く。発行背景：ペソ・レイ18.188の高額面化が進んだ1977年から1983年の5,000ペソ券で、保有資料は表面にLEY表記を置かない型に一致する。当時の社会情勢：軍政下で債務とインフレが拡大し、1983年のペソ・アルヘンティーノ導入へ至った。特殊な点：長く反復されたサン＝マルティン肖像と、港湾都市マル・デル・プラタの景観を組み合わせる。採用モチーフは、表面がホセ・デ・サン＝マルティン、国章、月桂樹、裏面がマル・デル・プラタの海岸と都市景観である。通貨制度と、国家が券面へ託した歴史・自然・産業を同時に読み取れる収蔵資料である。",
+      "motifs": "表：ホセ・デ・サン＝マルティン、国章、月桂樹／裏：マル・デル・プラタの海岸、都市景観",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#305",
+      "stateStatus": "現存",
+      "rarityFactors": {
+        "state": 2,
+        "age": 3,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 39,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ar-5000-1977-front.jpg",
+        "back": "media/ar-5000-1977-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録"
       ]
     }
   ],
