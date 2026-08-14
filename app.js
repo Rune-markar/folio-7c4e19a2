@@ -121,6 +121,8 @@ const atlasRegionViews = new Map([
 const atlasTimelineEras = new Set(["1885", "1914", "1920", "1923", "1936", "1938", "1940", "1941", "1943", "1946", "1947", "1951", "1965", "1966", "1970", "1975", "1981", "1983", "1985", "1986", "1987", "1988", "1991", "1992", "1993", "1994", "2000", "2005", "2010", "2018", "2024"]);
 const historicalMapCache = new Map();
 let historicalMapRequest = 0;
+let historicalMapExitPromise = null;
+const historicalMapExitDuration = 560;
 const staticArchive = true;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -409,6 +411,32 @@ async function loadHistoricalMap(year) {
   return historicalMapCache.get(year);
 }
 
+function retireHistoricalHighlight() {
+  const groups = [$("#historicalBorderData"), $("#historicalRegionData")];
+  if (!groups.some((group) => group.childElementCount) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    return Promise.resolve();
+  }
+  if (historicalMapExitPromise) return historicalMapExitPromise;
+  groups.forEach((group) => group.classList.add("is-burning-out"));
+  $("#historicalLabel").classList.remove("is-visible");
+  $("#mapDataStatus").textContent = "境界を切替中";
+  historicalMapExitPromise = new Promise((resolve) => {
+    window.setTimeout(resolve, historicalMapExitDuration);
+  }).finally(() => {
+    historicalMapExitPromise = null;
+  });
+  return historicalMapExitPromise;
+}
+
+function mapHighlightPath(feature, className, index) {
+  const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+  path.setAttribute("d", geometryPath(feature.geometry));
+  path.setAttribute("fill-rule", "evenodd");
+  path.setAttribute("class", className);
+  path.style.setProperty("--map-entry-delay", `${Math.min(index, 5) * 35}ms`);
+  return path;
+}
+
 async function renderAtlasMap() {
   const entry = selectedAtlasEntry();
   const eraEntry = historicalAtlas.find((item) => item.era === appState.atlasEra);
@@ -473,28 +501,20 @@ async function renderAtlasMap() {
         && focus.x >= regionProjectedBounds.minX && focus.x <= regionProjectedBounds.maxX
         && focus.y >= regionProjectedBounds.minY && focus.y <= regionProjectedBounds.maxY;
     }) : [];
+    await retireHistoricalHighlight();
+    if (requestId !== historicalMapRequest) return;
     const group = $("#historicalMapData");
-    group.replaceChildren(...coastlineData.features.map((feature) => {
-      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      path.setAttribute("d", geometryPath(feature.geometry));
-      path.setAttribute("fill-rule", "evenodd");
-      path.setAttribute("class", "map-territory");
-      return path;
-    }));
-    $("#historicalRegionData").replaceChildren(...regionalFeatures.map((feature) => {
-      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-      path.setAttribute("d", geometryPath(feature.geometry));
-      path.setAttribute("fill-rule", "evenodd");
-      path.setAttribute("class", "map-region-hatch");
-      return path;
-    }));
-    $("#historicalBorderData").replaceChildren(...selected.map((feature) => {
-      const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    if (!group.childElementCount) {
+      group.replaceChildren(...coastlineData.features.map((feature) => mapHighlightPath(feature, "map-territory", 0)));
+    }
+    const regionGroup = $("#historicalRegionData");
+    regionGroup.classList.remove("is-burning-out");
+    regionGroup.replaceChildren(...regionalFeatures.map((feature, index) => mapHighlightPath(feature, "map-region-hatch map-highlight-entering", index)));
+    const borderGroup = $("#historicalBorderData");
+    borderGroup.classList.remove("is-burning-out");
+    borderGroup.replaceChildren(...selected.map((feature, index) => {
       const precision = Number(feature.properties?.BORDERPRECISION || 3);
-      path.setAttribute("d", geometryPath(feature.geometry));
-      path.setAttribute("fill-rule", "evenodd");
-      path.setAttribute("class", `map-selected-border precision-${precision}${entry?.territoryMode ? ` ${entry.territoryMode}` : ""}`);
-      return path;
+      return mapHighlightPath(feature, `map-selected-border map-highlight-entering precision-${precision}${entry?.territoryMode ? ` ${entry.territoryMode}` : ""}`, index);
     }));
     let cameraTransform = "translate(0px, 0px) scale(1)";
     if (regionFeature) {
