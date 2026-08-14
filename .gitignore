@@ -1,2 +1,4 @@
 .playwright-cli/
+.codex-remote-attachments/
+.worktrees/
 *.log
