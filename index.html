@@ -76,7 +76,7 @@
                 <div>
                   <p class="eyebrow">HISTORICAL BANKNOTE ATLAS</p>
                   <h3 id="atlasTitle">紙幣から、かつての世界へ。</h3>
-                  <p>年代軸をたどり、当時の国旗から国家を選択してください。対象国の国境と収蔵品を地図上に呼び戻します。</p>
+                  <p>年代軸をたどり、地域から当時の国家・体制を選択してください。対象国の国境と収蔵品を地図上に呼び戻します。</p>
                 </div>
                 <div class="atlas-count"><strong id="heroSpecimenCount">00</strong><span>収蔵紙幣</span></div>
               </header>
@@ -86,20 +86,25 @@
                 <div class="era-list" id="eraList" role="listbox" aria-label="年代"><div class="era-track" aria-hidden="true"><span id="eraTrackProgress"></span></div></div>
               </div>
 
+              <div class="region-picker">
+                <p><span>02</span> 地域を選ぶ</p>
+                <div class="region-symbols" id="regionSymbols" role="listbox" aria-label="地域"></div>
+              </div>
+
               <div class="country-picker">
-                <p><span>02</span> 国・体制を選ぶ</p>
+                <p><span>03</span> 国家・体制を選ぶ</p>
                 <div class="country-symbols" id="countrySymbols" role="listbox" aria-label="国・体制"></div>
               </div>
 
               <div class="atlas-stage">
                 <div class="map-copy">
                   <p class="map-overline" id="mapOverline">BORDERLESS WORLD</p>
-                  <h4 class="map-country-heading"><span id="mapCountryName">国を選択してください</span><small id="mapCountryNative" hidden></small></h4>
+                  <h4 class="map-country-heading"><span id="mapCountryName">国家・体制を選択してください</span><small id="mapCountryNative" hidden></small></h4>
                   <div class="map-facts" id="mapFacts" hidden>
                     <p><span>当時の通貨</span><strong id="mapCurrency"></strong></p>
                     <p id="mapControlFact" hidden><span>1943年7月1日の状態</span><strong id="mapControl"></strong></p>
                   </div>
-                  <p id="mapCountryDetail">地図にはまだ国境がありません。上の年代と国を選ぶと、当時の姿が現れます。</p>
+                  <p id="mapCountryDetail">地図にはまだ国境がありません。上の年代、地域、国家・体制を選ぶと、当時の姿が現れます。</p>
                   <section class="currency-chronology" id="currencyChronology" aria-labelledby="currencyChronologyTitle" hidden>
                     <header>
                       <p class="eyebrow">MONETARY SUCCESSION</p>
@@ -114,7 +119,7 @@
                 <div class="world-map-wrap">
                   <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mapTitle mapDescription">
                     <title id="mapTitle">国境のない世界地図</title>
-                    <desc id="mapDescription">国を選ぶと、その年代の対象地域と国境が表示されます。</desc>
+                    <desc id="mapDescription">国家・体制を選ぶと、その年代の対象地域と国境が表示されます。</desc>
                     <defs>
                       <pattern id="mapGrid" width="50" height="48" patternUnits="userSpaceOnUse"><path d="M 50 0 L 0 0 0 48" fill="none" stroke="currentColor" stroke-width="1"/></pattern>
                       <filter id="mapGlow"><feGaussianBlur stdDeviation="9" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>

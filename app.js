@@ -4,6 +4,7 @@ const appState = {
   layout: "cards",
   search: "",
   atlasEra: "2018",
+  atlasRegion: "",
   atlasCountry: "",
   atlasCurrency: "",
   filters: { region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false }
@@ -46,6 +47,19 @@ const historicalAtlas = [
   { era: "2002", label: "2002–", period: "ユーロ", mapYear: 2018, mapLegend: "2018年境界資料（2002年現金流通開始）", featureNames: ["German Federal Republic"], country: "ドイツ連邦共和国（ユーロ）", nativeName: "Bundesrepublik Deutschland", currency: "ユーロ（Euro）", currencyFamily: "germany", currencyKey: "germany-euro", currencyOrder: 7, regimeLabel: "統一ドイツ", flag: "/flags/weimar-1919.svg", flagAlt: "ドイツ連邦共和国旗", flagPeriod: "1949–現在", short: "ドイツ", detail: "1999年に会計通貨として導入され、2002年からユーロ紙幣・硬貨の流通が始まりました。" },
   { era: "1914", label: "1914", period: "大戦の始まり", mapYear: 1914, featureNames: ["Denmark"], country: "デンマーク", officialName: "デンマーク王国", currency: "デンマーク・クローネ", flag: "/flags/denmark.svg", flagAlt: "1914年当時のデンマーク国旗", flagPeriod: "1914年仕様", short: "デンマーク", detail: "北欧の王国でクローネ紙幣が使われていた時代。" }
 ];
+const atlasRegionOverrides = new Map([
+  ["オーストリア共和国", "中央ヨーロッパ"],
+  ["オーストリア＝ハンガリー帝国", "中央ヨーロッパ"],
+  ["ドイツ帝国", "中央ヨーロッパ"],
+  ["ヴァイマル共和国", "中央ヨーロッパ"],
+  ["ナチス・ドイツ", "中央ヨーロッパ"],
+  ["ドイツ民主共和国", "中央ヨーロッパ"],
+  ["ドイツ連邦共和国", "中央ヨーロッパ"],
+  ["ドイツ連邦共和国（ユーロ）", "中央ヨーロッパ"],
+  ["フィンランド共和国", "北ヨーロッパ"],
+  ["フランス共和国", "西ヨーロッパ"],
+  ["トルコ共和国", "中東アジア"]
+]);
 const atlasTimelineEras = new Set(["1914", "1920", "1923", "1940", "1943", "1946", "1947", "1965", "1966", "1970", "1983", "1985", "1986", "1987", "1992", "1993", "1994", "2018"]);
 const historicalMapCache = new Map();
 let historicalMapRequest = 0;
@@ -153,6 +167,13 @@ function atlasCountryName(entry) {
   return entry?.officialName || entry?.country || "";
 }
 
+function atlasRegion(entry) {
+  if (!entry) return "";
+  const indexedRegion = appState.database.collectionIndex?.find((item) => item.country === entry.country)?.region;
+  const collectedRegion = appState.database.items.find((item) => item.country === entry.country)?.region;
+  return atlasRegionOverrides.get(entry.country) || indexedRegion || collectedRegion || "その他";
+}
+
 function renderCurrencyChronology(entry) {
   const chronology = $("#currencyChronology");
   const list = $("#currencyChronologyList");
@@ -194,14 +215,26 @@ function renderDashboard() {
     if (!activeEra) return;
     eraList.scrollTo({ left: activeEra.offsetLeft - (eraList.clientWidth - activeEra.offsetWidth) / 2, behavior: "smooth" });
   });
-  const countries = Array.from(new Map(historicalAtlas
-    .filter((entry) => entry.era === appState.atlasEra)
+  const eraEntries = historicalAtlas.filter((entry) => entry.era === appState.atlasEra);
+  const regions = Array.from(new Set(eraEntries.map(atlasRegion)));
+  if (appState.atlasRegion && !regions.includes(appState.atlasRegion)) {
+    appState.atlasRegion = "";
+    appState.atlasCountry = "";
+    appState.atlasCurrency = "";
+  }
+  $("#regionSymbols").innerHTML = regions.map((region) => {
+    const countryCount = new Set(eraEntries.filter((entry) => atlasRegion(entry) === region).map((entry) => entry.country)).size;
+    const active = region === appState.atlasRegion;
+    return `<button type="button" role="option" aria-selected="${active}" class="region-symbol${active ? " is-active" : ""}" data-atlas-region="${escapeHtml(region)}"><strong>${escapeHtml(region)}</strong><small>${countryCount}か国・体制</small></button>`;
+  }).join("");
+  const countries = Array.from(new Map(eraEntries
+    .filter((entry) => atlasRegion(entry) === appState.atlasRegion)
     .map((entry) => [entry.country, entry])).values());
-  $("#countrySymbols").innerHTML = countries.map((entry) => {
+  $("#countrySymbols").innerHTML = appState.atlasRegion ? countries.map((entry) => {
     const count = appState.database.items.filter((item) => item.country === entry.country).length;
     const wideName = atlasCountryName(entry).length > 12;
     return `<button type="button" role="option" aria-selected="${entry.country === appState.atlasCountry}" class="country-symbol${wideName ? " has-wide-name" : ""}${entry.country === appState.atlasCountry ? " is-active" : ""}" data-atlas-country="${escapeHtml(entry.country)}"><span class="country-flag"><img src="${entry.flag.replace(/^\//, "")}" alt="${escapeHtml(entry.flagAlt)}"></span><span><strong>${escapeHtml(atlasCountryName(entry))}</strong><small>${escapeHtml(entry.pickerCurrency || entry.currency)}</small><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
-  }).join("");
+  }).join("") : `<span class="picker-guidance">先に地域を選択してください</span>`;
   renderAtlasMap();
 }
 
@@ -310,10 +343,10 @@ async function renderAtlasMap() {
   $("#mapLabel").textContent = "";
   if (!entry) {
     $("#mapOverline").textContent = "BORDERLESS WORLD";
-    $("#mapCountryName").textContent = "国を選択してください";
+    $("#mapCountryName").textContent = "国家・体制を選択してください";
     $("#mapCountryNative").hidden = true;
     $("#mapCountryNative").textContent = "";
-    $("#mapCountryDetail").textContent = "地図にはまだ国境がありません。上の年代と国を選ぶと、当時の姿が現れます。";
+    $("#mapCountryDetail").textContent = "地図にはまだ国境がありません。上の年代、地域、国家・体制を選ぶと、当時の姿が現れます。";
     $("#viewCountryCollection").hidden = true;
     $("#mapFacts").hidden = true;
     $("#mapControlFact").hidden = true;
@@ -784,6 +817,14 @@ function attachEvents() {
     const eraTarget = event.target.closest("[data-atlas-era]");
     if (eraTarget) {
       appState.atlasEra = eraTarget.dataset.atlasEra;
+      appState.atlasRegion = "";
+      appState.atlasCountry = "";
+      appState.atlasCurrency = "";
+      renderDashboard();
+    }
+    const regionTarget = event.target.closest("[data-atlas-region]");
+    if (regionTarget) {
+      appState.atlasRegion = regionTarget.dataset.atlasRegion;
       appState.atlasCountry = "";
       appState.atlasCurrency = "";
       renderDashboard();

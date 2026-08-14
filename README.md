@@ -16,6 +16,8 @@ The URL slug is intentionally non-descriptive, but obscurity is not authenticati
 
 同じ国・地域の紙幣が複数の通貨期、発行期、または政治体制にまたがる場合は、ドイツと同じ縦型の「紙幣・通貨の系譜」を地図左側に表示する。国ごとの専用 UI は作らず、次の共通データ仕様で扱う。
 
+歴史地図の選択順は「01 年代 → 02 地域 → 03 国家・体制」とする。地域は台帳の `collectionIndex` または収蔵品の `region` を使用し、歴史上の国号と台帳名が一致しない場合だけ `atlasRegionOverrides` で補う。
+
 1. 同一系統の各期に共通の `currencyFamily` を設定する。国号や政治体制が変わっても、紙幣史として連続して比較する対象なら同じ値を使う。
 2. 各期には一意な `currencyKey` と、古い期を `1` とする昇順の `currencyOrder` を設定する。画面ではこの順番どおり上から下へ並べる。
 3. `label` は紙幣・通貨期の年代、`period` は利用者が選ぶ期の名称、`regimeLabel` はその時期の国・体制を示す。選択すると当該期の地図、国名、通貨、解説を一体で切り替える。
