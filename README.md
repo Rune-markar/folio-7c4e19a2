@@ -8,6 +8,16 @@ This repository publishes a read-only snapshot generated from the private NAS ar
 
 The URL slug is intentionally non-descriptive, but obscurity is not authentication. The published data is treated as public.
 
+## 歴史地図の同一系統国に関する基本基準
+
+同じ国・地域の紙幣が複数の通貨期、発行期、または政治体制にまたがる場合は、ドイツと同じ縦型の「紙幣・通貨の系譜」を地図左側に表示する。国ごとの専用 UI は作らず、次の共通データ仕様で扱う。
+
+1. 同一系統の各期に共通の `currencyFamily` を設定する。国号や政治体制が変わっても、紙幣史として連続して比較する対象なら同じ値を使う。
+2. 各期には一意な `currencyKey` と、古い期を `1` とする昇順の `currencyOrder` を設定する。画面ではこの順番どおり上から下へ並べる。
+3. `label` は紙幣・通貨期の年代、`period` は利用者が選ぶ期の名称、`regimeLabel` はその時期の国・体制を示す。選択すると当該期の地図、国名、通貨、解説を一体で切り替える。
+4. 収蔵品から同一系統の複数期が確認できた国にはこの仕様を適用する。現時点の適用対象はドイツ、アルゼンチン、フランスであり、今後の対象国も同じ項目を追加して拡張する。
+5. 該当年代の境界データがない場合は、利用できる最寄りの地図年を `mapYear` に指定し、`mapLegend` で紙幣年代と境界資料年の差を明記する。
+
 ## 紙幣の物語を整理して表示する手順
 
 紙幣詳細の解説は、`data/collection.json` の `story` に保存された一次データを変更せず、表示時に論点ごとへ分解する。
