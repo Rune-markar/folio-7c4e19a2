@@ -77,5 +77,6 @@
 | cn-frbc-5fen-1938 | cn-frbc-5fen-1938-front.jpg, cn-frbc-5fen-1938-back.jpg | [Numista 224631](https://en.numista.com/224631) | 民国27年（1938年）、中国聯合準備銀行5分、P#J47a。民国28年銘P#J47bとは年銘で切り分けた。採用画像にはDavid Yee collectionのクレジットがあるが個別ライセンス表示を確認できなかったため、外部再配布・営利利用前に権利条件を再確認する。 |
 | cn-frbc-10fen-1938 | cn-frbc-10fen-1938-front.jpg, cn-frbc-10fen-1938-back.jpg | [Numista 224638](https://en.numista.com/224638) | 民国27年（1938年）、中国聯合準備銀行1角、P#J48a、維新政府章・頤和園と額面彩紋の表裏を照合。ページ上の画像表示はCC BY-NC-SA。非営利・継承条件を維持する。 |
 | manchukuo-50fen-1941 | manchukuo-50fen-1941-front.jpg, manchukuo-50fen-1941-back.jpg | [Numista 245455](https://en.numista.com/245455) | 1941年無年号、満洲中央銀行50分、P#J141。緑色の乾隆帝像・双龍と青色の建築景観を照合し、褐色主体のP#J129とは区別した。Numista画像はCC BY-NC-SA。非営利・継承条件を維持する。 |
+| jp-10000-2024, jp-5000-2024, jp-1000-2024 | （画像未登録） | [日本銀行「現在発行されている銀行券」](https://www.boj.or.jp/note_tfjgs/note/valid/issue.htm)、[発行開始資料](https://www.boj.or.jp/about/press/koen_2024/ko240703a.htm) | 2024年7月3日発行のF号券3券種を照合。公式画像には「見本／SPECIMEN」表示があるため、公開画像基準に従ってファイルを収録せず、画像欄を空欄とした。 |
 
 画像はいずれも紙幣全体が写り、主要文字を確認でき、販売者名・ロゴ・透かし文字・`SPECIMEN` 表示のないものを採用しました。保有資料写真およびその共有フォルダURLは公開物へ収録していません。
