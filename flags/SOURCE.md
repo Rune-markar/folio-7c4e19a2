@@ -19,5 +19,7 @@ Flag designs are displayed for the year represented by each atlas entry.
 - Argentina: national flag used in the represented 1985 period.
 - Peru: national flag used in the represented 1987 period.
 - Chile: national flag used in the represented 1994 period.
+- Japan, 1870-1999 specification: the former proportions retained as a transitional exception by the Act on National Flag and Anthem: 7:10, disc diameter 3/5 of the height, with its centre shifted 1/100 of the flag length toward the hoist. Historical basis: 1870 Dajokan Proclamation No. 57, `国旗ノ寸法`, indexed by the National Diet Library: https://hourei.ndl.go.jp/simple/detail?current=-1&lawId=0000000005
+- Japan, 1999-present specification: Act on National Flag and Anthem (Act No. 127 of 1999), Appendix 1: 2:3, centred disc with a diameter of 3/5 of the height: https://laws.e-gov.go.jp/law/411AC0000000127
 
 Downloaded files retain their original SVG content. Simple geometric flags were recreated as compact SVG files from their documented designs.
