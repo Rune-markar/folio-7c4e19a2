@@ -93,6 +93,20 @@ async function refresh() {
   renderAll();
 }
 
+async function refreshPublishedCommit() {
+  try {
+    const response = await fetch("https://api.github.com/repos/Rune-markar/folio-7c4e19a2/commits/main", {
+      headers: { Accept: "application/vnd.github+json" },
+      signal: AbortSignal.timeout(2500)
+    });
+    if (!response.ok) return;
+    const { sha } = await response.json();
+    if (/^[0-9a-f]{40}$/i.test(sha)) $("#appCommit").textContent = sha.slice(0, 7);
+  } catch {
+    // Keep the embedded snapshot commit when GitHub is unavailable.
+  }
+}
+
 function collectionStats() {
   const items = appState.database.items;
   const totalPieces = items.reduce((sum, item) => sum + item.collectionQty + item.duplicateQty, 0);
@@ -829,6 +843,7 @@ function attachEvents() {
 
 async function init() {
   attachEvents();
+  refreshPublishedCommit();
   try {
     await refresh();
     $("#loadingState").hidden = true;
