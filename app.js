@@ -404,12 +404,14 @@ function filteredItems() {
 function noteCard(item) {
   const image = item.images?.front ? `<img src="${escapeHtml(item.images.front)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の表面">` : "";
   const location = item.location?.binder && item.location.binder !== "未配置" ? `${item.location.binder}${item.location.page ? ` / ${item.location.page}` : ""}` : "未配置";
-  const interaction = staticArchive ? "" : ` role="button" tabindex="0" aria-label="${escapeHtml(item.country)} ${escapeHtml(item.title)}を編集"`;
+  const interactionLabel = staticArchive ? "の詳細を見る" : "を編集";
+  const footerStatus = staticArchive ? "詳細を見る →" : location;
+  const interaction = ` role="button" tabindex="0" aria-label="${escapeHtml(item.country)} ${escapeHtml(item.title)}${interactionLabel}"`;
   return `<article class="note-card"${interaction} data-note-id="${escapeHtml(item.id)}">
     <div class="note-visual" style="--note-bg:${hashColor(item.country)}">${image}<span class="note-country-code">${escapeHtml(item.country.slice(0, 12))}</span><span class="note-denom">${escapeHtml(item.denomination)}</span></div>
     <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span><span class="rarity-label">希少度 ${item.rarityScore}/100</span></div>
       <h4>${escapeHtml(item.title || `${item.denomination} ${item.currency}`)}</h4><p>${escapeHtml(item.year || "年代不明")} · ${escapeHtml(item.series || item.currency)}</p>
-      <div class="note-footer"><span class="qty-pill">本蔵 ${item.collectionQty}枚${item.duplicateQty ? ` <b class="duplicate-pill">＋ダブり ${item.duplicateQty}</b>` : ""}</span><span>${escapeHtml(location)}</span></div>
+      <div class="note-footer"><span class="qty-pill">本蔵 ${item.collectionQty}枚${item.duplicateQty ? ` <b class="duplicate-pill">＋ダブり ${item.duplicateQty}</b>` : ""}</span><span>${escapeHtml(footerStatus)}</span></div>
     </div></article>`;
 }
 
@@ -529,6 +531,33 @@ function openNote(item = null) {
     formElement("rarityVolume").value = item.rarityFactors?.issueVolume || 1;
   }
   $("#noteDialog").showModal();
+}
+
+function openPublicNote(item) {
+  if (!item) return;
+  $("#publicNoteDialogTitle").textContent = `${item.country} · ${item.title}`;
+  $("#publicNoteKicker").textContent = `${item.year || "年代不明"} · ${item.series || item.currency}`;
+  $("#publicNoteRarity").textContent = `希少度 ${item.rarityScore}/100`;
+  const images = [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url);
+  $("#publicNoteImages").innerHTML = images.length ? images.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}"><figcaption>${label}</figcaption></figure>`).join("") : `<p class="public-note-empty">公開画像はありません。</p>`;
+  const facts = [
+    ["発行国・体制", item.country],
+    ["通貨", item.currency],
+    ["額面", item.denomination],
+    ["発行年・年代", item.year || "不明"],
+    ["シリーズ", item.series || "未記録"],
+    ["国家・体制", item.stateStatus || "未記録"]
+  ];
+  $("#publicNoteFacts").innerHTML = facts.map(([label, value]) => `<div><dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value)}</dd></div>`).join("");
+  $("#publicNoteStory").textContent = item.story || "歴史解説はまだ登録されていません。";
+  const motifs = item.motifs || "";
+  $("#publicNoteMotifs").textContent = motifs || "モチーフはまだ登録されていません。";
+  $("#publicNoteDialog").showModal();
+}
+
+function openCardNote(item) {
+  if (staticArchive) openPublicNote(item);
+  else openNote(item);
 }
 
 async function uploadAsset(itemId, file, side) {
@@ -701,13 +730,13 @@ function attachEvents() {
       renderDashboard();
     }
     const noteTarget = event.target.closest("[data-note-id]");
-    if (noteTarget && !staticArchive) openNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId));
+    if (noteTarget) openCardNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId));
     const close = event.target.closest("[data-close-dialog]");
     if (close) $(`#${close.dataset.closeDialog}`).close();
   });
   document.addEventListener("keydown", (event) => {
     const noteTarget = event.target.closest?.("[data-note-id]");
-    if (noteTarget && !staticArchive && ["Enter", " "].includes(event.key)) { event.preventDefault(); openNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId)); }
+    if (noteTarget && ["Enter", " "].includes(event.key)) { event.preventDefault(); openCardNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId)); }
   });
   $("#addNoteButton").addEventListener("click", () => openNote());
   $("#viewCountryCollection").addEventListener("click", () => {

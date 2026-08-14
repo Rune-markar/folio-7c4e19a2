@@ -322,6 +322,25 @@
       </form>
     </dialog>
 
+    <dialog class="modal public-note-modal" id="publicNoteDialog">
+      <article class="modal-shell">
+        <header class="modal-header">
+          <div><p class="eyebrow" id="publicNoteKicker">CATALOG ENTRY</p><h2 id="publicNoteDialogTitle">紙幣の詳細</h2></div>
+          <button class="icon-button" type="button" data-close-dialog="publicNoteDialog" aria-label="閉じる">×</button>
+        </header>
+        <div class="modal-body public-note-body">
+          <div class="public-note-images" id="publicNoteImages"></div>
+          <div class="public-note-copy">
+            <span class="public-note-rarity" id="publicNoteRarity"></span>
+            <dl class="public-note-facts" id="publicNoteFacts"></dl>
+            <section><p class="eyebrow">HISTORICAL CONTEXT</p><h3>この紙幣の物語</h3><p id="publicNoteStory"></p></section>
+            <section><p class="eyebrow">DESIGN MOTIFS</p><h3>券面のモチーフ</h3><p id="publicNoteMotifs"></p></section>
+          </div>
+        </div>
+        <footer class="modal-footer"><span class="footer-spacer"></span><button class="button button-secondary" type="button" data-close-dialog="publicNoteDialog">閉じる</button></footer>
+      </article>
+    </dialog>
+
     <dialog class="modal" id="saleDialog">
       <form method="dialog" class="modal-shell compact" id="saleForm">
         <header class="modal-header"><div><p class="eyebrow">SALE ENTRY</p><h2>売却を記録</h2></div><button class="icon-button" type="button" data-close-dialog="saleDialog" aria-label="閉じる">×</button></header>
