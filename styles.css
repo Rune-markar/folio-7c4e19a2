@@ -506,7 +506,8 @@ code { padding: 2px 5px; border-radius: 4px; background: var(--paper-deep); }
   .atlas-count strong { font-size: 26px; }
   .era-picker, .country-picker { grid-template-columns: 1fr; gap: 8px; padding: 13px 20px; }
   .era-list { margin-right: -20px; padding-right: 20px; }
-  .era-timeline { min-width: calc(var(--era-count) * 94px); grid-template-columns: repeat(var(--era-count),94px); }
+  .era-timeline { min-width: calc(var(--era-count) * 101px - 7px); grid-template-columns: repeat(var(--era-count),94px); }
+  .era-track { left: 47px; right: 47px; }
   .country-symbols { margin-right: -20px; padding-right: 20px; overflow-x: auto; }
   .era-button { min-width: 94px; }
   .country-symbol { min-width: 195px; }
