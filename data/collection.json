@@ -1,6 +1,6 @@
 {
   "schemaVersion": 5,
-  "updatedAt": "2026-08-14T20:00:00+09:00",
+  "updatedAt": "2026-08-14T20:13:00+09:00",
   "settings": {
     "archiveName": "World Banknote Archive"
   },
@@ -9,7 +9,7 @@
     "countryCount": 95,
     "detailedNotionCount": 34,
     "sheetCount": 12,
-    "photoRegistrationCount": 68,
+    "photoRegistrationCount": 70,
     "note": "NAS正本から生成した閲覧専用スナップショット（保有資料写真との照合登録を含む）"
   },
   "collectionIndex": [
@@ -3405,6 +3405,92 @@
       "tags": [
         "写真照合登録",
         "占領地通貨"
+      ]
+    },
+    {
+      "id": "ph-100-1944",
+      "type": "banknote",
+      "country": "フィリピン",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ペソ",
+      "denomination": "100",
+      "year": "1944",
+      "series": "日本政府占領地券・1943～1945年シリーズ",
+      "issueEndDate": "",
+      "title": "100 ペソ（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本軍占領下のフィリピンで1944年に発行された高額面軍票。当時の社会情勢：戦局悪化、物資不足、軍票の増刷によって占領地経済のインフレが深刻化していた。特殊な点：中央に大形の100を置き、透かしにはバナナの葉を用いる。採用モチーフは、表面がマニラのリサール記念碑と大形額面、裏面が褐色と緑色の額面彩紋である。",
+      "motifs": "表：リサール記念碑、大形額面／裏：褐色・緑色の額面彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#112",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/ph-100-1944-front.jpg",
+        "back": "media/ph-100-1944-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨"
+      ]
+    },
+    {
+      "id": "mm-1-1942",
+      "type": "banknote",
+      "country": "ミャンマー",
+      "region": "東南アジア",
+      "currency": "日本軍占領地ルピー",
+      "denomination": "1",
+      "year": "1942",
+      "series": "日本政府ビルマ占領地券",
+      "issueEndDate": "",
+      "title": "1 ルピー（日本政府占領地券）",
+      "story": "肖像・人物：人物肖像を置かない。発行背景：日本軍占領下のビルマ向けに1942年に発行されたルピー建て軍票。当時の社会情勢：英国統治期の通貨制度を置き換え、日本の軍事占領と物資調達を支える強制通貨として流通した。特殊な点：写真の券は地域を示すBDブロックであるが、紙色・透かし・ブロック間隔を測定できないためP#14の細分類は確定していない。採用モチーフは、表面がパンノキ、アーナンダ寺院、牛車、裏面が緑色の額面彩紋である。",
+      "motifs": "表：パンノキ、アーナンダ寺院、牛車／裏：緑色の額面彩紋",
+      "collectionQty": 1,
+      "duplicateQty": 0,
+      "condition": "未評価",
+      "estimatedValue": 0,
+      "catalogNumber": "P#14",
+      "stateStatus": "消滅国家・体制",
+      "rarityFactors": {
+        "state": 4,
+        "age": 4,
+        "condition": 2,
+        "marketEvidence": 1,
+        "issueVolume": 1
+      },
+      "rarityScore": 52,
+      "location": {
+        "binder": "非公開",
+        "page": "",
+        "pocket": ""
+      },
+      "images": {
+        "front": "media/mm-1-1942-front.jpg",
+        "back": "media/mm-1-1942-back.jpg",
+        "document": ""
+      },
+      "tags": [
+        "写真照合登録",
+        "占領地通貨",
+        "BDブロック",
+        "細分類未確定"
       ]
     },
     {
