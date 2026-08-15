@@ -8,8 +8,21 @@ const appState = {
   atlasCountry: "",
   atlasCurrency: "",
   collectionScopeIds: null,
-  filters: { region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false }
+  filters: { macroRegion: "", region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false }
 };
+
+const emptyCollectionFilters = () => ({ macroRegion: "", region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false });
+const macroRegionOrder = ["アジア", "ヨーロッパ", "北アメリカ", "南アメリカ", "ロシア", "アフリカ", "オセアニア", "その他"];
+const macroRegionByRegion = new Map([
+  ["東アジア", "アジア"], ["東南アジア", "アジア"], ["中央アジア", "アジア"], ["中東アジア", "アジア"],
+  ["北ヨーロッパ", "ヨーロッパ"], ["西ヨーロッパ", "ヨーロッパ"], ["中央ヨーロッパ", "ヨーロッパ"], ["東ヨーロッパ", "ヨーロッパ"], ["イベリア半島", "ヨーロッパ"], ["バルカン半島", "ヨーロッパ"],
+  ["北アメリカ", "北アメリカ"], ["中央アメリカ", "北アメリカ"], ["南アメリカ", "南アメリカ"],
+  ["ロシア構成国", "ロシア"], ["アフリカ", "アフリカ"], ["オセアニア", "オセアニア"]
+]);
+
+function macroRegionForItem(item) {
+  return macroRegionByRegion.get(item?.region) || "その他";
+}
 
 const viewMeta = {
   dashboard: ["HISTORICAL ATLAS", "紙幣の歴史地図"],
@@ -74,14 +87,14 @@ const historicalAtlas = [
   { era: "1936", label: "1935–1948", period: "南京国民政府の法幣", mapYear: 1940, mapLegend: "1940年境界資料（収蔵紙幣は1936年）", featureNames: ["China"], country: "中華民国", officialName: "中華民国（南京国民政府）", currency: "法幣（中華民国元）", currencyFamily: "republic-of-china", currencyKey: "roc-fabi", currencyOrder: 1, regimeLabel: "南京国民政府", flagPeriod: "1928–現在", short: "中華民国", detail: "1935年の幣制改革で主要銀行券を法定通貨へ統合した後の通貨期。収蔵品は中央銀行が1936年に発行した10元法幣です。" },
   { era: "1938", label: "1938–1940", period: "中国聯合準備銀行券", eraPeriod: "日中戦争下の中国", mapYear: 1940, mapLegend: "1940年境界資料（収蔵紙幣は1938年）", mapBoundaryLabel: "中華民国の外郭（支配域ではありません）", mapDescription: "1940年の世界境界。中華民国の外郭を表示し、維新政府の実効支配域としては塗っていません。", mapControl: "日本の影響下にあった中華民国維新政府の発券。中国全域を同政権の支配域としては表示しない", territoryMode: "outline-only", featureNames: ["China"], country: "中華民国", officialName: "中華民国維新政府", currency: "元（中国聯合準備銀行券）", currencyFamily: "republic-of-china", currencyKey: "roc-federal-reserve-bank-yuan", currencyOrder: 2, regimeLabel: "中華民国維新政府", short: "維新政府", detail: "日本の影響下で南京に置かれた維新政府の中国聯合準備銀行券。南京国民政府の法幣とは発行主体が異なり、地図の金色線は同政権の実効支配域ではなく中華民国の外郭です。" },
   { era: "1938", label: "1937–1944", period: "日本軍用円", eraPeriod: "日中戦争下の中国", mapYear: 1940, mapLegend: "1940年境界資料（収蔵紙幣は1937～1944年）", mapBoundaryLabel: "中華民国の外郭（占領域ではありません）", mapControl: "日本軍占領地域向け軍票。中国全域を日本の支配域としては表示しない", territoryMode: "outline-only", featureNames: ["China"], country: "中華民国", currency: "日本軍用円", currencyFamily: "republic-of-china", currencyKey: "roc-japanese-military-yen", currencyOrder: 3, regimeLabel: "日中戦争期の中華民国", flagPeriod: "1928–現在", short: "中華民国", detail: "日本軍占領地域向けの軍票。地図は当時の中華民国外郭であり、日本軍の占領・実効支配域を示すものではありません。" },
-  { era: "1941", label: "1932–1945", period: "満洲国圓", mapYear: 1940, mapLegend: "1940年境界資料・新京位置表示（収蔵紙幣は1941年）", mapBoundaryLabel: "中国北東部を含む外郭（満洲国境界ではありません）", mapDescription: "1940年の世界境界。満洲国の歴史的国境は復元せず、中国外郭と新京の位置だけを表示しています。", mapControl: "日本の強い支配下に置かれた満洲国。基礎地図では当時の国境を復元しない", mapLabel: "新京（現在の長春）", markerCoordinates: [125.3235, 43.8171], territoryMode: "outline-only", featureNames: ["China"], country: "満洲国", officialName: "満洲国", currency: "満洲国圓", currencyFamily: "manchukuo", currencyKey: "manchukuo-yuan", currencyOrder: 1, regimeLabel: "満洲国", short: "満洲国", detail: "満洲中央銀行が発行した満洲国圓。日本円圏に組み込まれた戦時・植民地的通貨制度であり、地図は満洲国の領域を示さず、新京の位置と中国外郭のみを表示します。" },
+  { era: "1941", label: "1932–1945", period: "満洲国圓", mapYear: 1940, mapLegend: "1940年境界資料・満洲国概略境界（収蔵紙幣は1941年）", mapBoundaryLabel: "満洲国の概略境界", mapDescription: "1940年の世界境界に、満洲国の概略境界を独立した領域として重ねています。境界線は歴史地図の代替ではなく概略表示です。", mapControl: "日本の強い支配下に置かれた満洲国。概略境界を中華民国とは別の選択領域として表示", mapLabel: "満洲国（概略）", markerCoordinates: [125.3235, 43.8171], boundaryKey: "manchukuo", featureNames: [], country: "満洲国", officialName: "満洲国", currency: "満洲国圓", currencyFamily: "manchukuo", currencyKey: "manchukuo-yuan", currencyOrder: 1, regimeLabel: "満洲国", flag: "/flags/manchukuo-1932.svg", flagAlt: "1932年から1945年の満洲国旗", flagPeriod: "1932–1945", short: "満洲国", detail: "満洲中央銀行が発行した満洲国圓。日本円圏に組み込まれた戦時・植民地的通貨制度です。地図では満洲国の概略境界を中華民国の外郭から独立して選択できます。" },
   { era: "2018", label: "1949–現在", period: "台湾の新台湾ドル", mapYear: 2018, featureNames: ["Taiwan"], country: "中華民国", officialName: "中華民国（台湾）", currency: "新台湾ドル", currencyFamily: "republic-of-china", currencyKey: "roc-new-taiwan-dollar", currencyOrder: 4, regimeLabel: "台湾の中華民国政府", flagPeriod: "1928–現在", short: "台湾", detail: "日中戦争期の大陸で使われた軍票とは別制度です。中華民国をめぐる紙幣史の後続期として表示するもので、主権・法的地位への見解を示す分類ではありません。" },
   { era: "1943", label: "1942–1945", period: "日本軍占領地ルピー", eraPeriod: "アジア太平洋戦争", mapYear: 1943, mapLegend: "1943年境界資料（占領・実効支配域ではありません）", mapBoundaryLabel: "ビルマの外郭", territoryMode: "outline-only", featureNames: ["Myanmar (Burma)"], country: "ミャンマー", officialName: "日本軍占領下ビルマ", currency: "日本軍占領地ルピー", currencyFamily: "myanmar", currencyKey: "myanmar-japanese-occupation-rupee", currencyOrder: 1, regimeLabel: "日本軍政 → ビルマ国", flagPeriod: "1942–1945", short: "ミャンマー", detail: "日本軍占領地ルピーが流通したビルマの戦時期。現在のミャンマーへ続く地域の紙幣史として扱い、外郭を占領軍の実効支配域とはみなしません。" },
   { era: "2018", label: "1948–現在", period: "独立後のチャット", mapYear: 2018, featureNames: ["Myanmar (Burma)"], country: "ミャンマー", officialName: "ミャンマー連邦共和国", currency: "チャット", currencyFamily: "myanmar", currencyKey: "myanmar-kyat", currencyOrder: 2, regimeLabel: "独立後のビルマ／ミャンマー", flagPeriod: "1948–現在", short: "ミャンマー", detail: "占領地軍票とは別制度の独立後通貨。地域の紙幣史を比較する後続期として系譜に含めます。" },
   { era: "1943", label: "1942–1945", period: "日本軍占領地ドル", eraPeriod: "アジア太平洋戦争", mapYear: 1943, mapLegend: "1943年境界資料（マラヤ諸地域の外郭）", mapBoundaryLabel: "マラヤ諸地域の外郭", territoryMode: "outline-only", featureNames: ["Federated Malay States", "Unfederated Malay States"], country: "マレーシア", officialName: "日本軍占領下マラヤ", currency: "日本軍占領地ドル", currencyFamily: "malaysia", currencyKey: "malaya-japanese-occupation-dollar", currencyOrder: 1, regimeLabel: "日本軍政下マラヤ", flagPeriod: "1942–1945", short: "マラヤ", detail: "軍票の通用圏は現在のマレーシアだけでなくシンガポールや北ボルネオ等を含みました。地図は資料にあるマラヤ諸地域の外郭であり、通用圏全体や実効支配域の厳密な復元ではありません。" },
   { era: "2018", label: "1967–現在", period: "マレーシア・リンギット", mapYear: 2018, featureNames: ["Malaysia"], country: "マレーシア", officialName: "マレーシア", currency: "リンギット", currencyFamily: "malaysia", currencyKey: "malaysia-ringgit", currencyOrder: 2, regimeLabel: "マレーシア", flagPeriod: "1963–現在", short: "マレーシア", detail: "占領地ドルの通用圏と現在の国境は一致しません。重なる地域の紙幣史をたどる後続期として表示します。" },
   { era: "1951", label: "1951", period: "人民共和国初期の第2レフ", mapYear: 1947, mapLegend: "1947年境界資料（収蔵紙幣は1951年）", featureNames: ["Bulgaria"], country: "ブルガリア", officialName: "ブルガリア人民共和国", currency: "第2レフ", flagPeriod: "1946–1967", short: "ブルガリア", detail: "社会主義体制初期の通貨改革後に発行された第2レフ紙幣の時期。" },
-  { era: "1981", label: "1981", period: "社会主義ユーゴスラビア・ディナール", mapYear: 1983, mapLegend: "1983年境界資料（収蔵紙幣は1981年）", featureNames: ["Yugoslavia"], country: "ユーゴスラビア社会主義連邦共和国", currency: "ユーゴスラビア・ディナール", currencyFamily: "yugoslavia", currencyKey: "yugoslavia-sfr-dinar", currencyOrder: 1, regimeLabel: "社会主義連邦共和国", flagPeriod: "1946–1992", short: "ユーゴスラビア", detail: "六共和国からなる社会主義連邦のディナール。1990年代の国家再編と通貨混乱へ続く前段として表示します。" },
+  { era: "1981", label: "1981", period: "社会主義ユーゴスラビア・ディナール", mapYear: 1983, mapLegend: "1983年境界資料（収蔵紙幣は1981年）", featureNames: ["Yugoslavia"], country: "ユーゴスラビア社会主義連邦共和国", currency: "ユーゴスラビア・ディナール", currencyFamily: "yugoslavia", currencyKey: "yugoslavia-sfr-dinar", currencyOrder: 1, regimeLabel: "社会主義連邦共和国", flag: "/flags/yugoslavia-1946.svg", flagAlt: "1946年から1992年のユーゴスラビア社会主義連邦共和国旗", flagPeriod: "1946–1992", short: "ユーゴスラビア", detail: "六共和国からなる社会主義連邦のディナール。1990年代の国家再編と通貨混乱へ続く前段として表示します。" },
   { era: "1988", label: "1988", period: "人民共和国末期の第3ズウォティ", mapYear: 1987, mapLegend: "1987年境界資料（収蔵紙幣は1988年）", featureNames: ["Poland"], country: "ポーランド", officialName: "ポーランド人民共和国", currency: "第3ズウォティ", flagPeriod: "1980–1990", short: "ポーランド", detail: "社会主義体制末期に流通した旧ズウォティ紙幣の時期。" },
   { era: "1991", label: "1991", period: "旧レウ末期", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1991年）", featureNames: ["Rumania"], country: "ルーマニア", officialName: "ルーマニア", currency: "旧レウ", currencyFamily: "romania", currencyKey: "romania-old-leu", currencyOrder: 1, regimeLabel: "体制転換後のルーマニア", flagPeriod: "1989–現在", short: "ルーマニア", detail: "社会主義政権崩壊後、デノミネーション前の旧レウが流通した時期。" },
   { era: "2005", label: "2005–現在", period: "新レウ", mapYear: 2018, mapLegend: "2018年境界資料（2005年デノミネーション）", featureNames: ["Rumania"], country: "ルーマニア", officialName: "ルーマニア", currency: "新レウ", currencyFamily: "romania", currencyKey: "romania-new-leu", currencyOrder: 2, regimeLabel: "現代ルーマニア", flagPeriod: "1989–現在", short: "ルーマニア", detail: "2005年に1万旧レウを1新レウとしたデノミネーション後の通貨期。" },
@@ -94,7 +107,18 @@ const historicalAtlas = [
   { era: "2018", label: "1997–現在", period: "香港特別行政区の香港ドル", mapYear: 2018, mapLegend: "2018年境界資料・香港位置表示", mapBoundaryLabel: "香港の位置（境界未収録）", featureNames: [], focusCoordinates: [114.17, 22.32], country: "香港", officialName: "香港特別行政区", currency: "香港ドル", currencyFamily: "hong-kong", currencyKey: "hong-kong-sar-dollar", currencyOrder: 2, regimeLabel: "香港特別行政区", flagPeriod: "1997–現在", short: "香港", detail: "主権移管後も香港ドルと複数発券銀行の制度が続く時期。英領期との制度的連続を紙幣史の系譜として表示します。" },
   { era: "2018", label: "2009–現在", period: "第3ウォン", mapYear: 2018, featureNames: ["Korea, People's Republic of"], country: "朝鮮民主主義人民共和国", currency: "第3ウォン", flagPeriod: "1948–現在", short: "北朝鮮", detail: "2009年のデノミネーション後の通貨期。収蔵品には2017～2019年の記念加刷券を含みます。" },
   { era: "2010", label: "1993–現在", period: "モルドバ・レウ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2010年）", featureNames: ["Moldova"], country: "モルドバ", officialName: "モルドバ共和国", currency: "モルドバ・レウ", flagPeriod: "1990–現在", short: "モルドバ", detail: "独立後に導入されたモルドバ・レウの通貨期。" },
-  { era: "2010", label: "1966–現在", period: "ケニア・シリング", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2010年）", featureNames: ["Kenya"], country: "ケニア", officialName: "ケニア共和国", currency: "ケニア・シリング", flag: "/flags/kenya.svg", flagAlt: "ケニア共和国国旗", flagPeriod: "1963–現在", short: "ケニア", detail: "独立後のケニアで、1966年に導入されたケニア・シリングが流通する通貨期。収蔵品は2010年銘です。" }
+  { era: "2010", label: "1966–現在", period: "ケニア・シリング", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2010年）", featureNames: ["Kenya"], country: "ケニア", officialName: "ケニア共和国", currency: "ケニア・シリング", flag: "/flags/kenya.svg", flagAlt: "ケニア共和国国旗", flagPeriod: "1963–現在", short: "ケニア", detail: "独立後のケニアで、1966年に導入されたケニア・シリングが流通する通貨期。収蔵品は2010年銘です。" },
+  { era: "2010", label: "1931–現在", period: "ホンジュラス・レンピラ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2010年）", featureNames: ["Honduras"], country: "ホンジュラス", officialName: "ホンジュラス共和国", currency: "レンピラ", flagPeriod: "1949–現在", short: "ホンジュラス", detail: "1931年に導入されたレンピラの通貨期。収蔵品は2010年5月6日付の1レンピラ券です。" },
+  { era: "1961", label: "1961–1991", period: "ソビエト・ルーブル", mapYear: 1965, mapLegend: "1965年境界資料（収蔵紙幣は1961年）", featureNames: ["Russia (Soviet Union)"], country: "ソビエト連邦", officialName: "ソビエト社会主義共和国連邦", currency: "ソビエト・ルーブル", flag: "/flags/soviet-union.svg", flagAlt: "ソビエト連邦国旗", flagPeriod: "1955–1991", short: "ソ連", detail: "1961年通貨改革後のルーブル券。1・3・5ルーブルを同じ通貨期にまとめています。" },
+  { era: "1994", label: "1994", period: "沿ドニエストル・ルーブル", mapYear: 1993, mapLegend: "1993年境界資料・ティラスポリ位置表示（収蔵紙幣は1994年）", mapBoundaryLabel: "モルドバ外郭・沿ドニエストル位置", territoryMode: "outline-only", featureNames: ["Moldova"], markerCoordinates: [29.638, 46.84], country: "沿ドニエストル", officialName: "沿ドニエストル・モルドバ共和国（未承認）", currency: "沿ドニエストル・ルーブル", flag: "/flags/transnistria.svg", flagAlt: "沿ドニエストルの旗", flagPeriod: "2000–現在", short: "沿ドニエストル", detail: "国際的承認を受けない沿ドニエストル当局が発行する地域通貨。地図はモルドバ外郭とティラスポリの位置を示します。" },
+  { era: "1991", label: "1991", period: "ソマリア・シリング", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1991年）", featureNames: ["Somalia"], country: "ソマリア", officialName: "ソマリア民主共和国末期", currency: "ソマリア・シリング", flagPeriod: "1954–現在", short: "ソマリア", detail: "中央政府崩壊と内戦開始の転換期にあたる1991年銘の50シリング券。" },
+  { era: "2011", label: "2011", period: "ブルンジ・フラン", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2011年）", featureNames: ["Burundi"], country: "ブルンジ", officialName: "ブルンジ共和国", currency: "ブルンジ・フラン", flagPeriod: "1982–現在", short: "ブルンジ", detail: "ブルンジ共和国銀行が発行した2011年11月1日付の100フラン券。" },
+  { era: "2012", label: "2012", period: "アンゴラ・クワンザ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2012年）", featureNames: ["Angola"], country: "アンゴラ", officialName: "アンゴラ共和国", currency: "クワンザ", flagPeriod: "1975–現在", short: "アンゴラ", detail: "アンゴラ国立銀行の2012年シリーズ。5・10クワンザを収蔵しています。" },
+  { era: "1990", label: "1990–1997", period: "ギニアビサウ・ペソ", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1990年）", featureNames: ["Guinea-Bissau"], country: "ギニアビサウ", officialName: "ギニアビサウ共和国", currency: "ペソ", flagPeriod: "1973–現在", short: "ギニアビサウ", detail: "西アフリカCFAフラン採用前の旧通貨ペソ。50・100ペソを収蔵しています。" },
+  { era: "1997", label: "1997–現在", period: "エリトリア・ナクファ", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1997年）", featureNames: ["Eritrea"], country: "エリトリア", officialName: "エリトリア国", currency: "ナクファ", flagPeriod: "1995–現在", short: "エリトリア", detail: "独立後の1997年に導入されたナクファ。収蔵品は導入時の10ナクファ券です。" },
+  { era: "1994", label: "1994–1999", period: "ルーブル／ディラム移行期", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1994・1999年）", featureNames: ["Tajikistan"], country: "タジキスタン", officialName: "タジキスタン共和国", currency: "タジク・ルーブル／ディラム", flagPeriod: "1992–現在", short: "タジキスタン", detail: "独立後のタジク・ルーブルと、ソモニ制度へ移る1999年銘ディラムをまとめた通貨移行期。" },
+  { era: "2017", label: "2017", period: "記念1マナト", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2017年）", featureNames: ["Turkmenistan"], country: "トルクメニスタン", officialName: "トルクメニスタン", currency: "マナト", flagPeriod: "2001–現在", short: "トルクメニスタン", detail: "2017年アジア室内・武道競技大会を記念した1マナト券。" },
+  { era: "1986", label: "1986", period: "Birds of Canada", mapYear: 1986, featureNames: ["Canada"], country: "カナダ", officialName: "カナダ", currency: "カナダ・ドル", flagPeriod: "1965–現在", short: "カナダ", detail: "Birds of Canadaシリーズの1986年銘5ドル券。" }
 ];
 
 const atlasCollectionScopes = new Map([
@@ -161,6 +185,17 @@ const atlasCollectionScopes = new Map([
   ["朝鮮民主主義人民共和国\u00002018\u0000第3ウォン", ["kp-50-2018-commemorative", "kp-200-2018-commemorative", "kp-500-2018-commemorative", "kp-1000-2018-commemorative", "kp-2000-2018-commemorative", "kp-5000-2017-kim-jong-suk", "kp-5000-2019-china-relations"]],
   ["モルドバ\u00002010\u0000モルドバ・レウ", ["md-1-2010"]],
   ["ケニア\u00002010\u0000ケニア・シリング", ["ke-50-2010"]]
+  ,["ホンジュラス\u00002010\u0000レンピラ", ["hn-1-2010"]]
+  ,["ソビエト連邦\u00001961\u0000ソビエト・ルーブル", ["su-1-1961", "su-3-1961", "su-5-1961"]]
+  ,["沿ドニエストル\u00001994\u0000沿ドニエストル・ルーブル", ["pmr-1-1994", "pmr-5-1994", "pmr-10-1994"]]
+  ,["ソマリア\u00001991\u0000ソマリア・シリング", ["so-50-1991"]]
+  ,["ブルンジ\u00002011\u0000ブルンジ・フラン", ["bi-100-2011"]]
+  ,["アンゴラ\u00002012\u0000クワンザ", ["ao-5-2012", "ao-10-2012"]]
+  ,["ギニアビサウ\u00001990\u0000ペソ", ["gw-50-1990", "gw-100-1990"]]
+  ,["エリトリア\u00001997\u0000ナクファ", ["er-10-1997"]]
+  ,["タジキスタン\u00001994\u0000タジク・ルーブル／ディラム", ["tj-1-1994", "tj-10-1994", "tj-100-1994", "tj-5diram-1999"]]
+  ,["トルクメニスタン\u00002017\u0000マナト", ["tm-1-2017"]]
+  ,["カナダ\u00001986\u0000カナダ・ドル", ["ca-5-1986"]]
 ]);
 const atlasRegionOverrides = new Map([
   ["オーストリア共和国", "中央ヨーロッパ"],
@@ -204,8 +239,15 @@ const atlasRegionViews = new Map([
   ["ロシア構成国", [19, 40, 180, 82]],
   ["アフリカ", [-20, -36, 55, 38]]
 ]);
-const atlasTimelineEras = new Set(["1885", "1914", "1919", "1920", "1923", "1936", "1938", "1940", "1941", "1943", "1946", "1947", "1948", "1951", "1964", "1965", "1966", "1970", "1972", "1974", "1975", "1981", "1983", "1985", "1986", "1987", "1988", "1989", "1991", "1992", "1993", "1994", "2000", "2002", "2005", "2010", "2014", "2018", "2024"]);
+const atlasTimelineEras = new Set(["1885", "1914", "1919", "1920", "1923", "1936", "1938", "1940", "1941", "1943", "1946", "1947", "1948", "1951", "1961", "1964", "1965", "1966", "1970", "1972", "1974", "1975", "1981", "1983", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1997", "2000", "2002", "2005", "2010", "2011", "2012", "2014", "2017", "2018", "2024"]);
 const historicalMapCache = new Map();
+const historicalBoundaryFeatures = new Map([
+  ["manchukuo", {
+    type: "Feature",
+    properties: { NAME: "Manchukuo (approximate)", BORDERPRECISION: 1 },
+    geometry: { type: "Polygon", coordinates: [[[119.2, 41.2], [120.3, 40.3], [122.1, 39.8], [124, 40.2], [126, 40], [128, 41.4], [130.6, 42.3], [131.1, 43.4], [131.5, 44.9], [134.8, 48], [132, 48.9], [130.8, 51], [125.8, 53], [120.2, 52], [117.5, 47], [119, 44], [119.2, 41.2]]] }
+  }]
+]);
 let historicalMapRequest = 0;
 let historicalMapExitPromise = null;
 const historicalMapExitDuration = 560;
@@ -337,9 +379,20 @@ function atlasCollectionCount(entry) {
   return atlasCollectionItems(entry).length;
 }
 
+const atlasFlagEmojiByCountry = new Map([
+  ["フィリピン", "🇵🇭"], ["日本", "🇯🇵"], ["中華民国", "🇹🇼"], ["ミャンマー", "🇲🇲"],
+  ["マレーシア", "🇲🇾"], ["ブルガリア", "🇧🇬"], ["ポーランド", "🇵🇱"], ["ルーマニア", "🇷🇴"],
+  ["ウクライナ", "🇺🇦"], ["ベラルーシ", "🇧🇾"], ["モンゴル", "🇲🇳"], ["香港", "🇭🇰"],
+  ["朝鮮民主主義人民共和国", "🇰🇵"], ["モルドバ", "🇲🇩"], ["デンマーク", "🇩🇰"],
+  ["ホンジュラス", "🇭🇳"], ["ソマリア", "🇸🇴"], ["ブルンジ", "🇧🇮"], ["アンゴラ", "🇦🇴"],
+  ["ギニアビサウ", "🇬🇼"], ["エリトリア", "🇪🇷"], ["タジキスタン", "🇹🇯"], ["トルクメニスタン", "🇹🇲"], ["カナダ", "🇨🇦"]
+]);
+
 function atlasFlagMarkup(entry) {
   if (entry.flag) return `<img src="${entry.flag.replace(/^\//, "")}" alt="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}">`;
-  return `<span class="country-flag-label" aria-hidden="true">${escapeHtml(entry.short || entry.country).slice(0, 3)}</span>`;
+  const emoji = atlasFlagEmojiByCountry.get(entry.country);
+  if (emoji) return `<span class="country-flag-emoji" role="img" aria-label="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}">${emoji}</span>`;
+  return `<span class="country-flag-label" aria-label="${escapeHtml(`${atlasCountryName(entry)}の旗資料を確認中`)}">${escapeHtml(entry.short || entry.country).slice(0, 3)}</span>`;
 }
 
 function atlasRegion(entry) {
@@ -608,7 +661,9 @@ async function renderAtlasMap() {
   try {
     const [data, coastlineData] = await Promise.all([loadHistoricalMap(mapYear), loadHistoricalMap(2018)]);
     if (requestId !== historicalMapRequest) return;
-    const selected = entry ? data.features.filter((feature) => entry.featureNames.includes(feature.properties?.NAME)) : [];
+    const boundaryFeature = entry?.boundaryKey ? historicalBoundaryFeatures.get(entry.boundaryKey) : null;
+    const selected = boundaryFeature ? [boundaryFeature] : entry ? data.features.filter((feature) => entry.featureNames.includes(feature.properties?.NAME)) : [];
+    const contextBoundaries = entry?.country === "中華民国" && mapYear === 1940 ? [historicalBoundaryFeatures.get("manchukuo")] : [];
     const regionFeature = regionBounds ? { type: "Feature", properties: {}, geometry: regionGeometry(regionBounds) } : null;
     const regionProjectedBounds = regionFeature ? projectedBounds([regionFeature]) : null;
     const regionalFeatures = regionProjectedBounds ? data.features.filter((feature) => {
@@ -631,7 +686,7 @@ async function renderAtlasMap() {
     borderGroup.replaceChildren(...selected.map((feature, index) => {
       const precision = Number(feature.properties?.BORDERPRECISION || 3);
       return mapHighlightPath(feature, `map-selected-border map-highlight-entering precision-${precision}${entry?.territoryMode ? ` ${entry.territoryMode}` : ""}`, index);
-    }));
+    }), ...contextBoundaries.map((feature, index) => mapHighlightPath(feature, "map-context-boundary map-highlight-entering precision-1", selected.length + index)));
     let cameraTransform = "translate(0px, 0px) scale(1)";
     if (regionFeature) {
       const bounds = regionProjectedBounds;
@@ -694,36 +749,39 @@ async function renderAtlasMap() {
   }
 }
 
-function filteredItems() {
+function itemMatchesFilters(item, excludedKeys = new Set()) {
   const query = appState.search.trim().normalize("NFKC").toLocaleLowerCase("ja");
-  return appState.database.items.filter((item) => {
-    if (appState.collectionScopeIds && !appState.collectionScopeIds.has(item.id)) return false;
-    const haystack = [item.country, item.region, item.currency, item.denomination, item.year, item.series, item.issueType, item.title, item.story, item.catalogNumber, ...(item.tags || [])].join(" ").normalize("NFKC").toLocaleLowerCase("ja");
-    if (query && !haystack.includes(query)) return false;
-    if (appState.filters.region && item.region !== appState.filters.region) return false;
-    if (appState.filters.country && item.country !== appState.filters.country) return false;
-    if (appState.filters.currency && item.currency !== appState.filters.currency) return false;
-    if (appState.filters.stateStatus && item.stateStatus !== appState.filters.stateStatus) return false;
-    const issueYears = Array.from(String(item.year || "").matchAll(/\d{4}/g), (match) => Number(match[0]));
-    const issueStart = issueYears.length ? Math.min(...issueYears) : null;
-    const issueEnd = issueYears.length ? Math.max(...issueYears) : null;
-    const overlaps = (start, end) => issueStart !== null && issueStart <= end && issueEnd >= start;
-    if (appState.filters.period === "before-1920" && !overlaps(0, 1919)) return false;
-    if (appState.filters.period === "1920-1949" && !overlaps(1920, 1949)) return false;
-    if (appState.filters.period === "1950-1979" && !overlaps(1950, 1979)) return false;
-    if (appState.filters.period === "1980-1999" && !overlaps(1980, 1999)) return false;
-    if (appState.filters.period === "after-2000" && !overlaps(2000, 9999)) return false;
-    if (appState.filters.period === "unknown" && issueStart !== null) return false;
-    const rarity = Number(item.rarityScore) || 0;
-    if (appState.filters.rarity === "50-plus" && rarity < 50) return false;
-    if (appState.filters.rarity === "40-49" && (rarity < 40 || rarity >= 50)) return false;
-    if (appState.filters.rarity === "under-40" && rarity >= 40) return false;
-    if (appState.filters.type && item.type !== appState.filters.type) return false;
-    if (appState.filters.location === "placed" && (!item.location?.binder || item.location.binder === "未配置")) return false;
-    if (appState.filters.location === "unplaced" && item.location?.binder && item.location.binder !== "未配置") return false;
-    if (appState.filters.duplicates && item.duplicateQty < 1) return false;
-    return true;
-  });
+  if (appState.collectionScopeIds && !appState.collectionScopeIds.has(item.id)) return false;
+  const haystack = [item.country, item.region, item.currency, item.denomination, item.year, item.series, item.issueType, item.title, item.story, item.catalogNumber, ...(item.tags || [])].join(" ").normalize("NFKC").toLocaleLowerCase("ja");
+  if (query && !haystack.includes(query)) return false;
+  if (!excludedKeys.has("macroRegion") && appState.filters.macroRegion && macroRegionForItem(item) !== appState.filters.macroRegion) return false;
+  if (!excludedKeys.has("region") && appState.filters.region && item.region !== appState.filters.region) return false;
+  if (!excludedKeys.has("country") && appState.filters.country && item.country !== appState.filters.country) return false;
+  if (!excludedKeys.has("currency") && appState.filters.currency && item.currency !== appState.filters.currency) return false;
+  if (!excludedKeys.has("stateStatus") && appState.filters.stateStatus && item.stateStatus !== appState.filters.stateStatus) return false;
+  const issueYears = Array.from(String(item.year || "").matchAll(/\d{4}/g), (match) => Number(match[0]));
+  const issueStart = issueYears.length ? Math.min(...issueYears) : null;
+  const issueEnd = issueYears.length ? Math.max(...issueYears) : null;
+  const overlaps = (start, end) => issueStart !== null && issueStart <= end && issueEnd >= start;
+  if (!excludedKeys.has("period") && appState.filters.period === "before-1920" && !overlaps(0, 1919)) return false;
+  if (!excludedKeys.has("period") && appState.filters.period === "1920-1949" && !overlaps(1920, 1949)) return false;
+  if (!excludedKeys.has("period") && appState.filters.period === "1950-1979" && !overlaps(1950, 1979)) return false;
+  if (!excludedKeys.has("period") && appState.filters.period === "1980-1999" && !overlaps(1980, 1999)) return false;
+  if (!excludedKeys.has("period") && appState.filters.period === "after-2000" && !overlaps(2000, 9999)) return false;
+  if (!excludedKeys.has("period") && appState.filters.period === "unknown" && issueStart !== null) return false;
+  const rarity = Number(item.rarityScore) || 0;
+  if (!excludedKeys.has("rarity") && appState.filters.rarity === "50-plus" && rarity < 50) return false;
+  if (!excludedKeys.has("rarity") && appState.filters.rarity === "40-49" && (rarity < 40 || rarity >= 50)) return false;
+  if (!excludedKeys.has("rarity") && appState.filters.rarity === "under-40" && rarity >= 40) return false;
+  if (!excludedKeys.has("type") && appState.filters.type && item.type !== appState.filters.type) return false;
+  if (!excludedKeys.has("location") && appState.filters.location === "placed" && (!item.location?.binder || item.location.binder === "未配置")) return false;
+  if (!excludedKeys.has("location") && appState.filters.location === "unplaced" && item.location?.binder && item.location.binder !== "未配置") return false;
+  if (!excludedKeys.has("duplicates") && appState.filters.duplicates && item.duplicateQty < 1) return false;
+  return true;
+}
+
+function filteredItems(excludedKeys = new Set()) {
+  return appState.database.items.filter((item) => itemMatchesFilters(item, excludedKeys));
 }
 
 function noteCard(item) {
@@ -756,10 +814,12 @@ function renderCollection() {
     select.innerHTML = `<option value="">すべて</option>${values.map((value) => `<option value="${escapeHtml(value)}">${escapeHtml(value)}</option>`).join("")}`;
     select.value = selected;
   };
-  const itemsByLabel = (key) => Array.from(new Set(appState.database.items.map((item) => item[key]).filter(Boolean))).sort((a, b) => a.localeCompare(b, "ja"));
-  fillFilter("#regionFilter", itemsByLabel("region"), appState.filters.region);
-  fillFilter("#countryFilter", itemsByLabel("country"), appState.filters.country);
-  fillFilter("#currencyFilter", itemsByLabel("currency"), appState.filters.currency);
+  const itemsByLabel = (key, excludedKeys) => Array.from(new Set(filteredItems(excludedKeys).map((item) => key === "macroRegion" ? macroRegionForItem(item) : item[key]).filter(Boolean))).sort((a, b) => a.localeCompare(b, "ja"));
+  const macroRegions = itemsByLabel("macroRegion", new Set(["macroRegion", "region", "country", "currency"])).sort((a, b) => macroRegionOrder.indexOf(a) - macroRegionOrder.indexOf(b));
+  fillFilter("#macroRegionFilter", macroRegions, appState.filters.macroRegion);
+  fillFilter("#regionFilter", itemsByLabel("region", new Set(["region", "country", "currency"])), appState.filters.region);
+  fillFilter("#countryFilter", itemsByLabel("country", new Set(["country", "currency"])), appState.filters.country);
+  fillFilter("#currencyFilter", itemsByLabel("currency", new Set(["currency"])), appState.filters.currency);
   $("#periodFilter").value = appState.filters.period;
   $("#stateStatusFilter").value = appState.filters.stateStatus;
   $("#rarityFilter").value = appState.filters.rarity;
@@ -862,6 +922,11 @@ function openNote(item = null) {
 
 function openPublicNote(item) {
   if (!item) return;
+  appState.filters.macroRegion = macroRegionForItem(item);
+  appState.filters.region = item.region || "";
+  appState.filters.country = item.country || "";
+  appState.filters.currency = item.currency || "";
+  renderCollection();
   $("#publicNoteDialogTitle").textContent = `${item.country} · ${item.title}`;
   $("#publicNoteKicker").textContent = `${item.year || "年代不明"} · ${item.series || item.currency}`;
   $("#publicNoteRarity").textContent = `希少度 ${item.rarityScore}/100`;
@@ -1133,7 +1198,12 @@ function attachEvents() {
     if (!items.length) return;
     appState.search = "";
     appState.collectionScopeIds = new Set(items.map((item) => item.id));
-    appState.filters = { region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false };
+    appState.filters = emptyCollectionFilters();
+    const first = items[0];
+    appState.filters.macroRegion = macroRegionForItem(first);
+    appState.filters.region = items.every((item) => item.region === first.region) ? first.region : "";
+    appState.filters.country = items.every((item) => item.country === first.country) ? first.country : "";
+    appState.filters.currency = items.every((item) => item.currency === first.currency) ? first.currency : "";
     $("#globalSearch").value = "";
     switchView("collection");
   });
@@ -1146,8 +1216,9 @@ function attachEvents() {
     try { await api(`/api/items/${encodeURIComponent(id)}`, { method: "DELETE" }); $("#noteDialog").close(); await refresh(); showToast("紙幣を削除しました。"); } catch (error) { showToast(error.message, true); }
   });
   $("#globalSearch").addEventListener("input", (event) => { appState.collectionScopeIds = null; appState.search = event.target.value; if (appState.search && appState.view !== "collection") switchView("collection"); else renderCollection(); });
-  $("#regionFilter").addEventListener("change", (event) => { appState.filters.region = event.target.value; renderCollection(); });
-  $("#countryFilter").addEventListener("change", (event) => { appState.filters.country = event.target.value; renderCollection(); });
+  $("#macroRegionFilter").addEventListener("change", (event) => { appState.filters.macroRegion = event.target.value; appState.filters.region = ""; appState.filters.country = ""; appState.filters.currency = ""; renderCollection(); });
+  $("#regionFilter").addEventListener("change", (event) => { appState.filters.region = event.target.value; appState.filters.country = ""; appState.filters.currency = ""; renderCollection(); });
+  $("#countryFilter").addEventListener("change", (event) => { appState.filters.country = event.target.value; appState.filters.currency = ""; renderCollection(); });
   $("#currencyFilter").addEventListener("change", (event) => { appState.filters.currency = event.target.value; renderCollection(); });
   $("#periodFilter").addEventListener("change", (event) => { appState.filters.period = event.target.value; renderCollection(); });
   $("#stateStatusFilter").addEventListener("change", (event) => { appState.filters.stateStatus = event.target.value; renderCollection(); });
@@ -1156,7 +1227,7 @@ function attachEvents() {
   $("#locationFilter").addEventListener("change", (event) => { appState.filters.location = event.target.value; renderCollection(); });
   $("#duplicateFilter").addEventListener("change", (event) => { appState.filters.duplicates = event.target.checked; renderCollection(); });
   $("#clearFilters").addEventListener("click", () => {
-    appState.search = ""; appState.collectionScopeIds = null; appState.filters = { region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false };
+    appState.search = ""; appState.collectionScopeIds = null; appState.filters = emptyCollectionFilters();
     $("#globalSearch").value = ""; $("#duplicateFilter").checked = false; renderCollection();
   });
   $$("[data-layout]").forEach((button) => button.addEventListener("click", () => { appState.layout = button.dataset.layout; $$("[data-layout]").forEach((item) => item.classList.toggle("is-active", item === button)); renderCollection(); }));

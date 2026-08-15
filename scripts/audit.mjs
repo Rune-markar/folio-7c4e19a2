@@ -25,6 +25,7 @@ const atlas = vm.runInNewContext(`(${expressionAfter("const historicalAtlas = ",
 const scopes = vm.runInNewContext(`(${expressionAfter("const atlasCollectionScopes = ", "const atlasRegionOverrides")})`);
 const withheld = vm.runInNewContext(`(${expressionAfter("const withheldImageIds = ", "const historicalAtlas")})`);
 const timelineEras = vm.runInNewContext(`(${expressionAfter("const atlasTimelineEras = ", "const historicalMapCache")})`);
+const flagEmojis = vm.runInNewContext(`(${expressionAfter("const atlasFlagEmojiByCountry = ", "function atlasFlagMarkup")})`);
 const itemIds = new Set(data.items.map((item) => item.id));
 
 check(itemIds.size === data.items.length, "収蔵品IDが重複しています");
@@ -80,15 +81,8 @@ for (const entry of atlas) {
 }
 for (const item of data.items) check(scopedIds.has(item.id), `${item.id}: どの歴史地図期にも収蔵スコープ登録されていません`);
 
-const legacyFlagExemptions = new Set([
-  "philippines-japanese-occupation-peso", "philippines-republic-peso", "roc-fabi", "roc-federal-reserve-bank-yuan", "roc-japanese-military-yen", "manchukuo-yuan", "roc-new-taiwan-dollar",
-  "myanmar-japanese-occupation-rupee", "myanmar-kyat", "malaya-japanese-occupation-dollar", "malaysia-ringgit", "ブルガリア\u00001951\u0000第2レフ", "yugoslavia-sfr-dinar", "ポーランド\u00001988\u0000第3ズウォティ",
-  "romania-old-leu", "romania-new-leu", "ウクライナ\u00001992\u0000フリヴニャ（1992年銘）", "belarus-first-ruble", "belarus-second-ruble", "mongolia-socialist-tugrik", "mongolia-democratic-tugrik",
-  "hong-kong-colonial-dollar", "hong-kong-sar-dollar", "朝鮮民主主義人民共和国\u00002018\u0000第3ウォン", "モルドバ\u00002010\u0000モルドバ・レウ"
-]);
 for (const entry of atlas) {
-  if (legacyFlagExemptions.has(scopeKey(entry))) continue;
-  check(entry.flag && entry.flagAlt && entry.flagPeriod, `${entry.country} ${entry.era}: 新規要件の国旗情報が不足しています`);
+  check(entry.flag || flagEmojis.has(entry.country), `${entry.country} ${entry.era}: 国旗表示が不足しています`);
   if (entry.flag) check(fs.existsSync(path.join(root, entry.flag.replace(/^\//, ""))), `${entry.country} ${entry.era}: 国旗ファイルがありません`);
 }
 

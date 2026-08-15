@@ -12,6 +12,8 @@ The URL slug is intentionally non-descriptive, but obscurity is not authenticati
 
 写真フォルダを使った棚卸し、既存登録との照合、公開用画像の選定、出典記録、検証、未確定資料の報告は [docs/BANKNOTE_REGISTRATION_WORKFLOW.md](docs/BANKNOTE_REGISTRATION_WORKFLOW.md) に従う。公開用画像の個別出典と利用条件は [media/SOURCE.md](media/SOURCE.md) に記録する。
 
+2026年8月15日の追加写真53枚の照合結果は [docs/PHOTO_BATCH_2026-08-15.md](docs/PHOTO_BATCH_2026-08-15.md) に記録している。
+
 ## 歴史地図の同一系統国に関する基本基準
 
 同じ国・地域の紙幣が複数の通貨期、発行期、または政治体制にまたがる場合は、ドイツと同じ縦型の「紙幣・通貨の系譜」を地図左側に表示する。国ごとの専用 UI は作らず、次の共通データ仕様で扱う。

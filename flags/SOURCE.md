@@ -28,3 +28,11 @@ Downloaded files retain their original SVG content. Simple geometric flags were 
 # ケニア
 
 - `kenya.svg` — ケニア憲法第9条第2項・第二附則、および National Flag, Emblems and Names Act (Cap. 99) 第二附則の制式記述を基準に再構成。黒・赤・緑の等幅三帯、細い白帯、中央の対称な盾と白い槍を反映した。出典: [Kenya Law（憲法）](https://new.kenyalaw.org/akn/ke/act/2010/constitution/eng@2010-09-03)、[Kenya Law（Cap. 99）](https://new.kenyalaw.org/akn/ke/act/1963/44/eng@2022-12-31)
+
+# 2026-08-15 追加・移行
+
+- `manchukuo-1932.svg` — 黄地と左上の赤・青・白・黒の横帯からなる1932–1945年の旗を、歴史資料表示用に単純化して再構成。
+- `yugoslavia-1946.svg` — 青・白・赤の三色旗と黄縁の赤い星からなるユーゴスラビア社会主義連邦共和国旗を再構成。
+- `soviet-union.svg` — 1955年制式の赤地、鎌と槌、赤い星の構成を小サイズ表示向けに再構成。
+- `transnistria.svg` — 赤・緑・赤の横帯と左上の標章からなる沿ドニエストルの旗を小サイズ表示向けに再構成。
+- 上記以外で従来文字プレースホルダーだった国は、Unicodeの国旗地域指示記号を国別割当で表示する。これは現行国旗の簡略表示であり、歴史旗の制式復元ではない。
