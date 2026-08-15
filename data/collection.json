@@ -1,15 +1,15 @@
 {
   "schemaVersion": 5,
-  "updatedAt": "2026-08-15T18:00:00+09:00",
+  "updatedAt": "2026-08-15T20:30:00+09:00",
   "settings": {
     "archiveName": "World Banknote Archive"
   },
   "sourceSnapshot": {
     "importedAt": "2026-08-15",
-    "countryCount": 98,
+    "countryCount": 100,
     "detailedNotionCount": 34,
     "sheetCount": 12,
-    "photoRegistrationCount": 90,
+    "photoRegistrationCount": 122,
     "note": "NAS正本から生成した閲覧専用スナップショット（保有資料写真との照合登録を含む）"
   },
   "collectionIndex": [
@@ -36,6 +36,10 @@
     {
       "region": "中央アメリカ",
       "country": "ハイチ"
+    },
+    {
+      "region": "南アメリカ",
+      "country": "ガイアナ"
     },
     {
       "region": "オセアニア",
@@ -335,7 +339,7 @@
     },
     {
       "region": "アフリカ",
-      "country": "南アメリカ共和国"
+      "country": "南アフリカ共和国"
     },
     {
       "region": "アフリカ",
@@ -359,7 +363,11 @@
     },
     {
       "region": "アフリカ",
-      "country": "マウライ"
+      "country": "ギニア"
+    },
+    {
+      "region": "アフリカ",
+      "country": "マラウイ"
     },
     {
       "region": "アフリカ",
@@ -5364,7 +5372,39 @@
     },
     {
       "id": "ca-5-1986", "type": "banknote", "country": "カナダ", "region": "北アメリカ", "currency": "カナダ・ドル", "denomination": "5", "year": "1986", "series": "Birds of Canadaシリーズ", "issueEndDate": "", "title": "5 ドル", "story": "肖像・人物：第7代首相ウィルフリッド・ローリエを表面に描く。発行背景：カナダ銀行のBirds of Canadaシリーズとして1986年銘で発行された券。当時の社会情勢：二言語国家としての制度と自然像を券面で示した時期である。特殊な点：青を基調とし、裏面にカワセミを描く。採用モチーフは、表面がローリエと国会議事堂、裏面がカワセミである。", "motifs": "表：ローリエ、国会議事堂／裏：カワセミ", "collectionQty": 1, "duplicateQty": 0, "condition": "未評価", "estimatedValue": 0, "stateStatus": "現存", "rarityFactors": {"state": 2, "age": 2, "condition": 2, "marketEvidence": 1, "issueVolume": 1}, "rarityScore": 36, "location": {"binder": "非公開", "page": "", "pocket": ""}, "images": {"front": "", "back": "", "document": ""}, "tags": ["写真照合登録", "追加写真3"]
-    }
+    },
+    {"id":"mx-1-1970","type":"banknote","country":"メキシコ","region":"中央アメリカ","currency":"ペソ","denomination":"1","year":"1970-07-22","series":"Banco de México 旧ペソ券","title":"1 ペソ","story":"肖像・人物：ホセ・マリア・モレロスを描く。発行背景：券面日付22-VII-1970のメキシコ銀行券。当時の社会情勢：高度成長期の小額流通券である。特殊な点：写真から日付を直接確認した。採用モチーフは、モレロスとアステカ暦石である。","motifs":"モレロス、アステカ暦石","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"ru-10-1997","type":"banknote","country":"ロシア連邦","region":"ロシア構成国","currency":"ロシア・ルーブル","denomination":"10","year":"1997","series":"1997年シリーズ","title":"10 ルーブル","story":"肖像・人物：人物肖像を用いず都市景観を描く。発行背景：1997年のデノミネーション後に発行されたロシア銀行券。当時の社会情勢：市場経済への移行と通貨安定化が進められた。特殊な点：クラスノヤルスクを主題とする。採用モチーフは、パラスケヴァ・ピャトニツァ礼拝堂と橋である。","motifs":"クラスノヤルスク、礼拝堂、橋","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"pmr-1-2007","type":"banknote","country":"沿ドニエストル","region":"東ヨーロッパ","currency":"沿ドニエストル・ルーブル","denomination":"1","year":"2007","series":"2007年券","title":"1 ルーブル","story":"肖像・人物：アレクサンドル・スヴォーロフを描く。発行背景：沿ドニエストル共和国銀行の2007年券。当時の社会情勢：未承認地域が独自通貨制度を継続した時期である。特殊な点：発行主体の国際的地位と通貨流通域を区別して記録する。採用モチーフは、スヴォーロフと地域建築である。","motifs":"スヴォーロフ、地域建築","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3","未承認地域"]},
+    {"id":"sy-50-2009","type":"banknote","country":"シリア","region":"中東アジア","currency":"シリア・ポンド","denomination":"50","year":"2009","series":"2009年券","title":"50 ポンド","story":"肖像・人物：人物肖像を用いず歴史遺産を描く。発行背景：シリア中央銀行の2009年銘券。当時の社会情勢：内戦前夜の通貨制度を伝える資料である。特殊な点：裏面の年銘と額面を写真から確認した。採用モチーフは、歴史建築と装飾文様である。","motifs":"歴史建築、装飾文様","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"lb-25-1983","type":"banknote","country":"レバノン","region":"中東アジア","currency":"レバノン・ポンド","denomination":"25","year":"1983-01-01","series":"1983年券","title":"25 ポンド","story":"肖像・人物：人物肖像を用いず国家景観を描く。発行背景：レバノン銀行の1983年1月1日付券。当時の社会情勢：内戦下でも中央銀行券が発行された時期である。特殊な点：券面の日付を写真から確認した。採用モチーフは、レバノン杉と歴史景観である。","motifs":"レバノン杉、歴史景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"bh-1-1973","type":"banknote","country":"バーレーン","region":"中東アジア","currency":"バーレーン・ディナール","denomination":"1","year":"1973","series":"1973年シリーズ","title":"1 ディナール","story":"肖像・人物：人物肖像を用いず国家建築を描く。発行背景：バーレーン通貨庁の1973年シリーズ。当時の社会情勢：独立後の金融制度を整備した時期である。特殊な点：赤い年銘を写真から確認した。採用モチーフは、国章と伝統建築である。","motifs":"国章、伝統建築","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"ss-10-2011","type":"banknote","country":"南スーダン","region":"アフリカ","currency":"南スーダン・ポンド","denomination":"10","year":"2011","series":"独立時シリーズ","title":"10 ポンド","story":"肖像・人物：ジョン・ガランを表面に描く。発行背景：2011年の独立時に導入された南スーダン・ポンド券。当時の社会情勢：新国家の制度形成が進められた。特殊な点：独立と同時期の初期シリーズである。採用モチーフは、ジョン・ガランとアフリカスイギュウである。","motifs":"ジョン・ガラン、アフリカスイギュウ","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"gn-100-1960","type":"banknote","country":"ギニア","region":"アフリカ","currency":"ギニア・フラン","denomination":"100","year":"1960-03-01","series":"1960年券","title":"100 フラン","story":"肖像・人物：国家建設を象徴する市民像を描く。発行背景：ギニア共和国の1960年3月1日付券。当時の社会情勢：独立後の独自通貨制度を築いた時期である。特殊な点：券面の日付を写真から確認した。採用モチーフは、市民像と産業景観である。","motifs":"市民像、産業景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"gy-50-2016","type":"banknote","country":"ガイアナ","region":"南アメリカ","currency":"ガイアナ・ドル","denomination":"50","year":"2016","series":"独立50周年記念券","title":"50 ドル記念券","story":"肖像・人物：人物肖像を用いず国家記章を中心に構成する。発行背景：独立50周年を記念した1966–2016表示の券。当時の社会情勢：独立後半世紀の節目を国家的に記念した。特殊な点：50の額面と50周年を重ねた記念デザインである。採用モチーフは、国章と記念標章である。","motifs":"国章、独立50周年標章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3","記念券"]},
+    {"id":"mw-20-2016","type":"banknote","country":"マラウイ","region":"アフリカ","currency":"マラウイ・クワチャ","denomination":"20","year":"2016-01-01","series":"2016年券","title":"20 クワチャ","story":"肖像・人物：独立指導者ヘイスティングズ・バンダを描く。発行背景：マラウイ準備銀行の2016年1月1日付券。当時の社会情勢：農業中心の経済と国家制度が継続した時期である。特殊な点：券面の日付を写真から確認した。採用モチーフは、バンダと地域景観である。","motifs":"バンダ、地域景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"mw-50-2016","type":"banknote","country":"マラウイ","region":"アフリカ","currency":"マラウイ・クワチャ","denomination":"50","year":"2016-01-01","series":"2016年券","title":"50 クワチャ","story":"肖像・人物：独立指導者ヘイスティングズ・バンダを描く。発行背景：マラウイ準備銀行の2016年1月1日付券。当時の社会情勢：農業中心の経済と国家制度が継続した時期である。特殊な点：券面の日付を写真から確認した。採用モチーフは、バンダと地域景観である。","motifs":"バンダ、地域景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"eg-25pt-2002","type":"banknote","country":"エジプト","region":"アフリカ","currency":"エジプト・ポンド","denomination":"0.25","year":"2002-08-14","series":"25ピアストル券","title":"25 ピアストル","story":"肖像・人物：人物肖像を用いずイスラム建築を描く。発行背景：2002年8月14日付のエジプト中央銀行券。当時の社会情勢：小額紙幣が日常決済を支えた時期である。特殊な点：券面の日付を写真から確認した。採用モチーフは、モスクと国家紋章である。","motifs":"モスク、国家紋章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"eg-25pt-2008","type":"banknote","country":"エジプト","region":"アフリカ","currency":"エジプト・ポンド","denomination":"0.25","year":"2008-11-25","series":"25ピアストル券","title":"25 ピアストル","story":"肖像・人物：人物肖像を用いずイスラム建築を描く。発行背景：2008年11月25日付のエジプト中央銀行券。当時の社会情勢：小額紙幣が硬貨と並行して用いられた時期である。特殊な点：同額面の異なる日付を別型式として記録する。採用モチーフは、モスクと国家紋章である。","motifs":"モスク、国家紋章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"eg-50pt-2017","type":"banknote","country":"エジプト","region":"アフリカ","currency":"エジプト・ポンド","denomination":"0.50","year":"2017-01-08","series":"50ピアストル券","title":"50 ピアストル","story":"肖像・人物：人物肖像を用いずイスラム建築を描く。発行背景：2017年1月8日付のエジプト中央銀行券。当時の社会情勢：通貨制度改革が続くなかで小額券が流通した。特殊な点：券面の日付を写真から確認した。採用モチーフは、アズハル・モスクと古代像である。","motifs":"アズハル・モスク、古代像","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"za-100-2012","type":"banknote","country":"南アフリカ共和国","region":"アフリカ","currency":"ランド","denomination":"100","year":"2012","series":"マンデラ・シリーズ","title":"100 ランド","story":"肖像・人物：ネルソン・マンデラを表面に描く。発行背景：南アフリカ準備銀行の2012年マンデラ・シリーズ。当時の社会情勢：民主化後の国家像を紙幣へ反映した時期である。特殊な点：額面ごとに大型動物を配する系列である。採用モチーフは、マンデラとケープバッファローである。","motifs":"マンデラ、ケープバッファロー","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"er-1-1997","type":"banknote","country":"エリトリア","region":"アフリカ","currency":"ナクファ","denomination":"1","year":"1997-05-24","series":"独自通貨導入シリーズ","title":"1 ナクファ","story":"肖像・人物：複数の市民像を描く。発行背景：1997年の独自通貨導入時に発行された券。当時の社会情勢：独立国家として通貨制度を分離した時期である。特殊な点：既登録10ナクファと同じ導入系列である。採用モチーフは、市民群像と学校景観である。","motifs":"市民群像、学校景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"kz-200-2006","type":"banknote","country":"カザフスタン","region":"中央アジア","currency":"テンゲ","denomination":"200","year":"2006","series":"2006年シリーズ","title":"200 テンゲ","story":"肖像・人物：人物肖像を用いず国家記念物を描く。発行背景：カザフスタン国立銀行の2006年シリーズ。当時の社会情勢：首都整備と国家的象徴の再構成が進んだ。特殊な点：縦構図を採用した系列である。採用モチーフは、バイテレクと国土景観である。","motifs":"バイテレク、国土景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"uz-5-1994","type":"banknote","country":"ウズベキスタン","region":"中央アジア","currency":"スム","denomination":"5","year":"1994","series":"1994年シリーズ","title":"5 スム","story":"肖像・人物：人物肖像を用いず国章を描く。発行背景：スム導入時の1994年券。当時の社会情勢：独立後の通貨主権を確立した時期である。特殊な点：券面の年銘を写真から確認した。採用モチーフは、国章と建築景観である。","motifs":"国章、建築景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"uz-100-1994","type":"banknote","country":"ウズベキスタン","region":"中央アジア","currency":"スム","denomination":"100","year":"1994","series":"1994年シリーズ","title":"100 スム","story":"肖像・人物：人物肖像を用いず国章を描く。発行背景：スム導入時の1994年券。当時の社会情勢：独立後の通貨主権を確立した時期である。特殊な点：裏面図柄から系列を照合した。採用モチーフは、国章と独立宮殿である。","motifs":"国章、独立宮殿","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"uz-500-1999","type":"banknote","country":"ウズベキスタン","region":"中央アジア","currency":"スム","denomination":"500","year":"1999","series":"1999年券","title":"500 スム","story":"肖像・人物：人物肖像を用いず国章を描く。発行背景：ウズベキスタン中央銀行の1999年券。当時の社会情勢：独立後のスム制度が定着した時期である。特殊な点：裏面図柄から額面と系列を照合した。採用モチーフは、国章とティムール像である。","motifs":"国章、ティムール像","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"hr-10-1991","type":"banknote","country":"クロアチア","region":"バルカン半島","currency":"クロアチア・ディナール","denomination":"10","year":"1991","series":"独立時ディナール券","title":"10 ディナール","story":"肖像・人物：科学者ルジェル・ボシュコヴィッチを描く。発行背景：1991年の独立時に導入された暫定通貨券。当時の社会情勢：ユーゴスラビア解体と独立戦争のさなかである。特殊な点：短命なクロアチア・ディナールの資料である。採用モチーフは、ボシュコヴィッチと国章である。","motifs":"ボシュコヴィッチ、国章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"hr-200-1991","type":"banknote","country":"クロアチア","region":"バルカン半島","currency":"クロアチア・ディナール","denomination":"200","year":"1991","series":"独立時ディナール券","title":"200 ディナール","story":"肖像・人物：科学者ルジェル・ボシュコヴィッチを描く。発行背景：1991年の独立時に導入された暫定通貨券。当時の社会情勢：ユーゴスラビア解体と独立戦争のさなかである。特殊な点：短命なクロアチア・ディナールの資料である。採用モチーフは、ボシュコヴィッチと国章である。","motifs":"ボシュコヴィッチ、国章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"hr-50000-1993","type":"banknote","country":"クロアチア","region":"バルカン半島","currency":"クロアチア・ディナール","denomination":"50000","year":"1993","series":"高額面ディナール券","title":"50,000 ディナール","story":"肖像・人物：科学者ルジェル・ボシュコヴィッチを描く。発行背景：1993年の高額面暫定通貨券。当時の社会情勢：戦時下の物価上昇に対応して高額面化した。特殊な点：クーナ導入前の短命通貨である。採用モチーフは、ボシュコヴィッチと国章である。","motifs":"ボシュコヴィッチ、国章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"hr-100000-1993","type":"banknote","country":"クロアチア","region":"バルカン半島","currency":"クロアチア・ディナール","denomination":"100000","year":"1993","series":"高額面ディナール券","title":"100,000 ディナール","story":"肖像・人物：科学者ルジェル・ボシュコヴィッチを描く。発行背景：1993年の高額面暫定通貨券。当時の社会情勢：戦時下の物価上昇に対応して高額面化した。特殊な点：クーナ導入前の短命通貨である。採用モチーフは、ボシュコヴィッチと国章である。","motifs":"ボシュコヴィッチ、国章","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"mk-10-1992","type":"banknote","country":"北マケドニア","region":"バルカン半島","currency":"デナル","denomination":"10","year":"1992","series":"独立時シリーズ","title":"10 デナル","story":"肖像・人物：人物肖像を用いず伝統意匠を描く。発行背景：独立後の1992年に発行された初期デナル券。当時の社会情勢：旧ユーゴスラビアから独自通貨へ移行した。特殊な点：券面にスコピエ1992年の表示がある。採用モチーフは、伝統装飾と農業景観である。","motifs":"伝統装飾、農業景観","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"mk-10-2018","type":"banknote","country":"北マケドニア","region":"バルカン半島","currency":"デナル","denomination":"10","year":"2018","series":"ポリマー券","title":"10 デナル","story":"肖像・人物：古代の女神像を描く。発行背景：耐久性を高めた2018年ポリマー券。当時の社会情勢：国名変更直前の通貨発行である。特殊な点：透明窓を備えるポリマー基材である。採用モチーフは、女神像とクジャクである。","motifs":"女神像、クジャク、透明窓","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"kg-1tyiyn-1993","type":"banknote","country":"キルギス","region":"中央アジア","currency":"トゥイン","denomination":"1","year":"1993","series":"独立時補助券","title":"1 トゥイン","story":"肖像・人物：人物肖像を用いず国章と幾何学文様を描く。発行背景：1993年のソム導入時に発行された補助単位券。当時の社会情勢：ソ連ルーブル圏から離脱した時期である。特殊な点：100トゥインを1ソムとする小額紙幣である。採用モチーフは、国章と幾何学文様である。","motifs":"国章、幾何学文様","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"kg-10tyiyn-1993","type":"banknote","country":"キルギス","region":"中央アジア","currency":"トゥイン","denomination":"10","year":"1993","series":"独立時補助券","title":"10 トゥイン","story":"肖像・人物：人物肖像を用いず国章と幾何学文様を描く。発行背景：1993年のソム導入時に発行された補助単位券。当時の社会情勢：ソ連ルーブル圏から離脱した時期である。特殊な点：100トゥインを1ソムとする小額紙幣である。採用モチーフは、国章と幾何学文様である。","motifs":"国章、幾何学文様","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"au-2-1983","type":"banknote","country":"オーストラリア","region":"オセアニア","currency":"オーストラリア・ドル","denomination":"2","year":"1983","series":"Johnston–Stone署名券","title":"2 ドル","story":"肖像・人物：牧畜業者ジョン・マッカーサーと発明家ウィリアム・ファラーを描く。発行背景：Johnston–Stone署名組合せの1983年券。当時の社会情勢：紙券から硬貨への移行前の流通券である。特殊な点：写真で同型2点を確認した。採用モチーフは、マッカーサー、ファラー、羊と小麦である。","motifs":"マッカーサー、ファラー、羊、小麦","collectionQty":2,"duplicateQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"us-1-1923-silver","type":"banknote","country":"アメリカ","region":"北アメリカ","currency":"米ドル","denomination":"1","year":"1923","series":"Silver Certificate","title":"1 ドル銀証券","story":"肖像・人物：ジョージ・ワシントンを描く。発行背景：Series of 1923の銀証券。当時の社会情勢：銀貨との兌換を表示する証券が流通していた。特殊な点：大型紙幣時代末期の米国券である。採用モチーフは、ワシントンと米国国璽意匠である。","motifs":"ワシントン、銀証券意匠","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"us-2-1976","type":"banknote","country":"アメリカ","region":"北アメリカ","currency":"米ドル","denomination":"2","year":"1976","series":"Federal Reserve Note","title":"2 ドル","story":"肖像・人物：トーマス・ジェファーソンを描く。発行背景：独立200周年に合わせて再設計されたSeries 1976券。当時の社会情勢：建国史を記念する図柄が採用された。特殊な点：写真で同型3点を確認した。採用モチーフは、ジェファーソンと独立宣言署名場面である。","motifs":"ジェファーソン、独立宣言","collectionQty":3,"duplicateQty":2,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]},
+    {"id":"us-1-2009","type":"banknote","country":"アメリカ","region":"北アメリカ","currency":"米ドル","denomination":"1","year":"2009","series":"Federal Reserve Note","title":"1 ドル","story":"肖像・人物：ジョージ・ワシントンを描く。発行背景：Series 2009の連邦準備券。当時の社会情勢：現行型の1ドル紙幣が広く流通した時期である。特殊な点：シリーズ年を写真から確認した。採用モチーフは、ワシントンと米国国璽である。","motifs":"ワシントン、米国国璽","collectionQty":1,"condition":"未評価","estimatedValue":0,"stateStatus":"現存","images":{"front":"","back":"","document":""},"tags":["写真照合登録","追加写真3"]}
   ],
   "lots": [],
   "trades": [],

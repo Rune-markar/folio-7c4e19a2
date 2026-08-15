@@ -118,7 +118,29 @@ const historicalAtlas = [
   { era: "1997", label: "1997–現在", period: "エリトリア・ナクファ", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1997年）", featureNames: ["Eritrea"], country: "エリトリア", officialName: "エリトリア国", currency: "ナクファ", flagPeriod: "1995–現在", short: "エリトリア", detail: "独立後の1997年に導入されたナクファ。収蔵品は導入時の10ナクファ券です。" },
   { era: "1994", label: "1994–1999", period: "ルーブル／ディラム移行期", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1994・1999年）", featureNames: ["Tajikistan"], country: "タジキスタン", officialName: "タジキスタン共和国", currency: "タジク・ルーブル／ディラム", flagPeriod: "1992–現在", short: "タジキスタン", detail: "独立後のタジク・ルーブルと、ソモニ制度へ移る1999年銘ディラムをまとめた通貨移行期。" },
   { era: "2017", label: "2017", period: "記念1マナト", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2017年）", featureNames: ["Turkmenistan"], country: "トルクメニスタン", officialName: "トルクメニスタン", currency: "マナト", flagPeriod: "2001–現在", short: "トルクメニスタン", detail: "2017年アジア室内・武道競技大会を記念した1マナト券。" },
-  { era: "1986", label: "1986", period: "Birds of Canada", mapYear: 1986, featureNames: ["Canada"], country: "カナダ", officialName: "カナダ", currency: "カナダ・ドル", flagPeriod: "1965–現在", short: "カナダ", detail: "Birds of Canadaシリーズの1986年銘5ドル券。" }
+  { era: "1986", label: "1986", period: "Birds of Canada", mapYear: 1986, featureNames: ["Canada"], country: "カナダ", officialName: "カナダ", currency: "カナダ・ドル", flagPeriod: "1965–現在", short: "カナダ", detail: "Birds of Canadaシリーズの1986年銘5ドル券。" },
+  { era: "1970", label: "1970", period: "旧ペソ券", mapYear: 1965, mapLegend: "1965年境界資料（収蔵紙幣は1970年）", featureNames: ["Mexico"], country: "メキシコ", currency: "ペソ", flagPending: true, short: "メキシコ", detail: "1970年日付の1ペソ券。" },
+  { era: "1997", label: "1997", period: "デノミネーション後ルーブル", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1997年）", featureNames: ["Russia (Soviet Union)"], country: "ロシア連邦", currency: "ロシア・ルーブル", flagPending: true, short: "ロシア", detail: "1997年シリーズの10ルーブル券。" },
+  { era: "2007", label: "2007", period: "沿ドニエストル・ルーブル", mapYear: 2018, mapLegend: "2018年境界資料・ティラスポリ位置表示（収蔵紙幣は2007年）", featureNames: ["Moldova"], markerCoordinates: [29.638, 46.84], territoryMode: "outline-only", country: "沿ドニエストル", currency: "沿ドニエストル・ルーブル（2007年券）", flag: "/flags/transnistria.svg", short: "沿ドニエストル", detail: "2007年シリーズの1ルーブル券。" },
+  { era: "2009", label: "2009", period: "シリア・ポンド", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2009年）", featureNames: ["Syria"], country: "シリア", currency: "シリア・ポンド", flagPending: true, short: "シリア", detail: "2009年銘の50ポンド券。" },
+  { era: "1983", label: "1983", period: "レバノン・ポンド", mapYear: 1983, featureNames: ["Lebanon"], country: "レバノン", currency: "レバノン・ポンド", flagPending: true, short: "レバノン", detail: "内戦期の1983年1月1日付25ポンド券。" },
+  { era: "1973", label: "1973", period: "独立後ディナール", mapYear: 1983, mapLegend: "1983年境界資料（収蔵紙幣は1973年）", featureNames: ["Bahrain"], country: "バーレーン", currency: "バーレーン・ディナール", flagPending: true, short: "バーレーン", detail: "1973年シリーズの1ディナール券。" },
+  { era: "2011", label: "2011", period: "独立時ポンド", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2011年）", featureNames: ["South Sudan"], country: "南スーダン", currency: "南スーダン・ポンド", flagPending: true, short: "南スーダン", detail: "独立時シリーズの10ポンド券。" },
+  { era: "1960", label: "1960", period: "独立後フラン", mapYear: 1965, mapLegend: "1965年境界資料（収蔵紙幣は1960年）", featureNames: ["Guinea"], country: "ギニア", currency: "ギニア・フラン", flagPending: true, short: "ギニア", detail: "1960年3月1日付の100フラン券。" },
+  { era: "2016", label: "2016", period: "独立50周年ドル", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2016年）", featureNames: ["Guyana"], country: "ガイアナ", currency: "ガイアナ・ドル", flagPending: true, short: "ガイアナ", detail: "独立50周年記念50ドル券。" },
+  { era: "2016", label: "2016", period: "マラウイ・クワチャ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2016年）", featureNames: ["Malawi"], country: "マラウイ", currency: "マラウイ・クワチャ", flagPending: true, short: "マラウイ", detail: "2016年1月1日付の20・50クワチャ券。" },
+  { era: "2002", label: "2002–2017", period: "エジプト小額券", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2002–2017年）", featureNames: ["Egypt"], country: "エジプト", currency: "エジプト・ポンド（ピアストル券）", flagPending: true, short: "エジプト", detail: "日付違いの25ピアストル2種と50ピアストル券。" },
+  { era: "2012", label: "2012", period: "マンデラ・シリーズ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2012年）", featureNames: ["South Africa"], country: "南アフリカ共和国", currency: "ランド", flagPending: true, short: "南アフリカ", detail: "2012年マンデラ・シリーズの100ランド券。" },
+  { era: "2006", label: "2006", period: "縦型テンゲ", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2006年）", featureNames: ["Kazakhstan"], country: "カザフスタン", currency: "テンゲ", flagPending: true, short: "カザフスタン", detail: "2006年シリーズの200テンゲ券。" },
+  { era: "1994", label: "1994–1999", period: "独立後スム", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1994・1999年）", featureNames: ["Uzbekistan"], country: "ウズベキスタン", currency: "スム", flagPending: true, short: "ウズベキスタン", detail: "5・100・500スム券。" },
+  { era: "1991", label: "1991–1993", period: "クロアチア・ディナール", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1991・1993年）", featureNames: ["Croatia"], country: "クロアチア", currency: "クロアチア・ディナール", flagPending: true, short: "クロアチア", detail: "独立時の暫定通貨4額面。" },
+  { era: "1992", label: "1992", period: "独立時デナル", mapYear: 1993, mapLegend: "1993年境界資料（収蔵紙幣は1992年）", featureNames: ["Macedonia (FYROM/North Macedonia)"], country: "北マケドニア", currency: "デナル（1992年券）", flagPending: true, short: "北マケドニア", detail: "独立初期の10デナル券。" },
+  { era: "2018", label: "2018", period: "ポリマー・デナル", mapYear: 2018, featureNames: ["Macedonia (FYROM/North Macedonia)"], country: "北マケドニア", currency: "デナル（ポリマー券）", flagPending: true, short: "北マケドニア", detail: "2018年の10デナル・ポリマー券。" },
+  { era: "1993", label: "1993", period: "独立時トゥイン", mapYear: 1993, featureNames: ["Kyrgyz Republic"], country: "キルギス", currency: "トゥイン", flagPending: true, short: "キルギス", detail: "ソム導入時の1・10トゥイン券。" },
+  { era: "1983", label: "1983", period: "紙券2ドル", mapYear: 1983, featureNames: ["Australia"], country: "オーストラリア", currency: "オーストラリア・ドル", flagPending: true, short: "豪州", detail: "Johnston–Stone署名の2ドル紙幣2点。" },
+  { era: "1923", label: "1923", period: "銀証券", mapYear: 1923, featureNames: ["United States of America"], country: "アメリカ", currency: "米ドル銀証券", flagPending: true, short: "米国", detail: "Series of 1923の1ドル銀証券。" },
+  { era: "1976", label: "1976", period: "独立200周年2ドル", mapYear: 1983, mapLegend: "1983年境界資料（収蔵紙幣は1976年）", featureNames: ["United States of America"], country: "アメリカ", currency: "米ドル（Series 1976）", flagPending: true, short: "米国", detail: "Series 1976の2ドル券3点。" },
+  { era: "2009", label: "2009", period: "連邦準備券", mapYear: 2018, mapLegend: "2018年境界資料（収蔵紙幣は2009年）", featureNames: ["United States of America"], country: "アメリカ", currency: "米ドル（Series 2009）", flagPending: true, short: "米国", detail: "Series 2009の1ドル券。" }
 ];
 
 const atlasCollectionScopes = new Map([
@@ -196,6 +218,29 @@ const atlasCollectionScopes = new Map([
   ,["タジキスタン\u00001994\u0000タジク・ルーブル／ディラム", ["tj-1-1994", "tj-10-1994", "tj-100-1994", "tj-5diram-1999"]]
   ,["トルクメニスタン\u00002017\u0000マナト", ["tm-1-2017"]]
   ,["カナダ\u00001986\u0000カナダ・ドル", ["ca-5-1986"]]
+  ,["メキシコ\u00001970\u0000ペソ", ["mx-1-1970"]]
+  ,["ロシア連邦\u00001997\u0000ロシア・ルーブル", ["ru-10-1997"]]
+  ,["沿ドニエストル\u00002007\u0000沿ドニエストル・ルーブル（2007年券）", ["pmr-1-2007"]]
+  ,["シリア\u00002009\u0000シリア・ポンド", ["sy-50-2009"]]
+  ,["レバノン\u00001983\u0000レバノン・ポンド", ["lb-25-1983"]]
+  ,["バーレーン\u00001973\u0000バーレーン・ディナール", ["bh-1-1973"]]
+  ,["南スーダン\u00002011\u0000南スーダン・ポンド", ["ss-10-2011"]]
+  ,["ギニア\u00001960\u0000ギニア・フラン", ["gn-100-1960"]]
+  ,["ガイアナ\u00002016\u0000ガイアナ・ドル", ["gy-50-2016"]]
+  ,["マラウイ\u00002016\u0000マラウイ・クワチャ", ["mw-20-2016", "mw-50-2016"]]
+  ,["エジプト\u00002002\u0000エジプト・ポンド（ピアストル券）", ["eg-25pt-2002", "eg-25pt-2008", "eg-50pt-2017"]]
+  ,["南アフリカ共和国\u00002012\u0000ランド", ["za-100-2012"]]
+  ,["エリトリア\u00001997\u0000ナクファ", ["er-1-1997", "er-10-1997"]]
+  ,["カザフスタン\u00002006\u0000テンゲ", ["kz-200-2006"]]
+  ,["ウズベキスタン\u00001994\u0000スム", ["uz-5-1994", "uz-100-1994", "uz-500-1999"]]
+  ,["クロアチア\u00001991\u0000クロアチア・ディナール", ["hr-10-1991", "hr-200-1991", "hr-50000-1993", "hr-100000-1993"]]
+  ,["北マケドニア\u00001992\u0000デナル（1992年券）", ["mk-10-1992"]]
+  ,["北マケドニア\u00002018\u0000デナル（ポリマー券）", ["mk-10-2018"]]
+  ,["キルギス\u00001993\u0000トゥイン", ["kg-1tyiyn-1993", "kg-10tyiyn-1993"]]
+  ,["オーストラリア\u00001983\u0000オーストラリア・ドル", ["au-2-1983"]]
+  ,["アメリカ\u00001923\u0000米ドル銀証券", ["us-1-1923-silver"]]
+  ,["アメリカ\u00001976\u0000米ドル（Series 1976）", ["us-2-1976"]]
+  ,["アメリカ\u00002009\u0000米ドル（Series 2009）", ["us-1-2009"]]
 ]);
 const atlasRegionOverrides = new Map([
   ["オーストリア共和国", "中央ヨーロッパ"],
@@ -239,7 +284,7 @@ const atlasRegionViews = new Map([
   ["ロシア構成国", [19, 40, 180, 82]],
   ["アフリカ", [-20, -36, 55, 38]]
 ]);
-const atlasTimelineEras = new Set(["1885", "1914", "1919", "1920", "1923", "1936", "1938", "1940", "1941", "1943", "1946", "1947", "1948", "1951", "1961", "1964", "1965", "1966", "1970", "1972", "1974", "1975", "1981", "1983", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1997", "2000", "2002", "2005", "2010", "2011", "2012", "2014", "2017", "2018", "2024"]);
+const atlasTimelineEras = new Set(["1885", "1914", "1919", "1920", "1923", "1936", "1938", "1940", "1941", "1943", "1946", "1947", "1948", "1951", "1960", "1961", "1964", "1965", "1966", "1970", "1972", "1973", "1974", "1975", "1976", "1981", "1983", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1997", "2000", "2002", "2005", "2006", "2007", "2009", "2010", "2011", "2012", "2014", "2016", "2017", "2018", "2024"]);
 const historicalMapCache = new Map();
 const historicalBoundaryFeatures = new Map([
   ["manchukuo", {
@@ -793,7 +838,7 @@ function noteCard(item) {
   const interaction = ` role="button" tabindex="0" aria-label="${escapeHtml(item.country)} ${escapeHtml(item.title)}${interactionLabel}"`;
   return `<article class="note-card"${interaction} data-note-id="${escapeHtml(item.id)}">
     <div class="note-visual" style="--note-bg:${hashColor(item.country)}">${image}<span class="note-country-code">${escapeHtml(item.country.slice(0, 12))}</span><span class="note-denom">${escapeHtml(item.denomination)}</span></div>
-    <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span>${issueBadge}<span class="rarity-label">希少度 ${item.rarityScore}/100</span></div>
+    <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span>${issueBadge}<span class="rarity-label">希少度 ${Number.isFinite(Number(item.rarityScore)) ? `${item.rarityScore}/100` : "未評価"}</span></div>
       <h4>${escapeHtml(item.title || `${item.denomination} ${item.currency}`)}</h4><p>${escapeHtml(item.year || "年代不明")} · ${escapeHtml(item.series || item.currency)}</p>
       <div class="note-footer"><span class="qty-pill">本蔵 ${item.collectionQty}枚${item.duplicateQty ? ` <b class="duplicate-pill">＋ダブり ${item.duplicateQty}</b>` : ""}</span><span>${escapeHtml(footerStatus)}</span></div>
     </div></article>`;
@@ -929,7 +974,7 @@ function openPublicNote(item) {
   renderCollection();
   $("#publicNoteDialogTitle").textContent = `${item.country} · ${item.title}`;
   $("#publicNoteKicker").textContent = `${item.year || "年代不明"} · ${item.series || item.currency}`;
-  $("#publicNoteRarity").textContent = `希少度 ${item.rarityScore}/100`;
+  $("#publicNoteRarity").textContent = `希少度 ${Number.isFinite(Number(item.rarityScore)) ? `${item.rarityScore}/100` : "未評価"}`;
   const images = [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url);
   const rightsReview = imageRightsReviewIds.has(item.id) ? `<p class="public-note-rights">画像の出典・利用条件は再確認中です。</p>` : "";
   $("#publicNoteImages").innerHTML = images.length ? images.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}" decoding="async"><figcaption>${label}</figcaption></figure>`).join("") + rightsReview : `<p class="public-note-empty">公開画像はありません。</p>`;
