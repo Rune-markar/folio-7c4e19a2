@@ -14,6 +14,8 @@ The URL slug is intentionally non-descriptive, but obscurity is not authenticati
 
 2026年8月15日の追加写真53枚の照合結果は [docs/PHOTO_BATCH_2026-08-15.md](docs/PHOTO_BATCH_2026-08-15.md) に記録している。
 
+2026年8月16日のGoogle Drive写真13枚の照合結果は [docs/PHOTO_BATCH_2026-08-16.md](docs/PHOTO_BATCH_2026-08-16.md) に記録している。
+
 ## 歴史地図の同一系統国に関する基本基準
 
 同じ国・地域の紙幣が複数の通貨期、発行期、または政治体制にまたがる場合は、ドイツと同じ縦型の「紙幣・通貨の系譜」を地図左側に表示する。国ごとの専用 UI は作らず、次の共通データ仕様で扱う。
