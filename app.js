@@ -545,7 +545,7 @@ function syncHorizontalPicker(target) {
 }
 
 function syncHorizontalPickers() {
-  [$("#eraList"), $("#regionSymbols"), $("#countrySymbols")].forEach(syncHorizontalPicker);
+  syncHorizontalPicker($("#countrySymbols"));
 }
 
 const atlasFlagSymbolByCountry = new Map([
@@ -616,6 +616,9 @@ function renderDashboard() {
     syncHorizontalPickers();
   }));
   const eraEntries = historicalAtlas.filter((entry) => entry.era === appState.atlasEra);
+  $("#eraPickerValue").textContent = appState.atlasEra || "選択";
+  $("#eraPickerSummary").textContent = `${eras.length}年代から選択`;
+  $("#eraPickerTrigger").setAttribute("aria-label", `年代を選ぶ。現在は${appState.atlasEra || "未選択"}`);
   const regions = Array.from(new Set(eraEntries.map(atlasRegion)));
   if (appState.atlasRegion && !regions.includes(appState.atlasRegion)) {
     appState.atlasRegion = "";
@@ -627,6 +630,9 @@ function renderDashboard() {
     const active = region === appState.atlasRegion;
     return `<button type="button" role="option" aria-selected="${active}" class="region-symbol${active ? " is-active" : ""}" data-atlas-region="${escapeHtml(region)}"><strong>${escapeHtml(region)}</strong><small>${countryCount}件の国名・通貨</small></button>`;
   }).join("");
+  $("#regionPickerValue").textContent = appState.atlasRegion || "選択";
+  $("#regionPickerSummary").textContent = `${regions.length}地域から選択`;
+  $("#regionPickerTrigger").setAttribute("aria-label", `地域を選ぶ。現在は${appState.atlasRegion || "未選択"}`);
   const countries = Array.from(new Map(eraEntries
     .filter((entry) => atlasRegion(entry) === appState.atlasRegion)
     .map((entry) => [atlasPickerKey(entry), entry])).values());
@@ -640,7 +646,7 @@ function renderDashboard() {
   }).join("") : `<span class="picker-guidance">先に地域を選択してください</span>`;
   const selectedEntry = selectedAtlasEntry();
   $("#atlasNextStep").textContent = selectedEntry
-    ? `${atlasCountryCurrencyName(selectedEntry)}を表示中です。地図上の国を選ぶと、その国の最新年代へ移動します。`
+    ? ""
     : appState.atlasRegion
       ? `次は「03 国名」から選択してください。地図上の国から直接選ぶこともできます。`
       : `次は「02 地域」を選択してください。`;
@@ -1347,6 +1353,7 @@ function attachEvents() {
     if (viewTarget) switchView(viewTarget.dataset.viewTarget);
     const eraTarget = event.target.closest("[data-atlas-era]");
     if (eraTarget) {
+      eraTarget.closest("dialog")?.close();
       appState.atlasEra = eraTarget.dataset.atlasEra;
       const firstEntry = historicalAtlas.find((entry) => entry.era === appState.atlasEra);
       appState.atlasRegion = firstEntry ? atlasRegion(firstEntry) : "";
@@ -1357,6 +1364,7 @@ function attachEvents() {
     }
     const regionTarget = event.target.closest("[data-atlas-region]");
     if (regionTarget) {
+      regionTarget.closest("dialog")?.close();
       appState.atlasRegion = regionTarget.dataset.atlasRegion;
       appState.atlasCountry = "";
       appState.atlasCurrency = "";
@@ -1388,6 +1396,12 @@ function attachEvents() {
     if (noteTarget) openCardNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId));
     const close = event.target.closest("[data-close-dialog]");
     if (close) $(`#${close.dataset.closeDialog}`).close();
+    const atlasPickerTrigger = event.target.closest("[data-open-atlas-picker]");
+    if (atlasPickerTrigger) {
+      const dialog = $(`#${atlasPickerTrigger.dataset.openAtlasPicker}`);
+      dialog.showModal();
+      requestAnimationFrame(() => dialog.querySelector("[aria-selected='true']")?.scrollIntoView({ block: "center" }));
+    }
   });
   document.addEventListener("keydown", (event) => {
     const noteTarget = event.target.closest?.("[data-note-id]");
@@ -1395,7 +1409,7 @@ function attachEvents() {
     const mapTarget = event.target.closest?.("[data-map-feature-name]");
     if (mapTarget && ["Enter", " "].includes(event.key)) { event.preventDefault(); selectAtlasEntry(latestAtlasEntryForFeatureName(mapTarget.dataset.mapFeatureName)); }
   });
-  [$("#eraList"), $("#regionSymbols"), $("#countrySymbols")].forEach((target) => target.addEventListener("scroll", () => syncHorizontalPicker(target), { passive: true }));
+  $("#countrySymbols").addEventListener("scroll", () => syncHorizontalPicker($("#countrySymbols")), { passive: true });
   window.addEventListener("resize", () => {
     window.clearTimeout(atlasResizeTimer);
     atlasResizeTimer = window.setTimeout(() => {

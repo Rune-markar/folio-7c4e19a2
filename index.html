@@ -62,8 +62,6 @@
           </div>
         </header>
 
-        <aside class="public-snapshot-note"><strong>閲覧専用公開版</strong><span>NAS正本から生成したスナップショットです。登録・編集機能と、保管位置・取得価格・非公開資料URLは公開していません。</span></aside>
-
         <div class="loading-state" id="loadingState">
           <div class="loading-seal">幣</div>
           <p>収蔵台帳を開いています…</p>
@@ -81,22 +79,13 @@
                 <div class="atlas-count"><strong id="heroSpecimenCount">00</strong><span>収蔵紙幣</span></div>
               </header>
 
-              <div class="era-picker" aria-label="年代を選択">
-                <p><span>01</span> 年代を選ぶ</p>
-                <div class="horizontal-picker">
-                  <button class="picker-scroll-button" type="button" data-scroll-target="eraList" data-scroll-direction="-1" aria-label="前の年代を表示">‹</button>
-                  <div class="era-list" id="eraList" role="listbox" aria-label="年代"><div class="era-track" aria-hidden="true"><span id="eraTrackProgress"></span></div></div>
-                  <button class="picker-scroll-button" type="button" data-scroll-target="eraList" data-scroll-direction="1" aria-label="次の年代を表示">›</button>
-                </div>
-              </div>
-
-              <div class="region-picker">
-                <p><span>02</span> 地域を選ぶ</p>
-                <div class="horizontal-picker">
-                  <button class="picker-scroll-button" type="button" data-scroll-target="regionSymbols" data-scroll-direction="-1" aria-label="前の地域を表示">‹</button>
-                  <div class="region-symbols" id="regionSymbols" role="listbox" aria-label="地域"></div>
-                  <button class="picker-scroll-button" type="button" data-scroll-target="regionSymbols" data-scroll-direction="1" aria-label="次の地域を表示">›</button>
-                </div>
+              <div class="atlas-primary-pickers" aria-label="年代と地域を選択">
+                <button class="atlas-compact-trigger" id="eraPickerTrigger" type="button" data-open-atlas-picker="eraPickerDialog" aria-haspopup="dialog">
+                  <span class="atlas-picker-step">01</span><span><small>年代</small><strong id="eraPickerValue">選択</strong><em id="eraPickerSummary"></em></span><i aria-hidden="true">⌄</i>
+                </button>
+                <button class="atlas-compact-trigger" id="regionPickerTrigger" type="button" data-open-atlas-picker="regionPickerDialog" aria-haspopup="dialog">
+                  <span class="atlas-picker-step">02</span><span><small>地域</small><strong id="regionPickerValue">選択</strong><em id="regionPickerSummary"></em></span><i aria-hidden="true">⌄</i>
+                </button>
               </div>
 
               <div class="country-picker">
@@ -370,6 +359,20 @@
         </div>
         <footer class="modal-footer"><span class="footer-spacer"></span><button class="button button-secondary" type="button" data-close-dialog="publicNoteDialog">閉じる</button></footer>
       </article>
+    </dialog>
+
+    <dialog class="atlas-choice-dialog" id="eraPickerDialog" aria-labelledby="eraPickerDialogTitle">
+      <section class="atlas-choice-shell">
+        <header><div><p class="eyebrow">01 · HISTORICAL ERA</p><h2 id="eraPickerDialogTitle">年代を選ぶ</h2></div><button type="button" data-close-dialog="eraPickerDialog" aria-label="年代選択を閉じる">×</button></header>
+        <div class="atlas-choice-list era-list" id="eraList" role="listbox" aria-label="年代"></div>
+      </section>
+    </dialog>
+
+    <dialog class="atlas-choice-dialog" id="regionPickerDialog" aria-labelledby="regionPickerDialogTitle">
+      <section class="atlas-choice-shell">
+        <header><div><p class="eyebrow">02 · REGION</p><h2 id="regionPickerDialogTitle">地域を選ぶ</h2></div><button type="button" data-close-dialog="regionPickerDialog" aria-label="地域選択を閉じる">×</button></header>
+        <div class="atlas-choice-list region-symbols" id="regionSymbols" role="listbox" aria-label="地域"></div>
+      </section>
     </dialog>
 
     <dialog class="modal" id="saleDialog">
