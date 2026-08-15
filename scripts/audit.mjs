@@ -8,6 +8,7 @@ const read = (name) => fs.readFileSync(path.join(root, name), "utf8");
 const data = JSON.parse(read("data/collection.json"));
 const app = read("app.js");
 const mediaSource = read("media/SOURCE.md");
+const flagSprite = read("flags/country-flags.svg");
 const failures = [];
 const check = (condition, message) => { if (!condition) failures.push(message); };
 
@@ -25,7 +26,7 @@ const atlas = vm.runInNewContext(`(${expressionAfter("const historicalAtlas = ",
 const scopes = vm.runInNewContext(`(${expressionAfter("const atlasCollectionScopes = ", "const atlasRegionOverrides")})`);
 const withheld = vm.runInNewContext(`(${expressionAfter("const withheldImageIds = ", "const historicalAtlas")})`);
 const timelineEras = vm.runInNewContext(`(${expressionAfter("const atlasTimelineEras = ", "const historicalMapCache")})`);
-const flagEmojis = vm.runInNewContext(`(${expressionAfter("const atlasFlagEmojiByCountry = ", "function atlasFlagMarkup")})`);
+const flagSymbols = vm.runInNewContext(`(${expressionAfter("const atlasFlagSymbolByCountry = ", "function atlasFlagMarkup")})`);
 const itemIds = new Set(data.items.map((item) => item.id));
 
 check(itemIds.size === data.items.length, "収蔵品IDが重複しています");
@@ -82,8 +83,9 @@ for (const entry of atlas) {
 for (const item of data.items) check(scopedIds.has(item.id), `${item.id}: どの歴史地図期にも収蔵スコープ登録されていません`);
 
 for (const entry of atlas) {
-  check(entry.flag || flagEmojis.has(entry.country), `${entry.country} ${entry.era}: 国旗表示が不足しています`);
+  check(entry.flag || flagSymbols.has(entry.country), `${entry.country} ${entry.era}: 国旗表示が不足しています`);
   if (entry.flag) check(fs.existsSync(path.join(root, entry.flag.replace(/^\//, ""))), `${entry.country} ${entry.era}: 国旗ファイルがありません`);
+  if (!entry.flag && flagSymbols.has(entry.country)) check(flagSprite.includes(`id="flag-${flagSymbols.get(entry.country)}"`), `${entry.country} ${entry.era}: 長方形国旗シンボルがありません`);
 }
 
 const families = new Map();

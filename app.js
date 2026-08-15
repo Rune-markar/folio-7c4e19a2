@@ -379,19 +379,19 @@ function atlasCollectionCount(entry) {
   return atlasCollectionItems(entry).length;
 }
 
-const atlasFlagEmojiByCountry = new Map([
-  ["フィリピン", "🇵🇭"], ["日本", "🇯🇵"], ["中華民国", "🇹🇼"], ["ミャンマー", "🇲🇲"],
-  ["マレーシア", "🇲🇾"], ["ブルガリア", "🇧🇬"], ["ポーランド", "🇵🇱"], ["ルーマニア", "🇷🇴"],
-  ["ウクライナ", "🇺🇦"], ["ベラルーシ", "🇧🇾"], ["モンゴル", "🇲🇳"], ["香港", "🇭🇰"],
-  ["朝鮮民主主義人民共和国", "🇰🇵"], ["モルドバ", "🇲🇩"], ["デンマーク", "🇩🇰"],
-  ["ホンジュラス", "🇭🇳"], ["ソマリア", "🇸🇴"], ["ブルンジ", "🇧🇮"], ["アンゴラ", "🇦🇴"],
-  ["ギニアビサウ", "🇬🇼"], ["エリトリア", "🇪🇷"], ["タジキスタン", "🇹🇯"], ["トルクメニスタン", "🇹🇲"], ["カナダ", "🇨🇦"]
+const atlasFlagSymbolByCountry = new Map([
+  ["フィリピン", "ph"], ["日本", "jp"], ["中華民国", "tw"], ["ミャンマー", "mm"],
+  ["マレーシア", "my"], ["ブルガリア", "bg"], ["ポーランド", "pl"], ["ルーマニア", "ro"],
+  ["ウクライナ", "ua"], ["ベラルーシ", "by"], ["モンゴル", "mn"], ["香港", "hk"],
+  ["朝鮮民主主義人民共和国", "kp"], ["モルドバ", "md"], ["デンマーク", "dk"],
+  ["ホンジュラス", "hn"], ["ソマリア", "so"], ["ブルンジ", "bi"], ["アンゴラ", "ao"],
+  ["ギニアビサウ", "gw"], ["エリトリア", "er"], ["タジキスタン", "tj"], ["トルクメニスタン", "tm"], ["カナダ", "ca"]
 ]);
 
 function atlasFlagMarkup(entry) {
   if (entry.flag) return `<img src="${entry.flag.replace(/^\//, "")}" alt="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}">`;
-  const emoji = atlasFlagEmojiByCountry.get(entry.country);
-  if (emoji) return `<span class="country-flag-emoji" role="img" aria-label="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}">${emoji}</span>`;
+  const symbol = atlasFlagSymbolByCountry.get(entry.country);
+  if (symbol) return `<svg class="country-flag-svg" viewBox="0 0 60 40" role="img" aria-label="${escapeHtml(entry.flagAlt || `${atlasCountryName(entry)}の旗`)}"><use href="flags/country-flags.svg#flag-${symbol}"></use></svg>`;
   return `<span class="country-flag-label" aria-label="${escapeHtml(`${atlasCountryName(entry)}の旗資料を確認中`)}">${escapeHtml(entry.short || entry.country).slice(0, 3)}</span>`;
 }
 
