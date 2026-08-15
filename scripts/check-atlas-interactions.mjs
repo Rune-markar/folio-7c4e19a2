@@ -24,6 +24,8 @@ for (const action of ["zoom-out", "reset", "zoom-in"]) {
 }
 assert.match(app, /addEventListener\("pointerdown"/, "ポインター操作で地図移動を開始できる");
 assert.match(app, /addEventListener\("pointermove"/, "ポインター操作で地図を移動できる");
+assert.match(app, /event\.target\.setPointerCapture\(event\.pointerId\)/, "国のタップは国境要素をクリック対象として保つ");
+assert.doesNotMatch(app, /svg\.setPointerCapture\(event\.pointerId\)/, "SVG全体でポインターを捕捉して国タップを失わない");
 assert.match(app, /addEventListener\("wheel"/, "ホイールで地図を拡大縮小できる");
 assert.match(app, /mapPointers\.size\s*===\s*2/, "2本指のピンチ操作を処理する");
 assert.match(styles, /\.world-map\s*\{[^}]*touch-action:\s*none/s, "スマホの地図ジェスチャーをブラウザへ渡さない");

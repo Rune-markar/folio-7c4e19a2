@@ -859,7 +859,10 @@ function attachMapInteractions() {
       mapGestureMoved = false;
     }
     mapPointers.set(event.pointerId, mapClientPoint(event));
-    svg.setPointerCapture(event.pointerId);
+    // Capture on the pressed map element so a tap keeps the country's path as
+    // the click target. Capturing on the SVG itself makes every tap look like
+    // a background click and prevents country selection.
+    event.target.setPointerCapture(event.pointerId);
     svg.classList.add("is-interacting");
   });
   svg.addEventListener("pointermove", (event) => {
