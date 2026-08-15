@@ -24,7 +24,7 @@ function expressionAfter(marker, nextMarker) {
 
 const atlas = vm.runInNewContext(`(${expressionAfter("const historicalAtlas = ", "const atlasCollectionScopes")})`);
 const scopes = vm.runInNewContext(`(${expressionAfter("const atlasCollectionScopes = ", "const atlasRegionOverrides")})`);
-const withheld = vm.runInNewContext(`(${expressionAfter("const withheldImageIds = ", "const historicalAtlas")})`);
+const imageRightsReviewIds = vm.runInNewContext(`(${expressionAfter("const imageRightsReviewIds = ", "const historicalAtlas")})`);
 const timelineEras = vm.runInNewContext(`(${expressionAfter("const atlasTimelineEras = ", "const historicalMapCache")})`);
 const flagSymbols = vm.runInNewContext(`(${expressionAfter("const atlasFlagSymbolByCountry = ", "function atlasFlagMarkup")})`);
 const itemIds = new Set(data.items.map((item) => item.id));
@@ -56,10 +56,10 @@ for (const item of data.items) {
 for (const line of mediaSource.split(/\r?\n/)) {
   if (!/(確認できなかった|再確認|来歴未確定)/.test(line)) continue;
   for (const item of data.items) {
-    if (line.includes(item.id)) check(withheld.has(item.id), `${item.id}: 権利未確認画像が公開停止集合にありません`);
+    if (line.includes(item.id)) check(imageRightsReviewIds.has(item.id), `${item.id}: 権利未確認画像が再確認集合にありません`);
   }
 }
-for (const id of withheld) check(itemIds.has(id), `${id}: 公開停止集合に存在しないIDがあります`);
+for (const id of imageRightsReviewIds) check(itemIds.has(id), `${id}: 権利再確認集合に存在しないIDがあります`);
 
 const scopeKey = (entry) => entry.currencyKey || `${entry.country}\u0000${entry.era}\u0000${entry.currency}`;
 const scopedIds = new Set();
@@ -106,4 +106,4 @@ if (failures.length) {
   failures.forEach((failure) => console.error(`- ${failure}`));
   process.exit(1);
 }
-console.log(`AUDIT OK: ${data.items.length} items, ${atlas.length} atlas entries, ${withheld.size} image sets withheld`);
+console.log(`AUDIT OK: ${data.items.length} items, ${atlas.length} atlas entries, ${imageRightsReviewIds.size} image sets under rights review`);

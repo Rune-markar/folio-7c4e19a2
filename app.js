@@ -33,7 +33,7 @@ const viewMeta = {
 };
 
 const palette = ["#d9c798", "#b9c7b1", "#d6aaa2", "#bfc4cf", "#ccb88f", "#a9c3bd", "#d3bdca"];
-const withheldImageIds = new Set([
+const imageRightsReviewIds = new Set([
   "ve-2-2018", "ve-5-2018", "ve-20-2014", "ve-50-2018", "ve-2000-2016",
   "ar-1-1985", "ar-5-1985", "ar-10-1985", "ar-10-1992", "cl-1000-1994", "pe-500-1987",
   "de-50-1906", "de-10000-1922", "de-100000-1923", "de-2000000-1923", "de-10000000-1923", "de-100000000-1923", "de-500000000-1923", "de-1000000000-1923", "de-1-1940",
@@ -785,7 +785,7 @@ function filteredItems(excludedKeys = new Set()) {
 }
 
 function noteCard(item) {
-  const image = !withheldImageIds.has(item.id) && item.images?.front ? `<img src="${escapeHtml(item.images.front)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の表面">` : "";
+  const image = item.images?.front ? `<img src="${escapeHtml(item.images.front)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の表面" loading="lazy" decoding="async">` : "";
   const issueBadge = item.issueType ? `<span class="commemorative-label">${escapeHtml(item.issueType)}</span>` : "";
   const location = item.location?.binder && item.location.binder !== "未配置" ? `${item.location.binder}${item.location.page ? ` / ${item.location.page}` : ""}` : "未配置";
   const interactionLabel = staticArchive ? "の詳細を見る" : "を編集";
@@ -901,10 +901,10 @@ function openNote(item = null) {
   formElement("rarityVolume").value = 1;
   $("#deleteNoteButton").hidden = !item;
   $("#noteDialogTitle").textContent = item ? `${item.country} · ${item.title}` : "紙幣を登録";
-  const previews = item && !withheldImageIds.has(item.id) ? [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url) : [];
+  const previews = item ? [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url) : [];
   imagePreview.hidden = previews.length === 0;
   imageEmpty.hidden = previews.length > 0;
-  imagePreview.innerHTML = previews.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}"><figcaption>${label}</figcaption></figure>`).join("");
+  imagePreview.innerHTML = previews.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}" decoding="async"><figcaption>${label}</figcaption></figure>`).join("");
   if (item) {
     const simple = ["id", "type", "region", "country", "currency", "denomination", "year", "series", "title", "catalogNumber", "collectionQty", "duplicateQty", "condition", "stateStatus", "acquisitionDate", "acquisitionCost", "estimatedValue", "marketNote", "story", "motifsFront", "motifsBack", "referenceUrl", "sourceUrl"];
     for (const name of simple) if (formElement(name)) formElement(name).value = item[name] ?? "";
@@ -930,8 +930,9 @@ function openPublicNote(item) {
   $("#publicNoteDialogTitle").textContent = `${item.country} · ${item.title}`;
   $("#publicNoteKicker").textContent = `${item.year || "年代不明"} · ${item.series || item.currency}`;
   $("#publicNoteRarity").textContent = `希少度 ${item.rarityScore}/100`;
-  const images = withheldImageIds.has(item.id) ? [] : [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url);
-  $("#publicNoteImages").innerHTML = images.length ? images.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}"><figcaption>${label}</figcaption></figure>`).join("") : `<p class="public-note-empty">公開画像はありません。</p>`;
+  const images = [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url);
+  const rightsReview = imageRightsReviewIds.has(item.id) ? `<p class="public-note-rights">画像の出典・利用条件は再確認中です。</p>` : "";
+  $("#publicNoteImages").innerHTML = images.length ? images.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}" decoding="async"><figcaption>${label}</figcaption></figure>`).join("") + rightsReview : `<p class="public-note-empty">公開画像はありません。</p>`;
   const facts = [
     ["発行国・体制", item.country],
     ...(item.issueType ? [["発行区分", item.issueType]] : []),

@@ -32,7 +32,7 @@ The URL slug is intentionally non-descriptive, but obscurity is not authenticati
 
 ## 必須監査
 
-変更後は依存パッケージ不要の `node scripts/audit.mjs` を実行する。JSON、ID、地域、カタログ番号、画像出典・公開停止、歴史地図境界、通貨系譜、国旗、収蔵スコープ、物語構造を一括確認する。
+変更後は依存パッケージ不要の `node scripts/audit.mjs` を実行する。JSON、ID、地域、カタログ番号、画像出典・権利確認状態、歴史地図境界、通貨系譜、国旗、収蔵スコープ、物語構造を一括確認する。
 
 ## 紙幣の物語を整理して表示する手順
 

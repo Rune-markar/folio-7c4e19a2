@@ -80,6 +80,10 @@
 | cn-frbc-10fen-1938 | cn-frbc-10fen-1938-front.jpg, cn-frbc-10fen-1938-back.jpg | [Numista 224638](https://en.numista.com/224638) | 民国27年（1938年）、中国聯合準備銀行1角、P#J48a、維新政府章・頤和園と額面彩紋の表裏を照合。ページ上の画像表示はCC BY-NC-SA。非営利・継承条件を維持する。 |
 | manchukuo-50fen-1941 | manchukuo-50fen-1941-front.jpg, manchukuo-50fen-1941-back.jpg | [Numista 245455](https://en.numista.com/245455) | 1941年無年号、満洲中央銀行50分、P#J141。緑色の乾隆帝像・双龍と青色の建築景観を照合し、褐色主体のP#J129とは区別した。Numista画像はCC BY-NC-SA。非営利・継承条件を維持する。 |
 | jp-10000-2024, jp-5000-2024, jp-1000-2024 | （画像未登録） | [日本銀行「現在発行されている銀行券」](https://www.boj.or.jp/note_tfjgs/note/valid/issue.htm)、[発行開始資料](https://www.boj.or.jp/about/press/koen_2024/ko240703a.htm) | 2024年7月3日発行のF号券3券種を照合。公式画像には「見本／SPECIMEN」表示があるため、公開画像基準に従ってファイルを収録せず、画像欄を空欄とした。 |
+| su-1-1961 | su-1-1961-front.jpg, su-1-1961-back.jpg | [Wikimedia Commons 表](https://commons.wikimedia.org/wiki/File:Rouble-1961-Paper-1-Obverse.jpg)、[裏](https://commons.wikimedia.org/wiki/File:Rouble-1961-Paper-1-Reverse.jpg) | 1961年ソ連1ルーブル券。Commonsでパブリックドメイン表示の表裏画像を縮小して収録。 |
+| su-3-1961 | su-3-1961-front.jpg, su-3-1961-back.jpg | [Wikimedia Commons 表](https://commons.wikimedia.org/wiki/File:Soviet_Union-1961-Bill-3-Obverse.jpg)、[裏](https://commons.wikimedia.org/wiki/File:Soviet_Union-1961-Bill-3-Reverse.jpg) | 1961年ソ連3ルーブル券。Commonsでパブリックドメイン表示の表裏画像を縮小して収録。 |
+| su-5-1961 | su-5-1961-front.jpg, su-5-1961-back.jpg | [Wikimedia Commons 表](https://commons.wikimedia.org/wiki/File:Soviet_Union-1961-Bill-5-Obverse.jpg)、[裏](https://commons.wikimedia.org/wiki/File:Soviet_Union-1961-Bill-5-Reverse.jpg) | 1961年ソ連5ルーブル券。Commonsでパブリックドメイン表示の表裏画像を縮小して収録。 |
+| pmr-1-1994 | pmr-1-1994-front.jpg, pmr-1-1994-back.jpg | [Wikimedia Commons 表](https://commons.wikimedia.org/wiki/File:1_Kupon_ruble_obverse.jpg)、[裏](https://commons.wikimedia.org/wiki/File:1_Kupon_ruble_reverse.jpg) | 沿ドニエストル1994年1クーポン・ルーブル券。Commonsでパブリックドメイン表示の自己スキャン表裏画像を収録。通貨複製に関する一般的注意が付されている。 |
 | ph-100-1944 | ph-100-1944-front.jpg, ph-100-1944-back.jpg | [Numista 203954](https://en.numista.com/203954), [Wikimedia Commons PHI-112](https://commons.wikimedia.org/wiki/File:PHI-112-Japanese_Government_(Philippines)-100_Pesos_(1944).jpg) | 1944年、日本軍政下フィリピン100ペソ、P#112、リサール記念碑と褐色・緑色の額面彩紋を照合。Smithsonian National Numismatic Collection所蔵画像を表裏に分割・縮小。原券はPD-Japan、デジタル画像はVRT確認済みで、同館へのクレジットを要する。 |
 | mm-1-1942 | mm-1-1942-front.jpg, mm-1-1942-back.jpg | [Numista 207646](https://en.numista.com/207646), [Wikimedia Commons BUR-14](https://commons.wikimedia.org/wiki/File:BUR-14-Burma-Japanese_Occupation-One_Rupee_ND_(1942).jpg) | 1942年、日本軍政下ビルマ1ルピー、P#14。パンノキ、アーナンダ寺院、BDブロックを照合したが、紙色・透かし・ブロック間隔を写真から測れないためa2／bの細分類は保留。Smithsonian National Numismatic Collection所蔵画像を表裏に分割・縮小。原券はPD-Japan、デジタル画像はCC BY-SA 4.0（同館クレジット）。 |
 
@@ -139,3 +143,7 @@
 | `de-50000000-1923` | `de-50000000-1923-front.jpg`, `de-50000000-1923-back.jpg` | 来歴未確定・公開停止 |
 | `sheet-dk-20-1972` | `sheet-dk-20-1972-front.jpg`, `sheet-dk-20-1972-back.jpg` | 来歴未確定・公開停止 |
 | `sheet-dk-10-1936` | `sheet-dk-10-1936-front.jpg`, `sheet-dk-10-1936-back.jpg` | 来歴未確定・公開停止 |
+
+## 2026-08-15 表示方針の更新
+
+上記の公開停止は2026-08-14監査時点の記録として保存する。2026-08-15以降、リポジトリへ既に収録済みの画像はカードと詳細画面で表示し、権利・来歴を確定できていない71件には「画像の出典・利用条件は再確認中です」と明示する。新たに追加する画像は、従来どおり出典と表示ライセンスを確認できるものに限定する。
