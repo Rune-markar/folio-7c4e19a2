@@ -314,6 +314,14 @@ const historicalBoundaryFeatures = new Map([
 let historicalMapRequest = 0;
 let historicalMapExitPromise = null;
 const historicalMapExitDuration = 560;
+const mapViewport = { width: 1000, height: 480, minScale: 1, maxScale: 18 };
+let mapBaseCamera = { x: 0, y: 0, scale: 1 };
+let mapCamera = { ...mapBaseCamera };
+const mapPointers = new Map();
+let mapGestureDistance = 0;
+let mapGestureMoved = false;
+let suppressNextMapClick = false;
+let mapClickSuppressionTimer = 0;
 const staticArchive = true;
 const $ = (selector, root = document) => root.querySelector(selector);
 const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
@@ -421,13 +429,6 @@ function selectedAtlasEntry() {
 
 function atlasCountryName(entry) {
   return entry?.officialName || entry?.country || "";
-}
-
-function atlasCountryCurrencyName(entry) {
-  if (!entry) return "";
-  const currencyName = entry.country === "ヴァイマル共和国" ? entry.period : (entry.pickerCurrency || entry.currency);
-  const countryName = entry.country === "ドイツ連邦共和国（ユーロ）" ? "ドイツ連邦共和国" : entry.country;
-  return `${countryName}（${currencyName}）`;
 }
 
 function atlasPickerCountryName(entry) {
@@ -796,6 +797,116 @@ function mapHighlightPath(feature, className, index, interactive = false) {
   return path;
 }
 
+function clampMapCamera(camera) {
+  const scale = Math.max(mapViewport.minScale, Math.min(mapViewport.maxScale, camera.scale));
+  return {
+    x: Math.max(mapViewport.width - mapViewport.width * scale, Math.min(0, camera.x)),
+    y: Math.max(mapViewport.height - mapViewport.height * scale, Math.min(0, camera.y)),
+    scale
+  };
+}
+
+function applyMapCamera(camera) {
+  mapCamera = clampMapCamera(camera);
+  $("#mapCamera").style.transform = `translate(${mapCamera.x.toFixed(2)}px, ${mapCamera.y.toFixed(2)}px) scale(${mapCamera.scale.toFixed(3)})`;
+}
+
+function setMapBaseCamera(camera) {
+  mapBaseCamera = clampMapCamera(camera);
+  applyMapCamera(mapBaseCamera);
+}
+
+function resetMapCamera() {
+  applyMapCamera(mapBaseCamera);
+}
+
+function mapClientPoint(event) {
+  const bounds = $(".world-map").getBoundingClientRect();
+  return {
+    x: (event.clientX - bounds.left) * mapViewport.width / bounds.width,
+    y: (event.clientY - bounds.top) * mapViewport.height / bounds.height
+  };
+}
+
+function panMapCamera(dx, dy) {
+  applyMapCamera({ ...mapCamera, x: mapCamera.x + dx, y: mapCamera.y + dy });
+}
+
+function zoomMapCameraAt(point, factor) {
+  const scale = Math.max(mapViewport.minScale, Math.min(mapViewport.maxScale, mapCamera.scale * factor));
+  const ratio = scale / mapCamera.scale;
+  applyMapCamera({
+    x: point.x - (point.x - mapCamera.x) * ratio,
+    y: point.y - (point.y - mapCamera.y) * ratio,
+    scale
+  });
+}
+
+function mapPointDistance([first, second]) {
+  return Math.hypot(second.x - first.x, second.y - first.y);
+}
+
+function mapPointMidpoint([first, second]) {
+  return { x: (first.x + second.x) / 2, y: (first.y + second.y) / 2 };
+}
+
+function attachMapInteractions() {
+  const svg = $(".world-map");
+  svg.addEventListener("pointerdown", (event) => {
+    if (event.pointerType === "mouse" && event.button !== 0) return;
+    if (!mapPointers.size) {
+      mapGestureDistance = 0;
+      mapGestureMoved = false;
+    }
+    mapPointers.set(event.pointerId, mapClientPoint(event));
+    svg.setPointerCapture(event.pointerId);
+    svg.classList.add("is-interacting");
+  });
+  svg.addEventListener("pointermove", (event) => {
+    if (!mapPointers.has(event.pointerId)) return;
+    event.preventDefault();
+    const before = [...mapPointers.values()];
+    const previous = mapPointers.get(event.pointerId);
+    const current = mapClientPoint(event);
+    mapPointers.set(event.pointerId, current);
+    const after = [...mapPointers.values()];
+    if (mapPointers.size === 1) {
+      const dx = current.x - previous.x;
+      const dy = current.y - previous.y;
+      mapGestureDistance += Math.hypot(dx, dy);
+      if (mapGestureDistance > 4) mapGestureMoved = true;
+      panMapCamera(dx, dy);
+    } else if (mapPointers.size === 2) {
+      const beforeDistance = mapPointDistance(before);
+      const afterDistance = mapPointDistance(after);
+      const beforeMidpoint = mapPointMidpoint(before);
+      const afterMidpoint = mapPointMidpoint(after);
+      mapGestureDistance += Math.abs(afterDistance - beforeDistance) + Math.hypot(afterMidpoint.x - beforeMidpoint.x, afterMidpoint.y - beforeMidpoint.y);
+      if (mapGestureDistance > 4) mapGestureMoved = true;
+      panMapCamera(afterMidpoint.x - beforeMidpoint.x, afterMidpoint.y - beforeMidpoint.y);
+      if (beforeDistance > 0) zoomMapCameraAt(afterMidpoint, afterDistance / beforeDistance);
+    }
+  });
+  const finishPointer = (event) => {
+    if (!mapPointers.has(event.pointerId)) return;
+    if (mapGestureMoved) {
+      suppressNextMapClick = true;
+      window.clearTimeout(mapClickSuppressionTimer);
+      mapClickSuppressionTimer = window.setTimeout(() => { suppressNextMapClick = false; }, 400);
+    }
+    mapPointers.delete(event.pointerId);
+    if (!mapPointers.size) svg.classList.remove("is-interacting");
+  };
+  svg.addEventListener("pointerup", finishPointer);
+  svg.addEventListener("pointercancel", finishPointer);
+  svg.addEventListener("wheel", (event) => {
+    event.preventDefault();
+    svg.classList.add("is-interacting");
+    zoomMapCameraAt(mapClientPoint(event), Math.exp(-event.deltaY * .0015));
+    requestAnimationFrame(() => svg.classList.remove("is-interacting"));
+  }, { passive: false });
+}
+
 async function renderAtlasMap() {
   const entry = selectedAtlasEntry();
   const eraEntry = historicalAtlas.find((item) => item.era === appState.atlasEra);
@@ -836,7 +947,7 @@ async function renderAtlasMap() {
     renderCurrencyChronology(null);
   } else {
     $("#mapOverline").textContent = entry.mapOverline || `${entry.label} · HISTORICAL BORDER`;
-    $("#mapCountryName").textContent = atlasCountryCurrencyName(entry);
+    $("#mapCountryName").textContent = atlasPickerCountryName(entry);
     $("#mapCountryNative").textContent = entry.nativeName || "";
     $("#mapCountryNative").hidden = !entry.nativeName;
     $("#mapCountryDetail").textContent = entry.detail;
@@ -887,7 +998,7 @@ async function renderAtlasMap() {
       const precision = Number(feature.properties?.BORDERPRECISION || 3);
       return mapHighlightPath(feature, `map-selected-border map-highlight-entering precision-${precision}${entry?.territoryMode ? ` ${entry.territoryMode}` : ""}`, index);
     }), ...contextBoundaries.map((feature, index) => mapHighlightPath(feature, "map-context-boundary map-highlight-entering precision-1", selected.length + index)));
-    let cameraTransform = "translate(0px, 0px) scale(1)";
+    let camera = { x: 0, y: 0, scale: 1 };
     if (regionFeature) {
       const bounds = regionProjectedBounds;
       const width = bounds.maxX - bounds.minX;
@@ -895,7 +1006,7 @@ async function renderAtlasMap() {
       const scale = Math.max(1.35, Math.min(4.8, 260 / Math.max(width, height, 1)));
       const x = (bounds.minX + bounds.maxX) / 2;
       const y = (bounds.minY + bounds.maxY) / 2;
-      cameraTransform = `translate(${(500 - x * scale).toFixed(2)}px, ${(240 - y * scale).toFixed(2)}px) scale(${scale.toFixed(3)})`;
+      camera = { x: 500 - x * scale, y: 240 - y * scale, scale };
     } else if (entry && selected.length) {
       const focus = projectedPolygonView(selected);
       const { bounds, x, y } = focus;
@@ -907,7 +1018,7 @@ async function renderAtlasMap() {
       const markerScreenRadius = Math.max(2.5, Math.min(4, displayedMinorSpan * 0.055));
       const markerRadius = markerScreenRadius / scale;
       const labelOffset = 12 / scale;
-      cameraTransform = `translate(${(500 - x * scale).toFixed(2)}px, ${(240 - y * scale).toFixed(2)}px) scale(${scale.toFixed(3)})`;
+      camera = { x: 500 - x * scale, y: 240 - y * scale, scale };
       $("#mapGlow feGaussianBlur").setAttribute("stdDeviation", (7 / scale).toFixed(3));
       const markerPoint = entry.markerCoordinates ? equalEarthPoint(entry.markerCoordinates) : [x, y];
       $("#mapMarker").setAttribute("cx", markerPoint[0]);
@@ -925,7 +1036,7 @@ async function renderAtlasMap() {
       const [x, y] = equalEarthPoint(entry.focusCoordinates);
       const scale = 7;
       const markerRadius = 3.5 / scale;
-      cameraTransform = `translate(${(500 - x * scale).toFixed(2)}px, ${(240 - y * scale).toFixed(2)}px) scale(${scale})`;
+      camera = { x: 500 - x * scale, y: 240 - y * scale, scale };
       $("#mapGlow feGaussianBlur").setAttribute("stdDeviation", (7 / scale).toFixed(3));
       $("#mapMarker").setAttribute("cx", x);
       $("#mapMarker").setAttribute("cy", y);
@@ -939,7 +1050,7 @@ async function renderAtlasMap() {
       $("#mapLabel").textContent = entry.mapLabel || atlasCountryName(entry);
       $("#historicalLabel").classList.add("is-visible");
     }
-    $("#mapCamera").style.transform = cameraTransform;
+    setMapBaseCamera(camera);
     $("#mapDataStatus").textContent = entry && !selected.length ? (entry.focusCoordinates ? `${mapYear}年 · 位置表示` : "対象境界を特定できません") : `${mapYear}年 · ${data.features.length}地域`;
     $("#mapDescription").textContent = entry ? (entry.mapDescription || (entry.focusCoordinates && !selected.length ? `${mapYear}年の世界境界。基礎資料に個別境界がないため、${atlasCountryName(entry)}の位置を示しています。` : entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。${atlasCountryName(entry)}の外郭を表示し、占領軍の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`)) : regionFeature ? appState.atlasRegion === "中央アジア" ? `${mapYear}年資料の世界地図。中央アジアに分類した9か国を網掛けで強調表示しています。` : `${mapYear}年資料の世界地図。${appState.atlasRegion}の概略範囲を網掛けで強調表示しています。` : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
   } catch (error) {
@@ -1348,7 +1459,14 @@ async function importFile(file, kind) {
 }
 
 function attachEvents() {
+  attachMapInteractions();
   document.addEventListener("click", (event) => {
+    const mapAction = event.target.closest("[data-map-action]");
+    if (mapAction) {
+      const action = mapAction.dataset.mapAction;
+      if (action === "reset") resetMapCamera();
+      else zoomMapCameraAt({ x: mapViewport.width / 2, y: mapViewport.height / 2 }, action === "zoom-in" ? 1.4 : 1 / 1.4);
+    }
     const viewTarget = event.target.closest("[data-view-target]");
     if (viewTarget) switchView(viewTarget.dataset.viewTarget);
     const eraTarget = event.target.closest("[data-atlas-era]");
@@ -1384,6 +1502,11 @@ function attachEvents() {
       selectAtlasEntry(entry);
     }
     const mapTarget = event.target.closest("[data-map-feature-name]");
+    if (event.target.closest(".world-map") && suppressNextMapClick) {
+      suppressNextMapClick = false;
+      window.clearTimeout(mapClickSuppressionTimer);
+      return;
+    }
     if (mapTarget) {
       selectAtlasEntry(latestAtlasEntryForFeatureName(mapTarget.dataset.mapFeatureName));
     }
@@ -1408,6 +1531,16 @@ function attachEvents() {
     if (noteTarget && ["Enter", " "].includes(event.key)) { event.preventDefault(); openCardNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId)); }
     const mapTarget = event.target.closest?.("[data-map-feature-name]");
     if (mapTarget && ["Enter", " "].includes(event.key)) { event.preventDefault(); selectAtlasEntry(latestAtlasEntryForFeatureName(mapTarget.dataset.mapFeatureName)); }
+    if (event.target.matches?.(".world-map")) {
+      const panBy = 45;
+      const actions = {
+        ArrowLeft: () => panMapCamera(panBy, 0), ArrowRight: () => panMapCamera(-panBy, 0),
+        ArrowUp: () => panMapCamera(0, panBy), ArrowDown: () => panMapCamera(0, -panBy),
+        "+": () => zoomMapCameraAt({ x: 500, y: 240 }, 1.4), "=": () => zoomMapCameraAt({ x: 500, y: 240 }, 1.4),
+        "-": () => zoomMapCameraAt({ x: 500, y: 240 }, 1 / 1.4), "0": resetMapCamera
+      };
+      if (actions[event.key]) { event.preventDefault(); actions[event.key](); }
+    }
   });
   $("#countrySymbols").addEventListener("scroll", () => syncHorizontalPicker($("#countrySymbols")), { passive: true });
   window.addEventListener("resize", () => {

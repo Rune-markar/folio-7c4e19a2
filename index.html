@@ -120,9 +120,14 @@
 
                 <div class="world-map-wrap">
                   <div class="map-secondary-actions">
+                    <div class="map-controls" role="group" aria-label="地図の拡大縮小">
+                      <button type="button" data-map-action="zoom-out" aria-label="地図を縮小">−</button>
+                      <button type="button" data-map-action="reset" aria-label="地図を選択対象の位置へ戻す">↺</button>
+                      <button type="button" data-map-action="zoom-in" aria-label="地図を拡大">＋</button>
+                    </div>
                     <button class="map-clear-selection" id="clearAtlasSelection" type="button" hidden>地図の国選択を解除</button>
                   </div>
-                  <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="mapTitle mapDescription">
+                  <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="mapTitle mapDescription" aria-label="歴史地図。ドラッグで移動、ピンチまたはホイールで拡大縮小できます" tabindex="0">
                     <title id="mapTitle">国境のない世界地図</title>
                     <desc id="mapDescription">国家・体制を選ぶと、その年代の対象地域と国境が表示されます。</desc>
                     <defs>

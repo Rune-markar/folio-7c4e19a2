@@ -191,9 +191,12 @@ img, video { height: auto; }
 .currency-era.is-active i { border-color: #fff4cf; background: var(--gold-light); box-shadow: 0 0 0 4px rgba(215,183,115,.13),0 0 12px rgba(215,183,115,.7); }
 .map-collection-button { margin-top: auto; }
 .world-map-wrap { min-width: 0; padding: 24px 24px 18px 0; display: flex; flex-direction: column; justify-content: center; }
-.world-map { width: 100%; height: auto; overflow: hidden; color: rgba(215,183,115,.07); }
+.world-map { width: 100%; height: auto; overflow: hidden; color: rgba(215,183,115,.07); cursor: grab; touch-action: none; user-select: none; }
+.world-map:active { cursor: grabbing; }
+.world-map:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
 .graticule { fill: none; stroke: rgba(215,183,115,.1); stroke-width: 1; }
 .map-camera { transform-box: view-box; transform-origin: 0 0; transition: transform .72s cubic-bezier(.22,.75,.18,1); }
+.world-map.is-interacting .map-camera { transition: none; }
 .historical-map-data { transition: opacity .25s ease; }
 .map-territory { fill: rgba(225,220,198,.13); stroke: transparent; pointer-events: none; }
 .map-territory[data-map-feature-name] { cursor: pointer; pointer-events: visiblePainted; stroke: rgba(215,183,115,.001); stroke-width: 10; vector-effect: non-scaling-stroke; transition: fill .18s, stroke .18s; }
@@ -248,7 +251,11 @@ img, video { height: auto; }
 .map-legend b { font: inherit; font-weight: 400; }
 .map-legend i { width: 10px; height: 10px; border: 1px solid #ffdf91; background: rgba(215,183,115,.72); }
 .map-legend.is-outline-only i { border-width: 2px; background: transparent; }
-.map-secondary-actions { min-height: 37px; padding: 0 8px 12px; display: flex; align-items: flex-start; justify-content: flex-end; }
+.map-secondary-actions { min-height: 37px; padding: 0 8px 12px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.map-controls { display: inline-flex; overflow: hidden; border: 1px solid rgba(255,255,255,.2); border-radius: 8px; }
+.map-controls button { width: 34px; height: 30px; border: 0; border-right: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.045); color: #fff1c7; cursor: pointer; font: 700 16px/1 var(--sans); }
+.map-controls button:last-child { border-right: 0; }
+.map-controls button:hover, .map-controls button:focus-visible { background: rgba(215,183,115,.2); outline: none; }
 .map-clear-selection { min-height: 25px; padding: 3px 8px; border: 0; border-bottom: 1px solid rgba(255,255,255,.18); background: transparent; color: rgba(255,255,255,.38); font-size: 8px; cursor: pointer; }
 .map-clear-selection:hover, .map-clear-selection:focus-visible { border-bottom-color: rgba(255,255,255,.55); color: rgba(255,255,255,.75); outline: none; }
 .atlas-source { padding: 9px 40px; border-top: 1px solid rgba(255,255,255,.07); color: rgba(255,255,255,.35); background: #0d1f19; font-size: 8px; letter-spacing: .04em; text-align: right; }
@@ -615,6 +622,7 @@ code { padding: 2px 5px; border-radius: 4px; background: var(--paper-deep); }
   .map-legend { justify-content: center; }
   .map-legend { margin-top: 14px; padding-top: 16px; }
   .map-secondary-actions { min-height: 42px; padding: 0 12px 12px; }
+  .map-controls button { width: 40px; height: 36px; }
   .atlas-source { padding-inline: 20px; text-align: left; }
 }
 
