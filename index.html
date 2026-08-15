@@ -83,18 +83,31 @@
 
               <div class="era-picker" aria-label="年代を選択">
                 <p><span>01</span> 年代を選ぶ</p>
-                <div class="era-list" id="eraList" role="listbox" aria-label="年代"><div class="era-track" aria-hidden="true"><span id="eraTrackProgress"></span></div></div>
+                <div class="horizontal-picker">
+                  <button class="picker-scroll-button" type="button" data-scroll-target="eraList" data-scroll-direction="-1" aria-label="前の年代を表示">‹</button>
+                  <div class="era-list" id="eraList" role="listbox" aria-label="年代"><div class="era-track" aria-hidden="true"><span id="eraTrackProgress"></span></div></div>
+                  <button class="picker-scroll-button" type="button" data-scroll-target="eraList" data-scroll-direction="1" aria-label="次の年代を表示">›</button>
+                </div>
               </div>
 
               <div class="region-picker">
                 <p><span>02</span> 地域を選ぶ</p>
-                <div class="region-symbols" id="regionSymbols" role="listbox" aria-label="地域"></div>
+                <div class="horizontal-picker">
+                  <button class="picker-scroll-button" type="button" data-scroll-target="regionSymbols" data-scroll-direction="-1" aria-label="前の地域を表示">‹</button>
+                  <div class="region-symbols" id="regionSymbols" role="listbox" aria-label="地域"></div>
+                  <button class="picker-scroll-button" type="button" data-scroll-target="regionSymbols" data-scroll-direction="1" aria-label="次の地域を表示">›</button>
+                </div>
               </div>
 
               <div class="country-picker">
                 <p><span>03</span> 国名・通貨を選ぶ</p>
-                <div class="country-symbols" id="countrySymbols" role="listbox" aria-label="国名・通貨"></div>
+                <div class="horizontal-picker">
+                  <button class="picker-scroll-button" type="button" data-scroll-target="countrySymbols" data-scroll-direction="-1" aria-label="前の国名・通貨を表示">‹</button>
+                  <div class="country-symbols" id="countrySymbols" role="listbox" aria-label="国名・通貨"></div>
+                  <button class="picker-scroll-button" type="button" data-scroll-target="countrySymbols" data-scroll-direction="1" aria-label="次の国名・通貨を表示">›</button>
+                </div>
               </div>
+              <p class="atlas-next-step" id="atlasNextStep" role="status"></p>
 
               <div class="atlas-stage">
                 <div class="map-copy">
@@ -117,7 +130,7 @@
                 </div>
 
                 <div class="world-map-wrap">
-                  <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="mapTitle mapDescription">
+                  <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="mapTitle mapDescription">
                     <title id="mapTitle">国境のない世界地図</title>
                     <desc id="mapDescription">国家・体制を選ぶと、その年代の対象地域と国境が表示されます。</desc>
                     <defs>
@@ -127,11 +140,11 @@
                     </defs>
                     <rect class="map-grid" width="1000" height="480" fill="url(#mapGrid)"/>
                     <g class="graticule" aria-hidden="true"><path d="M0 240H1000M500 0V480"/><ellipse cx="500" cy="240" rx="430" ry="150"/><ellipse cx="500" cy="240" rx="430" ry="65"/></g>
-                    <g class="map-camera" id="mapCamera" aria-hidden="true">
-                      <g class="historical-map-data" id="historicalMapData"></g>
-                      <g class="historical-region-data" id="historicalRegionData"></g>
-                      <g class="historical-border-data" id="historicalBorderData"></g>
-                      <g class="historical-label" id="historicalLabel">
+                    <g class="map-camera" id="mapCamera">
+                      <g class="historical-map-data" id="historicalMapData" aria-label="国を地図から選択"></g>
+                      <g class="historical-region-data" id="historicalRegionData" aria-hidden="true"></g>
+                      <g class="historical-border-data" id="historicalBorderData" aria-hidden="true"></g>
+                      <g class="historical-label" id="historicalLabel" aria-hidden="true">
                         <circle class="map-marker" id="mapMarker" r="6"/>
                         <text class="map-label" id="mapLabel"></text>
                       </g>
@@ -169,20 +182,23 @@
               </details>
             </aside>
             <div class="source-ribbon" id="sourceRibbon" hidden></div>
-            <div class="filter-bar">
-              <label><span>大地域</span><select id="macroRegionFilter"><option value="">すべて</option></select></label>
-              <label><span>地域区分</span><select id="regionFilter"><option value="">すべて</option></select></label>
-              <label><span>発行国・体制</span><select id="countryFilter"><option value="">すべて</option></select></label>
-              <label><span>通貨</span><select id="currencyFilter"><option value="">すべて</option></select></label>
-              <label><span>発行年代</span><select id="periodFilter"><option value="">すべて</option><option value="before-1920">1919年以前</option><option value="1920-1949">1920–1949年</option><option value="1950-1979">1950–1979年</option><option value="1980-1999">1980–1999年</option><option value="after-2000">2000年以降</option><option value="unknown">年代不明</option></select></label>
-              <label><span>国家・体制</span><select id="stateStatusFilter"><option value="">すべて</option><option value="現存">現存</option><option value="消滅国家・体制">消滅国家・体制</option></select></label>
-              <label><span>希少度</span><select id="rarityFilter"><option value="">すべて</option><option value="50-plus">50以上</option><option value="40-49">40–49</option><option value="under-40">39以下</option></select></label>
-              <label><span>種別</span><select id="typeFilter"><option value="">すべて</option><option value="banknote">紙幣</option><option value="coin">コイン</option></select></label>
-              <label class="private-filter"><span>保管状態</span><select id="locationFilter"><option value="">すべて</option><option value="placed">配置済み</option><option value="unplaced">未配置</option></select></label>
-              <label class="switch-filter"><input id="duplicateFilter" type="checkbox"><span>ダブりあり</span></label>
-              <button class="button button-secondary" id="clearFilters" type="button">絞り込み解除</button>
-            </div>
             <div class="collection-summary" id="collectionSummary"></div>
+            <details class="collection-filter-panel" id="collectionFilterPanel">
+              <summary><span>絞り込み</span><small id="activeFilterCount">条件なし</small></summary>
+              <div class="filter-bar">
+                <label><span>大地域</span><select id="macroRegionFilter"><option value="">すべて</option></select></label>
+                <label><span>地域区分</span><select id="regionFilter"><option value="">すべて</option></select></label>
+                <label><span>発行国・体制</span><select id="countryFilter"><option value="">すべて</option></select></label>
+                <label><span>通貨</span><select id="currencyFilter"><option value="">すべて</option></select></label>
+                <label><span>発行年代</span><select id="periodFilter"><option value="">すべて</option><option value="before-1920">1919年以前</option><option value="1920-1949">1920–1949年</option><option value="1950-1979">1950–1979年</option><option value="1980-1999">1980–1999年</option><option value="after-2000">2000年以降</option><option value="unknown">年代不明</option></select></label>
+                <label><span>国家・体制</span><select id="stateStatusFilter"><option value="">すべて</option><option value="現存">現存</option><option value="消滅国家・体制">消滅国家・体制</option></select></label>
+                <label><span>希少度</span><select id="rarityFilter"><option value="">すべて</option><option value="50-plus">50以上</option><option value="40-49">40–49</option><option value="under-40">39以下</option></select></label>
+                <label><span>種別</span><select id="typeFilter"><option value="">すべて</option><option value="banknote">紙幣</option><option value="coin">コイン</option></select></label>
+                <label class="private-filter"><span>保管状態</span><select id="locationFilter"><option value="">すべて</option><option value="placed">配置済み</option><option value="unplaced">未配置</option></select></label>
+                <label class="switch-filter"><input id="duplicateFilter" type="checkbox"><span>ダブりあり</span></label>
+                <button class="button button-secondary" id="clearFilters" type="button">絞り込み解除</button>
+              </div>
+            </details>
             <div class="collection-grid" id="collectionGrid"></div>
           </section>
 

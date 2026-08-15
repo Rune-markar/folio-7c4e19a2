@@ -12,6 +12,9 @@ const appState = {
 };
 
 const emptyCollectionFilters = () => ({ macroRegion: "", region: "", country: "", currency: "", period: "", stateStatus: "", rarity: "", type: "", location: "", duplicates: false });
+const atlasStateStorageKey = "world-banknote-atlas-selection-v1";
+let atlasStateRestored = false;
+let atlasResizeTimer = 0;
 const macroRegionOrder = ["アジア", "ヨーロッパ", "北アメリカ", "南アメリカ", "ロシア", "アフリカ", "オセアニア", "その他"];
 const macroRegionByRegion = new Map([
   ["東アジア", "アジア"], ["東南アジア", "アジア"], ["中央アジア", "アジア"], ["中東アジア", "アジア"],
@@ -22,6 +25,10 @@ const macroRegionByRegion = new Map([
 
 function macroRegionForItem(item) {
   return macroRegionByRegion.get(item?.region) || "その他";
+}
+
+function hasPublicRarityScore(item) {
+  return item?.rarityScore !== null && item?.rarityScore !== "" && Number.isFinite(Number(item?.rarityScore));
 }
 
 const viewMeta = {
@@ -339,6 +346,7 @@ function showToast(message, error = false) {
 
 async function refresh() {
   appState.database = await api("/api/database");
+  if (!atlasStateRestored) restoreAtlasSelection();
   renderAll();
 }
 
@@ -385,6 +393,10 @@ function switchView(view) {
   $("#viewEyebrow").textContent = viewMeta[view][0];
   $("#viewTitle").textContent = viewMeta[view][1];
   if (view === "collection") renderCollection();
+  if (view === "dashboard") requestAnimationFrame(() => requestAnimationFrame(() => {
+    centerActiveEra("auto");
+    syncHorizontalPickers();
+  }));
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -422,6 +434,102 @@ function atlasCollectionItems(entry) {
 
 function atlasCollectionCount(entry) {
   return atlasCollectionItems(entry).length;
+}
+
+function latestAtlasEntryForFeatureName(featureName) {
+  return historicalAtlas
+    .filter((entry) => entry.featureNames?.includes(featureName))
+    .sort((left, right) => Number(right.era) - Number(left.era) || Number(right.currencyOrder || 0) - Number(left.currencyOrder || 0))[0] || null;
+}
+
+function atlasEntryFromSelection(selection) {
+  if (!selection) return null;
+  if (selection.currency) {
+    const currencyEntry = historicalAtlas.find((entry) => entry.currencyKey === selection.currency);
+    if (currencyEntry) return currencyEntry;
+  }
+  return historicalAtlas.find((entry) => entry.era === selection.era && entry.country === selection.country) || null;
+}
+
+function restoreAtlasSelection() {
+  atlasStateRestored = true;
+  const params = new URLSearchParams(window.location.search);
+  const hasUrlSelection = ["era", "region", "country", "currency"].some((key) => params.has(key));
+  let saved = null;
+  if (!hasUrlSelection) {
+    try { saved = JSON.parse(window.localStorage.getItem(atlasStateStorageKey) || "null"); } catch { saved = null; }
+  }
+  const requested = hasUrlSelection ? {
+    era: params.get("era") || "",
+    region: params.get("region") || "",
+    country: params.get("country") || "",
+    currency: params.get("currency") || ""
+  } : saved;
+  const requestedEntry = atlasEntryFromSelection(requested);
+  if (requestedEntry) {
+    appState.atlasEra = requestedEntry.era;
+    appState.atlasRegion = atlasRegion(requestedEntry);
+    appState.atlasCountry = requestedEntry.country;
+    appState.atlasCurrency = requestedEntry.currencyKey || "";
+    return;
+  }
+  if (requested?.era && historicalAtlas.some((entry) => entry.era === requested.era)) {
+    appState.atlasEra = requested.era;
+    const regions = historicalAtlas.filter((entry) => entry.era === requested.era).map(atlasRegion);
+    appState.atlasRegion = regions.includes(requested.region) ? requested.region : regions[0] || "";
+    return;
+  }
+  const latestEntry = historicalAtlas
+    .filter((entry) => atlasTimelineEras.has(entry.era))
+    .sort((left, right) => Number(right.era) - Number(left.era))[0];
+  if (latestEntry) {
+    appState.atlasEra = latestEntry.era;
+    appState.atlasRegion = atlasRegion(latestEntry);
+    appState.atlasCountry = latestEntry.country;
+    appState.atlasCurrency = latestEntry.currencyKey || "";
+  }
+}
+
+function persistAtlasSelection() {
+  const selection = {
+    era: appState.atlasEra,
+    region: appState.atlasRegion,
+    country: appState.atlasCountry,
+    currency: appState.atlasCurrency
+  };
+  try { window.localStorage.setItem(atlasStateStorageKey, JSON.stringify(selection)); } catch { /* Storage may be unavailable in private contexts. */ }
+  const url = new URL(window.location.href);
+  Object.entries(selection).forEach(([key, value]) => value ? url.searchParams.set(key, value) : url.searchParams.delete(key));
+  window.history.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+}
+
+function selectAtlasEntry(entry) {
+  if (!entry) return;
+  appState.atlasEra = entry.era;
+  appState.atlasRegion = atlasRegion(entry);
+  appState.atlasCountry = entry.country;
+  appState.atlasCurrency = entry.currencyKey || "";
+  persistAtlasSelection();
+  renderDashboard();
+}
+
+function centerActiveEra(behavior = "smooth") {
+  const eraList = $("#eraList");
+  const activeEra = $(".era-button.is-active", eraList);
+  if (!activeEra || !eraList.clientWidth) return;
+  eraList.scrollTo({ left: activeEra.offsetLeft - (eraList.clientWidth - activeEra.offsetWidth) / 2, behavior });
+}
+
+function syncHorizontalPicker(target) {
+  if (!target) return;
+  const maxScroll = Math.max(0, target.scrollWidth - target.clientWidth);
+  $$(`[data-scroll-target="${target.id}"]`).forEach((button) => {
+    button.disabled = button.dataset.scrollDirection === "-1" ? target.scrollLeft <= 1 : target.scrollLeft >= maxScroll - 1;
+  });
+}
+
+function syncHorizontalPickers() {
+  [$("#eraList"), $("#regionSymbols"), $("#countrySymbols")].forEach(syncHorizontalPicker);
 }
 
 const atlasFlagSymbolByCountry = new Map([
@@ -487,11 +595,10 @@ function renderDashboard() {
   const selectedEraIndex = eras.findIndex((entry) => entry.era === appState.atlasEra);
   const eraList = $("#eraList");
   eraList.innerHTML = `<div class="era-timeline" style="--era-count:${eras.length}"><div class="era-track" aria-hidden="true"><span style="width:${eras.length > 1 ? selectedEraIndex / (eras.length - 1) * 100 : 0}%"></span></div>${eras.map((entry, index) => `<button type="button" role="option" aria-selected="${entry.era === appState.atlasEra}" class="era-button${entry.era === appState.atlasEra ? " is-active" : ""}" data-atlas-era="${entry.era}" style="--era-index:${index}"><i aria-hidden="true"></i><strong>${entry.era}</strong><span>${entry.eraPeriod || entry.period}</span></button>`).join("")}</div>`;
-  requestAnimationFrame(() => {
-    const activeEra = $(".era-button.is-active", eraList);
-    if (!activeEra) return;
-    eraList.scrollTo({ left: activeEra.offsetLeft - (eraList.clientWidth - activeEra.offsetWidth) / 2, behavior: "smooth" });
-  });
+  requestAnimationFrame(() => requestAnimationFrame(() => {
+    centerActiveEra();
+    syncHorizontalPickers();
+  }));
   const eraEntries = historicalAtlas.filter((entry) => entry.era === appState.atlasEra);
   const regions = Array.from(new Set(eraEntries.map(atlasRegion)));
   if (appState.atlasRegion && !regions.includes(appState.atlasRegion)) {
@@ -515,6 +622,12 @@ function renderDashboard() {
     const entryIndex = historicalAtlas.indexOf(entry);
     return `<button type="button" role="option" aria-selected="${active}" class="country-symbol${wideName ? " has-wide-name" : ""}${active ? " is-active" : ""}" data-atlas-entry-index="${entryIndex}"><span class="country-flag">${atlasFlagMarkup(entry)}</span><span><strong>${escapeHtml(displayName)}</strong><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
   }).join("") : `<span class="picker-guidance">先に地域を選択してください</span>`;
+  const selectedEntry = selectedAtlasEntry();
+  $("#atlasNextStep").textContent = selectedEntry
+    ? `${atlasCountryCurrencyName(selectedEntry)}を表示中です。地図上の国を選ぶと、その国の最新年代へ移動します。`
+    : appState.atlasRegion
+      ? `次は「03 国名・通貨」から選択してください。地図上の国から直接選ぶこともできます。`
+      : `次は「02 地域」を選択してください。`;
   renderAtlasMap();
 }
 
@@ -643,12 +756,20 @@ function retireHistoricalHighlight() {
   return historicalMapExitPromise;
 }
 
-function mapHighlightPath(feature, className, index) {
+function mapHighlightPath(feature, className, index, interactive = false) {
   const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
   path.setAttribute("d", geometryPath(feature.geometry));
   path.setAttribute("fill-rule", "evenodd");
   path.setAttribute("class", className);
   path.style.setProperty("--map-entry-delay", `${Math.min(index, 5) * 35}ms`);
+  const featureName = feature.properties?.NAME || "";
+  const entry = interactive ? latestAtlasEntryForFeatureName(featureName) : null;
+  if (entry) {
+    path.dataset.mapFeatureName = featureName;
+    path.setAttribute("role", "button");
+    path.setAttribute("tabindex", "0");
+    path.setAttribute("aria-label", `${atlasCountryName(entry)}を最新年代で表示`);
+  }
   return path;
 }
 
@@ -725,7 +846,7 @@ async function renderAtlasMap() {
     if (requestId !== historicalMapRequest) return;
     const group = $("#historicalMapData");
     if (!group.childElementCount) {
-      group.replaceChildren(...coastlineData.features.map((feature) => mapHighlightPath(feature, "map-territory", 0)));
+      group.replaceChildren(...coastlineData.features.map((feature) => mapHighlightPath(feature, "map-territory", 0, true)));
     }
     const regionGroup = $("#historicalRegionData");
     regionGroup.classList.remove("is-burning-out");
@@ -819,7 +940,7 @@ function itemMatchesFilters(item, excludedKeys = new Set()) {
   if (!excludedKeys.has("period") && appState.filters.period === "after-2000" && !overlaps(2000, 9999)) return false;
   if (!excludedKeys.has("period") && appState.filters.period === "unknown" && issueStart !== null) return false;
   const rarity = Number(item.rarityScore);
-  if (!excludedKeys.has("rarity") && appState.filters.rarity && !Number.isFinite(rarity)) return false;
+  if (!excludedKeys.has("rarity") && appState.filters.rarity && !hasPublicRarityScore(item)) return false;
   if (!excludedKeys.has("rarity") && appState.filters.rarity === "50-plus" && rarity < 50) return false;
   if (!excludedKeys.has("rarity") && appState.filters.rarity === "40-49" && (rarity < 40 || rarity >= 50)) return false;
   if (!excludedKeys.has("rarity") && appState.filters.rarity === "under-40" && rarity >= 40) return false;
@@ -841,15 +962,17 @@ function noteCard(item) {
   const interactionLabel = staticArchive ? "の詳細を見る" : "を編集";
   const footerStatus = staticArchive ? "詳細を見る →" : location;
   const interaction = ` role="button" tabindex="0" aria-label="${escapeHtml(item.country)} ${escapeHtml(item.title)}${interactionLabel}"`;
+  const rarityLabel = hasPublicRarityScore(item) ? `<span class="rarity-label">希少度 ${item.rarityScore}/100</span>` : "";
   return `<article class="note-card"${interaction} data-note-id="${escapeHtml(item.id)}">
     <div class="note-visual" style="--note-bg:${hashColor(item.country)}">${image}<span class="note-country-code">${escapeHtml(item.country.slice(0, 12))}</span><span class="note-denom">${escapeHtml(item.denomination)}</span></div>
-    <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span>${issueBadge}<span class="rarity-label">希少度 ${Number.isFinite(Number(item.rarityScore)) ? `${item.rarityScore}/100` : "未評価"}</span></div>
+    <div class="note-body"><div class="note-meta"><span class="country-label">${escapeHtml(item.country)}</span>${issueBadge}${rarityLabel}</div>
       <h4>${escapeHtml(item.title || `${item.denomination} ${item.currency}`)}</h4><p>${escapeHtml(item.year || "年代不明")} · ${escapeHtml(item.series || item.currency)}</p>
       <div class="note-footer"><span class="qty-pill">本蔵 ${item.collectionQty}枚${item.duplicateQty ? ` <b class="duplicate-pill">＋ダブり ${item.duplicateQty}</b>` : ""}</span><span>${escapeHtml(footerStatus)}</span></div>
     </div></article>`;
 }
 
 function renderCollection() {
+  $("#view-collection").classList.toggle("has-active-search", Boolean(appState.search.trim()));
   const source = appState.database.sourceSnapshot || {};
   const ribbon = $("#sourceRibbon");
   if (source.countryCount) {
@@ -878,6 +1001,8 @@ function renderCollection() {
   $("#duplicateFilter").checked = appState.filters.duplicates;
   const items = filteredItems();
   $("#collectionSummary").innerHTML = `<span><strong>${items.length}</strong>件を表示</span><span>全${appState.database.items.length}件 · 検索と絞り込みは同時に使えます</span>`;
+  const activeFilterCount = Object.entries(appState.filters).filter(([, value]) => value === true || (typeof value === "string" && value)).length;
+  $("#activeFilterCount").textContent = activeFilterCount ? `${activeFilterCount}条件を適用中` : "条件なし";
   const grid = $("#collectionGrid");
   grid.classList.toggle("is-table", appState.layout === "table");
   grid.innerHTML = items.length ? items.map(noteCard).join("") : `<div class="empty-state"><strong>条件に合う紙幣がありません</strong><p>検索語または絞り込みを解除してください。</p></div>`;
@@ -972,14 +1097,11 @@ function openNote(item = null) {
 
 function openPublicNote(item) {
   if (!item) return;
-  appState.filters.macroRegion = macroRegionForItem(item);
-  appState.filters.region = item.region || "";
-  appState.filters.country = item.country || "";
-  appState.filters.currency = item.currency || "";
-  renderCollection();
   $("#publicNoteDialogTitle").textContent = `${item.country} · ${item.title}`;
   $("#publicNoteKicker").textContent = `${item.year || "年代不明"} · ${item.series || item.currency}`;
-  $("#publicNoteRarity").textContent = `希少度 ${Number.isFinite(Number(item.rarityScore)) ? `${item.rarityScore}/100` : "未評価"}`;
+  const hasRarity = hasPublicRarityScore(item);
+  $("#publicNoteRarity").hidden = !hasRarity;
+  $("#publicNoteRarity").textContent = hasRarity ? `希少度 ${item.rarityScore}/100` : "";
   const images = [["表面", item.images?.front], ["裏面", item.images?.back]].filter(([, url]) => url);
   const rightsReview = imageRightsReviewIds.has(item.id) ? `<p class="public-note-rights">画像の出典・利用条件は再確認中です。</p>` : "";
   $("#publicNoteImages").innerHTML = images.length ? images.map(([label, url]) => `<figure><img src="${escapeHtml(url)}" alt="${escapeHtml(item.country)} ${escapeHtml(item.title)}の${label}" decoding="async"><figcaption>${label}</figcaption></figure>`).join("") + rightsReview : `<p class="public-note-empty">公開画像はありません。</p>`;
@@ -1202,9 +1324,11 @@ function attachEvents() {
     const eraTarget = event.target.closest("[data-atlas-era]");
     if (eraTarget) {
       appState.atlasEra = eraTarget.dataset.atlasEra;
-      appState.atlasRegion = "";
+      const firstEntry = historicalAtlas.find((entry) => entry.era === appState.atlasEra);
+      appState.atlasRegion = firstEntry ? atlasRegion(firstEntry) : "";
       appState.atlasCountry = "";
       appState.atlasCurrency = "";
+      persistAtlasSelection();
       renderDashboard();
     }
     const regionTarget = event.target.closest("[data-atlas-region]");
@@ -1212,25 +1336,29 @@ function attachEvents() {
       appState.atlasRegion = regionTarget.dataset.atlasRegion;
       appState.atlasCountry = "";
       appState.atlasCurrency = "";
+      persistAtlasSelection();
       renderDashboard();
     }
     const countryTarget = event.target.closest("[data-atlas-entry-index]");
     if (countryTarget) {
       const entry = historicalAtlas[Number(countryTarget.dataset.atlasEntryIndex)];
       if (!entry) return;
-      appState.atlasCountry = entry.country;
-      appState.atlasCurrency = entry.currencyKey || "";
-      renderDashboard();
+      selectAtlasEntry(entry);
     }
     const currencyTarget = event.target.closest("[data-atlas-currency]");
     if (currencyTarget) {
       const entry = historicalAtlas.find((item) => item.currencyKey === currencyTarget.dataset.atlasCurrency);
       if (!entry) return;
-      appState.atlasEra = entry.era;
-      appState.atlasRegion = atlasRegion(entry);
-      appState.atlasCountry = entry.country;
-      appState.atlasCurrency = entry.currencyKey;
-      renderDashboard();
+      selectAtlasEntry(entry);
+    }
+    const mapTarget = event.target.closest("[data-map-feature-name]");
+    if (mapTarget) {
+      selectAtlasEntry(latestAtlasEntryForFeatureName(mapTarget.dataset.mapFeatureName));
+    }
+    const scrollTarget = event.target.closest("[data-scroll-target]");
+    if (scrollTarget) {
+      const target = $(`#${scrollTarget.dataset.scrollTarget}`);
+      if (target) target.scrollBy({ left: Number(scrollTarget.dataset.scrollDirection) * target.clientWidth * .8, behavior: "smooth" });
     }
     const noteTarget = event.target.closest("[data-note-id]");
     if (noteTarget) openCardNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId));
@@ -1240,6 +1368,16 @@ function attachEvents() {
   document.addEventListener("keydown", (event) => {
     const noteTarget = event.target.closest?.("[data-note-id]");
     if (noteTarget && ["Enter", " "].includes(event.key)) { event.preventDefault(); openCardNote(appState.database.items.find((item) => item.id === noteTarget.dataset.noteId)); }
+    const mapTarget = event.target.closest?.("[data-map-feature-name]");
+    if (mapTarget && ["Enter", " "].includes(event.key)) { event.preventDefault(); selectAtlasEntry(latestAtlasEntryForFeatureName(mapTarget.dataset.mapFeatureName)); }
+  });
+  [$("#eraList"), $("#regionSymbols"), $("#countrySymbols")].forEach((target) => target.addEventListener("scroll", () => syncHorizontalPicker(target), { passive: true }));
+  window.addEventListener("resize", () => {
+    window.clearTimeout(atlasResizeTimer);
+    atlasResizeTimer = window.setTimeout(() => {
+      centerActiveEra("auto");
+      syncHorizontalPickers();
+    }, 120);
   });
   $("#addNoteButton").addEventListener("click", () => openNote());
   $("#viewCountryCollection").addEventListener("click", () => {
