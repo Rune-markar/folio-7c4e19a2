@@ -125,7 +125,13 @@
                       <button type="button" data-map-action="reset" aria-label="地図を選択対象の位置へ戻す">↺</button>
                       <button type="button" data-map-action="zoom-in" aria-label="地図を拡大">＋</button>
                     </div>
-                    <button class="map-clear-selection" id="clearAtlasSelection" type="button" hidden>地図の国選択を解除</button>
+                    <div class="map-action-notes">
+                      <button class="map-clear-selection" id="clearAtlasSelection" type="button" hidden>地図の国選択を解除</button>
+                      <details class="atlas-source-note">
+                        <summary aria-label="境界資料について"><span aria-hidden="true">i</span></summary>
+                        <p><strong>境界資料</strong>CShapes 2.0（ETH Zurich）・WGS 84。国家境界と占領・実効支配は区別し、占領地券は対象地域の外郭または位置のみを表示します。歴史的境界には異説を含みます。</p>
+                      </details>
+                    </div>
                   </div>
                   <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="mapTitle mapDescription" aria-label="歴史地図。ドラッグで移動、ピンチまたはホイールで拡大縮小できます" tabindex="0">
                     <title id="mapTitle">国境のない世界地図</title>
@@ -150,7 +156,6 @@
                   <div class="map-legend" id="mapLegend"><span><i></i><b id="mapBoundaryLabel">選択国の国境</b></span><span id="mapEraLegend">海岸線のみ表示</span><span id="mapDataStatus" role="status">地図データを読込中</span></div>
                 </div>
               </div>
-              <footer class="atlas-source">境界資料：CShapes 2.0（ETH Zurich）・WGS 84。国家境界と占領・実効支配は区別し、占領地券は対象地域の外郭または位置のみを表示します。歴史的境界には異説を含みます。</footer>
             </section>
           </section>
 
