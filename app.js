@@ -271,7 +271,16 @@ const atlasRegionOverrides = new Map([
   ["ウクライナ", "東ヨーロッパ"],
   ["モンゴル", "東アジア"],
   ["香港", "東アジア"],
-  ["朝鮮民主主義人民共和国", "東アジア"]
+  ["朝鮮民主主義人民共和国", "東アジア"],
+  ["カザフスタン", "中央アジア"],
+  ["キルギス", "中央アジア"],
+  ["タジキスタン", "中央アジア"],
+  ["トルクメニスタン", "中央アジア"],
+  ["ウズベキスタン", "中央アジア"],
+  ["アフガニスタン", "中央アジア"],
+  ["アルメニア", "中央アジア"],
+  ["アゼルバイジャン", "中央アジア"],
+  ["ジョージア", "中央アジア"]
 ]);
 const atlasRegionViews = new Map([
   ["北アメリカ", [-168, 12, -52, 74]],
@@ -291,6 +300,8 @@ const atlasRegionViews = new Map([
   ["ロシア構成国", [19, 40, 180, 82]],
   ["アフリカ", [-20, -36, 55, 38]]
 ]);
+const centralAsiaMapFeatureNames = new Set(["Afghanistan", "Armenia", "Azerbaijan", "Georgia", "Kazakhstan", "Kyrgyz Republic", "Tajikistan", "Turkmenistan", "Uzbekistan"]);
+const europeanAtlasRegions = new Set(["北ヨーロッパ", "西ヨーロッパ", "中央ヨーロッパ", "東ヨーロッパ", "イベリア半島", "バルカン半島"]);
 const atlasTimelineEras = new Set(["1885", "1914", "1919", "1920", "1923", "1936", "1938", "1940", "1941", "1943", "1946", "1947", "1948", "1951", "1960", "1961", "1964", "1965", "1966", "1970", "1972", "1973", "1974", "1975", "1976", "1981", "1983", "1985", "1986", "1987", "1988", "1989", "1990", "1991", "1992", "1993", "1994", "1997", "2000", "2002", "2005", "2006", "2007", "2009", "2010", "2011", "2012", "2014", "2016", "2017", "2018", "2024"]);
 const historicalMapCache = new Map();
 const historicalBoundaryFeatures = new Map([
@@ -763,6 +774,7 @@ function mapHighlightPath(feature, className, index, interactive = false) {
   path.setAttribute("class", className);
   path.style.setProperty("--map-entry-delay", `${Math.min(index, 5) * 35}ms`);
   const featureName = feature.properties?.NAME || "";
+  if (featureName) path.dataset.featureName = featureName;
   const entry = interactive ? latestAtlasEntryForFeatureName(featureName) : null;
   if (entry) {
     path.dataset.mapFeatureName = featureName;
@@ -783,15 +795,18 @@ async function renderAtlasMap() {
   $("#mapLabel").textContent = "";
   $("#clearAtlasSelection").hidden = !entry;
   if (!entry && appState.atlasRegion) {
+    const isCentralAsia = appState.atlasRegion === "中央アジア";
     $("#mapOverline").textContent = `${appState.atlasRegion} · REGION`;
     $("#mapCountryName").textContent = appState.atlasRegion;
     $("#mapCountryNative").hidden = true;
     $("#mapCountryNative").textContent = "";
-    $("#mapCountryDetail").textContent = "選択した地域を拡大し、概略範囲を網掛けで表示しています。国名・通貨を選ぶと、その当時の国境へ移動します。";
+    $("#mapCountryDetail").textContent = isCentralAsia
+      ? "中央アジアに分類した9か国を網掛けで表示しています。国名・通貨を選ぶと、その当時の国境へ移動します。"
+      : "選択した地域を拡大し、概略範囲を網掛けで表示しています。国名・通貨を選ぶと、その当時の国境へ移動します。";
     $("#viewCountryCollection").hidden = true;
     $("#mapFacts").hidden = true;
     $("#mapControlFact").hidden = true;
-    $("#mapBoundaryLabel").textContent = "選択地域（概略）";
+    $("#mapBoundaryLabel").textContent = isCentralAsia ? "中央アジア9か国" : "選択地域（概略）";
     $("#mapLegend").classList.remove("is-outline-only");
     $("#mapEraLegend").textContent = `${mapYear}年境界資料`;
     renderCurrencyChronology(null);
@@ -837,12 +852,15 @@ async function renderAtlasMap() {
     const contextBoundaries = entry?.country === "中華民国" && mapYear === 1940 ? [historicalBoundaryFeatures.get("manchukuo")] : [];
     const regionFeature = regionBounds ? { type: "Feature", properties: {}, geometry: regionGeometry(regionBounds) } : null;
     const regionProjectedBounds = regionFeature ? projectedBounds([regionFeature]) : null;
-    const regionalFeatures = regionProjectedBounds ? data.features.filter((feature) => {
-      const focus = projectedPolygonView([feature]);
-      return Number.isFinite(focus.x) && Number.isFinite(focus.y)
-        && focus.x >= regionProjectedBounds.minX && focus.x <= regionProjectedBounds.maxX
-        && focus.y >= regionProjectedBounds.minY && focus.y <= regionProjectedBounds.maxY;
-    }) : [];
+    const regionalFeatures = appState.atlasRegion === "中央アジア"
+      ? data.features.filter((feature) => centralAsiaMapFeatureNames.has(feature.properties?.NAME))
+      : regionProjectedBounds ? data.features.filter((feature) => {
+        if (europeanAtlasRegions.has(appState.atlasRegion) && centralAsiaMapFeatureNames.has(feature.properties?.NAME)) return false;
+        const focus = projectedPolygonView([feature]);
+        return Number.isFinite(focus.x) && Number.isFinite(focus.y)
+          && focus.x >= regionProjectedBounds.minX && focus.x <= regionProjectedBounds.maxX
+          && focus.y >= regionProjectedBounds.minY && focus.y <= regionProjectedBounds.maxY;
+      }) : [];
     await retireHistoricalHighlight();
     if (requestId !== historicalMapRequest) return;
     const group = $("#historicalMapData");
@@ -912,7 +930,7 @@ async function renderAtlasMap() {
     }
     $("#mapCamera").style.transform = cameraTransform;
     $("#mapDataStatus").textContent = entry && !selected.length ? (entry.focusCoordinates ? `${mapYear}年 · 位置表示` : "対象境界を特定できません") : `${mapYear}年 · ${data.features.length}地域`;
-    $("#mapDescription").textContent = entry ? (entry.mapDescription || (entry.focusCoordinates && !selected.length ? `${mapYear}年の世界境界。基礎資料に個別境界がないため、${atlasCountryName(entry)}の位置を示しています。` : entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。${atlasCountryName(entry)}の外郭を表示し、占領軍の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`)) : regionFeature ? `${mapYear}年資料の世界地図。${appState.atlasRegion}の概略範囲を網掛けで強調表示しています。` : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
+    $("#mapDescription").textContent = entry ? (entry.mapDescription || (entry.focusCoordinates && !selected.length ? `${mapYear}年の世界境界。基礎資料に個別境界がないため、${atlasCountryName(entry)}の位置を示しています。` : entry.territoryMode === "outline-only" ? `${mapYear}年の世界境界。${atlasCountryName(entry)}の外郭を表示し、占領軍の実効支配域としては塗っていません。` : `${mapYear}年の世界境界。${atlasCountryName(entry)}を強調表示しています。`)) : regionFeature ? appState.atlasRegion === "中央アジア" ? `${mapYear}年資料の世界地図。中央アジアに分類した9か国を網掛けで強調表示しています。` : `${mapYear}年資料の世界地図。${appState.atlasRegion}の概略範囲を網掛けで強調表示しています。` : `${mapYear}年資料の正確な海岸線。国境は非表示です。`;
   } catch (error) {
     if (requestId !== historicalMapRequest) return;
     $("#mapDataStatus").textContent = "地図の読込に失敗";

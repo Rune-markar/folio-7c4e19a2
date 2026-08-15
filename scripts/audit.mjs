@@ -33,6 +33,8 @@ check(itemIds.size === data.items.length, "収蔵品IDが重複しています")
 check(data.collectionIndex.length === data.sourceSnapshot.countryCount, "collectionIndex件数とsourceSnapshot.countryCountが一致しません");
 
 const canonicalRegions = new Map(data.collectionIndex.map((entry) => [entry.country, entry.region]));
+const centralAsiaCountries = ["アフガニスタン", "カザフスタン", "キルギス", "タジキスタン", "トルクメニスタン", "ウズベキスタン"];
+for (const country of centralAsiaCountries) check(canonicalRegions.get(country) === "中央アジア", `${country}: collectionIndexの地域が中央アジアではありません`);
 for (const item of data.items) {
   if (Object.hasOwn(item, "catalogNumber")) check(String(item.catalogNumber || "").trim(), `${item.id}: catalogNumberが空です`);
   check(item.catalogNumber !== "202211130", `${item.id}: 廃止した旧管理値202211130が残っています`);
