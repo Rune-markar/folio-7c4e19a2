@@ -100,11 +100,11 @@
               </div>
 
               <div class="country-picker">
-                <p><span>03</span> 国名・通貨を選ぶ</p>
+                <p><span>03</span> 国名を選ぶ</p>
                 <div class="horizontal-picker">
-                  <button class="picker-scroll-button" type="button" data-scroll-target="countrySymbols" data-scroll-direction="-1" aria-label="前の国名・通貨を表示">‹</button>
-                  <div class="country-symbols" id="countrySymbols" role="listbox" aria-label="国名・通貨"></div>
-                  <button class="picker-scroll-button" type="button" data-scroll-target="countrySymbols" data-scroll-direction="1" aria-label="次の国名・通貨を表示">›</button>
+                  <button class="picker-scroll-button" type="button" data-scroll-target="countrySymbols" data-scroll-direction="-1" aria-label="前の国名を表示">‹</button>
+                  <div class="country-symbols" id="countrySymbols" role="listbox" aria-label="国名"></div>
+                  <button class="picker-scroll-button" type="button" data-scroll-target="countrySymbols" data-scroll-direction="1" aria-label="次の国名を表示">›</button>
                 </div>
               </div>
               <p class="atlas-next-step" id="atlasNextStep" role="status"></p>
@@ -130,6 +130,9 @@
                 </div>
 
                 <div class="world-map-wrap">
+                  <div class="map-secondary-actions">
+                    <button class="map-clear-selection" id="clearAtlasSelection" type="button" hidden>地図の国選択を解除</button>
+                  </div>
                   <svg class="world-map" viewBox="0 0 1000 480" preserveAspectRatio="xMidYMid meet" role="group" aria-labelledby="mapTitle mapDescription">
                     <title id="mapTitle">国境のない世界地図</title>
                     <desc id="mapDescription">国家・体制を選ぶと、その年代の対象地域と国境が表示されます。</desc>
@@ -151,9 +154,6 @@
                     </g>
                   </svg>
                   <div class="map-legend" id="mapLegend"><span><i></i><b id="mapBoundaryLabel">選択国の国境</b></span><span id="mapEraLegend">海岸線のみ表示</span><span id="mapDataStatus" role="status">地図データを読込中</span></div>
-                  <div class="map-secondary-actions">
-                    <button class="map-clear-selection" id="clearAtlasSelection" type="button" hidden>地図の国選択を解除</button>
-                  </div>
                 </div>
               </div>
               <footer class="atlas-source">境界資料：CShapes 2.0（ETH Zurich）・WGS 84。国家境界と占領・実効支配は区別し、占領地券は対象地域の外郭または位置のみを表示します。歴史的境界には異説を含みます。</footer>

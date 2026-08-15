@@ -430,6 +430,11 @@ function atlasCountryCurrencyName(entry) {
   return `${countryName}（${currencyName}）`;
 }
 
+function atlasPickerCountryName(entry) {
+  if (!entry) return "";
+  return entry.country === "ドイツ連邦共和国（ユーロ）" ? "ドイツ連邦共和国" : entry.country;
+}
+
 function atlasPickerKey(entry) {
   return entry.currencyKey || `${entry.country}\u0000${entry.currency}`;
 }
@@ -628,16 +633,16 @@ function renderDashboard() {
   $("#countrySymbols").innerHTML = appState.atlasRegion ? countries.map((entry) => {
     const count = atlasCollectionCount(entry);
     const active = entry.currencyKey ? entry.currencyKey === appState.atlasCurrency : entry.country === appState.atlasCountry;
-    const displayName = atlasCountryCurrencyName(entry);
+    const displayName = atlasPickerCountryName(entry);
     const wideName = displayName.length > 12;
     const entryIndex = historicalAtlas.indexOf(entry);
-    return `<button type="button" role="option" aria-selected="${active}" class="country-symbol${wideName ? " has-wide-name" : ""}${active ? " is-active" : ""}" data-atlas-entry-index="${entryIndex}"><span class="country-flag">${atlasFlagMarkup(entry)}</span><span><strong>${escapeHtml(displayName)}</strong><small>${escapeHtml(entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
+    return `<button type="button" role="option" aria-selected="${active}" aria-label="${escapeHtml(`${displayName} ${entry.label || entry.flagPeriod}`)}" class="country-symbol${wideName ? " has-wide-name" : ""}${active ? " is-active" : ""}" data-atlas-entry-index="${entryIndex}"><span class="country-flag">${atlasFlagMarkup(entry)}</span><span><strong>${escapeHtml(displayName)}</strong><small>${escapeHtml(entry.label || entry.flagPeriod)} · ${count}件収蔵</small></span></button>`;
   }).join("") : `<span class="picker-guidance">先に地域を選択してください</span>`;
   const selectedEntry = selectedAtlasEntry();
   $("#atlasNextStep").textContent = selectedEntry
     ? `${atlasCountryCurrencyName(selectedEntry)}を表示中です。地図上の国を選ぶと、その国の最新年代へ移動します。`
     : appState.atlasRegion
-      ? `次は「03 国名・通貨」から選択してください。地図上の国から直接選ぶこともできます。`
+      ? `次は「03 国名」から選択してください。地図上の国から直接選ぶこともできます。`
       : `次は「02 地域」を選択してください。`;
   renderAtlasMap();
 }
