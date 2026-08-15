@@ -781,6 +781,7 @@ async function renderAtlasMap() {
   const requestId = ++historicalMapRequest;
   $("#historicalLabel").classList.remove("is-visible");
   $("#mapLabel").textContent = "";
+  $("#clearAtlasSelection").hidden = !entry;
   if (!entry && appState.atlasRegion) {
     $("#mapOverline").textContent = `${appState.atlasRegion} · REGION`;
     $("#mapCountryName").textContent = appState.atlasRegion;
@@ -1395,6 +1396,15 @@ function attachEvents() {
     appState.filters.currency = items.every((item) => item.currency === first.currency) ? first.currency : "";
     $("#globalSearch").value = "";
     switchView("collection");
+  });
+  $("#clearAtlasSelection").addEventListener("click", () => {
+    const entry = selectedAtlasEntry();
+    if (!entry) return;
+    appState.atlasRegion = atlasRegion(entry);
+    appState.atlasCountry = "";
+    appState.atlasCurrency = "";
+    persistAtlasSelection();
+    renderDashboard();
   });
   $("#addSaleButton").addEventListener("click", openSale);
   $("#noteForm").addEventListener("submit", saveNote);
