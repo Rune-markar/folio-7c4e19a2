@@ -83,7 +83,7 @@ for (const entry of atlas) {
 for (const item of data.items) check(scopedIds.has(item.id), `${item.id}: どの歴史地図期にも収蔵スコープ登録されていません`);
 
 for (const entry of atlas) {
-  check(entry.flag || flagSymbols.has(entry.country) || entry.flagPending === true, `${entry.country} ${entry.era}: 国旗表示または確認中表示が不足しています`);
+  check(entry.flag || flagSymbols.has(entry.country), `${entry.country} ${entry.era}: 国旗表示が不足しています`);
   if (entry.flag) check(fs.existsSync(path.join(root, entry.flag.replace(/^\//, ""))), `${entry.country} ${entry.era}: 国旗ファイルがありません`);
   if (!entry.flag && flagSymbols.has(entry.country)) check(flagSprite.includes(`id="flag-${flagSymbols.get(entry.country)}"`), `${entry.country} ${entry.era}: 長方形国旗シンボルがありません`);
 }

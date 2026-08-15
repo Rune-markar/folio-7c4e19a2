@@ -36,3 +36,6 @@ Downloaded files retain their original SVG content. Simple geometric flags were 
 - `soviet-union.svg` — 1955年制式の赤地、鎌と槌、赤い星の構成を小サイズ表示向けに再構成。
 - `transnistria.svg` — 赤・緑・赤の横帯と左上の標章からなる沿ドニエストルの旗を小サイズ表示向けに再構成。
 - `country-flags.svg` — 従来文字プレースホルダーまたはOS依存の絵文字だった国旗を、60:40の長方形シンボルとしてまとめた表示用スプライト。現行旗の主要な配色・構成を小サイズ向けに再構成し、歴史旗の制式復元がある場合は個別SVGを優先する。
+- `country-flags.svg` 追加分 — メキシコ、ロシア、シリア（1980–2024年旗）、レバノン、バーレーン、南スーダン、ギニア、ガイアナ、マラウイ、エジプト、南アフリカ、カザフスタン、ウズベキスタン、クロアチア、北マケドニア、キルギス（1992–2023年旗）、オーストラリア、アメリカの主要配色と構成を、歴史地図の小サイズ表示用に再構成。
+- `macedonia-1992.svg` — 1992–1995年のマケドニア共和国旗の赤地とヴェルギナの太陽を、小サイズ表示用に単純化して再構成。
+- 変更履歴の確認: バーレーン1972–2002年旗の8つの白い鋸歯は [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Flag_of_Bahrain_(1972%E2%80%932002).svg)、マケドニアの1995年変更は [Zname.mk](https://zname.mk/istorija/)、キルギスの1992年旗と2023年改正は [キルギス共和国電子政府ポータル](https://egov.kg/kg/ministry/31/3372)、シリアの1980–2024年旗は [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Syria-flag-changes.svg) を参照。
